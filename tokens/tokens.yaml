@@ -1,0 +1,36 @@
+color:
+  black: &color-black "#000000"
+  blue: &color-blue "#0795aa"
+  orange: &color-orange "#e76822"
+  orange-light: &color-orange-light "#F57026"
+  white: &color-white "#FFFFFF"
+  neutral:   # Neutral color numbers are based on the "B" value of the HEX code's HSB equivalent
+    15: &color-neutral-15 "#262626"
+    20: &color-neutral-20 "#323232"
+    30: &color-neutral-30 "#4d4d4d"
+    53: &color-neutral-53 "#888888"
+    95: &color-neutral-95 "#f3f1f1"
+
+text-color:
+  default: *color-neutral-20
+  link: *color-blue
+
+background-color:
+  default: *color-white
+
+font:
+  family:
+    sans-serif: "'Lato', sans-serif"
+  line-height:
+    normal: 1.2
+  size:
+    m: 14px
+
+border:
+  default: "solid 1px !{*color-neutral-53}"
+  radius:
+    default: 4px
+
+space:
+  inset:
+    s: 8px
