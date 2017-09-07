@@ -1,0 +1,11 @@
+{% extends "templates/sink.njk" %}
+
+{% block sink_body %}
+    <h2 class="esds-sink-page-header">Default Button</h2>
+    {{ esds.button() }}
+
+    <h2 class="esds-sink-page-header">Reverse Button</h2>
+    {% call esds.container(class="esds-container--dark") %}
+        {{ esds.button(class="esds-button--reverse") }}
+    {% endcall %}
+{% endblock %}

@@ -25,6 +25,8 @@ font:
     normal: 1.2
   size:
     m: 14px
+  weight:
+    bold: 700
 
 border:
   default: "solid 1px !{*color-neutral-53}"
@@ -34,3 +36,7 @@ border:
 space:
   inset:
     s: 8px
+    m: 26px
+  inset-stretch:
+    s: 8px 16px
+    m: 12px 20px

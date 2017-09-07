@@ -1,9 +1,11 @@
-<html>
-    <head>
-        <title>Design System</title>
-    </head>
-    <body>
-        <h1>Design System</h1>
-        <p>Hello world!</p>
-    </body>
-</html>
+{% extends 'templates/base.njk' %}
+
+{% block body %}
+    {% filter markdown %}
+        # EightShapes Design System Sink Pages
+        ## Visual Style
+        * [Color](/sink-pages/visual-style/color.html)
+        ## Components
+        * [Button](/sink-pages/components/buttons.html)
+    {% endfilter %}
+{% endblock body %}

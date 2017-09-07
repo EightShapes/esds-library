@@ -1,0 +1,37 @@
+{% extends 'templates/base.njk' %}
+
+{% block body %}
+    {# "Hostile" sink styles #}
+    <style>
+        html,
+        body {
+            color: hotpink;
+            font-family: Georgia;
+            font-size: 48px;
+            font-style: italic;
+            font-weight: bold;
+            line-height: 3;
+            margin: 0;
+            padding: 0;
+        }
+
+        body > * {
+            background: yellow;
+        }
+
+        .esds-sink-page-header {
+            background: transparent;
+            color: {{ esds_tokens['text-color'].default }};
+            font-family: {{ esds_tokens.font.family['sans-serif'] | safe }};
+            font-size: 20px;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1.2;
+            margin: 32px 0 16px 0;
+            padding: 0;
+        }
+    </style>
+    {% block sink_body %}
+
+    {% endblock %}
+{% endblock %}
