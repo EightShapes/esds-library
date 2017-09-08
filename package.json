@@ -1,5 +1,5 @@
 {
-  "name": "@eightshapes/eightshapes-design-system",
+  "name": "@eightshapes/eightshapes-library",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,6 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@eightshapes/eightshapes-build-tools": "^0.13.0"
+    "@eightshapes/eightshapes-build-tools": "*"
   }
 }
