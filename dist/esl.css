@@ -1,4 +1,4 @@
-.esds-button {
+.esl-button {
   background-color: #e76822;
   border: 0;
   border-radius: 4px;
@@ -11,12 +11,12 @@
   text-align: center;
   text-transform: uppercase; }
 
-.esds-button--reverse {
+.esl-button--reverse {
   background-color: #FFFFFF;
   color: #323232; }
 
-.esds-container--light {
+.esl-container--light {
   background-color: #f3f1f1; }
 
-.esds-container--dark {
+.esl-container--dark {
   background-color: #323232; }

@@ -1,18 +1,18 @@
-.esds-button {
-    background-color: $esds-color-orange;
+.esl-button {
+    background-color: $esl-color-orange;
     border: 0;
-    border-radius: $esds-border-radius-default;
-    color: $esds-color-white;
+    border-radius: $esl-border-radius-default;
+    color: $esl-color-white;
     cursor: pointer;
-    font-family: $esds-font-family-sans-serif;
-    font-size: $esds-font-size-m;
-    font-weight: $esds-font-weight-bold;
-    padding: $esds-space-inset-stretch-m;
+    font-family: $esl-font-family-sans-serif;
+    font-size: $esl-font-size-m;
+    font-weight: $esl-font-weight-bold;
+    padding: $esl-space-inset-stretch-m;
     text-align: center;
     text-transform: uppercase;
 }
 
-.esds-button--reverse {
-    background-color: $esds-color-white;
-    color: $esds-text-color-default;
+.esl-button--reverse {
+    background-color: $esl-color-white;
+    color: $esl-text-color-default;
 }
