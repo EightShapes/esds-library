@@ -1,42 +1,87 @@
-color:
-  black: &color-black "#000000"
-  blue: &color-blue "#0795aa"
-  orange: &color-orange "#e76822"
-  orange-light: &color-orange-light "#F57026"
-  white: &color-white "#FFFFFF"
-  neutral:   # Neutral color numbers are based on the "B" value of the HEX code's HSB equivalent
-    15: &color-neutral-15 "#262626"
-    20: &color-neutral-20 "#323232"
-    30: &color-neutral-30 "#4d4d4d"
-    53: &color-neutral-53 "#888888"
-    95: &color-neutral-95 "#f3f1f1"
+color :
+  white : &color-white "#FFFFFF"
+  black : &color-black "#000000"
+  orange : 
+    82 : &color-orange-82 "#D24B00"
+    91 : &color-orange-91 "#E76822"
+  neutral :
+    05 : &color-neutral-05 "#0D0D0D"
+    15 : &color-neutral-15 "#262626"
+    25 : &color-neutral-25 "#404040"
+    42 : &color-neutral-42 "#6B6B6B"
+    70 : &color-neutral-70 "#B3B1B1"
+    80 : &color-neutral-80 "#CCCACA"
+    90 : &color-neutral-90 "#E6E3E3"
+    95 : &color-neutral-95 "#F3F1F1"
+  teal : 
+    55 : &color-teal-55 "#00798C"
+    58 : &color-teal-58 "#068194"
+    71 : &color-teal-71 "#0A9DB3"
 
-text-color:
-  default: *color-neutral-20
-  link: *color-blue
+text-color :
+  primary : 
+    on-white : *color-neutral-15
+    on-light : *color-neutral-15
+    on-dark : *color-white
+    on-very-dark : *color-neutral-95
+  secondary : 
+    on-white : *color-neutral-42
+    on-light : *color-neutral-42
+    on-dark : *color-neutral-80
+    on-very-dark : *color-neutral-70
+  link : 
+    on-white : &text-color-link-on-white *color-teal-58
+    on-light : &text-color-link-on-light *color-teal-55
+    on-dark : &text-color-link-on-dark *color-teal-71
+    on-very-dark : &text-color-link-on-very-dark *color-teal-71
 
-background-color:
-  default: *color-white
+background-color :
+  white : *color-white
+  light : *color-neutral-95
+  dark : *color-neutral-15
+  very-dark : *color-neutral-05
 
-font:
-  family:
-    sans-serif: "'Lato', sans-serif"
-  line-height:
-    normal: 1.2
-  size:
-    m: 14px
-  weight:
-    bold: 700
+font :
+  family :
+    sans-serif : "'Lato', sans-serif"
+  line-height :
+    normal : 1.2
+  size :
+    heading-level-1 : 64px
+    heading-level-2 : 44px
+    heading-level-3 : 24px
+    heading-level-4 : 15px
+    heading-eyebrow : 18px
+    lead : 28px
+    l : 24px
+    m : 20px
+    s : 15px
+  weight :
+    bold : 700
 
-border:
-  default: "solid 1px !{*color-neutral-53}"
-  radius:
-    default: 4px
+border :
+  selected :
+    width : &border-selected-width 5px
+    on-white : "solid !{*border-selected-width} !{*text-color-link-on-white}"
+    on-light : "solid !{*border-selected-width} !{*text-color-link-on-light}"
+    on-dark : "solid !{*border-selected-width} !{*text-color-link-on-dark}"
+    on-very-dark : "solid !{*border-selected-width} !{*text-color-link-on-very-dark}"
+  default : "solid 1px !{*color-neutral-53}"
+  radius :
+    default : 4px
 
-space:
-  inset:
-    s: 8px
-    m: 26px
-  inset-stretch:
-    s: 8px 16px
-    m: 12px 20px
+space :
+  inset :
+    4-x : 64px
+    2-x : 32px
+    1-and-half-x: 24px
+    1-x : 16px
+    half-x : 8px
+    quarter-x : 4px
+    eighth-x : 2px
+  inset-stretch :
+    2-x : 8px 32px
+    1-and-half-x : 12px 24px
+    1-x : 8px 16px
+    half-x : 4px 8px
+    quarter-x : 2px 4px
