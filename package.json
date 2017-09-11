@@ -1,6 +1,6 @@
 {
-  "name": "@eightshapes/eightshapes-library",
-  "version": "0.1.0",
+  "name": "@eightshapes/esds-library",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,6 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@eightshapes/eightshapes-build-tools": "*"
+    "@eightshapes/esds-build": "*"
   }
 }
