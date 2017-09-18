@@ -1,0 +1,27 @@
+@mixin esds-light-containers-parents() {
+    &,
+    .esds-container-white &,
+    .esds-container-light & {
+        @content;
+    }
+}
+
+@mixin esds-dark-containers-parents() {
+    .esds-container-brand &,
+    .esds-container-dark &,
+    .esds-container-very-dark & {
+        @content;
+    }
+}
+
+@mixin esds-text-color-primary() {
+    @include esds-light-container-parents {
+        #{$property}: $esds-text-color-primary-on-light;
+    }
+
+    @if $enable-dark {
+        @include esds-container-dark-parent-selectors {
+            #{$property}: $esds-text-color-primary-on-dark;
+        }
+    }
+}
