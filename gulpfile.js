@@ -1,1 +1,1 @@
-const gulp = require('@eightshapes/esds-build');
+const gulp = require('esds-build');
