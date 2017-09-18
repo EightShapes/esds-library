@@ -22,16 +22,19 @@ text-color :
   primary : 
     on-white : *color-neutral-15
     on-light : *color-neutral-15
+    on-brand : *color-white
     on-dark : *color-white
     on-very-dark : *color-neutral-95
   secondary : 
     on-white : *color-neutral-42
     on-light : *color-neutral-42
+    on-brand : *color-neutral-90
     on-dark : *color-neutral-80
     on-very-dark : *color-neutral-70
   link : 
     on-white : &text-color-link-on-white *color-teal-58
     on-light : &text-color-link-on-light *color-teal-55
+    on-brand : &text-color-link-on-brand *color-white
     on-dark : &text-color-link-on-dark *color-teal-71
     on-very-dark : &text-color-link-on-very-dark *color-teal-71
 
@@ -40,6 +43,7 @@ background-color :
   light : *color-neutral-95
   dark : *color-neutral-15
   very-dark : *color-neutral-05
+  brand : *color-orange-91
 
 font :
   family :
@@ -58,6 +62,8 @@ font :
     s : 15px
   weight :
     bold : 700
+    light : 300
+    normal : 400
 
 border :
   selected :

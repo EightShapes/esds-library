@@ -12,6 +12,6 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@eightshapes/esds-build": "*"
+    "esds-build": "*"
   }
 }
