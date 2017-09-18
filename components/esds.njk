@@ -18,6 +18,19 @@
     </{{ element }}>
 {% endmacro %}
 
+{% macro icon(class=false, name='stopwatch', sprite_path="/icons/esds.svg", title=false) %}
+    {% if title %}
+        {% set title_id = "esds-icon__title--" + range(0, 100000) | random %}
+    {% endif %}
+
+    <svg class="esds-icon{{ ' ' + class if class }}">
+        {% if title %}
+            <title id="{{ title_id }}">{{ title }}</title>
+        {% endif %}
+        <use xlink:href="{{ sprite_path }}#{{ name }}"></use>
+    </svg>
+{% endmacro %}
+
 {% macro container(class=false) %}
     <div class="esds-container{{ ' ' + class if class }}">
         {{ caller() }}
