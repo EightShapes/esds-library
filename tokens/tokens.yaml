@@ -49,7 +49,8 @@ font :
   family :
     sans-serif : "'Lato', sans-serif"
   line-height :
-    normal : 1.2
+    normal : 1.3
+    headings : 1.2
   size :
     heading-level-1 : 64px
     heading-level-2 : 44px
@@ -60,10 +61,11 @@ font :
     l : 24px
     m : 20px
     s : 15px
+    xs : 12px
   weight :
     bold : 700
     light : 300
-    normal : 400
+    regular : 400
 
 border :
   selected :

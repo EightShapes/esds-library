@@ -39,7 +39,8 @@ $esds-background-color-very-dark: #0D0D0D;
 $esds-background-color-brand: #E76822;
 
 $esds-font-family-sans-serif: 'Lato', sans-serif;
-$esds-font-line-height-normal: 1.2;
+$esds-font-line-height-normal: 1.3;
+$esds-font-line-height-headings: 1.2;
 $esds-font-size-heading-level-1: 64px;
 $esds-font-size-heading-level-2: 44px;
 $esds-font-size-heading-level-3: 24px;
@@ -49,9 +50,10 @@ $esds-font-size-lead: 28px;
 $esds-font-size-l: 24px;
 $esds-font-size-m: 20px;
 $esds-font-size-s: 15px;
+$esds-font-size-xs: 12px;
 $esds-font-weight-bold: 700;
 $esds-font-weight-light: 300;
-$esds-font-weight-normal: 400;
+$esds-font-weight-regular: 400;
 
 $esds-border-selected-width: 5px;
 $esds-border-selected-on-white: solid 5px #FFFFFF;
