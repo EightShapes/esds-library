@@ -16,7 +16,7 @@
     max-width: 1200px;
 }
 
-.esds-row--hero-inset {
+.esds-row--hero-inset { // to be removed when making hero component
     padding: $esds-space-inset-1-x;
     padding-bottom: 70px;
     padding-top: 70px;
@@ -27,7 +27,7 @@
     }
 }
 
-.esds-row--content-inset {
+.esds-row--tall-inset {
     padding: $esds-space-inset-1-x;
     padding-bottom: $esds-space-inset-2-x;
     padding-top: $esds-space-inset-2-x;
@@ -38,17 +38,25 @@
     }
 }
 
+.esds-row--no-inset {
+    padding: 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 0;
+    }
+}
+
 .esds-row--background-image-dark {
 
     &:before {
-        content: ' ';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
         background-color: $esds-background-color-very-dark;
-        opacity: 0.65;
+        bottom: 0;
+        content: ' ';
+        left: 0;
+        opacity: .65;
+        position: absolute;
+        right: 0;
+        top: 0;
         z-index: 0;
     }
 
