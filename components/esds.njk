@@ -18,6 +18,12 @@
     </{{ element }}>
 {% endmacro %}
 
+{% macro container(class=false) %}
+    <div class="esds-container{{ ' ' + class if class }}">
+        {{ caller() }}
+    </div>
+{% endmacro %}
+
 {% macro icon(class=false, name='stopwatch', sprite_path="/icons/esds.svg", title=false) %}
     {% if title %}
         {% set title_id = "esds-icon__title--" + range(0, 100000) | random %}
@@ -31,8 +37,25 @@
     </svg>
 {% endmacro %}
 
-{% macro container(class=false) %}
-    <div class="esds-container{{ ' ' + class if class }}">
-        {{ caller() }}
+{% macro row(
+    class=false,
+    content=false,
+    background=false,
+    background_image=false
+    ) %}
+
+<div class="esds-row{% if (background) %} esds-container--{{background}}{% else %} esds-container--dark{% endif %}{% if class %} {{ class }}{% endif %}"
+    {% if background_image %}
+        style="background-image: url({{ background_image | safe }})"
+    {% endif %}
+    >
+    <div class="esds-row__inner">
+        {% if content %}
+            {{ content | safe }}
+        {% elif caller %}
+            {{ caller() }}
+        {% endif %}
     </div>
+</div>
+
 {% endmacro %}
