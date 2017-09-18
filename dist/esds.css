@@ -1,22 +1,38 @@
 .esds-button {
-  background-color: #e76822;
+  background-color: #D24B00;
   border: 0;
   border-radius: 4px;
   color: #FFFFFF;
   cursor: pointer;
   font-family: "Lato", sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
-  padding: 12px 20px;
+  padding: 8px 16px;
   text-align: center;
   text-transform: uppercase; }
 
 .esds-button--reverse {
   background-color: #FFFFFF;
-  color: #323232; }
+  color: #FFFFFF; }
+
+.esds-container--white {
+  background-color: #FFFFFF; }
+
+.esds-container--very-dark {
+  background-color: #0D0D0D; }
 
 .esds-container--light {
-  background-color: #f3f1f1; }
+  background-color: #F3F1F1; }
 
 .esds-container--dark {
-  background-color: #323232; }
+  background-color: #262626; }
+
+.esds-container--brand {
+  background-color: #E76822; }
+
+.esds-row {
+  padding: 32px 16px; }
+
+.esds-row__inner {
+  margin: 0 auto;
+  max-width: 1200px; }

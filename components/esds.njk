@@ -23,3 +23,26 @@
         {{ caller() }}
     </div>
 {% endmacro %}
+
+{% macro row(
+    class=false,
+    content=false,
+    background=false,
+    background_image=false
+    ) %}
+
+<div class="esds-row{% if (background) %} esds-container--{{background}}{% else %} esds-container--dark{% endif %}{% if class %} {{ class }}{% endif %}"
+    {% if background_image %}
+        style="background-image: url({{ background_image | safe }})"
+    {% endif %}
+    >
+    <div class="esds-row__inner">
+        {% if content %}
+            {{ content | safe }}
+        {% elif caller %}
+            {{ caller() }}
+        {% endif %}
+    </div>
+</div>
+
+{% endmacro %}

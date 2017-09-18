@@ -1,0 +1,49 @@
+.esds-row {
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+    padding: $esds-space-generic-2-x $esds-space-generic-1-x;
+    position: relative;
+    width: 100%;
+}
+
+.esds-row__inner {
+    color: $esds-text-color-primary-on-dark;
+    font-family: $esds-font-family-sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0 auto;    
+    max-width: 1200px;
+}
+
+.esds-row--hero-inset {
+    padding: $esds-space-inset-1-x;
+    padding-bottom: 140px;
+    padding-top: 140px;
+}
+
+.esds-row--content-inset {
+    padding: $esds-space-inset-1-x;
+    padding-bottom: $esds-space-inset-4-x;
+    padding-top: $esds-space-inset-4-x;
+}
+
+.esds-row--background-image-dark {
+
+    &:before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $esds-background-color-very-dark;
+        opacity: 0.65;
+        z-index: 0;
+    }
+
+    * {
+        position: relative;
+        z-index: 1;
+    }
+}

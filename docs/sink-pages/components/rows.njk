@@ -1,0 +1,37 @@
+{% extends "templates/sink.njk" %}
+
+{% block sink_body %}
+    <h2 class="esds-sink-page-header">Default</h2>
+    {{ esds.row() }}
+
+    <h2 class="esds-sink-page-header">Background - White</h2>
+    {{ esds.row(background="white") }}
+
+    <h2 class="esds-sink-page-header">Background - Light</h2>
+    {{ esds.row(background="light") }}
+
+    <h2 class="esds-sink-page-header">Background - Dark</h2>
+    {{ esds.row(background="dark") }}
+
+    <h2 class="esds-sink-page-header">Background - Very Dark</h2>
+    {{ esds.row(background="very-dark") }}
+
+    <h2 class="esds-sink-page-header">Background - Brand</h2>
+    {{ esds.row(background="brand") }}
+
+    <h2 class="esds-sink-page-header">Background Image, Hero Inset, Dark Photo</h2>
+    {% call esds.row(class="esds--row--hero-inset esds-row--background-image-dark", background="brand",background_image="/images/row/hero-planning-parts-people-products.jpg") %}
+		Hero
+    {% endcall %}
+
+    <h2 class="esds-sink-page-header">Background Image, Hero inset</h2>
+    {% call esds.row(class="esds-row--hero-inset", background_image="/images/row/hero-component-cutup.png") %}
+    	Hero
+	{% endcall %}
+
+    <h2 class="esds-sink-page-header">Background Image, Content inset, Dark Photo</h2>
+    {% call esds.row(class="esds-row--content-inset esds-row--background-image-dark", background_image="/images/row/hero-component-cutup.png") %}
+    	Content
+	{% endcall %}
+
+{% endblock %}
