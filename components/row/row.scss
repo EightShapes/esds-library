@@ -1,0 +1,67 @@
+.esds-row {
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+    padding: $esds-space-generic-2-x $esds-space-generic-1-x;
+    position: relative;
+    width: 100%;
+}
+
+.esds-row__inner {
+    color: $esds-text-color-primary-on-dark;
+    font-family: $esds-font-family-sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0 auto;    
+    max-width: 1200px;
+}
+
+.esds-row--hero-inset { // to be removed when making hero component
+    padding: $esds-space-inset-1-x;
+    padding-bottom: 70px;
+    padding-top: 70px;
+    
+    @media screen and (min-width: 768px) {
+        padding-bottom: 140px;
+        padding-top: 140px;
+    }
+}
+
+.esds-row--tall-inset {
+    padding: $esds-space-inset-1-x;
+    padding-bottom: $esds-space-inset-2-x;
+    padding-top: $esds-space-inset-2-x;
+    
+    @media screen and (min-width: 768px) {
+        padding-bottom: $esds-space-inset-4-x;
+        padding-top: $esds-space-inset-4-x;
+    }
+}
+
+.esds-row--no-inset {
+    padding: 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 0;
+    }
+}
+
+.esds-row--background-image-dark {
+
+    &:before {
+        background-color: $esds-background-color-very-dark;
+        bottom: 0;
+        content: ' ';
+        left: 0;
+        opacity: .65;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 0;
+    }
+
+    * {
+        position: relative;
+        z-index: 1;
+    }
+}
