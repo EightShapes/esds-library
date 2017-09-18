@@ -31,7 +31,18 @@
             padding: 0;
         }
     </style>
-    {% block sink_body %}
-
-    {% endblock %}
+    <h1 class="spot-doc-sink-title">{{ title }}</h1>
+    {% block sink_intro %}{% endblock %}
+    <div class="esds-container--white">
+        {{ sink_body() }}
+    </div>
+    <div class="esds-container--light">
+        {{ sink_body() }}
+    </div>
+    <div class="esds-container--dark">
+        {{ sink_body() }}
+    </div>
+    <div class="esds-container--very-dark">
+        {{ sink_body() }}
+    </div>
 {% endblock %}

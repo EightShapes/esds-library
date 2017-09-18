@@ -1,5 +1,6 @@
 {
   "name": "@eightshapes/esds-library",
+  "full_name": "EightShapes Library",
   "version": "0.2.1",
   "description": "",
   "main": "index.js",

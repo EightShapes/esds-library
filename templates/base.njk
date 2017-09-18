@@ -1,7 +1,10 @@
 {% import 'components/esds.njk' as esds with context %}
-<html>
+{% set title = "" %}
+{% set html_title = package.full_name + " v" + package.version + " - " + title %}
+<!DOCTYPE html>
+<html {{ 'class = ' + html_class if html_class }}>
     <head>
-        <title>EightShapes Design System</title>
+        <title>{{ html_title }}</title>
         <link rel="stylesheet" href="/styles/esds.css">
     </head>
     <body>
