@@ -30,19 +30,36 @@
             margin: 32px 0 16px 0;
             padding: 0;
         }
+
+        @media screen and (min-width: 1200px) {
+            .esds-doc-sink-container {
+                display: flex;
+                width: 100%;
+            }
+
+            .esds-doc-sink-container > .esds-doc-sink-container__column {
+                box-sizing: border-box;
+                flex: 0 0 25%;
+                max-width: 25%;
+                width: 25%;
+            }
+        }
+
     </style>
-    <h1 class="spot-doc-sink-title">{{ title }}</h1>
+    <h1 class="esds-doc-sink-title">{{ title }}</h1>
     {% block sink_intro %}{% endblock %}
-    <div class="esds-container--white">
-        {{ sink_body() }}
-    </div>
-    <div class="esds-container--light">
-        {{ sink_body() }}
-    </div>
-    <div class="esds-container--dark">
-        {{ sink_body() }}
-    </div>
-    <div class="esds-container--very-dark">
-        {{ sink_body() }}
+    <div class="esds-doc-sink-container">
+        <div class="esds-doc-sink-container__column esds-container--white">
+            {{ sink_body() }}
+        </div>
+        <div class="esds-doc-sink-container__column esds-container--light">
+            {{ sink_body() }}
+        </div>
+        <div class="esds-doc-sink-container__column esds-container--dark">
+            {{ sink_body() }}
+        </div>
+        <div class="esds-doc-sink-container__column esds-container--very-dark">
+            {{ sink_body() }}
+        </div>
     </div>
 {% endblock %}
