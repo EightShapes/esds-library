@@ -1,7 +1,15 @@
+.esds-container--white {
+    background-color: $esds-background-color-white;
+}
+
+.esds-container--very-dark {
+    background-color: $esds-background-color-very-dark;
+}
+
 .esds-container--light {
-    background-color: $esds-color-neutral-95;
+    background-color: $esds-background-color-light;
 }
 
 .esds-container--dark {
-    background-color: $esds-color-neutral-20;
+    background-color: $esds-background-color-dark;
 }
