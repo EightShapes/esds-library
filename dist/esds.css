@@ -67,7 +67,7 @@
 .esds-container--white {
   background-color: #FFFFFF; }
 
-.esds-container--very-dark {
+.esds-container--black {
   background-color: #0D0D0D; }
 
 .esds-container--light {
@@ -94,6 +94,14 @@
   font-weight: normal;
   margin: 0 auto;
   max-width: 1200px; }
+  .esds-row__inner h2 {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3;
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 44px; }
 
 .esds-row--hero-inset {
   padding: 16px;

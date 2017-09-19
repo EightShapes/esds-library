@@ -43,17 +43,19 @@
 @mixin level-2-heading() {
     @include esds-heading-reset;
     font-size: $esds-font-size-heading-level-2;
+    font-weight: $esds-font-weight-regular;
 }
 
 @mixin level-3-heading() {
     @include esds-heading-reset;
     font-size: $esds-font-size-heading-level-3;
+    font-weight: $esds-font-weight-regular;
 }
 
 @mixin level-4-heading() {
     @include esds-heading-reset;
     font-size: $esds-font-size-heading-level-4;
-    font-weight: $esds-font-weight-regular;
+    font-weight: $esds-font-weight-bold;
 }
 
 @mixin esds-body-text-l() {

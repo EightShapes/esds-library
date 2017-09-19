@@ -14,6 +14,10 @@
     font-weight: normal;
     margin: 0 auto;    
     max-width: 1200px;
+
+    h2 {
+        @include level-2-heading();
+    }
 }
 
 .esds-row--hero-inset { // to be removed when making hero component
