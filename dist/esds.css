@@ -15,7 +15,8 @@
   line-height: 1.3;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 44px; }
+  font-size: 44px;
+  font-weight: 400; }
 
 .esds-typography-demo--level-3-heading {
   font-family: "Lato", sans-serif;
@@ -24,7 +25,8 @@
   line-height: 1.3;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 24px; }
+  font-size: 24px;
+  font-weight: 400; }
 
 .esds-typography-demo--level-4-heading {
   font-family: "Lato", sans-serif;
@@ -34,7 +36,7 @@
   font-weight: 300;
   line-height: 1.2;
   font-size: 15px;
-  font-weight: 400; }
+  font-weight: 700; }
 
 .esds-typography-demo--eyebrow-heading {
   font-family: "Lato", sans-serif;
@@ -64,18 +66,23 @@
   background-color: #FFFFFF;
   color: #FFFFFF; }
 
+.esds-background--white,
 .esds-container--white {
   background-color: #FFFFFF; }
 
+.esds-background--black,
 .esds-container--black {
   background-color: #0D0D0D; }
 
+.esds-background--light,
 .esds-container--light {
   background-color: #F3F1F1; }
 
+.esds-background--dark,
 .esds-container--dark {
   background-color: #262626; }
 
+.esds-background--brand,
 .esds-container--brand {
   background-color: #E76822; }
 
@@ -101,7 +108,8 @@
     line-height: 1.3;
     font-weight: 300;
     line-height: 1.2;
-    font-size: 44px; }
+    font-size: 44px;
+    font-weight: 400; }
 
 .esds-row--hero-inset {
   padding: 16px;
