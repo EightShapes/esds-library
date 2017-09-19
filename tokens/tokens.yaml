@@ -79,6 +79,14 @@ border :
     default : 4px
 
 space :
+  generic :
+    4-x : 64px
+    2-x : 32px
+    1-and-half-x: 24px
+    1-x : 16px
+    half-x : 8px
+    quarter-x : 4px
+    eighth-x : 2px
   inset :
     4-x : 64px
     2-x : 32px
