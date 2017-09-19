@@ -75,8 +75,6 @@
 
 .esds-container--dark {
   background-color: #262626; }
-<<<<<<< HEAD
-=======
 
 .esds-container--brand {
   background-color: #E76822; }
@@ -122,17 +120,16 @@
       padding: 0; } }
 
 .esds-row--background-image-dark:before {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-color: #0D0D0D;
-  opacity: 0.65;
+  bottom: 0;
+  content: ' ';
+  left: 0;
+  opacity: .65;
+  position: absolute;
+  right: 0;
+  top: 0;
   z-index: 0; }
 
 .esds-row--background-image-dark * {
   position: relative;
   z-index: 1; }
->>>>>>> origin/master
