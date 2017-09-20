@@ -1,27 +1,9 @@
-@mixin esds-light-containers-parents() {
-    &,
-    .esds-container-white &,
-    .esds-container-light & {
-        @content;
-    }
-}
+@mixin esds-text-color($type: 'primary') {
+    $background-colors: esds-token('background-color');
 
-@mixin esds-dark-containers-parents() {
-    .esds-container-brand &,
-    .esds-container-dark &,
-    .esds-container-very-dark & {
-        @content;
-    }
-}
-
-@mixin esds-text-color-primary() {
-    @include esds-light-container-parents {
-        #{$property}: $esds-text-color-primary-on-light;
-    }
-
-    @if $enable-dark {
-        @include esds-container-dark-parent-selectors {
-            #{$property}: $esds-text-color-primary-on-dark;
+    @each $background, $background-color in $background-colors {
+        .esds-container--#{$background} & {
+            color: esds-token('text-color', $type, 'on-#{$background}');
         }
     }
 }

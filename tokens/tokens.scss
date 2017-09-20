@@ -84,3 +84,133 @@ $esds-space-inset-stretch-half-x: 4px 8px;
 $esds-space-inset-stretch-quarter-x: 2px 4px;
 
 $esds-namespace: "esds";
+$esds-tokens: (
+    'color': (
+        'white': $esds-color-white,
+        'black': $esds-color-black,
+        'orange': (
+            '82': $esds-color-orange-82,
+            '91': $esds-color-orange-91
+        ),
+        'neutral': (
+            '5': $esds-color-neutral-5,
+            '15': $esds-color-neutral-15,
+            '25': $esds-color-neutral-25,
+            '42': $esds-color-neutral-42,
+            '70': $esds-color-neutral-70,
+            '80': $esds-color-neutral-80,
+            '90': $esds-color-neutral-90,
+            '95': $esds-color-neutral-95
+        ),
+        'teal': (
+            '55': $esds-color-teal-55,
+            '58': $esds-color-teal-58,
+            '71': $esds-color-teal-71
+        )
+    ),
+    'text-color': (
+        'primary': (
+            'on-white': $esds-text-color-primary-on-white,
+            'on-light': $esds-text-color-primary-on-light,
+            'on-brand': $esds-text-color-primary-on-brand,
+            'on-dark': $esds-text-color-primary-on-dark,
+            'on-black': $esds-text-color-primary-on-black
+        ),
+        'secondary': (
+            'on-white': $esds-text-color-secondary-on-white,
+            'on-light': $esds-text-color-secondary-on-light,
+            'on-brand': $esds-text-color-secondary-on-brand,
+            'on-dark': $esds-text-color-secondary-on-dark,
+            'on-black': $esds-text-color-secondary-on-black
+        ),
+        'link': (
+            'on-white': $esds-text-color-link-on-white,
+            'on-light': $esds-text-color-link-on-light,
+            'on-brand': $esds-text-color-link-on-brand,
+            'on-dark': $esds-text-color-link-on-dark,
+            'on-black': $esds-text-color-link-on-black
+        )
+    ),
+    'background-color': (
+        'white': $esds-background-color-white,
+        'light': $esds-background-color-light,
+        'dark': $esds-background-color-dark,
+        'black': $esds-background-color-black,
+        'brand': $esds-background-color-brand
+    ),
+    'font': (
+        'family': (
+            'sans-serif': $esds-font-family-sans-serif
+        ),
+        'line-height': (
+            'normal': $esds-font-line-height-normal,
+            'headings': $esds-font-line-height-headings
+        ),
+        'size': (
+            'heading-level-1': $esds-font-size-heading-level-1,
+            'heading-level-2': $esds-font-size-heading-level-2,
+            'heading-level-3': $esds-font-size-heading-level-3,
+            'heading-level-4': $esds-font-size-heading-level-4,
+            'heading-eyebrow': $esds-font-size-heading-eyebrow,
+            'lead': $esds-font-size-lead,
+            'l': $esds-font-size-l,
+            'm': $esds-font-size-m,
+            's': $esds-font-size-s,
+            'xs': $esds-font-size-xs
+        ),
+        'weight': (
+            'bold': $esds-font-weight-bold,
+            'light': $esds-font-weight-light,
+            'regular': $esds-font-weight-regular
+        )
+    ),
+    'border': (
+        'selected': (
+            'width': $esds-border-selected-width,
+            'on-white': $esds-border-selected-on-white,
+            'on-light': $esds-border-selected-on-light,
+            'on-dark': $esds-border-selected-on-dark,
+            'on-black': $esds-border-selected-on-black
+        ),
+        'default': $esds-border-default,
+        'radius': (
+            'default': $esds-border-radius-default
+        )
+    ),
+    'space': (
+        'generic': (
+            '4-x': $esds-space-generic-4-x,
+            '2-x': $esds-space-generic-2-x,
+            '1-and-half-x': $esds-space-generic-1-and-half-x,
+            '1-x': $esds-space-generic-1-x,
+            'half-x': $esds-space-generic-half-x,
+            'quarter-x': $esds-space-generic-quarter-x,
+            'eighth-x': $esds-space-generic-eighth-x
+        ),
+        'inset': (
+            '4-x': $esds-space-inset-4-x,
+            '2-x': $esds-space-inset-2-x,
+            '1-and-half-x': $esds-space-inset-1-and-half-x,
+            '1-x': $esds-space-inset-1-x,
+            'half-x': $esds-space-inset-half-x,
+            'quarter-x': $esds-space-inset-quarter-x,
+            'eighth-x': $esds-space-inset-eighth-x
+        ),
+        'inset-stretch': (
+            '2-x': $esds-space-inset-stretch-2-x,
+            '1-and-half-x': $esds-space-inset-stretch-1-and-half-x,
+            '1-x': $esds-space-inset-stretch-1-x,
+            'half-x': $esds-space-inset-stretch-half-x,
+            'quarter-x': $esds-space-inset-stretch-quarter-x
+        )
+    ),
+    'namespace': $esds-namespace
+);
+
+@function esds-token($keys...) {
+    $map: $esds-tokens;
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}

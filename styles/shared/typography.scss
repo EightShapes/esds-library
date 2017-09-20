@@ -34,38 +34,44 @@
     line-height: $esds-font-line-height-headings;
 }
 
-@mixin level-1-heading() {
+@mixin esds-level-1-heading() {
     @include esds-heading-reset;
+    @include esds-text-color($type: 'primary');
     font-size: $esds-font-size-heading-level-1;
     font-weight: $esds-font-weight-bold;
 }
 
-@mixin level-2-heading() {
+@mixin esds-level-2-heading() {
     @include esds-heading-reset;
+    @include esds-text-color($type: 'primary');
     font-size: $esds-font-size-heading-level-2;
     font-weight: $esds-font-weight-regular;
 }
 
-@mixin level-3-heading() {
+@mixin esds-level-3-heading() {
     @include esds-heading-reset;
+    @include esds-text-color($type: 'primary');
     font-size: $esds-font-size-heading-level-3;
     font-weight: $esds-font-weight-regular;
 }
 
-@mixin level-4-heading() {
+@mixin esds-level-4-heading() {
     @include esds-heading-reset;
+    @include esds-text-color($type: 'primary');
     font-size: $esds-font-size-heading-level-4;
     font-weight: $esds-font-weight-bold;
 }
 
 @mixin esds-body-text-l() {
     @include esds-font-reset;
+    @include esds-text-color($type: 'primary');
     font-size: $esds-font-size-l;
     font-weight: $esds-font-weight-regular;
 }
 
 @mixin esds-body-text-m() {
     @include esds-font-reset;
+    @include esds-text-color($type: 'primary');
     font-size: $esds-font-size-m;
     font-weight: $esds-font-weight-regular;
 }
@@ -76,7 +82,8 @@
     font-weight: $esds-font-weight-regular;
 }
 
-@mixin eyebrow-heading() {
+@mixin esds-eyebrow-heading() {
+    @include esds-text-color($type: 'secondary');
     @include esds-font-reset;
     font-size: $esds-font-size-xs;
     font-weight: $esds-font-weight-bold;
@@ -85,26 +92,27 @@
     text-transform: uppercase;
 }
 
-@mixin link() {
+@mixin esds-link() {
     color: $esds-text-color-link-on-dark;
+    @include esds-text-color($type: 'link');
 }
 
-.esds-typography-demo--level-1-heading { 
-    @include level-1-heading(); 
+.esds-typography-sink--level-1-heading { 
+    @include esds-level-1-heading();
 }
 
-.esds-typography-demo--level-2-heading { 
-    @include level-2-heading(); 
+.esds-typography-sink--level-2-heading { 
+    @include esds-level-2-heading(); 
 }
 
-.esds-typography-demo--level-3-heading { 
-    @include level-3-heading(); 
+.esds-typography-sink--level-3-heading { 
+    @include esds-level-3-heading(); 
 }
 
-.esds-typography-demo--level-4-heading { 
-    @include level-4-heading(); 
+.esds-typography-sink--level-4-heading { 
+    @include esds-level-4-heading(); 
 }
 
-.esds-typography-demo--eyebrow-heading { 
-    @include eyebrow-heading(); 
+.esds-typography-sink--eyebrow-heading { 
+    @include esds-eyebrow-heading(); 
 }
