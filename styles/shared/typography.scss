@@ -1,4 +1,4 @@
-@mixin esds-text-crop($line-height: 1.25, $top-adjustment: 0px, $bottom-adjustment: 0px) { 
+@mixin esds-text-crop($line-height: 1.25, $top-adjustment: 0px, $bottom-adjustment: 0px) { // sass-lint:disable-line zero-unit - The px unit needs to be here so the calc() functions work correctly
     $offset-top: max((13 + ($line-height - 1.2) * (64 / 2)), 0) / 64;
     $offset-bottom: max((14.5 + ($line-height - 1.2) * (64 / 2)), 0) / 64;
 
@@ -93,7 +93,6 @@
 }
 
 @mixin esds-link() {
-    color: $esds-text-color-link-on-dark;
     @include esds-text-color($type: 'link');
 }
 

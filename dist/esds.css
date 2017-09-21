@@ -1,4 +1,4 @@
-.esds-typography-demo--level-1-heading {
+.esds-typography-sink--level-1-heading {
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -7,8 +7,18 @@
   line-height: 1.2;
   font-size: 64px;
   font-weight: 700; }
+  .esds-container--white .esds-typography-sink--level-1-heading {
+    color: #262626; }
+  .esds-container--light .esds-typography-sink--level-1-heading {
+    color: #262626; }
+  .esds-container--dark .esds-typography-sink--level-1-heading {
+    color: #FFFFFF; }
+  .esds-container--black .esds-typography-sink--level-1-heading {
+    color: #F3F1F1; }
+  .esds-container--brand .esds-typography-sink--level-1-heading {
+    color: #FFFFFF; }
 
-.esds-typography-demo--level-2-heading {
+.esds-typography-sink--level-2-heading {
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -17,8 +27,18 @@
   line-height: 1.2;
   font-size: 44px;
   font-weight: 400; }
+  .esds-container--white .esds-typography-sink--level-2-heading {
+    color: #262626; }
+  .esds-container--light .esds-typography-sink--level-2-heading {
+    color: #262626; }
+  .esds-container--dark .esds-typography-sink--level-2-heading {
+    color: #FFFFFF; }
+  .esds-container--black .esds-typography-sink--level-2-heading {
+    color: #F3F1F1; }
+  .esds-container--brand .esds-typography-sink--level-2-heading {
+    color: #FFFFFF; }
 
-.esds-typography-demo--level-3-heading {
+.esds-typography-sink--level-3-heading {
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -27,8 +47,18 @@
   line-height: 1.2;
   font-size: 24px;
   font-weight: 400; }
+  .esds-container--white .esds-typography-sink--level-3-heading {
+    color: #262626; }
+  .esds-container--light .esds-typography-sink--level-3-heading {
+    color: #262626; }
+  .esds-container--dark .esds-typography-sink--level-3-heading {
+    color: #FFFFFF; }
+  .esds-container--black .esds-typography-sink--level-3-heading {
+    color: #F3F1F1; }
+  .esds-container--brand .esds-typography-sink--level-3-heading {
+    color: #FFFFFF; }
 
-.esds-typography-demo--level-4-heading {
+.esds-typography-sink--level-4-heading {
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -37,8 +67,18 @@
   line-height: 1.2;
   font-size: 15px;
   font-weight: 700; }
+  .esds-container--white .esds-typography-sink--level-4-heading {
+    color: #262626; }
+  .esds-container--light .esds-typography-sink--level-4-heading {
+    color: #262626; }
+  .esds-container--dark .esds-typography-sink--level-4-heading {
+    color: #FFFFFF; }
+  .esds-container--black .esds-typography-sink--level-4-heading {
+    color: #F3F1F1; }
+  .esds-container--brand .esds-typography-sink--level-4-heading {
+    color: #FFFFFF; }
 
-.esds-typography-demo--eyebrow-heading {
+.esds-typography-sink--eyebrow-heading {
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -48,6 +88,29 @@
   letter-spacing: 1.67px;
   line-height: 1.2;
   text-transform: uppercase; }
+  .esds-container--white .esds-typography-sink--eyebrow-heading {
+    color: #6B6B6B; }
+  .esds-container--light .esds-typography-sink--eyebrow-heading {
+    color: #6B6B6B; }
+  .esds-container--dark .esds-typography-sink--eyebrow-heading {
+    color: #CCCACA; }
+  .esds-container--black .esds-typography-sink--eyebrow-heading {
+    color: #B3B1B1; }
+  .esds-container--brand .esds-typography-sink--eyebrow-heading {
+    color: #E6E3E3; }
+
+.esds-icon {
+  height: 24px;
+  width: 24px;
+  background: transparent; }
+
+.esds-icon--large {
+  height: 40px;
+  width: 40px; }
+
+.esds-icon--small {
+  height: 16px;
+  width: 16px; }
 
 .esds-button {
   background-color: #D24B00;
