@@ -1,6 +1,6 @@
 {% extends "templates/sink.njk" %}
 
-{% block sink_body %}
+{% macro sink_body() %}
     <h2 class="esds-sink-page-header">Default</h2>
     {{ esds.row() }}
 
@@ -14,7 +14,7 @@
     {{ esds.row(background="dark") }}
 
     <h2 class="esds-sink-page-header">Background - Very Dark</h2>
-    {{ esds.row(background="very-dark") }}
+    {{ esds.row(background="black") }}
 
     <h2 class="esds-sink-page-header">Background - Brand</h2>
     {{ esds.row(background="brand") }}
@@ -34,4 +34,4 @@
     	Content
 	{% endcall %}
 
-{% endblock %}
+{% endmacro %}

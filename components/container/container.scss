@@ -1,19 +1,24 @@
+.esds-background--white,
 .esds-container--white {
     background-color: $esds-background-color-white;
 }
 
-.esds-container--very-dark {
-    background-color: $esds-background-color-very-dark;
+.esds-background--black,
+.esds-container--black {
+    background-color: $esds-background-color-black;
 }
 
+.esds-background--light,
 .esds-container--light {
     background-color: $esds-background-color-light;
 }
 
+.esds-background--dark,
 .esds-container--dark {
     background-color: $esds-background-color-dark;
 }
 
+.esds-background--brand,
 .esds-container--brand {
     background-color: $esds-background-color-brand;
 }

@@ -1,0 +1,117 @@
+@mixin esds-text-crop($line-height: 1.25, $top-adjustment: 0px, $bottom-adjustment: 0px) { // sass-lint:disable-line zero-unit - The px unit needs to be here so the calc() functions work correctly
+    $offset-top: max((13 + ($line-height - 1.2) * (64 / 2)), 0) / 64;
+    $offset-bottom: max((14.5 + ($line-height - 1.2) * (64 / 2)), 0) / 64;
+
+    line-height: $line-height;
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+    }
+
+    &::before {
+        margin-bottom: calc(-#{$offset-top}em + #{$top-adjustment});
+    }
+
+    &::after {
+        margin-top: calc(-#{$offset-bottom}em + #{$bottom-adjustment});
+    }
+}
+
+@mixin esds-font-reset() {
+    font-family: $esds-font-family-sans-serif;
+    font-style: normal;
+    font-weight: $esds-font-weight-regular;
+    line-height: $esds-font-line-height-normal;
+}
+
+@mixin esds-heading-reset() {
+    @include esds-font-reset;
+    font-weight: $esds-font-weight-light;
+    line-height: $esds-font-line-height-headings;
+}
+
+@mixin esds-level-1-heading() {
+    @include esds-heading-reset;
+    @include esds-text-color($type: 'primary');
+    font-size: $esds-font-size-heading-level-1;
+    font-weight: $esds-font-weight-bold;
+}
+
+@mixin esds-level-2-heading() {
+    @include esds-heading-reset;
+    @include esds-text-color($type: 'primary');
+    font-size: $esds-font-size-heading-level-2;
+    font-weight: $esds-font-weight-regular;
+}
+
+@mixin esds-level-3-heading() {
+    @include esds-heading-reset;
+    @include esds-text-color($type: 'primary');
+    font-size: $esds-font-size-heading-level-3;
+    font-weight: $esds-font-weight-regular;
+}
+
+@mixin esds-level-4-heading() {
+    @include esds-heading-reset;
+    @include esds-text-color($type: 'primary');
+    font-size: $esds-font-size-heading-level-4;
+    font-weight: $esds-font-weight-bold;
+}
+
+@mixin esds-body-text-l() {
+    @include esds-font-reset;
+    @include esds-text-color($type: 'primary');
+    font-size: $esds-font-size-l;
+    font-weight: $esds-font-weight-regular;
+}
+
+@mixin esds-body-text-m() {
+    @include esds-font-reset;
+    @include esds-text-color($type: 'primary');
+    font-size: $esds-font-size-m;
+    font-weight: $esds-font-weight-regular;
+}
+
+@mixin esds-body-text-s() {
+    @include esds-font-reset;
+    font-size: $esds-font-size-s;
+    font-weight: $esds-font-weight-regular;
+}
+
+@mixin esds-eyebrow-heading() {
+    @include esds-text-color($type: 'secondary');
+    @include esds-font-reset;
+    font-size: $esds-font-size-xs;
+    font-weight: $esds-font-weight-bold;
+    letter-spacing: 1.67px;
+    line-height: $esds-font-line-height-headings;
+    text-transform: uppercase;
+}
+
+@mixin esds-link() {
+    @include esds-text-color($type: 'link');
+}
+
+.esds-typography-sink--level-1-heading { 
+    @include esds-level-1-heading();
+}
+
+.esds-typography-sink--level-2-heading { 
+    @include esds-level-2-heading(); 
+}
+
+.esds-typography-sink--level-3-heading { 
+    @include esds-level-3-heading(); 
+}
+
+.esds-typography-sink--level-4-heading { 
+    @include esds-level-4-heading(); 
+}
+
+.esds-typography-sink--eyebrow-heading { 
+    @include esds-eyebrow-heading(); 
+}

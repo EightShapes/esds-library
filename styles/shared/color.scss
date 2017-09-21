@@ -1,0 +1,9 @@
+@mixin esds-text-color($type: 'primary') {
+    $background-colors: esds-token('background-color');
+
+    @each $background, $background-color in $background-colors {
+        .esds-container--#{$background} & {
+            color: esds-token('text-color', $type, 'on-#{$background}');
+        }
+    }
+}

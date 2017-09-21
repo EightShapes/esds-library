@@ -1,5 +1,5 @@
 {% extends "templates/sink.njk" %}
-{% block sink_body %}
+{% macro sink_body() %}
     <h2 class="esds-sink-page-header">Icons Sink</h2>
 
     <h2 class="esds-sink-page-header">Default</h2> 
@@ -13,4 +13,4 @@
 
     <h2 class="esds-sink-page-header">Large</h2> 
     {{ esds.icon(class="esds-icon--large", name="angle-left") }}
-{% endblock %}
+{% endmacro %}
