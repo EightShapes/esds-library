@@ -12,16 +12,86 @@
     </div>
 {% endmacro %}
 
+{% macro button(class=false, text="Button Text", element="button") %}
+    <{{ element }} class="esds-button{{ ' ' + class if class }}">
+        {{ text }}
+    </{{ element }}>
+{% endmacro %}
+
+{% macro card(
+    class=false,
+    container="dark",
+    thumbnail_image=false,
+    type=false,
+    date=false,
+    title="[title]",
+    description=false,
+    href=false,
+    cta=false,
+    image_url=false,
+    width="320px"
+    ) %}
+
+<div 
+    class="esds-card{% if container %} esds-container--{{ container }}{% endif %}{% if class %} {{ class }}{% endif %}"
+    style="width: {{ width }};"
+>
+
+    <a href="{{ link_href }}" class="esds-card__link">
+        
+        {% if thumbnail_image %}
+        <div class="esds-card__thumbnail">
+            <div class="esds-card__thumbnail-inner"
+                style="background-image: url('{{ thumbnail_image }}')">
+            </div>
+            {{ thumbnail }}
+        </div>
+        {% endif %}
+
+        <div class="esds-card__content">
+            {% if type %}
+            <h4 class="esds-card__type">{{ type }}</h4>
+            {% endif %}
+
+            {% if date %}
+            <h4 class="esds-card__date">{{ date }}</h4>
+            {% endif %}
+
+            {% if title %}
+            <h3 class="esds-card__title">{{ title }}</h3>
+            {% endif %}
+
+            {% if description %}
+            <p class="esds-card__description">{{ description }}</p>
+            {% endif %}
+
+            {% if cta %}
+            <p class="esds-card__cta">{{ cta }}</p>
+            {% endif %}
+        </div>
+
+    </a>
+</div>
+
+{% endmacro %}
+
 {% macro container(class=false) %}
     <div class="esds-container{{ ' ' + class if class }}">
         {{ caller() }}
     </div>
 {% endmacro %}
 
-{% macro button(class=false, text="Button Text", element="button") %}
-    <{{ element }} class="esds-button{{ ' ' + class if class }}">
-        {{ text }}
-    </{{ element }}>
+{% macro icon(class=false, name='stopwatch', sprite_path="/icons/esds.svg", title=false) %}
+    {% if title %}
+        {% set title_id = "esds-icon__title--" + range(0, 100000) | random %}
+    {% endif %}
+
+    <svg class="esds-icon{{ ' ' + class if class }}">
+        {% if title %}
+            <title id="{{ title_id }}">{{ title }}</title>
+        {% endif %}
+        <use xlink:href="{{ sprite_path }}#{{ name }}"></use>
+    </svg>
 {% endmacro %}
 
 {% macro row(
@@ -45,17 +115,4 @@
     </div>
 </div>
 
-{% endmacro %}
-
-{% macro icon(class=false, name='stopwatch', sprite_path="/icons/esds.svg", title=false) %}
-    {% if title %}
-        {% set title_id = "esds-icon__title--" + range(0, 100000) | random %}
-    {% endif %}
-
-    <svg class="esds-icon{{ ' ' + class if class }}">
-        {% if title %}
-            <title id="{{ title_id }}">{{ title }}</title>
-        {% endif %}
-        <use xlink:href="{{ sprite_path }}#{{ name }}"></use>
-    </svg>
 {% endmacro %}

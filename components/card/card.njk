@@ -1,0 +1,56 @@
+{% macro card(
+    class=false,
+    container="dark",
+    thumbnail_image=false,
+    type=false,
+    date=false,
+    title="[title]",
+    description=false,
+    href=false,
+    cta=false,
+    image_url=false,
+    width="320px"
+    ) %}
+
+<div 
+    class="esds-card{% if container %} esds-container--{{ container }}{% endif %}{% if class %} {{ class }}{% endif %}"
+    style="width: {{ width }};"
+>
+
+    <a href="{{ link_href }}" class="esds-card__link">
+        
+        {% if thumbnail_image %}
+        <div class="esds-card__thumbnail">
+            <div class="esds-card__thumbnail-inner"
+                style="background-image: url('{{ thumbnail_image }}')">
+            </div>
+            {{ thumbnail }}
+        </div>
+        {% endif %}
+
+        <div class="esds-card__content">
+            {% if type %}
+            <h4 class="esds-card__type">{{ type }}</h4>
+            {% endif %}
+
+            {% if date %}
+            <h4 class="esds-card__date">{{ date }}</h4>
+            {% endif %}
+
+            {% if title %}
+            <h3 class="esds-card__title">{{ title }}</h3>
+            {% endif %}
+
+            {% if description %}
+            <p class="esds-card__description">{{ description }}</p>
+            {% endif %}
+
+            {% if cta %}
+            <p class="esds-card__cta">{{ cta }}</p>
+            {% endif %}
+        </div>
+
+    </a>
+</div>
+
+{% endmacro %}

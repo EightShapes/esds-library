@@ -78,6 +78,7 @@
 
 @mixin esds-body-text-s() {
     @include esds-font-reset;
+    @include esds-text-color($type: 'secondary');
     font-size: $esds-font-size-s;
     font-weight: $esds-font-weight-regular;
 }

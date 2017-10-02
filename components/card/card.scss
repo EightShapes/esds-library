@@ -1,0 +1,93 @@
+.esds-card {
+    border-radius: $esds-border-radius-default;
+    margin: $esds-space-stack-2-x;
+}
+
+.esds-card__link {
+    text-decoration: none;
+}
+
+.esds-card__thumbnail {
+    background-color: $esds-background-color-dark;
+    border-radius: $esds-border-radius-default $esds-border-radius-default 0 0;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding-top: 55%;
+    position: relative;
+    width: 100%;
+
+    &:before {
+        background-color: rgba($esds-color-teal-55, 0);
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: background .5s;
+        z-index: 1;
+
+        .esds-card__link:hover & {
+            background-color: rgba($esds-color-teal-55, .3);
+        }
+    }
+
+}
+
+.esds-card__thumbnail-inner {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    padding-top: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.esds-card__content {
+    margin: 0;
+    padding: $esds-space-inset-1-x;
+}
+
+.esds-card__type,
+.esds-card__date {
+    @include esds-eyebrow-heading();
+    margin: $esds-space-stack-half-x;
+    padding: 0;
+}
+
+.esds-card__type + .esds-card__date {
+    margin-top: -$esds-space-generic-half-x;
+}
+
+.esds-card__title {
+    @include esds-level-3-heading();
+    margin: $esds-space-stack-half-x;
+    padding: 0;
+}
+
+.esds-card__description {
+    @include esds-body-text-s();
+    margin: $esds-space-stack-half-x;
+    padding: 0;
+}
+
+.esds-card__cta {
+    @include esds-eyebrow-heading();
+    @include esds-text-color($type: 'link');
+    margin: $esds-space-stack-half-x;
+    padding: 0;
+
+    .esds-card__link:hover & {
+        text-decoration: underline;
+    }
+}
+
+.esds-card__link > *:last-child {
+    margin-bottom: 0;
+}

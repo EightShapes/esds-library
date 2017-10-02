@@ -82,6 +82,11 @@ $esds-space-inset-stretch-1-and-half-x: 12px 24px;
 $esds-space-inset-stretch-1-x: 8px 16px;
 $esds-space-inset-stretch-half-x: 4px 8px;
 $esds-space-inset-stretch-quarter-x: 2px 4px;
+$esds-space-stack-2-x: 0 0 32px;
+$esds-space-stack-1-and-half-x: 0 0  24px;
+$esds-space-stack-1-x: 0 0 16px;
+$esds-space-stack-half-x: 0 0 8px;
+$esds-space-stack-quarter-x: 0 0 4px;
 
 $esds-namespace: "esds";
 $esds-tokens: (
@@ -202,6 +207,13 @@ $esds-tokens: (
             '1-x': $esds-space-inset-stretch-1-x,
             'half-x': $esds-space-inset-stretch-half-x,
             'quarter-x': $esds-space-inset-stretch-quarter-x
+        ),
+        'stack': (
+            '2-x': $esds-space-stack-2-x,
+            '1-and-half-x': $esds-space-stack-1-and-half-x,
+            '1-x': $esds-space-stack-1-x,
+            'half-x': $esds-space-stack-half-x,
+            'quarter-x': $esds-space-stack-quarter-x
         )
     ),
     'namespace': $esds-namespace
