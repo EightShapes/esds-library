@@ -16,6 +16,7 @@ $esds-color-teal-55: #00798C;
 $esds-color-teal-58: #068194;
 $esds-color-teal-71: #0A9DB3;
 
+$esds-text-color-brand: #E76822;
 $esds-text-color-primary-on-white: #262626;
 $esds-text-color-primary-on-light: #262626;
 $esds-text-color-primary-on-brand: #FFFFFF;
@@ -82,6 +83,7 @@ $esds-space-inset-stretch-1-and-half-x: 12px 24px;
 $esds-space-inset-stretch-1-x: 8px 16px;
 $esds-space-inset-stretch-half-x: 4px 8px;
 $esds-space-inset-stretch-quarter-x: 2px 4px;
+$esds-space-stack-4-x: 0 0 64px;
 $esds-space-stack-2-x: 0 0 32px;
 $esds-space-stack-1-and-half-x: 0 0  24px;
 $esds-space-stack-1-x: 0 0 16px;
@@ -114,6 +116,7 @@ $esds-tokens: (
         )
     ),
     'text-color': (
+        'brand': $esds-text-color-brand,
         'primary': (
             'on-white': $esds-text-color-primary-on-white,
             'on-light': $esds-text-color-primary-on-light,
@@ -209,6 +212,7 @@ $esds-tokens: (
             'quarter-x': $esds-space-inset-stretch-quarter-x
         ),
         'stack': (
+            '4-x': $esds-space-stack-4-x,
             '2-x': $esds-space-stack-2-x,
             '1-and-half-x': $esds-space-stack-1-and-half-x,
             '1-x': $esds-space-stack-1-x,

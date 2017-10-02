@@ -19,6 +19,7 @@ color :
     71 : &color-teal-71 "#0A9DB3"
 
 text-color :
+  brand : *color-orange-91
   primary : 
     on-white : *color-neutral-15
     on-light : *color-neutral-15
@@ -102,6 +103,7 @@ space :
     half-x : 4px 8px
     quarter-x : 2px 4px
   stack :
+    4-x : 0 0 64px
     2-x : 0 0 32px
     1-and-half-x : 0 0  24px
     1-x : 0 0 16px

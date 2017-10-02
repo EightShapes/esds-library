@@ -1,0 +1,57 @@
+.esds-tiles {
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: $esds-space-generic-2-x;
+    grid-row-gap: $esds-space-generic-2-x;
+    grid-template-columns: 1fr;
+    list-style: none;
+    margin: $esds-space-stack-4-x;
+    padding: 0;
+
+    @media screen and (min-width: 1000px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.esds-tiles__tile {
+    list-style: none;
+    padding: $esds-space-inset-2-x;
+}
+
+.esds-tiles__heading {
+    @include esds-level-3-heading();
+    margin: $esds-space-stack-1-x;
+    text-transform: uppercase;
+
+    .esds-container--white {
+        color: $esds-text-color-brand;
+    }
+}
+
+.esds-tiles__description {
+    @include esds-body-text-m();
+    @include esds-text-color('secondary');
+    margin: $esds-space-stack-1-x;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.esds-tiles__property {
+    @include esds-eyebrow-heading();
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.esds-tiles--2-column {
+    @media screen and (min-width: 1000px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.esds-tiles--4-column {
+    @media screen and (min-width: 1000px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
