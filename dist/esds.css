@@ -2,7 +2,11 @@
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
+  letter-spacing: 0;
   line-height: 1.3;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
   font-weight: 300;
   line-height: 1.2;
   font-size: 64px;
@@ -22,7 +26,11 @@
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
+  letter-spacing: 0;
   line-height: 1.3;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
   font-weight: 300;
   line-height: 1.2;
   font-size: 44px;
@@ -42,7 +50,11 @@
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
+  letter-spacing: 0;
   line-height: 1.3;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
   font-weight: 300;
   line-height: 1.2;
   font-size: 24px;
@@ -62,7 +74,11 @@
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
+  letter-spacing: 0;
   line-height: 1.3;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
   font-weight: 300;
   line-height: 1.2;
   font-size: 15px;
@@ -82,7 +98,11 @@
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
+  letter-spacing: 0;
   line-height: 1.3;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.67px;
@@ -127,7 +147,7 @@
 
 .esds-button--reverse {
   background-color: #FFFFFF;
-  color: #FFFFFF; }
+  color: #262626; }
 
 .esds-background--white,
 .esds-container--white {
@@ -162,8 +182,13 @@
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: normal;
+  letter-spacing: 0;
   margin: 0 auto;
-  max-width: 1200px; }
+  max-width: 1200px;
+  text-align: left;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none; }
 
 .esds-row--hero-inset {
   padding: 16px;
@@ -203,3 +228,178 @@
 .esds-row--background-image-dark * {
   position: relative;
   z-index: 1; }
+
+.esds-card {
+  border-radius: 4px;
+  margin: 0 0 32px; }
+
+.esds-card__link {
+  text-decoration: none; }
+
+.esds-card__thumbnail {
+  background-color: #262626;
+  border-radius: 4px 4px 0 0;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding-top: 55%;
+  position: relative;
+  width: 100%; }
+  .esds-card__thumbnail:before {
+    background-color: rgba(0, 121, 140, 0);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: background .5s;
+    transition: background .5s;
+    z-index: 1; }
+    .esds-card__link:hover .esds-card__thumbnail:before {
+      background-color: rgba(0, 121, 140, 0.3); }
+
+.esds-card__thumbnail-inner {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  padding-top: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%; }
+
+.esds-card__content {
+  margin: 0;
+  padding: 16px; }
+
+.esds-card__type,
+.esds-card__date {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.3;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.67px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  padding: 0; }
+  .esds-container--white .esds-card__type, .esds-container--white
+  .esds-card__date {
+    color: #6B6B6B; }
+  .esds-container--light .esds-card__type, .esds-container--light
+  .esds-card__date {
+    color: #6B6B6B; }
+  .esds-container--dark .esds-card__type, .esds-container--dark
+  .esds-card__date {
+    color: #CCCACA; }
+  .esds-container--black .esds-card__type, .esds-container--black
+  .esds-card__date {
+    color: #B3B1B1; }
+  .esds-container--brand .esds-card__type, .esds-container--brand
+  .esds-card__date {
+    color: #E6E3E3; }
+
+.esds-card__type + .esds-card__date {
+  margin-top: -8px; }
+
+.esds-card__title {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.3;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 8px;
+  padding: 0; }
+  .esds-container--white .esds-card__title {
+    color: #262626; }
+  .esds-container--light .esds-card__title {
+    color: #262626; }
+  .esds-container--dark .esds-card__title {
+    color: #FFFFFF; }
+  .esds-container--black .esds-card__title {
+    color: #F3F1F1; }
+  .esds-container--brand .esds-card__title {
+    color: #FFFFFF; }
+
+.esds-card__description {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.3;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0 0 8px;
+  padding: 0; }
+  .esds-container--white .esds-card__description {
+    color: #6B6B6B; }
+  .esds-container--light .esds-card__description {
+    color: #6B6B6B; }
+  .esds-container--dark .esds-card__description {
+    color: #CCCACA; }
+  .esds-container--black .esds-card__description {
+    color: #B3B1B1; }
+  .esds-container--brand .esds-card__description {
+    color: #E6E3E3; }
+
+.esds-card__cta {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.3;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.67px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  padding: 0; }
+  .esds-container--white .esds-card__cta {
+    color: #6B6B6B; }
+  .esds-container--light .esds-card__cta {
+    color: #6B6B6B; }
+  .esds-container--dark .esds-card__cta {
+    color: #CCCACA; }
+  .esds-container--black .esds-card__cta {
+    color: #B3B1B1; }
+  .esds-container--brand .esds-card__cta {
+    color: #E6E3E3; }
+  .esds-container--white .esds-card__cta {
+    color: #068194; }
+  .esds-container--light .esds-card__cta {
+    color: #00798C; }
+  .esds-container--dark .esds-card__cta {
+    color: #0A9DB3; }
+  .esds-container--black .esds-card__cta {
+    color: #0A9DB3; }
+  .esds-container--brand .esds-card__cta {
+    color: #FFFFFF; }
+  .esds-card__link:hover .esds-card__cta {
+    text-decoration: underline; }
+
+.esds-card__link > *:last-child {
+  margin-bottom: 0; }

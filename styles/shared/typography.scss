@@ -25,7 +25,11 @@
     font-family: $esds-font-family-sans-serif;
     font-style: normal;
     font-weight: $esds-font-weight-regular;
+    letter-spacing: 0;
     line-height: $esds-font-line-height-normal;
+    text-decoration: none;
+    text-indent: 0;
+    text-shadow: none;
 }
 
 @mixin esds-heading-reset() {

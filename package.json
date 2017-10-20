@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepack": "gulp build:all"
   },
   "contributors": [
     "Nathan Curtis <nathan@eightshapes.com>",
@@ -12,7 +13,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "esds-build": "*"
+    "esds-build": "^0.24.0"
   },
   "dependencies": {
     "svg4everybody": "^2.1.9"
