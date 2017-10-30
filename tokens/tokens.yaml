@@ -32,11 +32,11 @@ text-color :
     on-dark : *color-neutral-80
     on-black : *color-neutral-70
   link : 
-    on-white : &text-color-link-on-white *color-teal-58
-    on-light : &text-color-link-on-light *color-teal-55
-    on-brand : &text-color-link-on-brand *color-white
-    on-dark : &text-color-link-on-dark *color-teal-71
-    on-black : &text-color-link-on-black *color-teal-71
+    on-white : *color-teal-58
+    on-light : *color-teal-55
+    on-brand : *color-white
+    on-dark  : *color-teal-71
+    on-black : *color-teal-71
 
 background-color :
   white : *color-white
@@ -70,11 +70,13 @@ font :
 border :
   selected :
     width : &border-selected-width 5px
-    on-white : "solid !{*border-selected-width} !{*text-color-link-on-white}"
-    on-light : "solid !{*border-selected-width} !{*text-color-link-on-light}"
-    on-dark : "solid !{*border-selected-width} !{*text-color-link-on-dark}"
-    on-black : "solid !{*border-selected-width} !{*text-color-link-on-black}"
-  default : "solid 1px !{*color-neutral-53}"
+    on-white : "solid !{*border-selected-width} !{*color-teal-58}"
+    on-light : "solid !{*border-selected-width} !{*color-teal-55}"
+    on-dark : "solid !{*border-selected-width} !{*color-teal-71}"
+    on-black : "solid !{*border-selected-width} !{*color-teal-71}"
+  control:
+    on-white: "solid 1px !{*color-neutral-70}"
+  default : "solid 1px !{*color-neutral-42}"
   radius :
     default : 4px
 
