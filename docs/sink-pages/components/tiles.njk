@@ -1,0 +1,74 @@
+{% extends "templates/sink-as-rows.njk" %}
+
+{% macro sink_body() %}
+    {{ esds.tiles() }}
+
+    {{ esds.tiles(
+        items = [
+            {
+                heading: "Interviews",
+                description: "Interview system stakeholders to understand priorities, culture, and existing practices."
+            },
+            {
+                heading: "System Reviews",
+                description: "Dig into your as-is systems documentation, design assets, and code."
+            },
+            {
+                heading: "Customize Materials",
+                description: "Develop client-specific slides & stories, integrating relevant quotes, product and system examples."
+            }
+        ]
+    ) }}
+
+    {{ esds.tiles(
+        class = "esds-tiles--4-column",
+        items = [
+            {
+                heading: "Workshop & Talks",
+                description: "We help you gather a group to collaborate through a series of working sessions, often paired with a large-group talk or two.",
+                property: "1-2 days"
+            },
+            {
+                heading: "System Strategy",
+                description: "We help you pitch a vision and objectives, plan a roadmap, and articulate the library, products, and people involved.",
+                property: "1-2 months"
+            },
+            {
+                heading: "System Design/Build",
+                description: "We make a library with you, designing and documenting components, building guides, and forming a community.",
+                property: "3 month cycle"
+            }
+        ]
+    )}}
+
+    {{ esds.tiles(
+        class = "esds-tiles--2-column",
+        items = [
+            {
+                heading: "Parts, Products, and People",
+                description: "Learn basic concepts and activities to start, spread, and sustain a system for a single product or a large enterprise."
+            },
+            {
+                heading: "Component Cut Up",
+                description: "Dive into an immersive activity to visualize, slice up, group, label and prioritize your component library."
+            },
+            {
+                heading: "Roadmapping",
+                description: "Transition a system from a project to a product via roadmapping, a backlog, and aligning adoption across product teams."
+            },
+            {
+                heading: "Practicing Design Systems",
+                description: "Prioritize and plan when to develop processes for operating your systems team, integrating with product squads, and cultivating a community of contribution for your design system."
+            },
+            {
+                heading: "Measuring System Success",
+                description: "Using objectives and key results, identify where you want to take your system and how you'll measure if you got there."
+            },
+            {
+                heading: "System Documentation",
+                description: "Sketch and plan key system documentation site page layouts and content targeted at designers, engineers, and your other system stakeholders."
+            }
+        ]
+    ) }}
+
+{% endmacro %}
