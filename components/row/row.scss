@@ -8,7 +8,7 @@
 }
 
 .esds-row__inner {
-    color: $esds-text-color-primary-on-dark;
+    @include esds-text-color('primary');
     font-family: $esds-font-family-sans-serif;
     font-style: normal;
     font-weight: normal;
