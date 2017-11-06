@@ -1,3 +1,6 @@
+$esds-color-card-thumbnail-overlay: rgba($esds-color-teal-55, 0);
+$esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-55, .3);
+
 .esds-card {
     border-radius: $esds-border-radius-default;
     margin: $esds-space-stack-2-x;
@@ -18,7 +21,7 @@
     width: 100%;
 
     &:before {
-        background-color: rgba($esds-color-teal-55, 0);
+        background-color: $esds-color-card-thumbnail-overlay;
         bottom: 0;
         content: '';
         left: 0;
@@ -29,7 +32,7 @@
         z-index: 1;
 
         .esds-card__link:hover & {
-            background-color: rgba($esds-color-teal-55, .3);
+            background-color: $esds-color-card-thumbnail-overlay-hover;
         }
     }
 
