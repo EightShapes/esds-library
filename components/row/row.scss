@@ -8,12 +8,17 @@
 }
 
 .esds-row__inner {
-    color: $esds-text-color-primary-on-dark;
+    @include esds-text-color('primary');
     font-family: $esds-font-family-sans-serif;
     font-style: normal;
     font-weight: normal;
+    letter-spacing: 0;
     margin: 0 auto;    
     max-width: 1200px;
+    text-align: left;
+    text-indent: 0;
+    text-shadow: none;
+    text-transform: none;
 }
 
 .esds-row--hero-inset { // to be removed when making hero component

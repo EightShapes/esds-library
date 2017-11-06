@@ -5,30 +5,81 @@
     <style>
         html,
         body {
-            color: hotpink;
-            font-family: Georgia;
-            font-size: 48px;
-            font-style: italic;
-            font-weight: bold;
-            line-height: 3;
+            /* Reset margin and padding */
             margin: 0;
             padding: 0;
+
+            /* Hostile inherited styles*/
+            color: darkorange;
+            font-family: Georgia;
+            font-size: 43px;
+            font-style: italic;
+            font-weight: bold;
+            letter-spacing: 0.5em;
+            line-height: 3.2;
+            text-align: center;
+            text-indent: 103px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 1px red;
+            vertical-align: middle;
         }
 
-        body > * {
-            background: yellow;
+        h1, 
+        h2, 
+        h3, 
+        h4, 
+        h5, 
+        h6, 
+        p, 
+        input,
+        button,
+        select,
+        optgroup,
+        textarea {
+            margin-bottom: 21px;
+            margin-top: 11px;
+        }
+
+        ul, 
+        ol {
+            list-style: lower-greek;
+            margin-bottom: 64px;
+            padding: 18px;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 12px 23px;
+        }
+
+        /* Reset BrowserSync Notification styles since the defaults don't protect against the hostile sink */
+        #__bs_notify__ {
+            font-size: 14.4px !important;
+            font-style: normal;
+            font-weight: normal;
+            letter-spacing: 0;
+            line-height: 1;
+            text-align: left;
+            text-indent: 0;
+            text-transform: none;
+            text-shadow: none;
         }
 
         .esds-sink-page-header {
             background: transparent;
-            color: {{ esds_tokens['text-color'].default }};
+            color: {{ esds_tokens['text-color'].primary['on-white'] }};
             font-family: {{ esds_tokens.font.family['sans-serif'] | safe }};
             font-size: 20px;
             font-style: normal;
             font-weight: normal;
+            letter-spacing: 0;
             line-height: 1.2;
             margin: 32px 0 16px 0;
             padding: 0;
+            text-align: left;
+            text-indent: 0;
+            text-shadow: none;
+            text-transform: none;
         }
 
         @media screen and (min-width: 1200px) {
