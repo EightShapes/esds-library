@@ -1,0 +1,91 @@
+.esds-headcrumb {
+    @include esds-box-sizing;
+    @include esds-text-color('primary');
+    @include esds-font-reset;
+    padding: $esds-space-inset-1-x;
+
+    @media screen and (min-width: 500px) {
+        padding: $esds-space-generic-2-x $esds-space-generic-1-x;
+    }
+}
+
+.esds-headcrumb__link {
+    @include esds-text-color('primary');
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+    top: -6px;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: none; // not accessible, needs something
+    }
+}
+
+.esds-headcrumb__brand {
+    margin: 0;
+    position: relative;
+    top: 6px;
+}
+
+.esds-headcrumb__delimiter {
+    fill: $esds-color-white;
+    flex-shrink: 0;
+    height: 18px;
+    position: relative;
+    width: 18px;
+
+    @media screen and (min-width: 500px) {
+        height: 24px;
+        top: 1px;
+        width: 24px;
+    }
+}
+
+.esds-headcrumb__brand-mark {
+    fill: $esds-color-white;
+    flex-shrink: 0;
+    // height: 30px;
+    height: 20px;
+    margin-right: $esds-space-generic-half-x;
+    // position: relative;
+    // top: 4px;
+    // width: 30px;
+
+    width: 20px;
+
+    @media screen and (min-width: 500px) {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.esds-headcrumb__brand-name {
+    @include esds-text-crop;
+    flex-shrink: 0;
+    font-size: $esds-font-size-m;
+    font-weight: $esds-font-weight-light;
+    position: relative;
+    top: -2px;
+
+    @media screen and (min-width: 500px) {
+        font-size: $esds-font-size-lead;
+    }
+}
+
+.esds-headcrumb__crumb-text {
+    @include esds-text-crop;
+    font-size: $esds-font-size-s;
+    font-weight: $esds-font-weight-light;
+
+    @media screen and (min-width: 500px) {
+        font-size: $esds-font-size-m;
+        position: relative;
+        top: 1px;
+    }
+}

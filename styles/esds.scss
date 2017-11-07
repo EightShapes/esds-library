@@ -2,10 +2,12 @@
 
 @import 'shared/color';
 @import 'shared/typography';
+@import 'shared/util';
 
 @import 'icon/icon';
 @import 'button/button';
 @import 'card/card';
 @import 'container/container';
 @import 'row/row';
+@import 'headcrumb/headcrumb'; // Has a dependency on row
 @import 'tile/tile';

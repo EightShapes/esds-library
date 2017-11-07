@@ -1,4 +1,5 @@
 .esds-row {
+    @include esds-box-sizing;
     background-position: center center;
     background-size: cover;
     margin: 0;
@@ -29,6 +30,10 @@
     @media screen and (min-width: 768px) {
         padding-bottom: 140px;
         padding-top: 140px;
+    }
+
+    .esds-row__inner {
+        max-width: 800px;
     }
 }
 
