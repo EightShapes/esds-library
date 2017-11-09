@@ -20,6 +20,10 @@
     text-indent: 0;
     text-shadow: none;
     text-transform: none;
+
+    .esds-row--narrow-inner & {
+        max-width: 940px;
+    }
 }
 
 .esds-row--hero-inset { // to be removed when making hero component
@@ -56,6 +60,14 @@
     }
 }
 
+.esds-row--no-inset-bottom {
+    padding-bottom: 0;
+
+    @media screen and (min-width: 768px) {
+        padding-bottom: 0;
+    }
+}
+
 .esds-row--background-image-dark {
 
     &:before {
@@ -75,3 +87,60 @@
         z-index: 1;
     }
 }
+
+.esds-row__horizontal-rule {
+    border: 0;
+    border-top: 3px solid $esds-color-neutral-90;
+    margin: 0;
+}
+
+.esds-row__level-1-heading {
+    @include esds-level-1-heading();
+    margin: $esds-space-stack-2-x;
+    text-align: center;
+}
+
+.esds-row__level-2-heading {
+    @include esds-level-2-heading();
+    margin: $esds-space-stack-2-x;
+    text-align: center;
+}
+
+.esds-row__lead-heading {
+    @include esds-font-reset();
+    font-size: $esds-font-size-lead;
+    margin: $esds-space-stack-1-x;
+    text-align: center;
+}
+
+.esds-row__p-lead {
+    font-size: $esds-font-size-lead;
+    margin: $esds-space-stack-2-x;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.esds-row__p-l {
+    font-size: $esds-font-size-l;
+    margin: $esds-space-stack-1-x;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.esds-row__p-m {
+    font-size: $esds-font-size-m;
+    margin: $esds-space-stack-1-x;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.esds-row__text-center {
+    text-align: center;
+}
+

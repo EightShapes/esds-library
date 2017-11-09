@@ -4,7 +4,12 @@
     items=[
         {
             heading: "[tile 1]",
-            description: "[tile description]"
+            description: "[tile description]",
+            list: [
+                "[tile bullet 1]",
+                "[tile bullet 2]",
+                "[tile bullet 3]"
+            ]
         }
     ]
 ) %}
@@ -12,8 +17,19 @@
 <ul class="esds-tiles{% if class %} {{ class }}{% endif %}">
     {% for item in items %}
     <li class="esds-tiles__tile esds-container--{{ container }}">
+        {% if item.heading %}
         <h3 class="esds-tiles__heading">{{ item.heading }}</h3>
+        {% endif %}
+        {% if item.description %}
         <p class="esds-tiles__description">{{ item.description }}</p>
+        {% endif %}
+        {% if item.list %}
+        <ul class="esds-tiles__list">
+            {% for bullets in item.list %}
+            <li class="esds-tiles__list-item">{{ bullets }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
         {% if item.property %}
         <p class="esds-tiles__property">{{ item.property }}</p>
         {% endif %}
