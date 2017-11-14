@@ -22,18 +22,21 @@ text-color :
   brand : *color-orange-91
   primary : 
     on-white : *color-neutral-15
+    on-white-opacity-85 : *color-neutral-15
     on-light : *color-neutral-15
     on-brand : *color-white
     on-dark : *color-white
     on-black : *color-neutral-95
   secondary : 
     on-white : *color-neutral-42
+    on-white-opacity-85 : *color-neutral-42
     on-light : *color-neutral-42
     on-brand : *color-neutral-90
     on-dark : *color-neutral-80
     on-black : *color-neutral-70
   link : 
     on-white : *color-teal-58
+    on-white-opacity-85 : *color-teal-58
     on-light : *color-teal-55
     on-brand : *color-white
     on-dark  : *color-teal-71
@@ -45,6 +48,7 @@ background-color :
   dark : *color-neutral-15
   black : *color-neutral-05
   brand : *color-orange-91
+  white-opacity-85: rgba(255, 255, 255, 0.85)
 
 font :
   family :
