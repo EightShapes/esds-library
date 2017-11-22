@@ -4,8 +4,56 @@
     <h2 class="esds-sink-page-header">Default Button</h2>
     {{ esds.button() }}
 
+    <h2 class="esds-sink-page-header">Default Button Hover</h2>
+    {{ esds.button(class="esds-button--hover") }}
+
+    <h2 class="esds-sink-page-header">Default Button Active</h2>
+    {{ esds.button(class="esds-button--active") }}
+
+    <h2 class="esds-sink-page-header">Default Button Focus</h2>
+    {{ esds.button(class="esds-button--focus") }}
+
+    <h2 class="esds-sink-page-header">Default Button Disabled</h2>
+    {{ esds.button(class="esds-button--disabled") }}
+
+    <h2 class="esds-sink-page-header">Default Large Button</h2>
+    {{ esds.button(class="esds-button--large") }}
+
+    <h2 class="esds-sink-page-header">Default Small Button</h2>
+    {{ esds.button(class="esds-button--small") }}
+
     <h2 class="esds-sink-page-header">Reverse Button</h2>
     {% call esds.container(class="esds-container--dark") %}
         {{ esds.button(class="esds-button--reverse") }}
+    {% endcall %}
+
+    <h2 class="esds-sink-page-header">Reverse Button Hover</h2>
+    {% call esds.container(class="esds-container--dark") %}
+        {{ esds.button(class="esds-button--reverse esds-button--hover") }}
+    {% endcall %}
+
+    <h2 class="esds-sink-page-header">Reverse Button Active</h2>
+    {% call esds.container(class="esds-container--dark") %}
+        {{ esds.button(class="esds-button--reverse esds-button--active") }}
+    {% endcall %}
+
+    <h2 class="esds-sink-page-header">Reverse Button Focus</h2>
+    {% call esds.container(class="esds-container--dark") %}
+        {{ esds.button(class="esds-button--reverse esds-button--focus") }}
+    {% endcall %}
+
+    <h2 class="esds-sink-page-header">Reverse Button Disabled</h2>
+    {% call esds.container(class="esds-container--dark") %}
+        {{ esds.button(class="esds-button--reverse esds-button--disabled") }}
+    {% endcall %}
+
+    <h2 class="esds-sink-page-header">Reverse Large Button</h2>
+    {% call esds.container(class="esds-container--dark") %}
+        {{ esds.button(class="esds-button--reverse esds-button--large") }}
+    {% endcall %}
+
+    <h2 class="esds-sink-page-header">Reverse Small Button</h2>
+    {% call esds.container(class="esds-container--dark") %}
+        {{ esds.button(class="esds-button--reverse esds-button--small") }}
     {% endcall %}
 {% endmacro %}
