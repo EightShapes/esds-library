@@ -1,26 +1,33 @@
 $esds-button-active-box-shadow: 0 0 4px 4px rgba($esds-color-teal-71, .8);
+$esds-button-transition-speed: .2s;
 
 .esds-button {
     background-color: $esds-color-orange-82;
-    border: 0;
+    border: 1px solid $esds-color-orange-82;
     border-radius: $esds-border-radius-default;
     color: $esds-color-white;
     cursor: pointer;
     font-family: $esds-font-family-sans-serif;
     font-size: $esds-font-size-s;
     font-weight: $esds-font-weight-bold;
+    margin: 0;
     padding: $esds-space-inset-stretch-2-x;
     text-align: center;
     text-transform: uppercase;
+    transition: background-color $esds-button-transition-speed linear,
+    border-color $esds-button-transition-speed linear,
+    color $esds-button-transition-speed linear;
 
     &:hover,
     &.esds-button--hover {
         background-color: $esds-color-orange-91;
+        border-color: $esds-color-orange-91;
     }
 
     &:active,
     &.esds-button--active {
         background-color: $esds-color-orange-91;
+        border-color: $esds-color-orange-91;
         box-shadow: $esds-button-active-box-shadow;
     }
 
@@ -33,28 +40,33 @@ $esds-button-active-box-shadow: 0 0 4px 4px rgba($esds-color-teal-71, .8);
     &:disabled,
     &.esds-button--disabled {
         background-color: $esds-color-orange-91;
+        border-color: $esds-color-orange-91;
         cursor: not-allowed;
-        opacity: .4;
+        opacity: .5;
     }
 }
 
 .esds-button--reverse {
     background-color: $esds-color-white;
+    border-color: $esds-color-white;
     color: $esds-text-color-primary-on-white;
 
     &:hover,
     &.esds-button--hover {
         background-color: $esds-color-neutral-90;
+        border-color: $esds-color-neutral-90;
     }
 
     &:active,
     &.esds-button--active {
         background-color: $esds-color-neutral-90;
+        border-color: $esds-color-neutral-90;
     }
 
     &:disabled,
     &.esds-button--disabled {
         background-color: $esds-color-neutral-90;
+        border-color: $esds-color-neutral-90;
     }
 }
 
@@ -67,4 +79,25 @@ $esds-button-active-box-shadow: 0 0 4px 4px rgba($esds-color-teal-71, .8);
     font-size: $esds-font-size-xs;
     font-weight: $esds-font-weight-regular;
     padding: $esds-space-inset-stretch-1-x;
+}
+
+.esds-button--secondary {
+    background-color: $esds-color-white;
+    color: $esds-color-orange-82;
+
+    &:hover,
+    &.esds-button--hover {
+        color: $esds-color-white;
+    }
+
+    &:active,
+    &.esds-button--active {
+        color: $esds-color-white;
+    }
+
+    &:disabled,
+    &.esds-button--disabled {
+        background-color: $esds-color-white;
+        color: $esds-color-orange-82;
+    }
 }
