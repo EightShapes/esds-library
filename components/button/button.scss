@@ -100,4 +100,27 @@ $esds-button-transition-speed: .2s;
         background-color: $esds-color-white;
         color: $esds-color-orange-82;
     }
+
+    &.esds-button--reverse {
+        background-color: transparent;
+        color: $esds-color-white;
+
+        &:hover,
+        &.esds-button--hover {
+            background-color: $esds-color-neutral-90;
+            color: $esds-text-color-primary-on-white;
+        }
+
+        &:active,
+        &.esds-button--active {
+            background-color: $esds-color-neutral-90;
+            color: $esds-text-color-primary-on-white;
+        }
+
+        &:disabled,
+        &.esds-button--disabled {
+            background-color: $esds-color-neutral-90;
+            color: $esds-text-color-primary-on-white;
+        }
+    }
 }
