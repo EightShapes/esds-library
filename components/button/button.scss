@@ -15,7 +15,6 @@ $esds-button-transition-speed: .2s;
     margin: 0;
     padding: $esds-space-inset-stretch-1-x;
     text-align: center;
-    text-transform: uppercase;
     transition:
         background-color $esds-button-transition-speed linear,  // sass-lint:disable-line indentation
         border-color $esds-button-transition-speed linear,  // sass-lint:disable-line indentation
