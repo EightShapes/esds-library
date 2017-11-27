@@ -44,39 +44,18 @@ $esds-button-transition-speed: .2s;
 
     &:disabled,
     &.esds-button--disabled {
-        background-color: $esds-color-orange-91;
-        border-color: $esds-color-orange-91;
+        background-color: $esds-color-orange-93;
+        border-color: $esds-color-orange-93;
         cursor: not-allowed;
-        opacity: .5;
+
+        &:active,
+        &:focus {
+            box-shadow: none;
+        }
     }
 
     &.esds-button--icon-only {
         padding: $esds-space-inset-half-x;
-    }
-}
-
-.esds-button--reverse {
-    background-color: $esds-color-white;
-    border-color: $esds-color-white;
-    color: $esds-text-color-primary-on-white;
-    fill: $esds-text-color-primary-on-white;
-
-    &:hover,
-    &.esds-button--hover {
-        background-color: $esds-color-neutral-90;
-        border-color: $esds-color-neutral-90;
-    }
-
-    &:active,
-    &.esds-button--active {
-        background-color: $esds-color-neutral-90;
-        border-color: $esds-color-neutral-90;
-    }
-
-    &:disabled,
-    &.esds-button--disabled {
-        background-color: $esds-color-neutral-90;
-        border-color: $esds-color-neutral-90;
     }
 }
 
@@ -118,36 +97,10 @@ $esds-button-transition-speed: .2s;
 
     &:disabled,
     &.esds-button--disabled {
-        background-color: $esds-color-white;
-        color: $esds-color-orange-82;
-        fill: $esds-color-orange-82;
-    }
-
-    &.esds-button--reverse {
-        background-color: transparent;
-        color: $esds-color-white;
-        fill: $esds-color-white;
-
-        &:hover,
-        &.esds-button--hover {
-            background-color: $esds-color-neutral-90;
-            color: $esds-text-color-primary-on-white;
-            fill: $esds-text-color-primary-on-white;
-        }
-
-        &:active,
-        &.esds-button--active {
-            background-color: $esds-color-neutral-90;
-            color: $esds-text-color-primary-on-white;
-            fill: $esds-text-color-primary-on-white;
-        }
-
-        &:disabled,
-        &.esds-button--disabled {
-            background-color: $esds-color-neutral-90;
-            color: $esds-text-color-primary-on-white;
-            fill: $esds-text-color-primary-on-white;
-        }
+        background-color: $esds-color-neutral-90;
+        border-color: $esds-color-neutral-42;
+        color: $esds-color-neutral-42;
+        fill: $esds-color-neutral-42;
     }
 }
 
