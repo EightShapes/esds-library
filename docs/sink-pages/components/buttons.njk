@@ -26,10 +26,10 @@
     {{ esds.button(class="esds-button--focus") }}
 
     <h2 class="esds-sink-page-header">Primary Button Disabled</h2>
-    {{ esds.button(class="esds-button--disabled") }}
+    {{ esds.button(disabled=true) }}
 
     <h2 class="esds-sink-page-header">Primary Button Disabled With Icon Left</h2>
-    {{ esds.button(class="esds-button--disabled", icon_left="angle-left", icon_left_title="angle left icon", text="Button Text") }}
+    {{ esds.button(icon_left="angle-left", icon_left_title="angle left icon", text="Button Text", disabled=true) }}
 
     <h2 class="esds-sink-page-header">Primary Button Large</h2>
     {{ esds.button(class="esds-button--large") }}
@@ -88,10 +88,10 @@
     {{ esds.button(class="esds-button--secondary esds-button--focus") }}
 
     <h2 class="esds-sink-page-header">Secondary Button Disabled</h2>
-    {{ esds.button(class="esds-button--secondary esds-button--disabled") }}
+    {{ esds.button(class="esds-button--secondary", disabled=true) }}
 
     <h2 class="esds-sink-page-header">Secondary Button Disabled With Icon Left</h2>
-    {{ esds.button(class="esds-button--secondary esds-button--disabled", icon_left="angle-left", icon_left_title="angle left icon", text="Button Text") }}
+    {{ esds.button(class="esds-button--secondary", icon_left="angle-left", icon_left_title="angle left icon", text="Button Text", disabled=true) }}
 
     <h2 class="esds-sink-page-header">Secondary Button Large</h2>
     {{ esds.button(class="esds-button--secondary esds-button--large") }}
@@ -150,10 +150,10 @@
     {{ esds.button(class="esds-button--flat esds-button--focus") }}
 
     <h2 class="esds-sink-page-header">Flat Button Disabled</h2>
-    {{ esds.button(class="esds-button--flat esds-button--disabled") }}
+    {{ esds.button(class="esds-button--flat", disabled=true) }}
 
     <h2 class="esds-sink-page-header">Flat Button Disabled With Icon Left</h2>
-    {{ esds.button(class="esds-button--flat esds-button--disabled", icon_left="angle-left", icon_left_title="angle left icon", text="Button Text") }}
+    {{ esds.button(class="esds-button--flat", icon_left="angle-left", icon_left_title="angle left icon", text="Button Text", disabled=true) }}
 
     <h2 class="esds-sink-page-header">Flat Button Large</h2>
     {{ esds.button(class="esds-button--flat esds-button--large") }}
