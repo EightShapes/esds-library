@@ -27,6 +27,10 @@ $esds-button-transition-speed: .2s;
     &.esds-button--hover {
         background-color: $esds-color-orange-91;
         border-color: $esds-color-orange-91;
+
+        .esds-container--brand & {
+            border-color: $esds-color-white;
+        }
     }
 
     &:active,
@@ -34,6 +38,10 @@ $esds-button-transition-speed: .2s;
         background-color: $esds-color-orange-91;
         border-color: $esds-color-orange-91;
         box-shadow: $esds-button-active-box-shadow;
+
+        .esds-container--brand & {
+            border-color: $esds-color-white;
+        }
     }
 
     &:focus,
@@ -51,6 +59,10 @@ $esds-button-transition-speed: .2s;
         &:active,
         &:focus {
             box-shadow: none;
+        }
+
+        .esds-container--brand & {
+            border-color: $esds-color-orange-93;
         }
     }
 
@@ -101,6 +113,42 @@ $esds-button-transition-speed: .2s;
         border-color: $esds-color-neutral-42;
         color: $esds-color-neutral-42;
         fill: $esds-color-neutral-42;
+    }
+}
+
+.esds-button--flat {
+    background-color: transparent;
+    border-color: transparent;
+    color: $esds-color-orange-82;
+    fill: $esds-color-orange-82;
+
+    .esds-container--brand & {
+        color: $esds-color-white;
+        fill: $esds-color-white;
+    }
+
+    &:hover,
+    &.esds-button--hover {
+        color: $esds-color-white;
+        fill: $esds-color-white;
+    }
+
+    &:active,
+    &.esds-button--active {
+        color: $esds-color-white;
+        fill: $esds-color-white;
+    }
+
+    &:disabled,
+    &.esds-button--disabled {
+        background-color: transparent;
+        border-color: transparent;
+        color: $esds-color-neutral-42;
+        fill: $esds-color-neutral-42;
+
+        .esds-container--brand & {
+            border-color: transparent;
+        }
     }
 }
 
