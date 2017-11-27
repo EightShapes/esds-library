@@ -99,7 +99,7 @@ space :
     half-x : 8px
     quarter-x : 4px
     eighth-x : 2px
-  inset-stretch :
+  inset-squish :
     4-x : 16px 64px
     2-x : 8px 32px
     1-and-half-x : 12px 24px

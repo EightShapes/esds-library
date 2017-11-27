@@ -13,7 +13,7 @@ $esds-button-transition-speed: .2s;
     font-weight: $esds-font-weight-bold;
     line-height: 1;
     margin: 0;
-    padding: $esds-space-inset-stretch-1-x;
+    padding: $esds-space-inset-squish-1-x;
     text-align: center;
     transition:
         background-color $esds-button-transition-speed linear,  // sass-lint:disable-line indentation
@@ -72,7 +72,7 @@ $esds-button-transition-speed: .2s;
 
 .esds-button--large {
     font-size: $esds-font-size-m;
-    padding: $esds-space-inset-stretch-4-x;
+    padding: $esds-space-inset-squish-4-x;
 
     &.esds-button--icon-only {
         padding: $esds-space-inset-1-x;
@@ -82,7 +82,7 @@ $esds-button-transition-speed: .2s;
 .esds-button--small {
     font-size: $esds-font-size-xs;
     font-weight: $esds-font-weight-regular;
-    padding: $esds-space-inset-stretch-half-x;
+    padding: $esds-space-inset-squish-half-x;
 
     &.esds-button--icon-only {
         padding: $esds-space-inset-quarter-x;
