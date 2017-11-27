@@ -1,21 +1,26 @@
 {% macro button(
     class=false,
-    text="Button Text",
+    text=false,
     element="button",
     icon_left=false,
-    icon_right=false,
-    icon_only=false
+    icon_right=false
 )%}
-    <{{ element }} class="esds-button{{ ' ' + class if class }}{{ ' esds-button--icon-only' if icon_only}}
+    {% if text == false and icon_left == false and icon_right == false %}
+        {% set text = "Button Text" %}
+    {% endif %}
+
+    <{{ element }} class="esds-button{{ ' ' + class if class }}{{ ' esds-button--icon-only' if text == false }}
     ">
         {% if icon_left %}
-        {{ icon(class="esds-button__icon", name=icon_left) }}
+            {{ icon(class="esds-button__icon", name=icon_left) }}
         {% endif %}
-        {% if icon_only == false %}
-        <span class="esds-button__label">{{ text }}</span>
+        {% if (icon_left or icon_right) and text %}
+            <span class="esds-button__label">{{ text }}</span>
+        {% elif text %}
+            {{ text }}
         {% endif %}
-        {% if icon_right %}
-        {{ icon(class="esds-button__icon", name=icon_right) }}
+        {% if icon_right and text %}
+            {{ icon(class="esds-button__icon", name=icon_right) }}
         {% endif %}
     </{{ element }}>
 {% endmacro %}

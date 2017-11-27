@@ -5,16 +5,16 @@
     {{ esds.button() }}
 
     <h2 class="esds-sink-page-header">Primary Button With Icon Left</h2>
-    {{ esds.button(icon_left="angle-left") }}
+    {{ esds.button(icon_left="angle-left", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Primary Button With Icon Right</h2>
-    {{ esds.button(icon_right="angle-right") }}
+    {{ esds.button(icon_right="angle-right", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Primary Button With Icon Left and Right</h2>
-    {{ esds.button(icon_left="eightshapes-mark", icon_right="eightshapes-mark") }}
+    {{ esds.button(icon_left="eightshapes-mark", icon_right="eightshapes-mark", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Primary Button With Icon Only</h2>
-    {{ esds.button(icon_left="eightshapes-mark", icon_only=true) }}
+    {{ esds.button(icon_left="eightshapes-mark") }}
 
     <h2 class="esds-sink-page-header">Primary Button Hover</h2>
     {{ esds.button(class="esds-button--hover") }}
@@ -29,66 +29,37 @@
     {{ esds.button(class="esds-button--disabled") }}
 
     <h2 class="esds-sink-page-header">Primary Button Disabled With Icon Left</h2>
-    {{ esds.button(class="esds-button--disabled", icon_left="angle-left") }}
+    {{ esds.button(class="esds-button--disabled", icon_left="angle-left", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Primary Button Large</h2>
     {{ esds.button(class="esds-button--large") }}
 
     <h2 class="esds-sink-page-header">Primary Button Large With Icon Left</h2>
-    {{ esds.button(class="esds-button--large", icon_left="angle-left") }}
+    {{ esds.button(class="esds-button--large", icon_left="angle-left", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Primary Button Large With Icon Right</h2>
-    {{ esds.button(class="esds-button--large", icon_right="angle-right") }}
+    {{ esds.button(class="esds-button--large", icon_right="angle-right", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Primary Button Large With Icon Left and Right</h2>
-    {{ esds.button(class="esds-button--large", icon_left="eightshapes-mark", icon_right="eightshapes-mark") }}
+    {{ esds.button(class="esds-button--large", icon_left="eightshapes-mark", icon_right="eightshapes-mark", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Primary Button Large With Icon Only</h2>
-    {{ esds.button(class="esds-button--large", icon_left="eightshapes-mark", icon_only=true) }}
+    {{ esds.button(class="esds-button--large", icon_left="eightshapes-mark") }}
 
     <h2 class="esds-sink-page-header">Primary Button Small</h2>
     {{ esds.button(class="esds-button--small") }}
 
     <h2 class="esds-sink-page-header">Primary Button Small With Icon Left</h2>
-    {{ esds.button(class="esds-button--small", icon_left="angle-left") }}
+    {{ esds.button(class="esds-button--small", icon_left="angle-left", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Primary Button Small With Icon Right</h2>
-    {{ esds.button(class="esds-button--small", icon_right="angle-right") }}
+    {{ esds.button(class="esds-button--small", icon_right="angle-right", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Primary Button Small With Icon Left and Right</h2>
-    {{ esds.button(class="esds-button--small", icon_left="eightshapes-mark", icon_right="eightshapes-mark") }}
+    {{ esds.button(class="esds-button--small", icon_left="eightshapes-mark", icon_right="eightshapes-mark", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Primary Button Small With Icon Only</h2>
-    {{ esds.button(class="esds-button--small", icon_left="eightshapes-mark", icon_only=true) }}
-
-    <hr>
-
-    <h2 class="esds-sink-page-header">Secondary Button</h2>
-    {{ esds.button(class="esds-button--secondary") }}
-
-    <h2 class="esds-sink-page-header">Secondary Button With Icon Left and Right</h2>
-    {{ esds.button(class="esds-button--secondary", icon_left="eightshapes-mark", icon_right="eightshapes-mark") }}
-
-    <h2 class="esds-sink-page-header">Secondary Button Hover</h2>
-    {{ esds.button(class="esds-button--secondary esds-button--hover") }}
-
-    <h2 class="esds-sink-page-header">Secondary Button Active</h2>
-    {{ esds.button(class="esds-button--secondary esds-button--active") }}
-
-    <h2 class="esds-sink-page-header">Secondary Button Focus</h2>
-    {{ esds.button(class="esds-button--secondary esds-button--focus") }}
-
-    <h2 class="esds-sink-page-header">Secondary Button Disabled</h2>
-    {{ esds.button(class="esds-button--secondary esds-button--disabled") }}
-
-    <h2 class="esds-sink-page-header">Secondary Button Disabled With Icon Left</h2>
-    {{ esds.button(class="esds-button--secondary esds-button--disabled", icon_left="angle-left") }}
-
-    <h2 class="esds-sink-page-header">Secondary Button Large</h2>
-    {{ esds.button(class="esds-button--large esds-button--secondary") }}
-
-    <h2 class="esds-sink-page-header">Secondary Button Small</h2>
-    {{ esds.button(class="esds-button--small esds-button--secondary") }}
+    {{ esds.button(class="esds-button--small", icon_left="eightshapes-mark") }}
 
     <hr>
 
@@ -96,16 +67,16 @@
     {{ esds.button(class="esds-button--secondary") }}
 
     <h2 class="esds-sink-page-header">Secondary Button With Icon Left</h2>
-    {{ esds.button(class="esds-button--secondary", icon_left="angle-left") }}
+    {{ esds.button(class="esds-button--secondary", icon_left="angle-left", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Secondary Button With Icon Right</h2>
-    {{ esds.button(class="esds-button--secondary", icon_right="angle-right") }}
+    {{ esds.button(class="esds-button--secondary", icon_right="angle-right", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Secondary Button With Icon Left and Right</h2>
-    {{ esds.button(class="esds-button--secondary", icon_left="eightshapes-mark", icon_right="eightshapes-mark") }}
+    {{ esds.button(class="esds-button--secondary", icon_left="eightshapes-mark", icon_right="eightshapes-mark", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Secondary Button With Icon Only</h2>
-    {{ esds.button(class="esds-button--secondary", icon_left="eightshapes-mark", icon_only=true) }}
+    {{ esds.button(class="esds-button--secondary", icon_left="eightshapes-mark") }}
 
     <h2 class="esds-sink-page-header">Secondary Button Hover</h2>
     {{ esds.button(class="esds-button--secondary esds-button--hover") }}
@@ -120,37 +91,37 @@
     {{ esds.button(class="esds-button--secondary esds-button--disabled") }}
 
     <h2 class="esds-sink-page-header">Secondary Button Disabled With Icon Left</h2>
-    {{ esds.button(class="esds-button--secondary esds-button--disabled", icon_left="angle-left") }}
+    {{ esds.button(class="esds-button--secondary esds-button--disabled", icon_left="angle-left", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Secondary Button Large</h2>
     {{ esds.button(class="esds-button--secondary esds-button--large") }}
 
     <h2 class="esds-sink-page-header">Secondary Button Large With Icon Left</h2>
-    {{ esds.button(class="esds-button--secondary esds-button--large", icon_left="angle-left") }}
+    {{ esds.button(class="esds-button--secondary esds-button--large", icon_left="angle-left", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Secondary Button Large With Icon Right</h2>
-    {{ esds.button(class="esds-button--secondary esds-button--large", icon_right="angle-right") }}
+    {{ esds.button(class="esds-button--secondary esds-button--large", icon_right="angle-right", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Secondary Button Large With Icon Left and Right</h2>
-    {{ esds.button(class="esds-button--secondary esds-button--large", icon_left="eightshapes-mark", icon_right="eightshapes-mark") }}
+    {{ esds.button(class="esds-button--secondary esds-button--large", icon_left="eightshapes-mark", icon_right="eightshapes-mark", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Secondary Button Large With Icon Only</h2>
-    {{ esds.button(class="esds-button--secondary esds-button--large", icon_left="eightshapes-mark", icon_only=true) }}
+    {{ esds.button(class="esds-button--secondary esds-button--large", icon_left="eightshapes-mark") }}
 
     <h2 class="esds-sink-page-header">Secondary Button Small</h2>
     {{ esds.button(class="esds-button--secondary esds-button--small") }}
 
     <h2 class="esds-sink-page-header">Secondary Button Small With Icon Left</h2>
-    {{ esds.button(class="esds-button--secondary esds-button--small", icon_left="angle-left") }}
+    {{ esds.button(class="esds-button--secondary esds-button--small", icon_left="angle-left", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Secondary Button Small With Icon Right</h2>
-    {{ esds.button(class="esds-button--secondary esds-button--small", icon_right="angle-right") }}
+    {{ esds.button(class="esds-button--secondary esds-button--small", icon_right="angle-right", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Secondary Button Small With Icon Left and Right</h2>
-    {{ esds.button(class="esds-button--secondary esds-button--small", icon_left="eightshapes-mark", icon_right="eightshapes-mark") }}
+    {{ esds.button(class="esds-button--secondary esds-button--small", icon_left="eightshapes-mark", icon_right="eightshapes-mark", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Secondary Button Small With Icon Only</h2>
-    {{ esds.button(class="esds-button--secondary esds-button--small", icon_left="eightshapes-mark", icon_only=true) }}
+    {{ esds.button(class="esds-button--secondary esds-button--small", icon_left="eightshapes-mark") }}
     
     <hr>
 
@@ -158,16 +129,16 @@
     {{ esds.button(class="esds-button--flat") }}
 
     <h2 class="esds-sink-page-header">Flat Button With Icon Left</h2>
-    {{ esds.button(class="esds-button--flat", icon_left="angle-left") }}
+    {{ esds.button(class="esds-button--flat", icon_left="angle-left", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Flat Button With Icon Right</h2>
-    {{ esds.button(class="esds-button--flat", icon_right="angle-right") }}
+    {{ esds.button(class="esds-button--flat", icon_right="angle-right", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Flat Button With Icon Left and Right</h2>
-    {{ esds.button(class="esds-button--flat", icon_left="eightshapes-mark", icon_right="eightshapes-mark") }}
+    {{ esds.button(class="esds-button--flat", icon_left="eightshapes-mark", icon_right="eightshapes-mark", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Flat Button With Icon Only</h2>
-    {{ esds.button(class="esds-button--flat", icon_left="eightshapes-mark", icon_only=true) }}
+    {{ esds.button(class="esds-button--flat", icon_left="eightshapes-mark") }}
 
     <h2 class="esds-sink-page-header">Flat Button Hover</h2>
     {{ esds.button(class="esds-button--flat esds-button--hover") }}
@@ -188,30 +159,30 @@
     {{ esds.button(class="esds-button--flat esds-button--large") }}
 
     <h2 class="esds-sink-page-header">Flat Button Large With Icon Left</h2>
-    {{ esds.button(class="esds-button--flat esds-button--large", icon_left="angle-left") }}
+    {{ esds.button(class="esds-button--flat esds-button--large", icon_left="angle-left", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Flat Button Large With Icon Right</h2>
-    {{ esds.button(class="esds-button--flat esds-button--large", icon_right="angle-right") }}
+    {{ esds.button(class="esds-button--flat esds-button--large", icon_right="angle-right", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Flat Button Large With Icon Left and Right</h2>
-    {{ esds.button(class="esds-button--flat esds-button--large", icon_left="eightshapes-mark", icon_right="eightshapes-mark") }}
+    {{ esds.button(class="esds-button--flat esds-button--large", icon_left="eightshapes-mark", icon_right="eightshapes-mark", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Flat Button Large With Icon Only</h2>
-    {{ esds.button(class="esds-button--flat esds-button--large", icon_left="eightshapes-mark", icon_only=true) }}
+    {{ esds.button(class="esds-button--flat esds-button--large", icon_left="eightshapes-mark") }}
 
     <h2 class="esds-sink-page-header">Flat Button Small</h2>
     {{ esds.button(class="esds-button--flat esds-button--small") }}
 
     <h2 class="esds-sink-page-header">Flat Button Small With Icon Left</h2>
-    {{ esds.button(class="esds-button--flat esds-button--small", icon_left="angle-left") }}
+    {{ esds.button(class="esds-button--flat esds-button--small", icon_left="angle-left", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Flat Button Small With Icon Right</h2>
-    {{ esds.button(class="esds-button--flat esds-button--small", icon_right="angle-right") }}
+    {{ esds.button(class="esds-button--flat esds-button--small", icon_right="angle-right", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Flat Button Small With Icon Left and Right</h2>
-    {{ esds.button(class="esds-button--flat esds-button--small", icon_left="eightshapes-mark", icon_right="eightshapes-mark") }}
+    {{ esds.button(class="esds-button--flat esds-button--small", icon_left="eightshapes-mark", icon_right="eightshapes-mark", text="Button Text") }}
 
     <h2 class="esds-sink-page-header">Flat Button Small With Icon Only</h2>
-    {{ esds.button(class="esds-button--flat esds-button--small", icon_left="eightshapes-mark", icon_only=true) }}
+    {{ esds.button(class="esds-button--flat esds-button--small", icon_left="eightshapes-mark") }}
     
 {% endmacro %}
