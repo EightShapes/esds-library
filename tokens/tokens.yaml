@@ -100,8 +100,8 @@ space :
     quarter-x : 4px
     eighth-x : 2px
   inset-squish :
-    4-x : 16px 64px
-    2-x : 8px 32px
+    4-x : 32px 64px
+    2-x : 16px 32px
     1-and-half-x : 12px 24px
     1-x : 8px 16px
     half-x : 4px 8px
