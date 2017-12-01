@@ -82,6 +82,18 @@
             text-transform: none;
         }
 
+        .esds-container--dark .esds-sink-page-header {
+          color: {{ esds_tokens['text-color'].primary['on-dark'] }};
+        }
+
+        .esds-container--black .esds-sink-page-header {
+          color: {{ esds_tokens['text-color'].primary['on-black'] }};
+        }
+
+        .esds-container--brand .esds-sink-page-header {
+          color: {{ esds_tokens['text-color'].primary['on-brand'] }};
+        }
+
         @media screen and (min-width: 1200px) {
             .esds-doc-sink-container {
                 display: flex;

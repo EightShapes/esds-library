@@ -4,6 +4,7 @@ color :
   orange : 
     82 : &color-orange-82 "#D24B00"
     91 : &color-orange-91 "#E76822"
+    93 : &color-orange-93 "#EEAC8D" #Disabled primary button background and border color
   neutral :
     05 : &color-neutral-05 "#0D0D0D"
     15 : &color-neutral-15 "#262626"
@@ -102,8 +103,9 @@ space :
     half-x : 8px
     quarter-x : 4px
     eighth-x : 2px
-  inset-stretch :
-    2-x : 8px 32px
+  inset-squish :
+    4-x : 32px 64px
+    2-x : 16px 32px
     1-and-half-x : 12px 24px
     1-x : 8px 16px
     half-x : 4px 8px
