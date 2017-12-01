@@ -21,6 +21,24 @@
     ) }}
 
     {{ esds.tiles(
+        class= "esds-tiles--secondary",
+        items = [
+            {
+                heading: "Interviews",
+                description: "Interview system stakeholders to understand priorities, culture, and existing practices."
+            },
+            {
+                heading: "System Reviews",
+                description: "Dig into your as-is systems documentation, design assets, and code."
+            },
+            {
+                heading: "Customize Materials",
+                description: "Develop client-specific slides & stories, integrating relevant quotes, product and system examples."
+            }
+        ]
+    ) }}
+
+    {{ esds.tiles(
         class = "esds-tiles--4-column",
         items = [
             {
@@ -67,6 +85,26 @@
             {
                 heading: "System Documentation",
                 description: "Sketch and plan key system documentation site page layouts and content targeted at designers, engineers, and your other system stakeholders."
+            }
+        ]
+    ) }}
+
+    {{ esds.tiles(
+        class = "esds-tiles--2-column",
+        container = "white-opacity-85",
+        items = [
+            {
+                list: [
+                    "Interview system stakeholders",
+                    "Understand priorities, culture, and existing"
+                ]
+            },
+            {
+                list: [
+                    "We make a library with you",
+                    "Designing and documenting components",
+                    "Building guides, and forming a community"
+                ]
             }
         ]
     ) }}

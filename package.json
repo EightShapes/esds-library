@@ -1,11 +1,11 @@
 {
-  "name": "@eightshapes/esds-library",
-  "version": "0.4.0-alpha.1",
+  "name": "esds-library",
+  "version": "0.4.0-alpha.3",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepack": "gulp build:all"
+    "prepack": "npm install && gulp build:all"
   },
   "contributors": [
     "Nathan Curtis <nathan@eightshapes.com>",

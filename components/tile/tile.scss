@@ -11,11 +11,19 @@
     @media screen and (min-width: 1000px) {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    &:last-child {
+        margin: 0;
+    }
 }
 
 .esds-tiles__tile {
     list-style: none;
     padding: $esds-space-inset-2-x;
+
+    .esds-tiles--no-padding & {
+        padding: 0;
+    }
 }
 
 .esds-tiles__heading {
@@ -25,6 +33,11 @@
 
     .esds-container--white {
         color: $esds-text-color-brand;
+    }
+
+    .esds-tiles--secondary & {
+        color: $esds-text-color-brand;
+        font-size: $esds-font-size-m;
     }
 }
 
@@ -53,5 +66,25 @@
 .esds-tiles--4-column {
     @media screen and (min-width: 1000px) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.esds-tiles__list {
+    list-style: disc;
+    margin: $esds-space-stack-1-x;
+    padding-left: $esds-space-generic-1-and-half-x;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.esds-tiles__list-item {
+    @include esds-body-text-m();
+    @include esds-text-color('secondary');
+    margin: $esds-space-stack-1-x;
+
+    &:last-child {
+        margin: 0;
     }
 }
