@@ -96,41 +96,27 @@
 
 .esds-row__level-1-heading {
     @include esds-level-1-heading();
-    font-size: $esds-font-size-heading-level-2;
     margin: $esds-space-stack-2-x;
     text-align: center;
-
-    @media screen and (min-width: 500px) {
-        font-size: $esds-font-size-heading-level-1;
-    }
 }
 
 .esds-row__level-2-heading {
     @include esds-level-2-heading();
-    font-size: $esds-font-size-heading-level-3;
     margin: $esds-space-stack-2-x;
     text-align: center;
-
-    @media screen and (min-width: 500px) {
-        font-size: $esds-font-size-heading-level-2;
-    }
 }
 
 .esds-row__lead-heading {
     @include esds-font-reset();
-    font-size: $esds-font-size-lead;
+    @include esds-responsive-font-size($type: 'body-l');
     margin: $esds-space-stack-1-x;
     text-align: center;
 }
 
 .esds-row__p-lead {
     @include esds-font-reset();
-    font-size: $esds-font-size-m;
+    @include esds-responsive-font-size($type: 'body-l');
     margin: $esds-space-stack-2-x;
-
-    @media screen and (min-width: 500px) {
-        font-size: $esds-font-size-lead;
-    }
 
     &:last-child {
         margin: 0;
@@ -139,11 +125,6 @@
 
 .esds-row__p-l {
     @include esds-body-text-m();
-    margin: $esds-space-stack-1-x;
-
-    @media screen and (min-width: 500px) {
-        font-size: $esds-font-size-l;
-    }
 
     &:last-child {
         margin: 0;
@@ -153,10 +134,6 @@
 .esds-row__p-m {
     @include esds-body-text-s();
     margin: $esds-space-stack-1-x;
-
-    @media screen and (min-width: 500px) {
-        font-size: $esds-font-size-m;
-    }
 
     &:last-child {
         margin: 0;

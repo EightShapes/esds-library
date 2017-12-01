@@ -36,8 +36,8 @@
     }
 
     .esds-tiles--secondary & {
+        @include esds-responsive-font-size($type: 'body-m');
         color: $esds-text-color-brand;
-        font-size: $esds-font-size-m;
     }
 }
 
