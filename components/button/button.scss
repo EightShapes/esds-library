@@ -9,7 +9,7 @@ $esds-button-transition-speed: .2s;
     cursor: pointer;
     fill: $esds-color-white;
     font-family: $esds-font-family-sans-serif;
-    font-size: $esds-font-size-s;
+    font-size: $esds-font-size-body-s-default;
     font-weight: $esds-font-weight-bold;
     line-height: 1;
     margin: 0;
@@ -71,7 +71,7 @@ $esds-button-transition-speed: .2s;
 }
 
 .esds-button--large {
-    font-size: $esds-font-size-m;
+    font-size: $esds-font-size-body-m-default;
     padding: $esds-space-inset-squish-2-x;
 
     &.esds-button--icon-only {
@@ -80,7 +80,7 @@ $esds-button-transition-speed: .2s;
 }
 
 .esds-button--small {
-    font-size: $esds-font-size-xs;
+    font-size: $esds-font-size-body-s-default;
     font-weight: $esds-font-weight-regular;
     padding: $esds-space-inset-squish-half-x;
 

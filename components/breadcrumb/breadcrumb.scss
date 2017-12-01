@@ -63,24 +63,19 @@
 
 .esds-breadcrumb__brand-name {
     @include esds-text-crop;
+    @include esds-responsive-font-size($type: 'body-m');
     flex-shrink: 0;
-    font-size: $esds-font-size-m;
     font-weight: $esds-font-weight-light;
     position: relative;
     top: -2px;
-
-    @media screen and (min-width: 500px) {
-        font-size: $esds-font-size-lead;
-    }
 }
 
 .esds-breadcrumb__crumb-text {
     @include esds-text-crop;
-    font-size: $esds-font-size-s;
+    @include esds-responsive-font-size($type: 'body-s');
     font-weight: $esds-font-weight-light;
 
     @media screen and (min-width: 500px) {
-        font-size: $esds-font-size-m;
         position: relative;
         top: 1px;
     }
