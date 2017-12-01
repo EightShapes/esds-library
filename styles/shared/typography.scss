@@ -1,7 +1,14 @@
-@mixin esds-text-crop($line-height: 1.25, $top-adjustment: 0px, $bottom-adjustment: 0px) { // sass-lint:disable-line zero-unit - The px unit needs to be here so the calc() functions work correctly
-    $offset-top: max((13 + ($line-height - 1.2) * (64 / 2)), 0) / 64;
-    $offset-bottom: max((14.5 + ($line-height - 1.2) * (64 / 2)), 0) / 64;
+@mixin esds-text-crop($line-height: 1.3, $top-adjustment: 0px, $bottom-adjustment: 0px) { // sass-lint:disable-line zero-unit - The px unit needs to be here so the calc() functions work correctly
+    $top-crop: 11;
+    $bottom-crop: 9;
+    $crop-font-size: 41;
+    $crop-line-height: 1.2;
 
+    // Apply values to calculate em-based margins that work with any font size
+    $dynamic-top-crop: max(($top-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)), 0) / $crop-font-size;
+    $dynamic-bottom-crop: max(($bottom-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)), 0) / $crop-font-size;
+
+    // Mixin output
     line-height: $line-height;
 
     &::before,
@@ -13,11 +20,11 @@
     }
 
     &::before {
-        margin-bottom: calc(-#{$offset-top}em + #{$top-adjustment});
+        margin-bottom: calc(-#{$dynamic-top-crop}em + #{$top-adjustment});
     }
 
     &::after {
-        margin-top: calc(-#{$offset-bottom}em + #{$bottom-adjustment});
+        margin-top: calc(-#{$dynamic-bottom-crop}em + #{$bottom-adjustment});
     }
 }
 
@@ -27,6 +34,7 @@
     font-weight: $esds-font-weight-regular;
     letter-spacing: 0;
     line-height: $esds-font-line-height-normal;
+    text-align: left;
     text-decoration: none;
     text-indent: 0;
     text-shadow: none;
@@ -88,8 +96,8 @@
 }
 
 @mixin esds-eyebrow-heading() {
+    @include esds-heading-reset;
     @include esds-text-color($type: 'secondary');
-    @include esds-font-reset;
     font-size: $esds-font-size-xs;
     font-weight: $esds-font-weight-bold;
     letter-spacing: 1.67px;
@@ -102,21 +110,41 @@
 }
 
 .esds-typography-sink--level-1-heading { 
+    @include esds-text-crop();
     @include esds-level-1-heading();
 }
 
 .esds-typography-sink--level-2-heading { 
+    @include esds-text-crop();
     @include esds-level-2-heading(); 
 }
 
 .esds-typography-sink--level-3-heading { 
+    @include esds-text-crop();
     @include esds-level-3-heading(); 
 }
 
 .esds-typography-sink--level-4-heading { 
+    @include esds-text-crop();
     @include esds-level-4-heading(); 
 }
 
 .esds-typography-sink--eyebrow-heading { 
+    @include esds-text-crop();
     @include esds-eyebrow-heading(); 
+}
+
+.esds-typography-sink--body-text-l {
+    @include esds-text-crop();
+    @include esds-body-text-l();
+}
+
+.esds-typography-sink--body-text-m {
+    @include esds-text-crop();
+    @include esds-body-text-m();
+}
+
+.esds-typography-sink--body-text-s {
+    @include esds-text-crop();
+    @include esds-body-text-s();
 }
