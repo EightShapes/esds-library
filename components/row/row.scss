@@ -1,4 +1,5 @@
 .esds-row {
+    @include esds-box-sizing;
     background-position: center center;
     background-size: cover;
     margin: 0;
@@ -19,6 +20,10 @@
     text-indent: 0;
     text-shadow: none;
     text-transform: none;
+
+    .esds-row--narrow-inner & {
+        max-width: 940px;
+    }
 }
 
 .esds-row--hero-inset { // to be removed when making hero component
@@ -29,6 +34,10 @@
     @media screen and (min-width: 768px) {
         padding-bottom: 140px;
         padding-top: 140px;
+    }
+
+    .esds-row__inner {
+        max-width: 800px;
     }
 }
 
@@ -51,6 +60,14 @@
     }
 }
 
+.esds-row--no-inset-bottom {
+    padding-bottom: 0;
+
+    @media screen and (min-width: 768px) {
+        padding-bottom: 0;
+    }
+}
+
 .esds-row--background-image-dark {
 
     &:before {
@@ -70,3 +87,83 @@
         z-index: 1;
     }
 }
+
+.esds-row__horizontal-rule {
+    border: 0;
+    border-top: 3px solid $esds-color-neutral-90;
+    margin: 0;
+}
+
+.esds-row__level-1-heading {
+    @include esds-level-1-heading();
+    font-size: $esds-font-size-heading-level-2;
+    margin: $esds-space-stack-2-x;
+    text-align: center;
+
+    @media screen and (min-width: 500px) {
+        font-size: $esds-font-size-heading-level-1;
+    }
+}
+
+.esds-row__level-2-heading {
+    @include esds-level-2-heading();
+    font-size: $esds-font-size-heading-level-3;
+    margin: $esds-space-stack-2-x;
+    text-align: center;
+
+    @media screen and (min-width: 500px) {
+        font-size: $esds-font-size-heading-level-2;
+    }
+}
+
+.esds-row__lead-heading {
+    @include esds-font-reset();
+    font-size: $esds-font-size-lead;
+    margin: $esds-space-stack-1-x;
+    text-align: center;
+}
+
+.esds-row__p-lead {
+    @include esds-font-reset();
+    font-size: $esds-font-size-m;
+    margin: $esds-space-stack-2-x;
+
+    @media screen and (min-width: 500px) {
+        font-size: $esds-font-size-lead;
+    }
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.esds-row__p-l {
+    @include esds-body-text-m();
+    margin: $esds-space-stack-1-x;
+
+    @media screen and (min-width: 500px) {
+        font-size: $esds-font-size-l;
+    }
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.esds-row__p-m {
+    @include esds-body-text-s();
+    margin: $esds-space-stack-1-x;
+
+    @media screen and (min-width: 500px) {
+        font-size: $esds-font-size-m;
+    }
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.esds-row__text-center {
+    text-align: center;
+}
+

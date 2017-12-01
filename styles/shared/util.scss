@@ -1,0 +1,22 @@
+@mixin esds-accessibly-hidden() {
+    clip: rect(0 0 0 0);
+    left: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+// sass-lint:disable force-pseudo-nesting
+@mixin esds-box-sizing() {
+    &,
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+}
+// sass-lint:enable force-pseudo-nesting

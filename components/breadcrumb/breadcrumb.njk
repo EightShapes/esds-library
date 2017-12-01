@@ -1,0 +1,18 @@
+{% macro breadcrumb(class=false, text="Design Systems", href="#") %}
+    {% set breadcrumb_class = "esds-breadcrumb" %}
+    {% if class %}
+        {% set breadcrumb_class = breadcrumb_class + " " + class %}
+    {% endif %}
+
+    {% set row_content %}
+        <h1 class="esds-breadcrumb__brand">
+            <a href="{{ href }}" class="esds-breadcrumb__link">
+                {{ icon(name="eightshapes-mark", class="esds-breadcrumb__brand-mark") }}
+                <span class="esds-breadcrumb__brand-name">eightshapes</span>
+                {{ icon(name="angle-right", class="esds-breadcrumb__delimiter") }}
+                <span class="esds-breadcrumb__crumb-text">{{ text }}</span>
+            </a>
+        </h1>
+    {% endset %}
+    {{ row(background="brand", class=breadcrumb_class, content=row_content) }}
+{% endmacro %}
