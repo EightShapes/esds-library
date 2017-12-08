@@ -1,0 +1,73 @@
+{% macro site_nav(
+    class=false,
+    sections=[
+        {
+            items:[
+                {
+                    label: "Section 1 Heading Without Link",
+                    heading: true
+                },
+                {
+                    label: "Section 1 Heading With Link",
+                    href: "#",
+                    heading: true
+                },
+                {
+                    label: "Site Nav Link 1",
+                    href: "#"
+                },
+                {
+                    label: "Site Nav Without Link 2"
+                },
+                {
+                    label: "Site Nav Link 3",
+                    href: "#",
+                    active: true
+                },
+                {
+                    label: "Site Nav Link 4",
+                    href: "#",
+                    target: "_blank"
+                }
+            ]
+        }
+    ]
+) %}
+    <div id="esls-site-nav" class="esls-site-nav{{ ' ' + class if class }}">
+        <button id="esls-site-nav-toggle-button" class="esls-site-nav__toggle-button">
+            {{ esds.icon(name="bars", class="esls-site-nav__icon esls-site-nav-icon--bars") }}
+            {{ esds.icon(name="bar-single", sprite_path="/icons/esls.svg", class="esls-site-nav__icon esls-site-nav__icon--close esls-site-nav__icon--close-1") }}
+            {{ esds.icon(name="bar-single", sprite_path="/icons/esls.svg", class="esls-site-nav__icon esls-site-nav__icon--close esls-site-nav__icon--close-2") }}
+        </button>
+        <div class="esls-site-nav__inner">
+            {% for section in sections %}
+            <ul class="esls-site-nav__section">
+                {% for item in section.items %}
+                {% set element_tag = 'span' %}
+
+                {% if item.href %}
+                    {% set element_tag = 'a' %}
+                {% endif %}
+                
+                <li class="esls-site-nav__item{{ ' esls-site-nav__item--eyebrow-heading' if item.heading }}">
+                    <{{ element_tag }}
+                    {% if item.href %}
+                        href="{{ item.href }}"
+                    {% endif %}
+
+                    {% if item.target %}
+                        target="{{ item.target }}"
+                    {% endif %}
+
+                    class="esls-site-nav__label{{ ' esls-site-nav__label--link' if item.href }}{{ ' esls-site-nav__label--link-is-active' if item.active }}"
+                    >
+                        {{ item.label }}
+                    </{{ element_tag }}>
+                </li>
+
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
+{% endmacro %}

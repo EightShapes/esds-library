@@ -1,0 +1,26 @@
+{# This file contains markup overrides for various esds-doc components #}
+{# Markup overrides are injected into container elements within esds-doc components #}
+{# This file must be imported before importing the esds-doc components, this is typically done in a base template file #}
+{# Example: 
+    {% set esds_doc_overrides_path = 'imports/esds-doc-overrides.njk' %}
+    {% import 'esds-doc/components/esds-doc.njk' as esds_doc with context%}
+    {% import 'components/luci-site.nunjucks' as luci_site with context %}
+
+    The "esds_doc_overrides_path" variable is required for the markup overrides to work
+#}
+
+{% import 'esds-library/components/esds.njk' as esds with context %}
+
+
+{% set esds_doc_overrides = {
+    code_snippet: {
+        copy_button: esds.button(text=copy_button_text,class="esds-button--secondary esds-button--small"),
+        toggle_code_visibility_button: false
+    },
+    html_example_list: {
+        example_label_markup: false
+    },
+    icon_swatch: {
+        icon_markup: false
+    }
+} %}

@@ -1,0 +1,116 @@
+//page_navigation enhancements
+.esds-doc-page-navigation {
+    padding-top: $esds-space-generic-half-x;
+}
+
+.esds-doc-page-navigation__inner {
+
+    .esds-doc-page-navigation--fixed & {
+        top: $esls-space-header-height-default + $esds-space-generic-2-x + $esds-space-generic-half-x;
+    }
+}
+
+.esds-doc-page-navigation__item {
+    padding: $esds-space-generic-eighth-x 0;
+
+    &:last-child {
+        padding-bottom: $esds-space-generic-1-x;
+    }
+}
+
+.esds-doc-page-navigation__link {
+    position: relative;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.esds-doc-page-navigation__link--active {
+    font-weight: $esds-font-weight-bold;
+
+    &:before {
+        background-color: $esds-color-orange-91;
+        bottom: 0;
+        content: '';
+        display: block;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: $esds-space-generic-half-x;
+    }
+}
+
+//container
+.esds-doc-container--light {
+    background: $esds-background-color-light;
+}
+
+//html_example_list
+.esds-doc-html-example-list__item  {
+
+    @media screen and (min-width: $esls-breakpoints-width-500) {
+        padding: $esds-space-inset-1-and-half-x;
+    }
+}
+
+.esds-doc-html-example-list__label {
+
+    .esds-doc-container--light & {
+        background: $esds-background-color-light;
+        color: $esds-text-color-primary-on-light;
+    }
+}
+
+//code_snippet
+.esds-doc-code-snippet__pre[class*='language-'] {
+
+    @media screen and (min-width: $esls-breakpoints-width-500) {
+        padding: $esds-space-inset-1-and-half-x;
+    }
+}
+
+.esds-doc-code-snippet__copied-notification {
+    color: $esds-text-color-primary-on-black;
+    right: calc(50% - 60px);
+}
+
+.esds-doc-code-snippet__copy-code-wrap {
+
+    & + .esds-doc-code-snippet__source {
+        padding-top: $esds-space-generic-1-x;
+
+        @media screen and (min-width: 500px) {
+            padding-top: $esds-space-generic-half-x;
+        }
+    }
+}
+
+//code_example_pair
+.esds-doc-code-example-pair {
+
+    & + & {
+        margin-top: -$esds-space-generic-2-x;
+    }
+}
+
+//reference_table
+.esds-doc-reference-table {
+
+    code {
+        background-color: $esds-color-neutral-95;
+        border: 1px solid $esds-color-neutral-80;
+        border-radius: 2px;
+        color: $esds-color-teal-71;
+        font-size: .875rem;
+        line-height: 1.5em;
+        padding: $esds-space-generic-eighth-x $esds-space-generic-quarter-x;
+    }
+}
+
+.esds-doc-reference-table__inner {
+
+    .esds-doc-reference-table--layout-fixed & {
+        table-layout: fixed;
+    }
+}

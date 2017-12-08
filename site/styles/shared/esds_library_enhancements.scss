@@ -1,0 +1,24 @@
+//headcrumb enhancements
+.esds-headcrumb {
+    padding-left: $esds-space-generic-2-x;
+
+    @media screen and (min-width: $esls-breakpoints-width-1024) {
+        padding-left: $esds-space-generic-1-x;
+    }
+}
+
+.esds-headcrumb__brand-name {
+    display: none;
+
+    @media screen and (min-width: $esls-breakpoints-width-500) {
+        display: block;
+    }
+}
+
+.esds-headcrumb__delimiter {
+    display: none;
+
+    @media screen and (min-width: $esls-breakpoints-width-500) {
+        display: block;
+    }
+}

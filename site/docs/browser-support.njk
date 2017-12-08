@@ -1,0 +1,16 @@
+{% extends 'templates/content.njk' %}
+{% set page_title = "Browser Support" %}
+
+{% block body_content %}
+    {% filter markdown %}
+        The EightShapes Design System is tested and currently supported on the following browsers:
+
+        - Chrome (latest)
+        - Firefox (latest)
+        - Safari (latest)
+        - Edge (latest)
+        - IE (11 only)
+        - Mobile Safari (latest)
+    {% endfilter %}
+
+{% endblock body_content %}

@@ -1,0 +1,68 @@
+{
+  "site_nav": [
+      {
+          "items":[
+              {
+                  "label": "Home",
+                  "href": "/"
+              },
+              {
+                  "label": "Getting Started",
+                  "href": "#"
+              },
+              {
+                  "label": "Browser Support",
+                  "href": "/browser-support.html"
+              }
+          ]
+      },
+      {
+          "items":[
+              {
+                  "label": "Visual Style",
+                  "heading": true
+              },
+              {
+                  "label": "Color",
+                  "href": "#"
+              },
+              {
+                  "label": "Typography",
+                  "href": "#"
+              }
+          ]
+      },
+      {
+          "items":[
+              {
+                  "label": "Components",
+                  "heading": true
+              },
+              {
+                  "label": "Buttons",
+                  "href": "/components/buttons.html"
+              },
+              {
+                  "label": "Cards",
+                  "href": "#"
+              },
+              {
+                  "label": "Breadcrumbs",
+                  "href": "#"
+              },
+              {
+                  "label": "Icons",
+                  "href": "#"
+              },
+              {
+                  "label": "Rows",
+                  "href": "#"
+              },
+              {
+                  "label": "Tiles",
+                  "href": "#"
+              }
+          ]
+      }
+  ]
+}

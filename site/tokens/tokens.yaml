@@ -1,0 +1,18 @@
+# Tokens from esds-library are already available in nunjucks and scss environments.
+# Tokens here are specific to eightshapes-library-site.
+breakpoints:
+  width-500: 500px
+  width-768: 768px
+  width-1024: 1024px
+  width-1200: 1200px
+
+space:
+  header-height:
+    default: 94px
+    short: 52px
+  site-nav-width: 250px
+  local-nav-width: 200px
+
+z-index:
+  header: 100
+  site-nav: 110

@@ -1,0 +1,27 @@
+{
+  "name": "eightshapes-library-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepack": "gulp build:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EightShapes/esds-library-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EightShapes/esds-library-site/issues"
+  },
+  "homepage": "https://github.com/EightShapes/esds-library-site#readme",
+  "devDependencies": {
+    "esds-build": "^0.26.2"
+  },
+  "dependencies": {
+    "esds-doc": "^0.10.0-alpha.4",
+    "esds-library": "../library"
+  }
+}
