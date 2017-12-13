@@ -26,6 +26,14 @@
     }
 }
 
+.esds-tiles__tile--link {
+    text-decoration: none;
+
+    &:hover {
+        background-color: $esds-color-teal-96;
+    }
+}
+
 .esds-tiles__heading {
     @include esds-level-3-heading();
     margin: $esds-space-stack-1-x;
@@ -38,6 +46,11 @@
     .esds-tiles--secondary & {
         @include esds-responsive-font-size($type: 'body-m');
         color: $esds-text-color-brand;
+    }
+
+    .esds-tiles__tile--link & {
+        color: $esds-text-color-brand;
+        fill: $esds-text-color-brand;
     }
 }
 
