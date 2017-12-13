@@ -1,5 +1,5 @@
-//headcrumb enhancements
-.esds-headcrumb {
+//breadcrumb enhancements
+.esds-breadcrumb {
     padding-left: $esds-space-generic-2-x;
 
     @media screen and (min-width: $esls-breakpoints-width-1024) {
@@ -7,7 +7,7 @@
     }
 }
 
-.esds-headcrumb__brand-name {
+.esds-breadcrumb__brand-name {
     display: none;
 
     @media screen and (min-width: $esls-breakpoints-width-500) {
@@ -15,7 +15,7 @@
     }
 }
 
-.esds-headcrumb__delimiter {
+.esds-breadcrumb__delimiter {
     display: none;
 
     @media screen and (min-width: $esls-breakpoints-width-500) {
