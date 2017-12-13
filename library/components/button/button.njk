@@ -2,6 +2,7 @@
     class=false,
     text=false,
     element="button",
+    href=false,
     disabled=false,
     icon_left=false,
     icon_left_title=false,
@@ -12,7 +13,7 @@
         {% set text = "Button Text" %}
     {% endif %}
 
-    <{{ element }} class="esds-button{{ ' ' + class if class }}{{ ' esds-button--icon-only' if text == false }}{{ ' esds-button--disabled' if disabled }}" {{ 'disabled' if disabled }}>
+    <{{ element }} class="esds-button{{ ' ' + class if class }}{{ ' esds-button--icon-only' if text == false }}{{ ' esds-button--disabled' if disabled }}" {{ 'disabled' if disabled }} {{ 'href=' + href if href }}>
         {% if icon_left %}
             {{ icon(class="esds-button__icon", name=icon_left, title=icon_left_title) }}
         {% endif %}
