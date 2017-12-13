@@ -6,7 +6,7 @@
     date=false,
     title="[title]",
     description=false,
-    href=false,
+    href="#",
     cta=false,
     image_url=false,
     width="320px"
@@ -17,7 +17,7 @@
     style="width: {{ width }};"
 >
 
-    <a href="{{ link_href }}" class="esds-card__link">
+    <a href="{{ href }}" class="esds-card__link">
         
         {% if thumbnail_image %}
         <div class="esds-card__thumbnail">
