@@ -18,6 +18,7 @@ color :
     55 : &color-teal-55 "#00798C"
     58 : &color-teal-58 "#068194"
     71 : &color-teal-71 "#0A9DB3"
+    96 : &color-teal-96 "#E7F4F6" #Tiles as link hover color
 
 text-color :
   brand : *color-orange-91

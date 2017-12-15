@@ -9,16 +9,17 @@
                 "[tile bullet 1]",
                 "[tile bullet 2]",
                 "[tile bullet 3]"
-            ]
+            ],
+            href: "#"
         }
     ]
 ) %}
 
-<ul class="esds-tiles{% if class %} {{ class }}{% endif %}">
+<div class="esds-tiles{% if class %} {{ class }}{% endif %}">
     {% for item in items %}
-    <li class="esds-tiles__tile esds-container--{{ container }}">
+    <{{ 'a href="' + item.href + '"' if item.href else 'div' }} class="esds-tiles__tile esds-container--{{ container }}{{ ' esds-tiles__tile--link' if item.href }}">
         {% if item.heading %}
-        <h3 class="esds-tiles__heading">{{ item.heading }}</h3>
+        <h3 class="esds-tiles__heading">{{ item.heading }}{{ icon(class="esds-icon--small", name="angle-right") if item.href }}</h3>
         {% endif %}
         {% if item.description %}
         <p class="esds-tiles__description">{{ item.description }}</p>
@@ -33,8 +34,8 @@
         {% if item.property %}
         <p class="esds-tiles__property">{{ item.property }}</p>
         {% endif %}
-    </li>
+    </{{ 'a' if item.href else 'div' }}>
     {% endfor %}
-</ul>
+</div>
 
 {% endmacro %}
