@@ -36,27 +36,13 @@
 
 .esds-tiles__heading {
     @include esds-level-3-heading();
+    @include esds-text-color('primary');
     margin: $esds-space-stack-1-x;
-    text-transform: uppercase;
-
-    .esds-container--white {
-        color: $esds-text-color-brand;
-    }
-
-    .esds-tiles--secondary & {
-        @include esds-responsive-font-size($type: 'body-m');
-        color: $esds-text-color-brand;
-    }
-
-    .esds-tiles__tile--link & {
-        color: $esds-text-color-brand;
-        fill: $esds-text-color-brand;
-    }
 }
 
 .esds-tiles__description {
     @include esds-body-text-m();
-    @include esds-text-color('secondary');
+    @include esds-text-color('primary');
     margin: $esds-space-stack-1-x;
 
     &:last-child {

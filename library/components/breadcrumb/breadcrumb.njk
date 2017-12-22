@@ -1,5 +1,5 @@
 {% macro breadcrumb(class=false, text="Design Systems", href="#") %}
-    {% set breadcrumb_class = "esds-breadcrumb" %}
+    {% set breadcrumb_class = "esds-breadcrumb esds-row--no-inset" %}
     {% if class %}
         {% set breadcrumb_class = breadcrumb_class + " " + class %}
     {% endif %}

@@ -3,11 +3,6 @@
     background-color: $esds-background-color-white;
 }
 
-.esds-background--white-opacity-85,
-.esds-container--white-opacity-85 {
-    background-color: $esds-background-color-white-opacity-85;
-}
-
 .esds-background--black,
 .esds-container--black {
     background-color: $esds-background-color-black;
@@ -27,3 +22,9 @@
 .esds-container--brand {
     background-color: $esds-background-color-brand;
 }
+
+.esds-background--dark-photograph,
+.esds-container--dark-photograph {
+    background-color: transparent;
+}
+
