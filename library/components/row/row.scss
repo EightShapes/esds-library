@@ -14,7 +14,7 @@
     font-style: normal;
     font-weight: normal;
     letter-spacing: 0;
-    margin: 0 auto;    
+    margin: 0 auto;
     max-width: 1200px;
     padding: $esds-space-inset-1-x;
     text-align: left;
@@ -42,7 +42,16 @@
         }
     }
 
+    .esds-row--very-very-tall-inset & {
+        padding: $esds-space-inset-4-x;
+        
+        @media screen and (min-width: $esds-breakpoints-width-768) {
+            padding: $esds-space-generic-16-x $esds-space-generic-8-x;
+        }
+    }
+
     .esds-row--no-inset & {
+        max-width: none;
         padding: 0;
 
         @media screen and (min-width: $esds-breakpoints-width-768) {
