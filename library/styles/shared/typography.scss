@@ -100,6 +100,13 @@
     text-transform: uppercase;
 }
 
+@mixin esds-body-text-lead() {
+    @include esds-font-reset;
+    @include esds-text-color($type: 'primary');
+    @include esds-responsive-font-size($type: 'heading-level-4');
+    font-weight: $esds-font-weight-regular;
+}
+
 @mixin esds-body-text-l() {
     @include esds-font-reset;
     @include esds-text-color($type: 'primary');
@@ -123,6 +130,15 @@
 
 @mixin esds-link() {
     @include esds-text-color($type: 'link');
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.esds-link {
+    @include esds-link();
 }
 
 .esds-typography-sink--level-1-heading { 

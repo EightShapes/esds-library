@@ -60,22 +60,24 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-55, .3);
 .esds-card__type,
 .esds-card__date {
     @include esds-eyebrow-heading();
-    margin: $esds-space-stack-half-x;
+    margin: $esds-space-stack-1-x;
     padding: 0;
 }
 
 .esds-card__type + .esds-card__date {
-    margin-top: -$esds-space-generic-half-x;
+    margin-top: -$esds-space-generic-three-quarter-x;
 }
 
 .esds-card__title {
-    @include esds-level-3-heading();
-    margin: $esds-space-stack-half-x;
+    @include esds-text-crop();
+    @include esds-level-4-heading();
+    line-height: $esds-font-line-height-tight;
+    margin: $esds-space-stack-1-x;
     padding: 0;
 }
 
 .esds-card__description {
-    @include esds-body-text-s();
+    @include esds-body-text-m();
     margin: $esds-space-stack-half-x;
     padding: 0;
 }

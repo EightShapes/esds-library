@@ -3,6 +3,7 @@
     container="white",
     items=[
         {
+            subheading: "",
             heading: "[tile 1]",
             description: "[tile description]",
             list: [
@@ -18,12 +19,19 @@
 <div class="esds-tiles{% if class %} {{ class }}{% endif %}">
     {% for item in items %}
     <{{ 'a href="' + item.href + '"' if item.href else 'div' }} class="esds-tiles__tile esds-container--{{ container }}{{ ' esds-tiles__tile--link' if item.href }}">
+        
+        {% if item.subheading %}
+        <h4 class="esds-tiles__subheading">{{ item.subheading }}</h4>
+        {% endif %}
+
         {% if item.heading %}
         <h3 class="esds-tiles__heading">{{ item.heading }}{{ icon(class="esds-icon--small", name="angle-right") if item.href }}</h3>
         {% endif %}
+        
         {% if item.description %}
         <p class="esds-tiles__description">{{ item.description }}</p>
         {% endif %}
+        
         {% if item.list %}
         <ul class="esds-tiles__list">
             {% for bullets in item.list %}
@@ -31,6 +39,7 @@
             {% endfor %}
         </ul>
         {% endif %}
+        
         {% if item.property %}
         <p class="esds-tiles__property">{{ item.property }}</p>
         {% endif %}

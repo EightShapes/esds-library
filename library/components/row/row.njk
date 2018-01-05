@@ -5,7 +5,7 @@
     background_image=false
     ) %}
 
-<div class="esds-row{% if (background) %} esds-container--{{background}}{% else %} esds-container--dark{% endif %}{% if class %} {{ class }}{% endif %}"
+<div class="esds-row{% if (background) %} esds-container--{{background}}{% endif %}{% if class %} {{ class }}{% endif %}"
     {% if background_image %}
         style="background-image: url({{ background_image | safe }})"
     {% endif %}
