@@ -106,9 +106,9 @@ font :
       at-768 : 0.9*16px
       at-1000 : 0.9*16px
   weight :
-    bold : 700
+    bold : 300
     light : 300
-    regular : 400
+    regular : 300
   line-length :
     long-form : 800px
 
