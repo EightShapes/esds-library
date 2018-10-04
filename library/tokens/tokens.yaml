@@ -101,9 +101,9 @@ font :
       at-1000 : 1.414*16px
     heading-eyebrow : 
       default : 0.75*16px
-      at-480 : 0.75*16px 
-      at-768 : 0.75*16px
-      at-1000 : 0.75*16px
+      at-480 : 0.85*16px 
+      at-768 : 0.9*16px
+      at-1000 : 0.9*16px
     body-l : 
       default : 1.2*16px 
       at-480 : 1.25*16px 
@@ -142,7 +142,7 @@ border :
     on-white: "solid 1px !{*color-neutral-70}"
   default : "solid 1px !{*color-neutral-42}"
   radius :
-    default : 4px
+    default : 8px
 
 space :
   generic :

@@ -18,6 +18,7 @@
 }
 
 .esds-tiles__tile {
+    border-radius: $esds-border-radius-default;
     list-style: none;
     padding: $esds-space-inset-2-x;
 
@@ -87,8 +88,8 @@
 
 .esds-tiles__list-item {
     @include esds-body-text-m();
-    @include esds-text-color('secondary');
-    margin: $esds-space-stack-1-x;
+    margin: $esds-space-stack-half-x;
+    padding: 0;
 
     &:last-child {
         margin: 0;
