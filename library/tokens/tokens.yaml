@@ -3,13 +3,14 @@ color :
   black : &color-black "#000000"
   orange : 
     82 : &color-orange-82 "#D24B00"
-    91 : &color-orange-91 "#E76822"
+    91 : &color-orange-91 "#E85200"
     93 : &color-orange-93 "#EEAC8D" #Disabled primary button background and border color
   neutral :
     05 : &color-neutral-05 "#0D0D0D"
     15 : &color-neutral-15 "#262626"
     25 : &color-neutral-25 "#404040"
     42 : &color-neutral-42 "#6B6B6B"
+    53 : &color-neutral-53 "#888888"
     70 : &color-neutral-70 "#B3B1B1"
     80 : &color-neutral-80 "#CCCACA"
     90 : &color-neutral-90 "#E6E3E3"
@@ -23,18 +24,18 @@ color :
 text-color :
   brand : *color-orange-91
   primary : 
-    on-white : *color-neutral-15
-    on-light : *color-neutral-15
+    on-white : *color-neutral-05
+    on-light : *color-neutral-05
     on-brand : *color-white
     on-dark : *color-white
     on-black : *color-neutral-95
     on-dark-photograph : *color-white
   secondary : 
-    on-white : *color-neutral-42
-    on-light : *color-neutral-42
+    on-white : *color-neutral-53
+    on-light : *color-neutral-53
     on-brand : *color-neutral-90
-    on-dark : *color-neutral-80
-    on-black : *color-neutral-70
+    on-dark : *color-neutral-53
+    on-black : *color-neutral-53
     on-dark-photograph : *color-neutral-90
   link : 
     on-white : *color-teal-58
@@ -52,19 +53,37 @@ background-color :
   brand : *color-orange-91
   dark-photograph : transparent
 
+alert-color :
+  error :
+    on-light : "#B90000"
+    on-dark : "#FF222B"
+    fill : "#EEDFDF"
+  success :
+    on-light : "#158A06"
+    on-dark : "#26AD1B"
+    fill : "#E9F3E8"
+  warning : 
+    on-light : "#E1B800"
+    fill : "#F9F0D3"
+  info :
+    on-light : *color-teal-58
+    fill : "#DAECEF"
+  new : 
+    on-light : *color-orange-91
+    fill : "#FBE5D9"
 font :
   family :
-    sans-serif : "'Lato', sans-serif"
+    sans-serif : "Barlow, 'Lato', sans-serif"
   line-height :
     normal : 1.3
-    headings : 1.2
+    headings : 1.1
     tight : 1.1
   size :
     heading-level-1 : 
-      default : 2.074*16px
-      at-480 : 2.441*16px
-      at-768 : 3.157*16px
-      at-1000 : 3.998*16px
+      default : 2.75*16px
+      at-480 : 3*16px
+      at-768 : 4*16px
+      at-1000 : 5*16px
     heading-level-2 : 
       default : 1.728*16px
       at-480 : 1.953*16px
@@ -106,9 +125,9 @@ font :
       at-768 : 0.9*16px
       at-1000 : 0.9*16px
   weight :
-    bold : 300
     light : 300
-    regular : 300
+    regular : 400
+    bold : 600
   line-length :
     long-form : 800px
 

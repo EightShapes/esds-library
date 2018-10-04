@@ -73,21 +73,21 @@
     @include esds-heading-reset;
     @include esds-text-color($type: 'primary');
     @include esds-responsive-font-size($type: 'heading-level-2');
-    font-weight: $esds-font-weight-regular;
+    font-weight: $esds-font-weight-light;
 }
 
 @mixin esds-level-3-heading() {
     @include esds-heading-reset;
     @include esds-text-color($type: 'primary');
     @include esds-responsive-font-size($type: 'heading-level-3');
-    font-weight: $esds-font-weight-regular;
+    font-weight: $esds-font-weight-light;
 }
 
 @mixin esds-level-4-heading() {
     @include esds-heading-reset;
     @include esds-text-color($type: 'primary');
     @include esds-responsive-font-size($type: 'heading-level-4');
-    font-weight: $esds-font-weight-bold;
+    font-weight: $esds-font-weight-light;
 }
 
 @mixin esds-eyebrow-heading() {
@@ -104,7 +104,7 @@
     @include esds-font-reset;
     @include esds-text-color($type: 'primary');
     @include esds-responsive-font-size($type: 'heading-level-4');
-    font-weight: $esds-font-weight-regular;
+    font-weight: $esds-font-weight-light;
 }
 
 @mixin esds-body-text-l() {
@@ -164,6 +164,11 @@
 .esds-typography-sink--eyebrow-heading { 
     @include esds-text-crop();
     @include esds-eyebrow-heading(); 
+}
+
+.esds-typography-sink--body-text-lead {
+    @include esds-text-crop();
+    @include esds-body-text-lead();
 }
 
 .esds-typography-sink--body-text-l {

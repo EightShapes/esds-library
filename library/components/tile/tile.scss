@@ -43,6 +43,7 @@
 .esds-tiles__heading {
     @include esds-level-4-heading();
     @include esds-text-color('primary');
+    font-weight: $esds-font-weight-bold;
     margin: $esds-space-stack-1-x;
 }
 
