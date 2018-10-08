@@ -1,3 +1,5 @@
+$semitransparentwhite: rgba(255, 255, 255, .9);
+
 .esds-tiles {
     background-color: transparent;
     display: grid;
@@ -21,13 +23,14 @@
         max-width: $esds-font-line-length-long-form;
     }
 }
+
 .esds-tiles__tile {
     border-radius: $esds-border-radius-default;
     list-style: none;
     padding: $esds-space-inset-2-x;
 
     .esds-tiles--translucent-white & {
-        background-color: rgba(255,255,255,0.9);
+        background-color: $semitransparentwhite;
     }
 
     .esds-tiles--no-padding & {

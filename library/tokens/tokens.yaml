@@ -185,4 +185,5 @@ space :
 breakpoints:
   width-500: 500px
   width-768: 768px
+  width-1000: 1000px
   width-1200: 1200px

@@ -1,0 +1,62 @@
+{% macro list(
+    class=false,
+    items=[
+        {
+            eyebrow: false,
+            title: "[link 1 title]",
+            href: "[link 1 href]",
+            pill: false,
+            description: "[link 1 description]"
+        }
+    ]
+) %}
+
+<ul class="esds-list{% if class %} {{ class }}{% endif %}">
+    {% for item in items %}
+        {% if item.heading %}
+        <li class="esds-list__item esds-list__item--heading">
+            {{ item.heading }}
+        </li>
+        {% else %}
+        <li class="esds-list__item{{ ' esds-list__item--grid' if item.image}}">
+            {% if item.image %}
+            <div class="esds-list__image-cell">
+                {% if item.href %}
+                <a class="esds-list__image-link" href="{{ item.href }}">
+                {% endif %}
+                    <img class="esds-list__image" alt="{{ item.title }}" src="{{ item.image }}"/>
+                {% if item.href %}
+                </a>
+                {% endif %}
+            </div>
+            {% endif %}
+            <dl class="esds-list__group">
+                {% if item.eyebrow %}
+                <dt class="esds-list__eyebrow">
+                    {{ item.eyebrow }}
+                </dt>
+                {% endif %}
+                <dt class="esds-list__title">
+                    {% if item.href %}
+                    <a class="esds-list__link" href="{{ item.href }}">
+                    {% endif %}
+                        {{ item.title | markdown | replace('<p>', '') | replace('</p>', '') }} {# markdown wraps everything processed with <p> tags, we don't want that here #}
+                    {% if item.href %}
+                    </a>
+                    {% endif %}
+                    {% if item.pill %}
+                    {{ pill(label=item.pill) }}
+                    {% endif %}
+                </dt>
+                {% if item.description %}
+                <dd class="esds-list__description">
+                    {{ item.description }}
+                </dd>
+                {% endif %}
+            </dl>
+        </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+{% endmacro %}

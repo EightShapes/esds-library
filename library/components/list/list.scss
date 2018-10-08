@@ -1,0 +1,83 @@
+.esds-list {
+    background-color: transparent;
+    list-style: none;
+    margin: $esds-space-stack-1-x;
+    padding: 0;
+}
+
+.esds-list__item {
+    margin: $esds-space-stack-1-x;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.esds-list__item--heading {
+    @include esds-font-reset();
+    color: $esds-text-color-brand;
+    font-size: $esds-font-size-heading-level-3-default;
+    margin: $esds-space-stack-2-x;
+}
+
+.esds-list__group {
+    margin: 0;
+
+    .esds-list--large & {
+        @include esds-body-text-l();
+    }
+}
+
+.esds-list__eyebrow {
+    @include esds-eyebrow-heading();
+    @include esds-text-color('secondary');
+    margin: $esds-space-stack-quarter-x;
+}
+
+.esds-list__title {
+    @include esds-body-text-m();
+    @include esds-text-color('primary');
+    font-weight: $esds-font-weight-regular;
+
+    .esds-list--large & {
+        @include esds-body-text-l();
+        font-weight: $esds-font-weight-light;
+    }
+
+}
+
+.esds-list__link {
+    @include esds-text-color('link');
+    font-weight: $esds-font-weight-bold;
+    text-decoration: none;
+
+    .esds-list--large & {
+        font-weight: $esds-font-weight-regular;
+    }
+}
+
+.esds-list__description {
+    @include esds-body-text-m();
+    @include esds-text-color('secondary');
+    margin: 0;
+}
+
+.esds-list__item--grid {
+    display: grid;
+    grid-column-gap: $esds-space-generic-1-x;
+    grid-template-columns: 20% 80%;
+}
+
+.esds-list__image {
+    max-width: 100%;
+}
+
+.esds-list__image-link {
+    border: 1px solid $esds-color-teal-71;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+        box-shadow: 0 0 8px $esds-color-neutral-80;
+    }
+}

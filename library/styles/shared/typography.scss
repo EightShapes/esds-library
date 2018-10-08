@@ -112,6 +112,7 @@
     @include esds-text-color($type: 'primary');
     @include esds-responsive-font-size($type: 'body-l');
     font-weight: $esds-font-weight-regular;
+    line-height: 1.2;
 }
 
 @mixin esds-body-text-m() {
