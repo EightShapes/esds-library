@@ -1,4 +1,4 @@
-{% macro breadcrumb(class=false, text=false, href="#") %}
+{% macro breadcrumb(class=false, section=false, section_href="#") %}
     {% set breadcrumb_class = "esds-breadcrumb esds-row--no-inset" %}
     {% if class %}
         {% set breadcrumb_class = breadcrumb_class + " " + class %}
@@ -8,14 +8,13 @@
         <h1 class="esds-breadcrumb__brand">
             <a href="/" class="esds-breadcrumb__link">
                 {{ icon(name="eightshapes-mark", class="esds-breadcrumb__brand-mark") }}
-                <span class="esds-breadcrumb__brand-name">eightshapes</span>
             </a>
-            {% if text %}
-            <a href="{{ href }}" class="esds-breadcrumb__link">
-                {{ icon(name="angle-right", class="esds-breadcrumb__delimiter") }}
-                <span class="esds-breadcrumb__crumb-text">{{ text }}</span>
+            {% if section %}
+            <a href="{{ section_href }}" class="esds-breadcrumb__link">
+                {{ icon(name="angleright", class="esds-breadcrumb__delimiter") }}
+                <span class="esds-breadcrumb__crumb-section">{{ section }}</span>
             </a>
-            {% endif%}
+            {% endif %}
         </h1>
     {% endcall %}
 

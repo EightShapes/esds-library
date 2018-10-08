@@ -13,14 +13,22 @@
     }
 
     &:last-child {
-        margin: 0;
+        margin-bottom: 0;
+    }
+
+    &.esds-tiles--long-form-max-width {
+        margin: 0 auto $esds-space-generic-2-x;
+        max-width: $esds-font-line-length-long-form;
     }
 }
-
 .esds-tiles__tile {
     border-radius: $esds-border-radius-default;
     list-style: none;
     padding: $esds-space-inset-2-x;
+
+    .esds-tiles--translucent-white & {
+        background-color: rgba(255,255,255,0.9);
+    }
 
     .esds-tiles--no-padding & {
         padding: 0;
@@ -46,6 +54,10 @@
     @include esds-text-color('primary');
     font-weight: $esds-font-weight-bold;
     margin: $esds-space-stack-1-x;
+
+    .esds-tiles__tile--link & {
+        @include esds-text-color($type: 'link');
+    }
 }
 
 .esds-tiles__description {

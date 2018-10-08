@@ -2,10 +2,11 @@
     class=false,
     content=false,
     background=false,
+    background_only=false,
     background_image=false
     ) %}
 
-<div class="esds-row{% if (background) %} esds-container--{{background}}{% endif %}{% if class %} {{ class }}{% endif %}"
+<div class="esds-row{% if (background_only) %} esds-background--{{background_only}} {% elif (background) %} esds-container--{{background}}{% endif %}{% if class %} {{ class }}{% endif %}"
     {% if background_image %}
         style="background-image: url({{ background_image | safe }})"
     {% endif %}
