@@ -25,7 +25,7 @@
         {% endif %}
 
         {% if item.heading %}
-        <h3 class="esds-tiles__heading">{{ item.heading }}{{ icon(class="esds-icon--small", name="angle-right") if item.href }}</h3>
+        <h3 class="esds-tiles__heading">{{ item.heading }}{{ icon(class="esds-tiles__heading-icon esds-icon--small", name="angle-right") if item.href }}</h3>
         {% endif %}
         
         {% if item.description %}
