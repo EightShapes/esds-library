@@ -63,6 +63,10 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
     }
 }
 
+.esds-tiles__heading-icon {
+    fill: currentColor;
+}
+
 .esds-tiles__description {
     @include esds-body-text-m();
     @include esds-text-color('primary');
