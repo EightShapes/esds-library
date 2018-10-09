@@ -27,7 +27,10 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
 .esds-tiles__tile {
     border-radius: $esds-border-radius-default;
     list-style: none;
-    padding: $esds-space-inset-2-x;
+    padding: $esds-space-inset-1-x;
+    @media screen and (min-width: 1000px) {
+        padding: $esds-space-inset-1-and-half-x;
+    }
 
     .esds-tiles--translucent-white & {
         background-color: $semitransparentwhite;
