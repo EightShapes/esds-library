@@ -60,7 +60,7 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-55, .3);
 .esds-card__type,
 .esds-card__date {
     @include esds-eyebrow-heading();
-    @include esds-responsive-stacking();
+    margin: $esds-space-stack-three-quarter-x;
     padding: 0;
 }
 
@@ -71,9 +71,9 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-55, .3);
 .esds-card__title {
     @include esds-text-crop();
     @include esds-level-4-heading();
-    @include esds-responsive-stacking();
     font-weight: $esds-font-weight-bold;
     line-height: $esds-font-line-height-tight;
+    margin: $esds-space-stack-1-x;
     padding: 0;
 }
 

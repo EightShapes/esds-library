@@ -31,6 +31,7 @@
 .esds-list__eyebrow {
     @include esds-eyebrow-heading();
     @include esds-text-color('secondary');
+    font-weight: $esds-font-weight-regular;
     margin: $esds-space-stack-quarter-x;
 }
 

@@ -76,14 +76,14 @@ font :
     sans-serif : "Barlow, 'Lato', sans-serif"
   line-height :
     normal : 1.3
-    headings : 1.1
-    tight : 1.1
+    headings : 1.2
+    tight : 1.2
   size :
     heading-level-1 : 
-      default : 2.75*16px
-      at-480 : 3*16px
-      at-768 : 4*16px
-      at-1000 : 5*16px
+      default : 2.25*16px
+      at-480 : 2.5*16px
+      at-768 : 3*16px
+      at-1000 : 4*16px
     heading-level-2 : 
       default : 1.728*16px
       at-480 : 1.953*16px

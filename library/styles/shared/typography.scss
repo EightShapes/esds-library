@@ -34,7 +34,6 @@
     font-style: normal;
     font-weight: $esds-font-weight-regular;
     letter-spacing: 0;
-    line-height: $esds-font-line-height-normal;
     text-align: left;
     text-decoration: none;
     text-indent: 0;
@@ -105,6 +104,7 @@
     @include esds-text-color($type: 'primary');
     @include esds-responsive-font-size($type: 'heading-level-4');
     font-weight: $esds-font-weight-light;
+    line-height: $esds-font-line-height-normal;
 }
 
 @mixin esds-body-text-l() {
@@ -112,7 +112,7 @@
     @include esds-text-color($type: 'primary');
     @include esds-responsive-font-size($type: 'body-l');
     font-weight: $esds-font-weight-regular;
-    line-height: 1.2;
+    line-height: $esds-font-line-height-normal;
 }
 
 @mixin esds-body-text-m() {
@@ -120,6 +120,7 @@
     @include esds-text-color($type: 'primary');
     @include esds-responsive-font-size($type: 'body-m');
     font-weight: $esds-font-weight-regular;
+    line-height: $esds-font-line-height-normal;
 }
 
 @mixin esds-body-text-s() {
@@ -127,6 +128,7 @@
     @include esds-text-color($type: 'secondary');
     @include esds-responsive-font-size($type: 'body-s');
     font-weight: $esds-font-weight-regular;
+    line-height: $esds-font-line-height-normal;
 }
 
 @mixin esds-link() {

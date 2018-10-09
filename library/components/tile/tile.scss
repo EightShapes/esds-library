@@ -74,13 +74,13 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
 }
 
 .esds-tiles__property {
-    @include esds-eyebrow-heading();
+    @include esds-body-text-s();
+    @include esds-text-color('secondary');
     margin: 0;
-    text-transform: uppercase;
 }
 
 .esds-tiles--2-column {
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 768px) {
         grid-template-columns: 1fr 1fr;
     }
 }
