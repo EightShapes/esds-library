@@ -50,14 +50,14 @@
 .esds-breadcrumb__brand-mark {
     fill: $esds-color-white;
     flex-shrink: 0;
-    height: 20px;
+    height: 30px;
     margin-right: $esds-space-generic-half-x;
 
-    width: 20px;
+    width: 200px;
 
     @media screen and (min-width: 500px) {
-        height: 30px;
-        width: 30px;
+        height: 40px;
+        // width: 30px;
     }
 }
 
