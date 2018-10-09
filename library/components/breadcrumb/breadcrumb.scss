@@ -28,6 +28,8 @@
 }
 
 .esds-breadcrumb__brand {
+    display: flex;
+    justify-content: center;
     margin: 0;
     position: relative;
     top: 6px;
@@ -57,24 +59,10 @@
 
     @media screen and (min-width: 500px) {
         height: 40px;
-        // width: 30px;
     }
 }
 
-.esds-breadcrumb__brand-name {
-    @include esds-text-crop;
-    flex-shrink: 0;
-    font-size: $esds-font-size-body-l-default;
-    font-weight: $esds-font-weight-light;
-    position: relative;
-    top: -2px;
-
-    @media screen and (min-width: 768px) {
-        font-size: $esds-font-size-heading-level-3-at-768;
-    }
-}
-
-.esds-breadcrumb__crumb-text {
+.esds-breadcrumb__crumb-section {
     @include esds-text-crop;
     font-size: $esds-font-size-body-m-default;
     font-weight: $esds-font-weight-light;
