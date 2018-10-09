@@ -4,6 +4,18 @@
     <h2 class="esds-sink-page-header">Breadcrumb</h2>
     {{ esds.breadcrumb() }}
 
+    <h2 class="esds-sink-page-header">Systems</h2>
+    {{ esds.breadcrumb(section="Design Systems", section_href="/systems.html") }}
+
+    <h2 class="esds-sink-page-header">Discovery</h2>
+    {{ esds.breadcrumb(section="Discovery", section_href="/discovery.html") }}
+
+    <h2 class="esds-sink-page-header">Design</h2>
+    {{ esds.breadcrumb(section="Design", section_href="/design.html") }}
+
+    <h2 class="esds-sink-page-header">About Us</h2>
+    {{ esds.breadcrumb(section="About Us", section_href="/about_us.html") }}
+
     <h2 class="esds-sink-page-header">Content Stress Test</h2>
-    {{ esds.breadcrumb(text="Really really long breadcrumb text here") }}
+    {{ esds.breadcrumb(section="Really really long breadcrumb text here") }}
 {% endmacro %}

@@ -1,0 +1,10 @@
+{% macro pill(
+    class=false,
+    label="Pill Label"
+) %}
+
+<span class="esds-pill{% if class %} {{ class }}{% endif %}">
+    {{ label }}
+</span>
+
+{% endmacro %}

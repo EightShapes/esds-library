@@ -1,0 +1,14 @@
+@mixin esds-responsive-stacking() { 
+    line-height: 1.3;
+    margin: $esds-space-stack-half-x;
+
+    @media screen and (min-width: 768px) {
+        line-height: 1.2;
+        margin: $esds-space-stack-three-quarter-x;
+    }
+    @media screen and (min-width: 1000px) {
+        line-height: 1.2;
+        margin: $esds-space-stack-1-x;
+    }
+}
+

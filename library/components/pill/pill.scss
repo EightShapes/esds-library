@@ -1,0 +1,14 @@
+.esds-pill {
+    background-color: $esds-background-color-light;
+    color: $esds-text-color-primary-on-light;
+    font-size: $esds-font-size-heading-eyebrow-default;
+    font-weight: $esds-font-weight-bold;
+    padding: $esds-space-inset-squish-quarter-x;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.esds-pill--brand {
+    background-color: $esds-background-color-brand;
+    color: $esds-text-color-primary-on-brand;
+}
