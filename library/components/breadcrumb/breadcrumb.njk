@@ -4,18 +4,20 @@
         {% set breadcrumb_class = breadcrumb_class + " " + class %}
     {% endif %}
 
-    {% call row(background="brand", class=breadcrumb_class) %}
-        <h1 class="esds-breadcrumb__brand">
-            <a href="/" class="esds-breadcrumb__link">
-                {{ icon(name="eightshapes-mark", class="esds-breadcrumb__brand-mark") }}
-            </a>
-            {% if section %}
-            <a href="{{ section_href }}" class="esds-breadcrumb__link">
-                {{ icon(name="angleright", class="esds-breadcrumb__delimiter") }}
-                <span class="esds-breadcrumb__crumb-section">{{ section }}</span>
-            </a>
-            {% endif %}
-        </h1>
-    {% endcall %}
-
+    {# Hard-coded esds-row markup since a {% call %} to the row changes the nunjucks variable scope and the section and section_href variables don't work with that method #}
+    <div class="esds-row esds-container--brand {{ breadcrumb_class }}">
+        <div class="esds-row__inner">
+            <h1 class="esds-breadcrumb__brand">
+                <a href="/" class="esds-breadcrumb__link">
+                    {{ icon(name="eightshapes-logo", class="esds-breadcrumb__brand-mark") }}
+                </a>
+                {% if section %}
+                <a href="{{ section_href }}" class="esds-breadcrumb__link">
+                    {{ icon(name="angle-right", class="esds-breadcrumb__delimiter") }}
+                    <span class="esds-breadcrumb__crumb-section">{{ section }}</span>
+                </a>
+                {% endif %}
+            </h1>
+        </div>
+    </div>
 {% endmacro %}
