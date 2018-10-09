@@ -55,6 +55,9 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-55, .3);
 .esds-card__content {
     margin: 0;
     padding: $esds-space-inset-1-x;
+    @media screen and (min-width: 1000px) {
+        padding: $esds-space-inset-1-and-half-x;
+    }
 }
 
 .esds-card__type,
