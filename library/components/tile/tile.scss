@@ -43,6 +43,7 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
 
 .esds-tiles__tile--link {
     text-decoration: none;
+    transition: background $esds-transition-interactive-hover-speed linear;
 
     &:hover {
         background-color: $esds-color-teal-96;
