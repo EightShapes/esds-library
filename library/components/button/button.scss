@@ -1,5 +1,4 @@
 $esds-button-active-box-shadow: 0 0 4px 4px rgba($esds-color-teal-71, .8);
-$esds-button-transition-speed: .2s;
 
 .esds-button {
     @include esds-font-reset();
@@ -21,10 +20,10 @@ $esds-button-transition-speed: .2s;
     text-shadow: none;
     text-transform: none;
     transition:
-        background-color $esds-button-transition-speed linear,  // sass-lint:disable-line indentation
-        border-color $esds-button-transition-speed linear,  // sass-lint:disable-line indentation
-        color $esds-button-transition-speed linear,  // sass-lint:disable-line indentation
-        fill $esds-button-transition-speed linear;  // sass-lint:disable-line indentation
+        background-color $esds-transition-interactive-hover-speed linear,  // sass-lint:disable-line indentation
+        border-color $esds-transition-interactive-hover-speed linear,  // sass-lint:disable-line indentation
+        color $esds-transition-interactive-hover-speed linear,  // sass-lint:disable-line indentation
+        fill $esds-transition-interactive-hover-speed linear;  // sass-lint:disable-line indentation
     white-space: nowrap;
 
     &:hover,

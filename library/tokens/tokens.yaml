@@ -182,6 +182,9 @@ space :
     half-x : 0 0 8px
     quarter-x : 0 0 4px
 
+transition :
+  interactive-hover-speed : .2s
+
 breakpoints:
   width-500: 500px
   width-768: 768px

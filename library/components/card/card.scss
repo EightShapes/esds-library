@@ -28,7 +28,7 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-55, .3);
         position: absolute;
         right: 0;
         top: 0;
-        transition: background .5s;
+        transition: background $esds-transition-interactive-hover-speed linear;
         z-index: 1;
 
         .esds-card__link:hover & {
