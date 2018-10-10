@@ -8,6 +8,10 @@
 .esds-list__item {
     margin: $esds-space-stack-1-x;
 
+    .esds-list--large & {
+        margin: $esds-space-stack-1-and-half-x;
+    }
+
     &:last-child {
         margin: 0;
     }
@@ -32,7 +36,7 @@
     @include esds-eyebrow-heading();
     @include esds-text-color('secondary');
     font-weight: $esds-font-weight-regular;
-    margin: $esds-space-stack-quarter-x;
+    margin: $esds-space-stack-eighth-x;
 }
 
 .esds-list__title {
