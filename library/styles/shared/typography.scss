@@ -111,7 +111,7 @@
     @include esds-font-reset;
     @include esds-text-color($type: 'primary');
     @include esds-responsive-font-size($type: 'body-l');
-    font-weight: $esds-font-weight-regular;
+    font-weight: $esds-font-weight-light;
     line-height: $esds-font-line-height-normal;
 }
 
