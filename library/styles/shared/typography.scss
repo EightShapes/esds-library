@@ -93,7 +93,7 @@
     @include esds-heading-reset;
     @include esds-text-color($type: 'secondary');
     @include esds-responsive-font-size($type: 'heading-eyebrow');
-    font-weight: $esds-font-weight-bold;
+    font-weight: $esds-font-weight-light;
     letter-spacing: 1.67px;
     line-height: $esds-font-line-height-headings;
     text-transform: uppercase;
