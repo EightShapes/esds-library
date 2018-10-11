@@ -21,10 +21,11 @@
         
         {% if thumbnail_image %}
         <div class="esds-card__thumbnail">
-            <div class="esds-card__thumbnail-inner"
-                style="background-image: url('{{ thumbnail_image }}')">
+            <div class="esds-card__thumbnail-inner-wrap">
+                <div class="esds-card__thumbnail-inner"
+                    style="background-image: url('{{ thumbnail_image }}')">
+                </div>
             </div>
-            {{ thumbnail }}
         </div>
         {% endif %}
 

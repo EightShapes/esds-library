@@ -4,6 +4,15 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-55, .3);
 .esds-card {
     border-radius: $esds-border-radius-default;
     margin: $esds-space-stack-2-x;
+    
+    &.esds-container--white,
+    &.esds-container--light,
+    &.esds-container--dark,
+    &.esds-container--black,
+    &.esds-container--brand,
+    &.esds-container--dark-photograph {
+        background: transparent;
+    }
 }
 
 .esds-card__link {
@@ -11,17 +20,66 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-55, .3);
 }
 
 .esds-card__thumbnail {
-    background-color: $esds-background-color-light;
-    border-radius: $esds-border-radius-default $esds-border-radius-default 0 0;
     display: block;
     height: 0;
     overflow: hidden;
     padding-top: 55%;
     position: relative;
     width: 100%;
+}
+
+.esds-card__thumbnail-inner-wrap {
+    border-radius: ($esds-border-radius-default + 2px) ($esds-border-radius-default + 2px) 0 0; // Border radius greater than default so when image loads the border radius doesn't show through
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+
+    .esds-container--white & {
+        background-color: $esds-background-color-white;
+    }
+
+    .esds-container--light & {
+        background-color: $esds-background-color-light;
+    }
+
+    .esds-container--dark & {
+        background-color: $esds-background-color-dark;
+    }
+
+    .esds-container--black {
+        background-color: $esds-background-color-black;
+    }
+
+    .esds-container--brand & {
+        background-color: $esds-background-color-brand;
+    }
+
+    .esds-container--dark-photograph & {
+        background-color: transparent;
+    }
+}
+
+.esds-card__thumbnail-inner {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: $esds-border-radius-default $esds-border-radius-default 0 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    padding-top: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 
     &:before {
         background-color: $esds-color-card-thumbnail-overlay;
+        border-radius: $esds-border-radius-default $esds-border-radius-default 0 0;
         bottom: 0;
         content: '';
         left: 0;
@@ -35,28 +93,42 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-55, .3);
             background-color: $esds-color-card-thumbnail-overlay-hover;
         }
     }
-
-}
-
-.esds-card__thumbnail-inner {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    padding-top: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
 }
 
 .esds-card__content {
+    border-radius: $esds-border-radius-default;
     margin: 0;
     padding: $esds-space-inset-1-x;
     @media screen and (min-width: 1000px) {
         padding: $esds-space-inset-1-and-half-x;
+    }
+
+    .esds-card__thumbnail + & {
+        border-radius: 0 0 $esds-border-radius-default $esds-border-radius-default;
+    }
+
+    .esds-container--white & {
+        background-color: $esds-background-color-white;
+    }
+
+    .esds-container--light & {
+        background-color: $esds-background-color-light;
+    }
+
+    .esds-container--dark & {
+        background-color: $esds-background-color-dark;
+    }
+
+    .esds-container--black & {
+        background-color: $esds-background-color-black;
+    }
+
+    .esds-container--brand & {
+        background-color: $esds-background-color-brand;
+    }
+
+    .esds-container--dark-photograph & {
+        background-color: transparent;
     }
 }
 
