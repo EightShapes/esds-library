@@ -29,7 +29,7 @@
         {% endif %}
         
         {% if item.description %}
-        <p class="esds-tiles__description">{{ item.description }}</p>
+        <p class="esds-tiles__description">{{ item.description | safe }}</p>
         {% endif %}
         
         {% if item.list %}
