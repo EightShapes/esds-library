@@ -76,6 +76,10 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
     @include esds-text-color('primary');
     margin: $esds-space-stack-1-x;
 
+    a {
+        @include esds-link(); 
+    }
+
     &:last-child {
         margin: 0;
     }
