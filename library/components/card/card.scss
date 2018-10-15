@@ -36,30 +36,6 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-55, .3);
     right: 0;
     top: 0;
     z-index: 5;
-
-    .esds-container--white & {
-        background-color: $esds-background-color-white;
-    }
-
-    .esds-container--light & {
-        background-color: $esds-background-color-light;
-    }
-
-    .esds-container--dark & {
-        background-color: $esds-background-color-dark;
-    }
-
-    .esds-container--black {
-        background-color: $esds-background-color-black;
-    }
-
-    .esds-container--brand & {
-        background-color: $esds-background-color-brand;
-    }
-
-    .esds-container--dark-photograph & {
-        background-color: transparent;
-    }
 }
 
 .esds-card__thumbnail-inner {
@@ -76,23 +52,6 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-55, .3);
     top: 0;
     width: 100%;
     z-index: 10;
-
-    &:before {
-        background-color: $esds-color-card-thumbnail-overlay;
-        border-radius: $esds-border-radius-default $esds-border-radius-default 0 0;
-        bottom: 0;
-        content: '';
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        transition: background $esds-transition-interactive-hover-speed linear;
-        z-index: 1;
-
-        .esds-card__link:hover & {
-            background-color: $esds-color-card-thumbnail-overlay-hover;
-        }
-    }
 }
 
 .esds-card__content {
@@ -106,7 +65,10 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-55, .3);
     .esds-card__thumbnail + & {
         border-radius: 0 0 $esds-border-radius-default $esds-border-radius-default;
     }
+}
 
+.esds-card__thumbnail-inner-wrap,
+.esds-card__content {
     .esds-container--white & {
         background-color: $esds-background-color-white;
     }
@@ -148,21 +110,33 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-55, .3);
     @include esds-level-4-heading();
     font-weight: $esds-font-weight-bold;
     line-height: $esds-font-line-height-tight;
-    margin: $esds-space-stack-1-x;
+    margin: 0;
     padding: 0;
+
+    &:not(:last-child) {
+        margin: $esds-space-stack-1-x;
+    }
 }
 
 .esds-card__description {
     @include esds-body-text-m();
-    margin: $esds-space-stack-1-x;
+    margin: 0;
     padding: 0;
+
+    &:not(:last-child) {
+        margin: $esds-space-stack-1-x;
+    }
 }
 
 .esds-card__cta {
     @include esds-body-text-m();
     @include esds-text-color($type: 'link');
-    margin: $esds-space-stack-half-x;
+    margin: 0;
     padding: 0;
+
+    &:not(:last-child) {
+        margin: $esds-space-stack-1-x;
+    }
 
     .esds-card__link:hover & {
         text-decoration: underline;

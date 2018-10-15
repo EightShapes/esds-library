@@ -17,8 +17,10 @@
     style="width: {{ width }};"
 >
 
+    {% if href %}
     <a href="{{ href }}" class="esds-card__link">
-        
+    {% endif %}
+
         {% if thumbnail_image %}
         <div class="esds-card__thumbnail">
             <div class="esds-card__thumbnail-inner-wrap">
@@ -51,7 +53,10 @@
             {% endif %}
         </div>
 
+    {% if href %}
     </a>
+    {% endif %}
+    
 </div>
 
 {% endmacro %}
