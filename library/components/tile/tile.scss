@@ -28,6 +28,7 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
     border-radius: $esds-border-radius-default;
     list-style: none;
     padding: $esds-space-inset-1-x;
+    
     @media screen and (min-width: 1000px) {
         padding: $esds-space-inset-1-and-half-x;
     }

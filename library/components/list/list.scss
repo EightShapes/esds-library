@@ -33,16 +33,24 @@
 }
 
 .esds-list__eyebrow {
+    @include esds-text-crop();
     @include esds-eyebrow-heading();
     @include esds-text-color('secondary');
     font-weight: $esds-font-weight-regular;
-    margin: $esds-space-stack-eighth-x;
+    margin: $esds-space-stack-half-x;
 }
 
 .esds-list__title {
+    @include esds-text-crop();
     @include esds-body-text-m();
     @include esds-text-color('primary');
     font-weight: $esds-font-weight-regular;
+    line-height: $esds-font-line-height-headings;
+    margin: $esds-space-stack-quarter-x;
+
+    @media screen and (min-width: 768px) {
+        margin: $esds-space-stack-half-x;
+    }
 
     .esds-list--large & {
         @include esds-body-text-l();

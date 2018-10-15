@@ -117,8 +117,8 @@ font :
     body-m : 
       default : 1*16px
       at-480 : 1*16px
-      at-768 : 1.1*16px
-      at-1000 : 1.1*16px
+      at-768 : 1.2*16px
+      at-1000 : 1.2*16px
     body-s : 
       default : 0.75*16px
       at-480 : 0.85*16px 
@@ -140,7 +140,7 @@ border :
     on-black : "solid !{*border-selected-width} !{*color-teal-71}"
   control:
     on-white: "solid 1px !{*color-neutral-70}"
-  default : "solid 1px !{*color-neutral-42}"
+  default : "solid 2px !{*color-neutral-42}"
   radius :
     default : 8px
 
@@ -149,6 +149,7 @@ space :
     16-x : 256px
     8-x : 128px
     4-x : 64px
+    3-x : 48px
     2-x : 32px
     1-and-half-x: 24px
     1-x : 16px
