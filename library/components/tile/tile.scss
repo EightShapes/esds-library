@@ -112,6 +112,10 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
     &:last-child {
         margin: 0;
     }
+
+    .esds-tiles--2-column & {
+        margin: $esds-space-stack-1-x;
+    }
 }
 
 .esds-tiles__list-item {

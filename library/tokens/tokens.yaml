@@ -16,9 +16,10 @@ color :
     90 : &color-neutral-90 "#E6E3E3"
     95 : &color-neutral-95 "#F3F1F1"
   teal : 
-    55 : &color-teal-55 "#00798C"
-    58 : &color-teal-58 "#068194"
-    71 : &color-teal-71 "#0A9DB3"
+    27 : &color-teal-27 "#00798C"
+    30 : &color-teal-30 "#068194"
+    37 : &color-teal-37 "#0A9DB3"
+    48 : &color-teal-48 "#20BDD5"
     96 : &color-teal-96 "#E7F4F6" #Tiles as link hover color
 
 text-color :
@@ -38,12 +39,12 @@ text-color :
     on-black : *color-neutral-53
     on-dark-photograph : *color-neutral-90
   link : 
-    on-white : *color-teal-58
-    on-light : *color-teal-55
+    on-white : *color-teal-30
+    on-light : *color-teal-27
     on-brand : *color-white
-    on-dark  : *color-teal-71
-    on-black : *color-teal-71
-    on-dark-photograph : *color-teal-71
+    on-dark  : *color-teal-48
+    on-black : *color-teal-48
+    on-dark-photograph : *color-teal-48
 
 background-color :
   white : *color-white
@@ -66,7 +67,7 @@ alert-color :
     on-light : "#E1B800"
     fill : "#F9F0D3"
   info :
-    on-light : *color-teal-58
+    on-light : *color-teal-30
     fill : "#DAECEF"
   new : 
     on-light : *color-orange-91
@@ -134,10 +135,11 @@ font :
 border :
   selected :
     width : &border-selected-width 5px
-    on-white : "solid !{*border-selected-width} !{*color-teal-58}"
-    on-light : "solid !{*border-selected-width} !{*color-teal-55}"
-    on-dark : "solid !{*border-selected-width} !{*color-teal-71}"
-    on-black : "solid !{*border-selected-width} !{*color-teal-71}"
+    on-white : "solid !{*border-selected-width} !{*color-teal-30}"
+    on-light : "solid !{*border-selected-width} !{*color-teal-30}"
+    on-dark : "solid !{*border-selected-width} !{*color-teal-48}"
+    on-black : "solid !{*border-selected-width} !{*color-teal-48}"
+  interactive-image : "solid 2px !{*color-teal-30}"
   control:
     on-white: "solid 1px !{*color-neutral-70}"
   default : "solid 2px !{*color-neutral-42}"
