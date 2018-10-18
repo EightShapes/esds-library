@@ -1,5 +1,9 @@
 {
     "codeNamespace": "esds",
+    "autoprefixerOptions": {
+      "browsers": ["last 2 versions"],
+      "grid": true
+    },
     "copyTasks": [
         {
             "name": "js-dependencies",
