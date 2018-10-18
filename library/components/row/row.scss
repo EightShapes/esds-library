@@ -58,6 +58,29 @@
             padding: 0;
         }
     }
+
+}
+
+.esds-row--marketing-max-width {
+    & .esds-row__inner {
+        max-width: $esds-font-line-length-long-form;
+    }
+
+    &.esds-row--tall-inset .esds-row__inner {
+        max-width: $esds-font-line-length-long-form + $esds-space-inset-4-x*2;
+    }
+
+    &.esds-row--very-tall-inset .esds-row__inner {
+        max-width: $esds-font-line-length-long-form + $esds-space-inset-8-x*2;
+    }
+
+    &.esds-row--very-very-tall-inset .esds-row__inner {
+        max-width: $esds-font-line-length-long-form + $esds-space-inset-8-x*2;
+    }
+
+    &.esds-row--no-inset .esds-row__inner {
+        max-width: $esds-font-line-length-long-form;
+    }
 }
 
 .esds-row--background-image-dark {
