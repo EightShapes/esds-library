@@ -1,7 +1,7 @@
 .esds-list {
     background-color: transparent;
     list-style: none;
-    margin: $esds-space-stack-1-x;
+    margin: $esds-space-stack-2-x;
     padding: 0;
 
 }
@@ -22,7 +22,7 @@
     @include esds-font-reset();
     color: $esds-text-color-brand;
     font-size: $esds-font-size-heading-level-3-default;
-    margin: $esds-space-stack-2-x;
+    margin: $esds-space-stack-1-and-half-x;
 }
 
 .esds-list__group {
