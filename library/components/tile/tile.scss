@@ -2,17 +2,11 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
 
 .esds-tiles {
     background-color: transparent;
-    display: grid;
-    grid-column-gap: $esds-space-generic-2-x;
-    grid-row-gap: $esds-space-generic-2-x;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
     margin: $esds-space-stack-2-x;
     padding: 0;
-
-    @media screen and (min-width: 1000px) {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
 
     &:last-child {
         margin-bottom: 0;
@@ -24,13 +18,22 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
     }
 }
 
+.esds-tiles__placeholder,
 .esds-tiles__tile {
     border-radius: $esds-border-radius-default;
     list-style: none;
     padding: $esds-space-inset-1-x;
+    margin: 0 $esds-space-generic-2-x $esds-space-generic-2-x 0;
+    flex: 0 0 100%;
+
     
     @media screen and (min-width: 1000px) {
+        flex: 1 1 26%;
         padding: $esds-space-inset-1-and-half-x;
+        
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
     }
 
     .esds-tiles--translucent-white & {
@@ -40,6 +43,48 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
     .esds-tiles--no-padding & {
         padding: 0;
     }
+}
+
+.esds-tiles--2-column {
+    @media screen and (min-width: 768px) {
+        .esds-tiles__placeholder,
+        .esds-tiles__tile {
+            flex: 1 1 35%;
+
+            &:nth-child(3n) {
+                margin-right: $esds-space-generic-2-x;
+            }
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.esds-tiles--4-column {
+    @media screen and (min-width: 1000px) {
+        .esds-tiles__placeholder,
+        .esds-tiles__tile {
+            flex: 1 1 21%;
+
+            &:nth-child(3n) {
+                margin-right: $esds-space-generic-2-x;
+            }
+
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.esds-tiles__placeholder {
+    padding-bottom: 0;
+    height: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    overflow: hidden;
 }
 
 .esds-tiles__tile--link {
@@ -90,18 +135,6 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
     @include esds-body-text-s();
     @include esds-text-color('secondary');
     margin: 0;
-}
-
-.esds-tiles--2-column {
-    @media screen and (min-width: 768px) {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.esds-tiles--4-column {
-    @media screen and (min-width: 1000px) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
 }
 
 .esds-tiles__list {
