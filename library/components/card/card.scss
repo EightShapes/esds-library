@@ -6,6 +6,7 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-30, .3);
     display: flex;
     flex-direction: column;
     margin: $esds-space-stack-2-x;
+    overflow: hidden;
 
     &.esds-container--white,
     &.esds-container--light,
@@ -50,12 +51,12 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-30, .3);
     border-radius: $esds-border-radius-default $esds-border-radius-default 0 0;
     bottom: 0;
     height: 100%;
-    left: 0;
+    left: -1px;
     padding-top: 0;
     position: absolute;
     right: 0;
     top: 0;
-    width: 100%;
+    width: calc(100% + 2px);
     z-index: 10;
 }
 

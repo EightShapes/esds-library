@@ -180,10 +180,21 @@
         ) }}
     </div>
     <h2 class="esds-sink-page-header">Card Grid</h2>
-    <div style="display: flex;">
+    <style>
+        .card-grid {
+            background: lightgray;
+            display: flex;
+            padding: 20px;
+        }
+
+        .card-grid > * {
+            margin-right: 20px;
+        }
+    </style>
+    <div class="card-grid">
         {{ esds.card(
             container="light",
-            thumbnail_image="/images/card/patterns-vs-components.jpeg",
+            thumbnail_image="/images/card/tokens-in-design-systems.jpeg",
             type="Medium",
             title="Contributions to Design Systems",
             description="Opening a Library to a Community's Code, Design, and More",
