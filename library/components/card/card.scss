@@ -3,6 +3,8 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-30, .3);
 
 .esds-card {
     border-radius: $esds-border-radius-default;
+    display: flex;
+    flex-direction: column;
     margin: $esds-space-stack-2-x;
 
     &.esds-container--white,
@@ -16,6 +18,9 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-30, .3);
 }
 
 .esds-card__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     text-decoration: none;
 }
 
@@ -58,6 +63,7 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-30, .3);
     border-radius: $esds-border-radius-default;
     margin: 0;
     padding: $esds-space-inset-1-x;
+    flex: 1 0 auto;
     @media screen and (min-width: 1000px) {
         padding: $esds-space-inset-1-and-half-x;
     }
