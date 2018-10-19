@@ -13,7 +13,7 @@
     ) %}
 
 <div 
-    class="esds-card{% if container %} esds-container--{{ container }}{% endif %}{% if class %} {{ class }}{% endif %}"
+    class="esds-card{{ ' esds-container--' + container if container }}{{ ' esds-card--link' if href }}{{ ' ' + class if class }}"
     style="width: {{ width }};"
 >
 
