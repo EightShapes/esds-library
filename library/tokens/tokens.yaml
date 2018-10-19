@@ -72,6 +72,17 @@ alert-color :
   new : 
     on-light : *color-orange-91
     fill : "#FBE5D9"
+
+interactive-color :
+  hover :
+    on-light : "#E1F1F3"
+    on-dark : "#004E5A"
+  shadow : 
+    on-white : *color-teal-30
+    on-light : *color-teal-27
+    on-brand : *color-white
+    on-dark  : *color-teal-48
+
 font :
   family :
     sans-serif : "Barlow, 'Lato', sans-serif"
