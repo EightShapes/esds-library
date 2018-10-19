@@ -60,20 +60,6 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-30, .3);
     z-index: 10;
 }
 
-.esds-card__content {
-    border-radius: $esds-border-radius-default;
-    margin: 0;
-    padding: $esds-space-inset-1-x;
-    flex: 1 0 auto;
-    @media screen and (min-width: 1000px) {
-        padding: $esds-space-inset-1-and-half-x;
-    }
-
-    .esds-card__thumbnail + & {
-        border-radius: 0 0 $esds-border-radius-default $esds-border-radius-default;
-    }
-}
-
 .esds-card__thumbnail-inner-wrap,
 .esds-card__content {
     .esds-container--white & {
@@ -98,6 +84,40 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-30, .3);
 
     .esds-container--dark-photograph & {
         background-color: transparent;
+    }
+}
+
+.esds-card__content {
+    border-radius: $esds-border-radius-default;
+    flex: 1 0 auto;
+    margin: 0;
+    padding: $esds-space-inset-1-x;
+    transition: background .5s;
+
+    @media screen and (min-width: 1000px) {
+        padding: $esds-space-inset-1-and-half-x;
+    }
+
+    .esds-card__thumbnail + & {
+        border-radius: 0 0 $esds-border-radius-default $esds-border-radius-default;
+    }
+    
+    .esds-card--hover .esds-card__link &,
+    .esds-card__link:hover &,
+    .esds-container--white .esds-card__link:hover &,
+    .esds-container--white .esds-card--hover .esds-card__link &,
+    .esds-container--light .esds-card__link:hover &,
+    .esds-container--light .esds-card--hover .esds-card__link & {
+        background-color: $esds-interactive-color-hover-on-light;
+    }
+
+    .esds-container--dark .esds-card__link:hover &,
+    .esds-container--dark .esds-card--hover .esds-card__link &,
+    .esds-container--black .esds-card__link:hover &,
+    .esds-container--black .esds-card--hover .esds-card__link &,
+    .esds-container--brand .esds-card__link:hover &,
+    .esds-container--brand .esds-card--hover .esds-card__link & {
+        background-color: $esds-interactive-color-hover-on-dark;
     }
 }
 
