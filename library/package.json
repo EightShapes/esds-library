@@ -13,7 +13,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "esds-build": "^0.28.1"
+    "esds-build": "^0.39.1"
   },
   "dependencies": {
     "svg4everybody": "^2.1.9"

@@ -56,6 +56,50 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-30, .3);
     // }
 }
 
+// Focus states based on background/container card is within
+// Allowing .esds-background--* classes to affect state here because internally the card uses .esds-container--* classes to alter background and text colors, so a card grid needs to use a `background--` class to avoid altering the card's internal behavior
+// The focus ring color is dependent on the parent wrapping container so .esds-background--* classes are also included
+.esds-card__link:focus,
+.esds-card--focus .esds-card__link {
+    box-shadow: 0 0 8px $esds-interactive-color-shadow-on-white;
+    outline: none;
+}
+
+.esds-container--white,
+.esds-background--white {
+    .esds-card__link:focus,
+    .esds-card--focus .esds-card__link {
+        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-white;
+    }
+}
+
+.esds-container--light,
+.esds-background--light {
+    .esds-card__link:focus,
+    .esds-card--focus .esds-card__link {
+        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-light;
+    }
+}
+
+.esds-container--dark,
+.esds-background--dark,
+.esds-container--black,
+.esds-background--black {
+    .esds-card__link:focus,
+    .esds-card--focus .esds-card__link {
+        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-dark;
+    }
+}
+
+.esds-container--brand,
+.esds-background--brand {
+    .esds-card__link:focus,
+    .esds-card--focus .esds-card__link {
+        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-brand;
+    }
+}
+
+
 .esds-card__thumbnail {
     display: block;
     height: 0;
