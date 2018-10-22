@@ -1,8 +1,6 @@
 {% extends "templates/sink-as-rows.njk" %}
 
 {% macro sink_body() %}
-    {{ esds.tiles() }}
-
     {{ esds.tiles(
         items = [
             {
@@ -149,5 +147,30 @@
             }
         ]
     ) }}
+
+    {{ esds.tiles (
+        items = [
+            {
+                heading: "Workshops & Talks",
+                description: "Discover needs, define objectives, and setup a strategy of scope, adopters, people, and processes involved.",
+                href: "#tile-link",
+                property: "1-2 Months"
+            },
+            {
+                heading: "Workshops & Talks",
+                description: "Discover needs, define objectives, and setup a strategy of scope, adopters, people, and processes involved.",
+                href: "#tile-link",
+                property: "1-2 Months",
+                class: "esds-tile--hover"
+            },
+            {
+                heading: "Workshops & Talks",
+                description: "Discover needs, define objectives, and setup a strategy of scope, adopters, people, and processes involved.",
+                href: "#tile-link",
+                property: "1-2 Months",
+                class: "esds-tile--focus"
+            }
+        ]
+    )}}
 
 {% endmacro %}

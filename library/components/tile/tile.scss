@@ -21,16 +21,16 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
 .esds-tiles__placeholder,
 .esds-tiles__tile {
     border-radius: $esds-border-radius-default;
-    list-style: none;
-    padding: $esds-space-inset-1-x;
-    margin: 0 $esds-space-generic-2-x $esds-space-generic-2-x 0;
     flex: 0 0 100%;
+    list-style: none;
+    margin: 0 $esds-space-generic-2-x $esds-space-generic-2-x 0;
+    padding: $esds-space-inset-1-x;
 
     
     @media screen and (min-width: 1000px) {
         flex: 1 1 26%;
         padding: $esds-space-inset-1-and-half-x;
-        
+
         &:nth-child(3n) {
             margin-right: 0;
         }
@@ -80,19 +80,62 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
 }
 
 .esds-tiles__placeholder {
-    padding-bottom: 0;
     height: 0;
-    padding-top: 0;
     margin-bottom: 0;
     overflow: hidden;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 .esds-tiles__tile--link {
     text-decoration: none;
     transition: background $esds-transition-interactive-hover-speed linear;
 
+    &.esds-tile--focus,
+    &.esds-tile--hover,
+    &:focus,
     &:hover {
-        background-color: $esds-color-teal-96;
+        background-color: $esds-interactive-color-hover-on-light;
+    }
+
+    &:focus,
+    &.esds-tile--focus {
+        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-white;
+        outline: none;
+    }
+}
+
+.esds-background--white,
+.esds-container--white {
+    .esds-tile--focus,
+    .esds-tiles__tile--link:focus {
+        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-white;
+    }
+}
+
+.esds-background--light,
+.esds-container--light {
+    .esds-tile--focus,
+    .esds-tiles__tile--link:focus {
+        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-light;
+    }
+}
+
+.esds-background--dark,
+.esds-container--dark,
+.esds-background--black,
+.esds-container--black {
+    .esds-tile--focus,
+    .esds-tiles__tile--link:focus {
+        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-dark;
+    }
+}
+
+.esds-background--brand,
+.esds-container--brand {
+    .esds-tile--focus,
+    .esds-tiles__tile--link:focus {
+        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-brand;
     }
 }
 

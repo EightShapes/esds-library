@@ -29,31 +29,6 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-30, .3);
     height: 100%;
     overflow: hidden;
     text-decoration: none;
-
-    // TODO: This needs to be based on the background container, not the card's inner container...hmmmmmm
-    // .esds-card--focus &,
-    // &:focus,
-    // .esds-container--white .esds-card__link:focus &,
-    // .esds-container--white.esds-card--focus .esds-card__link & {
-    //     box-shadow: 0 0 8px $esds-interactive-color-shadow-on-white;
-    // }
-
-    // .esds-container--light .esds-card__link:focus &,
-    // .esds-container--light.esds-card--focus .esds-card__link & {
-    //     box-shadow: 0 0 8px $esds-interactive-color-shadow-on-light;
-    // }
-
-    // .esds-container--dark .esds-card__link:focus &,
-    // .esds-container--dark.esds-card--focus .esds-card__link &,
-    // .esds-container--black .esds-card__link:focus &,
-    // .esds-container--black.esds-card--focus .esds-card__link & {
-    //     box-shadow: 0 0 8px $esds-interactive-color-shadow-on-dark;
-    // }
-
-    // .esds-container--brand .esds-card__link:focus &,
-    // .esds-container--brand.esds-card--focus .esds-card__link & {
-    //     box-shadow: 0 0 8px $esds-interactive-color-shadow-on-brand;
-    // }
 }
 
 // Focus states based on background/container card is within
