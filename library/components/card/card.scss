@@ -142,7 +142,7 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-30, .3);
     flex: 1 0 auto;
     margin: 0;
     padding: $esds-space-inset-1-x;
-    transition: background .5s;
+    transition: background $esds-transition-interactive-hover-speed;
 
     @media screen and (min-width: 1000px) {
         padding: $esds-space-inset-1-and-half-x;
