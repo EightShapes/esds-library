@@ -61,6 +61,28 @@
 
 }
 
+.esds-row--article-max-width {
+    & .esds-row__inner {
+        max-width: $esds-font-line-length-article;
+    }
+
+    &.esds-row--tall-inset .esds-row__inner {
+        max-width: $esds-font-line-length-article + $esds-space-inset-4-x*2;
+    }
+
+    &.esds-row--very-tall-inset .esds-row__inner {
+        max-width: $esds-font-line-length-article + $esds-space-inset-8-x*2;
+    }
+
+    &.esds-row--very-very-tall-inset .esds-row__inner {
+        max-width: $esds-font-line-length-article + $esds-space-inset-8-x*2;
+    }
+
+    &.esds-row--no-inset .esds-row__inner {
+        max-width: $esds-font-line-length-article;
+    }
+}
+
 .esds-row--marketing-max-width {
     & .esds-row__inner {
         max-width: $esds-font-line-length-long-form;
@@ -81,6 +103,10 @@
     &.esds-row--no-inset .esds-row__inner {
         max-width: $esds-font-line-length-long-form;
     }
+}
+
+.esds-row--article-masthead {
+    height: 50vw;
 }
 
 .esds-row--background-image-dark {
