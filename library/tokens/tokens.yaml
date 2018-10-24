@@ -109,8 +109,8 @@ font :
     heading-level-4 : 
       default : 1.2*16px
       at-480 : 1.25*16px
-      at-768 : 1.333*16px
-      at-1000 : 1.414*16px
+      at-768 : 1.5*16px
+      at-1000 : 1.6*16px
     heading-eyebrow : 
       default : 13px
       at-480 : 14px 
@@ -142,6 +142,7 @@ font :
     bold : 600
   line-length :
     long-form : 800px
+    article : 700px
 
 border :
   selected :
