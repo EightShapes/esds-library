@@ -100,7 +100,7 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
 
     &:focus,
     &.esds-tile--focus {
-        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-white;
+        box-shadow: $esds-shadow-interactive-on-white;
         outline: none;
     }
 }
@@ -109,7 +109,7 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
 .esds-container--white {
     .esds-tile--focus,
     .esds-tiles__tile--link:focus {
-        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-white;
+        box-shadow: $esds-shadow-interactive-on-white;
     }
 }
 
@@ -117,7 +117,7 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
 .esds-container--light {
     .esds-tile--focus,
     .esds-tiles__tile--link:focus {
-        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-light;
+        box-shadow: $esds-shadow-interactive-on-light;
     }
 }
 
@@ -127,7 +127,7 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
 .esds-container--black {
     .esds-tile--focus,
     .esds-tiles__tile--link:focus {
-        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-dark;
+        box-shadow: $esds-shadow-interactive-on-dark;
     }
 }
 
@@ -135,7 +135,7 @@ $semitransparentwhite: rgba(255, 255, 255, .9);
 .esds-container--brand {
     .esds-tile--focus,
     .esds-tiles__tile--link:focus {
-        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-brand;
+        box-shadow: $esds-shadow-interactive-on-brand;
     }
 }
 

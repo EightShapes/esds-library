@@ -36,7 +36,7 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-30, .3);
 // The focus ring color is dependent on the parent wrapping container so .esds-background--* classes are also included
 .esds-card__link:focus,
 .esds-card--focus .esds-card__link {
-    box-shadow: 0 0 8px $esds-interactive-color-shadow-on-white;
+    box-shadow: $esds-shadow-interactive-on-white;
     outline: none;
 }
 
@@ -44,7 +44,7 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-30, .3);
 .esds-background--white {
     .esds-card__link:focus,
     .esds-card--focus .esds-card__link {
-        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-white;
+        box-shadow: $esds-shadow-interactive-on-white;
     }
 }
 
@@ -52,7 +52,7 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-30, .3);
 .esds-background--light {
     .esds-card__link:focus,
     .esds-card--focus .esds-card__link {
-        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-light;
+        box-shadow: $esds-shadow-interactive-on-light;
     }
 }
 
@@ -62,7 +62,7 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-30, .3);
 .esds-background--black {
     .esds-card__link:focus,
     .esds-card--focus .esds-card__link {
-        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-dark;
+        box-shadow: $esds-shadow-interactive-on-dark;
     }
 }
 
@@ -70,7 +70,7 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-30, .3);
 .esds-background--brand {
     .esds-card__link:focus,
     .esds-card--focus .esds-card__link {
-        box-shadow: 0 0 8px $esds-interactive-color-shadow-on-brand;
+        box-shadow: $esds-shadow-interactive-on-brand;
     }
 }
 
@@ -228,9 +228,17 @@ $esds-color-card-thumbnail-overlay-hover: rgba($esds-color-teal-30, .3);
     @include esds-text-color($type: 'link');
     margin: 0;
     padding: 0;
+    transition: color $esds-transition-interactive-hover-speed;
 
     &:not(:last-child) {
         margin: $esds-space-stack-1-x;
+    }
+
+    .esds-container--brand .esds-card__link:focus &,
+    .esds-container--brand.esds-card--focus .esds-card__link &,
+    .esds-container--brand .esds-card__link:hover &,
+    .esds-container--brand.esds-card--hover .esds-card__link & {
+        color: $esds-text-color-link-on-black;
     }
 }
 
