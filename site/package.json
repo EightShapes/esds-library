@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/EightShapes/esds-library-site#readme",
   "devDependencies": {
-    "esds-build": "^0.28.1"
+    "esds-build": "^0.39.1"
   },
   "dependencies": {
     "esds-doc": "^0.10.0-alpha.4",
