@@ -18,7 +18,7 @@
 
 <div class="esds-tiles{% if class %} {{ class }}{% endif %}">
     {% for item in items %}
-    <{{ 'a href=' + item.href if item.href else 'div' }} class="esds-tiles__tile esds-container--{{ container }}{{ ' esds-tiles__tile--link' if item.href }}">
+    <{{ 'a href=' + item.href if item.href else 'div' }} class="esds-tiles__tile esds-container--{{ container }}{{ ' esds-tiles__tile--link' if item.href }}{{ ' ' + item.class if item.class }}">
         
         {% if item.subheading %}
         <h4 class="esds-tiles__subheading">{{ item.subheading }}</h4>

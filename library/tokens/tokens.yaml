@@ -78,10 +78,19 @@ interactive-color :
     on-light : "#E1F1F3"
     on-dark : "#004E5A"
   shadow : 
-    on-white : *color-teal-30
-    on-light : *color-teal-27
-    on-brand : *color-white
-    on-dark  : *color-teal-48
+    on-white : &interactive-color-on-white *color-teal-30
+    on-light : &interactive-color-on-light *color-teal-27
+    on-brand : &interactive-color-on-brand *color-white
+    on-dark  : &interactive-color-on-dark *color-teal-48
+    on-black  : &interactive-color-on-black *color-teal-48
+
+shadow:
+  interactive:
+    on-white : "0 0 8px !{*interactive-color-on-white}"
+    on-light : "0 0 8px !{*interactive-color-on-light}"
+    on-brand : "0 0 8px !{*interactive-color-on-brand}"
+    on-dark  : "0 0 8px !{*interactive-color-on-dark}"
+    on-black  : "0 0 8px !{*interactive-color-on-black}"
 
 font :
   family :

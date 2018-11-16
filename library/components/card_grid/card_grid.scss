@@ -1,0 +1,41 @@
+.esds-card-grid {
+    &:not(:last-child) {
+        margin: $esds-space-stack-4-x;
+    }
+
+    .esds-card-grid__placeholder {
+        height: 0;
+        overflow: hidden;
+    }
+
+    @media screen and (min-width: $esds-breakpoints-width-500) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -($esds-space-generic-2-x);
+
+        .esds-card-grid__placeholder,
+        .esds-card {
+            flex: 1 1 40%;
+            margin-right: $esds-space-generic-2-x;
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @media screen and (min-width: $esds-breakpoints-width-768) {
+        .esds-card-grid__placeholder,
+        .esds-card {
+            flex: 1 1 30%;
+
+            &:nth-child(2n) {
+                margin-right: $esds-space-generic-2-x;
+            }
+
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+    }
+}
