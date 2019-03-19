@@ -1,0 +1,16 @@
+{
+  "name": "esds-base-wc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepack": "npm install && gulp build:all"
+  },
+  "keywords": [],
+  "author": "Kevin Powell <kevinmpowell@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "esds-build": "^0.48.1"
+  }
+}
