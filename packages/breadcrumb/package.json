@@ -1,6 +1,6 @@
 {
-  "name": "breadcrumb",
-  "version": "1.0.0",
+  "name": "esds-breadcrumb",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "esds-build": "^0.48.1"
+  }
 }
