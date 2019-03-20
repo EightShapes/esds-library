@@ -1,0 +1,6 @@
+{
+  "concatenateScripts": false,
+  "concatenateMacros": false,
+  "copyScripts": true,
+  "additionalWatchTasks": ["watch:scripts:rollup"]
+}

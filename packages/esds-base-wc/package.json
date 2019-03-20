@@ -15,6 +15,8 @@
     "lit-element": "^2.0.1"
   },
   "devDependencies": {
-    "esds-build": "^0.48.1"
+    "esds-build": "github:eightshapes/esds-build#feature/web-components-upgrade",
+    "rollup": "^1.7.0",
+    "rollup-plugin-node-resolve": "^4.0.1"
   }
 }
