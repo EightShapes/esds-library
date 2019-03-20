@@ -3,9 +3,13 @@
 
 {% block body %}
   <h1>Esds Button Proving Ground</h1>
-  <div class="test-examples"></div>
+  <div class="test-examples">
+    <!-- Render button examples here -->
+  </div>
+
+
   <script type="module">
-    import { html, render } from '/scripts/lit-html.js';
+    import { html, render } from '/scripts/esds-base-wc.js';
 
     const outputTarget = document.querySelector('.test-examples');
     let output = [];
@@ -17,7 +21,7 @@
       const variantHeading = v.length > 0 ? v.charAt(0).toUpperCase() + v.slice(1) : 'Primary';
       output.push(html`<h2>${variantHeading}</h2>`);
       sizes.forEach((s) => {
-        const sizeHeading = s.length > 0 ? s.charAt(0).toUpperCase() + s.slice(1) : 'Medim';
+        const sizeHeading = s.length > 0 ? s.charAt(0).toUpperCase() + s.slice(1) : 'Medium';
         output.push(html`
           <h3>${sizeHeading}</h3>
           <div class="avr">
@@ -27,6 +31,11 @@
             <esds-button variant="${v}" size="${s}" class="esds-button--active">Active</esds-button>
             <esds-button variant="${v}" size="${s}" class="esds-button--focus">Focus</esds-button>
             <esds-button variant="${v}" size="${s}" disabled>Disabled</esds-button>
+            <br />
+            <br />
+            <esds-button variant="${v}" size="${s}" icon-left="angle-left">Icon Left</esds-button>
+            <esds-button variant="${v}" size="${s}" icon-right="angle-right">Icon Right</esds-button>
+            <esds-button variant="${v}" size="${s}" icon-left="eightshapes-mark" icon-right="eightshapes-mark">Button Text</esds-button>
           </div>
           `);
         });

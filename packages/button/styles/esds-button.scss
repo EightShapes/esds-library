@@ -170,24 +170,25 @@ $esds-button-active-box-shadow: 0 0 4px 4px rgba($esds-color-teal-37, .8);
       }
     }
 
-    .esds-button__icon {
+    .esds-button__icon .esds-icon-v1 {
       display: inline-block;
       height: 16px;
       vertical-align: middle;
       width: 16px;
 
-      .esds-button__label + & {
-        padding-left: $esds-space-generic-eighth-x;
-      }
+    }
 
-      .esds-button--large & {
-        height: 20px;
-        width: 20px;
-      }
+    .esds-button__label + .esds-button__icon .esds-icon-v1 {
+      padding-left: $esds-space-generic-eighth-x;
+    }
 
-      .esds-button--small & {
-        height: 12px;
-        width: 12px;
-      }
+    &.esds-button--large .esds-icon-v1 {
+      height: 20px;
+      width: 20px;
+    }
+
+    &.esds-button--small .esds-icon-v1 {
+      height: 12px;
+      width: 12px;
     }
 } // end of .esds-button-v1

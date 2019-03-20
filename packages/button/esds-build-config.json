@@ -13,6 +13,24 @@
       "sources": ["./scripts/**/*"],
       "destination": "_site/latest/scripts",
       "watch": true
+    },
+    {
+      "name": "esds icon",
+      "sources": ["./node_modules/esds-icon/scripts/**/*"],
+      "destination": "_site/latest/scripts",
+      "watch": true
+    },
+    {
+      "name": "esds icon styles",
+      "sources": ["./node_modules/esds-icon/dist/esds-icon.css"],
+      "destination": "_site/latest/styles",
+      "watch": true
+    },
+    {
+      "name": "Esds Icon Sprite",
+      "sources": ["./node_modules/esds-icons/dist/esds-icons.svg"],
+      "destination": "_site/latest/icons",
+      "watch": true
     }
   ]
 }

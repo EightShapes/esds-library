@@ -1,4 +1,4 @@
-import { LitElement, html } from './lit-element.js';
+import { LitElement, html, ifDefined } from './esds-base-wc.js';
 
 // Extend the LitElement base class
 class EsdsButton extends LitElement {
@@ -7,8 +7,13 @@ class EsdsButton extends LitElement {
       disabled: {type: Boolean},
       element: {type: String},
       href: {type: String},
+      iconLeft: {type: String, attribute: 'icon-left'},
+      iconLeftTitle: {type: String, attribute: 'icon-left-title'},
+      iconRight: {type: String, attribute: 'icon-right'},
+      iconRightTitle: {type: String, attribute: 'icon-right-title'},
       size: {type: String},
       tag: { type: String },
+      text: { type: String },
       type: { type: String },
       variant: { type: String }
     }
@@ -21,15 +26,14 @@ class EsdsButton extends LitElement {
 
   constructor() {
     super();
+    this.defaultButtonText = 'Button Text';
     this.defaultClass = 'esds-button-v1';
     this.baseModifierClass = 'esds-button--';
     this.disabled = false;
     this.element = 'button';
+    this.text = this.defaultButtonText;
     this.type = 'button';
     this.stylesheet = 'esds-button.css';
-    this.slots = {
-      default: 'Button Text'
-    };
     this.slotsExtracted = false;
     if (!this.slotsExtracted) {
       this.slots = this.extractSlotContent();
@@ -48,7 +52,7 @@ class EsdsButton extends LitElement {
 
   extractSlotContent() {
     // Iterate over the component on connectedCallback and extract all named slotables
-    const slots = this.slots;
+    const slots = this.slots || {};
     const namedSlots = this.querySelectorAll("[slot]");
     if (namedSlots) {
       namedSlots.forEach(n => {
@@ -60,7 +64,6 @@ class EsdsButton extends LitElement {
     // If there are any remaining child nodes, copy them into a `default` slotable
     const remainingNodes = Array.from(this.childNodes).slice(); // make a copy of the childNodes, cause the this.childNodes reference will change after the component renders
     if (remainingNodes.length > 0) {
-      console.log(remainingNodes);
       slots['default'] = remainingNodes;
     }
     return slots;
@@ -103,16 +106,46 @@ class EsdsButton extends LitElement {
        this.element = 'a';
      }
 
+     if (this.text === this.defaultButtonText && (this.iconLeft || this.iconRight)) {
+       this.text = false;
+     }
+
+     if ((!this.text || this.text === this.defaultButtonText) && this.slots.default) {
+       this.text = this.slots.default;
+     }
+
      let component;
+     let iconLeft;
+     let iconRight;
+     let text;
+
+     if (this.iconLeft) {
+       iconLeft = html`<esds-icon class="esds-button__icon" name="${this.iconLeft}" title="${ifDefined(this.iconLeftTitle)}"></esds-icon>`;
+     }
+
+     if (this.iconRight) {
+       iconRight = html`<esds-icon class="esds-button__icon" name="${this.iconRight}" title="${ifDefined(this.iconRightTitle)}"></esds-icon>`;
+     }
+
+     if ((this.iconRight || this.iconLeft) && this.text) {
+       text = html`<span class="esds-button__label">${this.text}</span>`;
+     } else if (this.text) {
+       text = this.text;
+     }
+
      if (this.element === 'button') {
        component = html`
        <button class="${blockLevelClass}" type="${this.type}" ?disabled=${this.disabled}>
-         ${this.slots.default}
+         ${iconLeft}
+         ${text}
+         ${iconRight}
        </button>`;
      } else if (this.element === 'a') {
        component = html`
        <a class="${blockLevelClass}" href="${this.href}">
-         ${this.slots.default}
+         ${iconLeft}
+         ${text}
+         ${iconRight}
        </a>`;
      }
 

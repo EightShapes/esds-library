@@ -14,8 +14,9 @@
     "esds-build": "github:eightshapes/esds-build#feature/web-components-upgrade"
   },
   "dependencies": {
-    "esds-visual-style": "0.1.0",
-    "lit-element": "^2.0.1",
-    "lit-html": "^1.0.0"
+    "esds-base-wc": "0.1.0",
+    "esds-icon": "0.1.0",
+    "esds-icons": "0.1.0",
+    "esds-visual-style": "0.1.0"
   }
 }
