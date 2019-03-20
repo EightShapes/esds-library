@@ -1,0 +1,14 @@
+{
+  "codeNamespace": "esds",
+  "concatenateScripts": false,
+  "concatenateMacros": false,
+  "copyScripts": true,
+  "copyTasks": [
+    {
+      "name": "tokensJsonToWebroot",
+      "sources": ["tokens/tokens.json"],
+      "destination": "_site/latest/scripts/",
+      "watch": true
+    }
+  ]
+}

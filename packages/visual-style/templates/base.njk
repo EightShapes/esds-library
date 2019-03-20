@@ -1,5 +1,3 @@
-{# Import the concatenated nunjucks macro file #}
-{% import 'components/esds-visual-style.njk' as library with context %}
 <!doctype html>
 <html>
     <head>
@@ -11,10 +9,20 @@
         {% block head_content_prepend %}{% endblock head_content_prepend %}
         <link rel="stylesheet" href="/styles/esds-visual-style.css">
         {% block head_content_append %}{% endblock head_content_append %}
+        <script>
+        function getDsTokens() {
+          return fetch('/scripts/tokens.json').then(function(response){
+            return response.json();
+          })
+          .then((tokens) => {
+            return tokens;
+          });
+        }
+
+        </script>
     </head>
     <body>
         {% block body %}{% endblock body %}
-        <script src="/scripts/esds-visual-style.js"></script>
         {% block closing_body_assets %}{% endblock closing_body_assets %}
     </body>
 </html>
