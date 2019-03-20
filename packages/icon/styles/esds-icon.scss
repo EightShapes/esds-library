@@ -1,1 +1,23 @@
-@import '../tokens/tokens';
+@import './node_modules/esds-visual-style/styles/esds-visual-style';
+
+$esds-icon-size-s: 16px;
+$esds-icon-size-m: 24px;
+$esds-icon-size-l: 40px;
+
+@mixin esds-icon-size($size: $esds-icon-size-m) {
+    height: $size;
+    width: $size;
+}
+
+.esds-icon-v1 {
+    @include esds-icon-size;
+    background: transparent;
+
+    &.esds-icon--large {
+      @include esds-icon-size($esds-icon-size-l);
+    }
+
+    &.esds-icon--small {
+      @include esds-icon-size($esds-icon-size-s);
+    }
+}

@@ -1,5 +1,24 @@
 {
   "concatenateScripts": false,
   "concatenateMacros": false,
-  "copyScripts": true
+  "copyScripts": true,
+  "copyTasks": [
+    {
+      "name": "webified modules",
+      "sources": ["./web_modules/**/*"],
+      "destination": "_site/latest/scripts"
+    },
+    {
+      "name": "component-scripts",
+      "sources": ["./scripts/**/*"],
+      "destination": "_site/latest/scripts",
+      "watch": true
+    },
+    {
+      "name": "Esds Icons",
+      "sources": ["./node_modules/esds-icons/dist/esds-icons.svg"],
+      "destination": "_site/latest/icons",
+      "watch": true
+    }
+  ]
 }

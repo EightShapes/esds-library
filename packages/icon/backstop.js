@@ -15,7 +15,9 @@ const localConfig = {
             "label": "",
             "url": `http://${runtimeConfig.hostUrl}:${runtimeConfig.testingPort}/index.html`,
             "misMatchThreshold" : 0.1,
-            "requireSameDimensions": true
+            "requireSameDimensions": true,
+            "selectors": [".avr"],
+            "selectorExpansion": true
         }
     ],
     "paths": {
@@ -25,7 +27,7 @@ const localConfig = {
       "html_report": "backstop_data/html_report",
       "ci_report": "backstop_data/ci_report"
     },
-    "report": ["html", "json"],
+    "report": ["browser", "json"],
     "engine": "chrome"
 }
 

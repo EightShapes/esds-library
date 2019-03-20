@@ -1,7 +1,26 @@
 {% extends 'templates/base.njk' %}
-{% set title = "Design System" %}
+{% set title = "Esds Icon Proving Ground" %}
 
 {% block body %}
-  <h1>Design System</h1>
-  <p>Hello world!</p>
+  <h1>Esds Icon</h1>
+
+  <div class="avr">
+    <h2>Default</h2>
+    <esds-icon></esds-icon>
+  </div>
+
+  <div class="avr">
+    <h2>Small</h2>
+    <esds-icon size="small"></esds-icon>
+  </div>
+
+  <div class="avr">
+    <h2>Large</h2>
+    <esds-icon size="large"></esds-icon>
+  </div>
+
+  <div class="avr">
+    <h2>Accessible (has a &lt;title&gt;)</h2>
+    <esds-icon title="what time is it?"></esds-icon>
+  </div>
 {% endblock %}

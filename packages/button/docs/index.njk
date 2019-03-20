@@ -5,7 +5,6 @@
   <h1>Esds Button Proving Ground</h1>
   <div class="test-examples"></div>
   <script type="module">
-    import EsdsButton from '/scripts/esds-button.js';
     import { html, render } from '/scripts/lit-html.js';
 
     const outputTarget = document.querySelector('.test-examples');
@@ -34,12 +33,4 @@
     });
     render(output, outputTarget);
   </script>
-
-  {# <esds-button>Testing</esds-button>
-  <esds-button size="large"></esds-button>
-  <esds-button size="small"></esds-button>
-  <esds-button size="small" disabled></esds-button>
-  <esds-button href="http://eightshapes.com">Go To EightShapes.com</esds-button>
-  <esds-button variation="secondary" href="http://eightshapes.com">Go To EightShapes.com</esds-button>
-  <esds-button variation="flat" href="http://eightshapes.com">Go To EightShapes.com</esds-button> #}
 {% endblock %}
