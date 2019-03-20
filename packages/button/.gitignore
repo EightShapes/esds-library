@@ -42,3 +42,7 @@ backstop_data/bitmaps_test/
 
 # MacOS folder attributes
 *.DS_Store
+
+# Lint configs, controlled at top level root
+.sass-lint.yml
+.eslintrc

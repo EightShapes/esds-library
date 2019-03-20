@@ -1,7 +1,45 @@
 {% extends 'templates/base.njk' %}
-{% set title = "Design System" %}
+{% set title = "Esds Button" %}
 
 {% block body %}
-  <h1>Design System</h1>
-  <p>Hello world!</p>
+  <h1>Esds Button Proving Ground</h1>
+  <div class="test-examples"></div>
+  <script type="module">
+    import EsdsButton from '/scripts/esds-button.js';
+    import { html, render } from '/scripts/lit-html.js';
+
+    const outputTarget = document.querySelector('.test-examples');
+    let output = [];
+
+    const variants = ['', 'secondary', 'flat'];
+    const sizes = ['', 'large', 'small'];
+    const states = ['hover', 'active', 'focus'];
+    variants.forEach((v) => {
+      const variantHeading = v.length > 0 ? v.charAt(0).toUpperCase() + v.slice(1) : 'Primary';
+      output.push(html`<h2>${variantHeading}</h2>`);
+      sizes.forEach((s) => {
+        const sizeHeading = s.length > 0 ? s.charAt(0).toUpperCase() + s.slice(1) : 'Medim';
+        output.push(html`
+          <h3>${sizeHeading}</h3>
+          <div class="avr">
+            <esds-button variant="${v}" size="${s}">Default</esds-button>
+            <esds-button variant="${v}" size="${s}" href="http://eightshapes.com">Link Button</esds-button>
+            <esds-button variant="${v}" size="${s}" class="esds-button--hover">Hover</esds-button>
+            <esds-button variant="${v}" size="${s}" class="esds-button--active">Active</esds-button>
+            <esds-button variant="${v}" size="${s}" class="esds-button--focus">Focus</esds-button>
+            <esds-button variant="${v}" size="${s}" disabled>Disabled</esds-button>
+          </div>
+          `);
+        });
+    });
+    render(output, outputTarget);
+  </script>
+
+  {# <esds-button>Testing</esds-button>
+  <esds-button size="large"></esds-button>
+  <esds-button size="small"></esds-button>
+  <esds-button size="small" disabled></esds-button>
+  <esds-button href="http://eightshapes.com">Go To EightShapes.com</esds-button>
+  <esds-button variation="secondary" href="http://eightshapes.com">Go To EightShapes.com</esds-button>
+  <esds-button variation="flat" href="http://eightshapes.com">Go To EightShapes.com</esds-button> #}
 {% endblock %}

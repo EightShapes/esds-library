@@ -1,5 +1,18 @@
 {
   "concatenateScripts": false,
   "concatenateMacros": false,
-  "copyScripts": true
+  "copyScripts": true,
+  "copyTasks": [
+    {
+      "name": "lit-element-webified",
+      "sources": ["./web_modules/**/*"],
+      "destination": "_site/latest/scripts"
+    },
+    {
+      "name": "component-scripts",
+      "sources": ["./scripts/**/*"],
+      "destination": "_site/latest/scripts",
+      "watch": true
+    }
+  ]
 }

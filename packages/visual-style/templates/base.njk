@@ -10,15 +10,14 @@
         <link rel="stylesheet" href="/styles/esds-visual-style.css">
         {% block head_content_append %}{% endblock head_content_append %}
         <script>
-        function getDsTokens() {
-          return fetch('/scripts/tokens.json').then(function(response){
-            return response.json();
-          })
-          .then((tokens) => {
-            return tokens;
-          });
-        }
-
+          function getDsTokens() {
+            return fetch('/scripts/tokens.json').then(function(response){
+              return response.json();
+            })
+            .then((tokens) => {
+              return tokens;
+            });
+          }
         </script>
     </head>
     <body>
