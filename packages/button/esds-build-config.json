@@ -4,9 +4,10 @@
   "copyScripts": true,
   "copyTasks": [
     {
-      "name": "lit-element-webified",
-      "sources": ["./web_modules/**/*"],
-      "destination": "_site/latest/scripts"
+      "name": "ESDS Base Component",
+      "sources": ["./node_modules/esds-base-wc/dist/esds-base-wc.*"],
+      "destination": "_site/latest/scripts",
+      "watch": true
     },
     {
       "name": "component-scripts",

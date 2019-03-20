@@ -1,7 +1,7 @@
-import { LitElement, html, ifDefined } from './esds-base-wc.js';
+import { EsdsBaseWc, html, ifDefined } from './esds-base-wc.js';
 
 // Extend the LitElement base class
-class EsdsButton extends LitElement {
+class EsdsButton extends EsdsBaseWc {
   static get properties() {
     return {
       disabled: {type: Boolean},
@@ -19,11 +19,6 @@ class EsdsButton extends LitElement {
     }
   }
 
-  getStylesheet() {
-    const stylesPath = window.stylesPath || '/styles';
-    return `${stylesPath}/${this.stylesheet}`;
-  }
-
   constructor() {
     super();
     this.defaultButtonText = 'Button Text';
@@ -34,63 +29,10 @@ class EsdsButton extends LitElement {
     this.text = this.defaultButtonText;
     this.type = 'button';
     this.stylesheet = 'esds-button.css';
-    this.slotsExtracted = false;
-    if (!this.slotsExtracted) {
-      this.slots = this.extractSlotContent();
-    }
-  }
-  /**
-   * Implement `render` to define a template for your element.
-   *
-   * You must provide an implementation of `render` for any element
-   * that uses LitElement as a base class.
-   */
-
-  createRenderRoot() {
-    return this;
   }
 
-  extractSlotContent() {
-    // Iterate over the component on connectedCallback and extract all named slotables
-    const slots = this.slots || {};
-    const namedSlots = this.querySelectorAll("[slot]");
-    if (namedSlots) {
-      namedSlots.forEach(n => {
-        slots[n.getAttribute('slot')] = n;
-        n.parentNode.removeChild(n);
-      });
-    }
-
-    // If there are any remaining child nodes, copy them into a `default` slotable
-    const remainingNodes = Array.from(this.childNodes).slice(); // make a copy of the childNodes, cause the this.childNodes reference will change after the component renders
-    if (remainingNodes.length > 0) {
-      slots['default'] = remainingNodes;
-    }
-    return slots;
-  }
-
-  setHostClass() {
-    // const classBase = 'esds-button--';
-    // const addClasses = [this.defaultClass];
-    // const removeClasses = [];
-    //
-    // if (this.size) {
-    //   addClasses.push(`${classBase}${this.size}`);
-    // }
-    //
-    // addClasses.forEach((c) => this.classList.add(c));
-    // removeClasses.forEach((c) => this.classList.remove(c));
-
-  }
 
   render(){
-    // this.setHostClass();
-    /**
-     * `render` must return a lit-html `TemplateResult`.
-     *
-     * To create a `TemplateResult`, tag a JavaScript template literal
-     * with the `html` helper function:
-     */
      let blockLevelClass = this.defaultClass;
      if (this.size) {
        blockLevelClass += ` ${this.baseModifierClass}${this.size}`;
@@ -150,7 +92,7 @@ class EsdsButton extends LitElement {
      }
 
     return html`
-      <link rel="stylesheet" href="${this.getStylesheet()}"/>
+      ${this.getStylesheet()}
       ${component}
     `;
   }
