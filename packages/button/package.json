@@ -1,6 +1,6 @@
 {
   "name": "esds-button",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "esds-base-wc": "^0.2.1",
-    "esds-icon": "^0.2.1",
-    "esds-icons": "^0.2.1",
+    "esds-icon": "^0.3.0",
+    "esds-icons": "^0.3.0",
     "esds-visual-style": "^0.2.1"
   },
   "gitHead": "056d2298a4e1889363511e20c057d60eaf566d82"
