@@ -9,7 +9,7 @@ class EsdsInput extends EsdsBaseWc {
       describedby: {type: String},
       disabled: {type: Boolean},
       form: {type: String},
-      id: {type: String},
+      id: {type: String, attribute: 'input-id'},
       invalid: {type: Boolean},
       invalidMessage: {type: String, attribute: 'invalid-message'},
       list: {type: String},
@@ -41,6 +41,12 @@ class EsdsInput extends EsdsBaseWc {
     this.type = 'text';
   }
 
+  handleKeyup() {
+    // Reflect the current input value up to the value property on keyup
+    const input = this.querySelector('input');
+    this.value = input.value;
+  }
+
   render(){
      let blockLevelClass = this.defaultClass;
      if (this.size) {
@@ -66,7 +72,8 @@ class EsdsInput extends EsdsBaseWc {
               ?disabled="${this.disabled}"
               ?autofocus="${this.autofocus}"
               ?autocomplete="${this.autocomplete}"
-              pattern="${ifDefined(this.pattern)}"/>
+              pattern="${ifDefined(this.pattern)}"
+              @keyup=${this.handleKeyup}/>
     `;
   }
 
@@ -81,24 +88,3 @@ class EsdsInput extends EsdsBaseWc {
 }
 
 export default EsdsInput;
-
-
-// {% macro form_input(
-//             class=false,
-//             describedby=false,
-//             disabled=false,
-//             id=false,
-//             name=false,
-//             placeholder=false,
-//             type='text',
-//             value=false) %}
-//     <input
-//     class="<%= project.namespace %>-form__input{{ ' ' + class if class }}"
-//     type="{{ type }}"
-//     {% if id %} id="{{ id }}" {% endif %}
-//     {% if name %} name="{{ name }}" {% endif %}
-//     {% if value %} value="{{ value }}" {% endif %}
-//     {{ 'disabled' if disabled }}
-//     {% if placeholder %} placeholder="{{ placeholder }}" {% endif %}
-//     {% if describedby %} aria-describedby="{{describedby}}" {% endif %}>
-// {% endmacro %}

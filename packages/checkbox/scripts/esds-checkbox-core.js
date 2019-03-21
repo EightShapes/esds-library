@@ -94,7 +94,8 @@ class EsdsCheckbox extends EsdsBaseWc {
                 ?readonly="${this.readonly}"
                 ?required="${this.required}"
                 ?disabled="${this.disabled}"
-                ?autofocus="${this.autofocus}"/>
+                ?autofocus="${this.autofocus}"
+                @change=${this.handleChange}/>
           <span class="esds-checkbox__inner">
               <span class="esds-checkbox__visual">
                 <esds-icon name="check" class="esds-checkbox__checked-icon"></esds-icon>
@@ -108,6 +109,11 @@ class EsdsCheckbox extends EsdsBaseWc {
           </span>
       </label>
     `;
+  }
+
+  handleChange(e) {
+    const checkbox = this.querySelector('input');
+    this.checked = checkbox.checked;
   }
 
   updated(changedProperties) {
