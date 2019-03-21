@@ -1,5 +1,3 @@
-{# Import the concatenated nunjucks macro file #}
-{% import 'components/esds-checkbox.njk' as library with context %}
 <!doctype html>
 <html>
     <head>
@@ -9,12 +7,11 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% block head_content_prepend %}{% endblock head_content_prepend %}
-        <link rel="stylesheet" href="/styles/esds-checkbox.css">
         {% block head_content_append %}{% endblock head_content_append %}
     </head>
     <body>
         {% block body %}{% endblock body %}
-        <script src="/scripts/esds-checkbox.js"></script>
+        <script type="module" src="/scripts/esds-checkbox.js"></script>
         {% block closing_body_assets %}{% endblock closing_body_assets %}
     </body>
 </html>

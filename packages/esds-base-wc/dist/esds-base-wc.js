@@ -2245,4 +2245,9 @@ const unsafeHTML = directive((value) => (part) => {
   createRenderRoot() {
     return this;
   }
+
+  // Util methods
+  static generateRandomNumber(max = 100000000) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
 }export{EsdsBaseWc,LitElement,directive,html,ifDefined,render,unsafeHTML};//# sourceMappingURL=esds-base-wc.js.map

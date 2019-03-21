@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "esds-base-wc": "0.1.0",
+    "esds-icon": "0.1.0",
+    "esds-icons": "0.1.0",
     "esds-visual-style": "0.1.0"
   }
 }

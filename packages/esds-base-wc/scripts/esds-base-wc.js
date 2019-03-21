@@ -37,6 +37,11 @@ class EsdsBaseWc extends LitElement {
   createRenderRoot() {
     return this;
   }
+
+  // Util methods
+  static generateRandomNumber(max = 100000000) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
 }
 
 export { EsdsBaseWc, LitElement, render, html, directive, ifDefined, unsafeHTML };

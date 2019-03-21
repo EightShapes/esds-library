@@ -1,1 +1,5 @@
-@import '../tokens/tokens';
+@import '../node_modules/esds-visual-style/styles/esds-visual-style';
+
+.esds-checkbox-v1 {
+  @include esds-font-reset;
+}
