@@ -1,6 +1,6 @@
 {
   "name": "esds-tabs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "esds-build": "github:eightshapes/esds-build#feature/web-components-upgrade"
   },
   "dependencies": {
-    "esds-base-wc": "0.1.0",
-    "esds-visual-style": "0.1.0"
+    "esds-base-wc": "^0.2.0",
+    "esds-visual-style": "^0.2.0"
   }
 }
