@@ -1,10 +1,61 @@
 @import '../node_modules/esds-visual-style/styles/esds-visual-style';
 
 .esds-tabs-v1 {
-  .esds-tabs__label--active {
-    background: hotpink;
+  @include esds-box-sizing;
+  @include esds-font-reset;
+
+  .esds-tabs__labels {
+    border-bottom: $esds-border-default;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
-  
+
+  .esds-tabs__label {
+    margin-right: $esds-space-generic-half-x;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .esds-tabs__label-link {
+    background: transparent;
+    border: solid 2px transparent;
+    border-radius: $esds-border-radius-default $esds-border-radius-default 0 0;
+    bottom: -2px;
+    color: $esds-text-color-link-on-white;
+    display: block;
+    padding: $esds-space-inset-half-x;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+
+    &:hover {
+      color: darken($esds-text-color-link-on-white, 10%);
+    }
+
+    @at-root .esds-tabs--large#{&} {
+      font-size: $esds-font-size-body-l-default;
+      padding: $esds-space-inset-1-x;
+    }
+
+    @at-root .esds-tabs--small#{&} {
+      font-size: $esds-font-size-body-s-default;
+      padding: $esds-space-inset-quarter-x;
+    }
+  }
+
+  .esds-tabs__label--active .esds-tabs__label-link {
+    background: $esds-background-color-white;
+    border: $esds-border-default;
+    border-bottom-color: $esds-color-white;
+    color: $esds-text-color-primary-on-white;
+
+  }
+
   .esds-tab-panel-v1 {
     display: none;
 

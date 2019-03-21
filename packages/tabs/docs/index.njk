@@ -3,50 +3,121 @@
 
 {% block body %}
   <h1>ESDS Tabs Testing Page</h1>
-  <esds-tabs>
-    <esds-tab-panel label="Plain Text">
-      <h1>Tab 1 Content</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, et.</p>
-    </esds-tab-panel>
+  <div class="testing-container" style="display: flex; justify-content: space-between;">
 
-    <esds-tab-panel label="List">
-      <h1>Tab 2 Content</h1>
-      <ul>
-        <li>Lorem ipsum dolor.</li>
-        <li>Lorem ipsum dolor.</li>
-        <li>Lorem ipsum dolor.</li>
-        <li>Lorem ipsum dolor.</li>
-        <li>Lorem ipsum dolor.</li>
-      </ul>
-    </esds-tab-panel>
+  </div>
+  <script type="module">
+    import { html, render } from '/scripts/esds-base-wc.js';
+    const output = [];
+    const target = document.querySelector('.testing-container');
+    const sizes = ['', 'large', 'small'];
+    sizes.forEach((s) => {
+      const sizeHeading = s.length > 0 ? s.charAt(0).toUpperCase() + s.slice(1) : 'Medium';
+      output.push(html`
+        <div class="avr" style="width: 30%">
+          <h2>${sizeHeading}</h2>
+          <h3>Default Tabs Behavior (first tab selected)</h3>
+          <esds-tabs size="${s}">
+            <esds-tab-panel label="Plain Text">
+              <h1>Tab 1 Content</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, et.</p>
+            </esds-tab-panel>
 
-    <esds-tab-panel label="Table">
-      <table>
-        <thead>
-          <tr>
-            <th>Heading 1</th>
-            <th>Heading 2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Column 1</td>
-            <td>Column 2</td>
-          </tr>
-          <tr>
-            <td>Column 1</td>
-            <td>Column 2</td>
-          </tr>
-          <tr>
-            <td>Column 1</td>
-            <td>Column 2</td>
-          </tr>
-          <tr>
-            <td>Column 1</td>
-            <td>Column 2</td>
-          </tr>
-        </tbody>
-      </table>
-    </esds-tab-panel>
-  </esds-tabs>
+            <esds-tab-panel label="List">
+              <h1>Tab 2 Content</h1>
+              <ul>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor.</li>
+              </ul>
+            </esds-tab-panel>
+
+            <esds-tab-panel label="Table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Heading 1</th>
+                    <th>Heading 2</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Column 1</td>
+                    <td>Column 2</td>
+                  </tr>
+                  <tr>
+                    <td>Column 1</td>
+                    <td>Column 2</td>
+                  </tr>
+                  <tr>
+                    <td>Column 1</td>
+                    <td>Column 2</td>
+                  </tr>
+                  <tr>
+                    <td>Column 1</td>
+                    <td>Column 2</td>
+                  </tr>
+                </tbody>
+              </table>
+            </esds-tab-panel>
+          </esds-tabs>
+          <br /><br /><br /><br /><br />
+          <h3>Specify Active Panel On Load</h3>
+          <esds-tabs size="${s}">
+            <esds-tab-panel label="Standing By">
+              <h1>Not Selected By Default</h1>
+            </esds-tab-panel>
+            <esds-tab-panel label="Waiting Around">
+              <h1>Not Selected By Default</h1>
+            </esds-tab-panel>
+            <esds-tab-panel label="Active On Load" active>
+              <h1>This Content Appears On Load</h1>
+            </esds-tab-panel>
+            <esds-tab-panel label="Just Hanging Out">
+              <h1>Not Selected By Default</h1>
+            </esds-tab-panel>
+          </esds-tabs>
+          <br /><br /><br /><br /><br />
+          <h3>Content Resilience</h3>
+          <esds-tabs size="${s}">
+            <esds-tab-panel label="Really really really really long label">
+              <h1>Just Testing</h1>
+            </esds-tab-panel>
+            <esds-tab-panel label="This label is also pretty long for a tab label">
+              <h1>Testing More</h1>
+            </esds-tab-panel>
+            <esds-tab-panel label="Another Super Long Label">
+              <h1>Again, Testing</h1>
+            </esds-tab-panel>
+            <esds-tab-panel label="Pad The End">
+              <h1>Redundant Tab Content</h1>
+            </esds-tab-panel>
+            <esds-tab-panel label="Pad The End">
+              <h1>Redundant Tab Content</h1>
+            </esds-tab-panel>
+            <esds-tab-panel label="Pad The End">
+              <h1>Redundant Tab Content</h1>
+            </esds-tab-panel>
+            <esds-tab-panel label="Pad The End">
+              <h1>Redundant Tab Content</h1>
+            </esds-tab-panel>
+            <esds-tab-panel label="Pad The End">
+              <h1>Redundant Tab Content</h1>
+            </esds-tab-panel>
+            <esds-tab-panel label="Pad The End">
+              <h1>Redundant Tab Content</h1>
+            </esds-tab-panel>
+            <esds-tab-panel label="Pad The End">
+              <h1>Redundant Tab Content</h1>
+            </esds-tab-panel>
+          </esds-tabs>
+        </div>
+      `);
+    });
+
+    render(output, target);
+  </script>
+
 {% endblock %}
