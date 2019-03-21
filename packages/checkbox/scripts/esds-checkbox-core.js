@@ -10,10 +10,11 @@ class EsdsCheckbox extends EsdsBaseWc {
       disabled: {type: Boolean},
       form: {type: String},
       id: {type: String, attribute: 'input-id'},
+      indeterminate: {type: Boolean},
       invalid: {type: Boolean},
       label: {type: String},
       name: {type: String},
-      optional: {type: String},
+      optional: {type: Boolean},
       optionalText: {type: String, attribute: 'optional-text'},
       pattern: {type: String},
       required: {type: Boolean},
@@ -29,14 +30,16 @@ class EsdsCheckbox extends EsdsBaseWc {
     this.defaultClass = 'esds-checkbox-v1';
     this.baseModifierClass = 'esds-checkbox--';
     this.stylesheet = 'esds-checkbox.css';
+    this.defaultLabelText = 'Check Me!';
 
     // Default prop values
     this.autofocus = false;
     this.checked = false;
     this.disabled = false;
+    this.indeterminate = false;
     this.invalidMessage = 'The field is invalid';
     this.invalid = false;
-    this.label = 'Check Me!';
+    this.label = this.defaultLabelText;
     this.optionalText = '(Optional)';
     this.requiredTooltipText = 'This field is required';
   }
@@ -69,6 +72,11 @@ class EsdsCheckbox extends EsdsBaseWc {
        `;
      }
 
+     let label = unsafeHTML(this.label);
+     if (this.label === this.defaultLabelText && this.slots.default) {
+       label = this.slots.default;
+     }
+
     return html`
       ${this.getStylesheet()}
       <label class="${blockLevelClass}" for="${id}">
@@ -87,11 +95,11 @@ class EsdsCheckbox extends EsdsBaseWc {
                 ?autofocus="${this.autofocus}"/>
           <span class="esds-checkbox__inner">
               <span class="esds-checkbox__visual">
-                <esds-icon></esds-icon>
-                <esds-icon></esds-icon>
+                <esds-icon name="check" class="esds-checkbox__checked-icon"></esds-icon>
+                <esds-icon name="minus" class="esds-checkbox__indeterminate-icon"></esds-icon>
               </span>
               <span class="esds-checkbox__label">
-                ${unsafeHTML(this.label)}
+                ${label}
                 ${optionalLabel}
                 ${requiredLabel}
               </span>
@@ -106,6 +114,11 @@ class EsdsCheckbox extends EsdsBaseWc {
         input.setCustomValidity(this.invalidMessage);
       } else {
         input.setCustomValidity('');
+      }
+
+      if (this.indeterminate) {
+        console.log("INDETERMINATE CHECKBOX FOUND");
+        input.indeterminate = true;
       }
   }
 }
