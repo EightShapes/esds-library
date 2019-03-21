@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepack": "npm install && gulp build:all"
+    "prepack": "gulp build:all"
   },
   "keywords": [],
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
@@ -19,5 +19,5 @@
     "esds-icons": "^0.2.1-alpha.0",
     "esds-visual-style": "^0.2.1-alpha.0"
   },
-  "gitHead": "421f29a4eb38373108f31b43f011d84af2a56cfe"
+  "gitHead": "056d2298a4e1889363511e20c057d60eaf566d82"
 }

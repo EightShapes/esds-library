@@ -6,7 +6,7 @@
   "module": "scripts/esds-base-wc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepack": "npm install && gulp build:all"
+    "prepack": "gulp build:all"
   },
   "keywords": [],
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
@@ -19,5 +19,5 @@
     "rollup": "^1.7.0",
     "rollup-plugin-node-resolve": "^4.0.1"
   },
-  "gitHead": "421f29a4eb38373108f31b43f011d84af2a56cfe"
+  "gitHead": "056d2298a4e1889363511e20c057d60eaf566d82"
 }
