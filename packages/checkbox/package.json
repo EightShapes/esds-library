@@ -1,6 +1,6 @@
 {
   "name": "esds-checkbox",
-  "version": "0.2.1-alpha.0",
+  "version": "0.2.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,10 +13,10 @@
     "esds-build": "github:eightshapes/esds-build#feature/web-components-upgrade"
   },
   "dependencies": {
-    "esds-base-wc": "^0.2.1-alpha.0",
-    "esds-icon": "^0.2.1-alpha.0",
-    "esds-icons": "^0.2.1-alpha.0",
-    "esds-visual-style": "^0.2.1-alpha.0"
+    "esds-base-wc": "^0.2.1",
+    "esds-icon": "^0.2.1",
+    "esds-icons": "^0.2.1",
+    "esds-visual-style": "^0.2.1"
   },
   "gitHead": "056d2298a4e1889363511e20c057d60eaf566d82"
 }
