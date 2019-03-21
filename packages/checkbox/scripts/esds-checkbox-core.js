@@ -14,12 +14,14 @@ class EsdsCheckbox extends EsdsBaseWc {
       invalid: {type: Boolean},
       label: {type: String},
       name: {type: String},
-      optional: {type: Boolean},
+      optionalLabel: {type: Boolean, attribute: 'optional-label'},
       optionalText: {type: String, attribute: 'optional-text'},
       pattern: {type: String},
       required: {type: Boolean},
+      requiredLabel: {type: Boolean, attribute: 'required-label'},
       requiredTooltipText: {type: String, attribute: 'required-tooltip-text'},
       readonly: {type: Boolean},
+      size: {type: String},
       tabindex: {type: String},
       value: {type: String}
     }
@@ -56,7 +58,7 @@ class EsdsCheckbox extends EsdsBaseWc {
      }
 
      let optionalLabel = '';
-     if (this.optional) {
+     if (this.optionalLabel) {
        optionalLabel = html`
          <span class="esds-checkbox__label-optional">
              ${this.optionalText}
@@ -65,10 +67,10 @@ class EsdsCheckbox extends EsdsBaseWc {
      }
 
      let requiredLabel = '';
-     if (this.required) {
+     if (this.requiredLabel) {
        requiredLabel = html`
          <abbr class="esds-checkbox__label-required-indicator" title="${this.requiredTooltipText}" aria-hidden="true">*</abbr>
-         <span class="esds-checkbox__screenreader-only">${this.requiredTooltipText}</span>
+         <span class="esds-checkbox__label-required-accessible-description">${this.requiredTooltipText}</span>
        `;
      }
 
@@ -117,63 +119,9 @@ class EsdsCheckbox extends EsdsBaseWc {
       }
 
       if (this.indeterminate) {
-        console.log("INDETERMINATE CHECKBOX FOUND");
         input.indeterminate = true;
       }
   }
 }
 
 export default EsdsCheckbox;
-
-// {% macro form_checkbox(
-//             class=false,
-//             checked=false,
-//             describedby=false,
-//             disabled=false,
-//             id=false,
-//             label='I accept the terms and conditions',
-//             name=false,
-//             optional=false,
-//             required=false,
-//             required_tooltip_text="Please check the box.",
-//             value=false,
-//             icon_path=false,
-//             indeterminate=false) %}
-//     {% if id == false %}
-//         {% set random_number = range(0, 100000) | random %}
-//         {% set id = label | replace(' ', '-') | lower + '--' + random_number %}
-//     {% endif %}
-//     <label class="<%= project.namespace %>-form__checkbox{{ ' ' + class if class }}{{ ' <%= project.namespace %>-form__checkbox--disabled' if disabled }}" for="{{ id }}">
-//         <input id="{{ id }}" type="checkbox" class="<%= project.namespace %>-form__checkbox-input"
-//             {{ 'checked' if checked }}
-//             {{ 'disabled' if disabled }}
-//             {% if name %} name="{{ name }}" {% endif %}
-//             {% if describedby %} aria-describedby="{{ describedby }}" {% endif %}
-//             {% if value %} value="{{ value }}" {% endif %}/>
-//         <span class="<%= project.namespace %>-form__checkbox-inner">
-//             <span class="<%= project.namespace %>-form__checkbox-visual">
-//                 {{ icon(name='check', class='<%= project.namespace %>-form__checkbox-checked-icon', path=icon_path)}}
-//                 {{ icon(name='minus', class='<%= project.namespace %>-form__checkbox-indeterminate-icon', path=icon_path)}}
-//             </span>
-//             <span class="<%= project.namespace %>-form__checkbox-label">
-//                 {{ label | safe }}
-//                 {%- if optional -%}
-//                     <span class="<%= project.namespace %>-form__label-optional">
-//                         (Optional)
-//                     </span>
-//                 {%- endif -%}
-//                 {%- if required -%}
-//                     <abbr class="<%= project.namespace %>-form__label-required-indicator" title="{{ required_tooltip_text }}" aria-hidden="true">*</abbr>
-//                     <span class="<%= project.namespace %>-screenreader-only">Required Field.</span>
-//                 {% endif %}
-//             </span>
-//         </span>
-//     </label>
-//     {# Indeterminate state can only be set via Javascript: https://css-tricks.com/almanac/selectors/i/indeterminate/ #}
-//     {% if indeterminate %}
-//         <!-- Something like the following Javascript would be required to set an indeterminate state on a checkbox -->
-//         <script>
-//             document.getElementById("{{ id }}").indeterminate = true;
-//         </script>
-//     {% endif %}
-// {% endmacro %}

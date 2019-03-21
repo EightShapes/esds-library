@@ -1,72 +1,72 @@
 {% extends 'templates/base.njk' %}
-{% set title = "ESDS Checkbox Proving Ground" %}
+{% set title = "ESDS Checkbox Testing Page" %}
 
 {% block body %}
-  <h1>ESDS Checkbox Proving Ground</h1>
-  <div class="avr">
-    <esds-checkbox>Default</esds-checkbox>
+  <h1>ESDS Checkbox Testing Page</h1>
+  <div class="test-container" style="display: flex; justify-content: space-between;">
+    <!-- Examples will be injected here -->
   </div>
-  <div class="avr">
-    <esds-checkbox>Hover</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox>Active</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox>Focus</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox disabled>Disabled</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox invalid>Error</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox checked>Checked</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox checked>Hover</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox checked>Active</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox checked>Focus</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox checked disabled>Disabled</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox checked invalid>Error</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox indeterminate>Indeterminate</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox indeterminate>Hover</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox indeterminate>Active</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox indeterminate>Focus</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox indeterminate disabled>Disabled</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox indeterminate invalid>Error</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox>Wrapping<br>Label<br>Testing</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox label="Set Label Via Attribute"></esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox optional>Not Required</esds-checkbox>
-  </div>
-  <div class="avr">
-    <esds-checkbox required>Required</esds-checkbox>
-  </div>
+
+  <script type="module">
+    import { html, render } from '/scripts/esds-base-wc.js';
+    const sizes = ['', 'large', 'small'];
+    const testContainer = document.querySelector('.test-container');
+    const output = [];
+
+    sizes.forEach((s) => {
+      const sizeHeading = s.length > 0 ? s.charAt(0).toUpperCase() + s.slice(1) : 'Medium';
+      output.push(html`
+        <div class="avr">
+          <h3>${sizeHeading}</h3>
+          <esds-checkbox size="${s}">Default</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" class="esds-checkbox--hover">Hover</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" class="esds-checkbox--active">Active</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" class="esds-checkbox--focus">Focus</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" disabled>Disabled</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" invalid>Error</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" checked>Checked</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" checked class="esds-checkbox--hover">Hover</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" checked class="esds-checkbox--active">Active</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" checked class="esds-checkbox--focus">Focus</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" checked disabled>Disabled</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" checked invalid>Error</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" indeterminate>Indeterminate</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" indeterminate class="esds-checkbox--hover">Hover</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" indeterminate class="esds-checkbox--active">Active</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" indeterminate class="esds-checkbox--focus">Focus</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" indeterminate disabled>Disabled</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" indeterminate invalid>Error</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}">Wrapping<br>Label<br>Testing</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" label="Set Label Via Attribute"></esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" optional-label>Not Required</esds-checkbox>
+          <br>
+          <esds-checkbox size="${s}" required-label>Required</esds-checkbox>
+          <br>
+        </div>
+      `);
+    });
+
+    render(output, testContainer);
+  </script>
+
 {% endblock %}
