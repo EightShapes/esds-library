@@ -1,0 +1,52 @@
+{% extends 'templates/base.njk' %}
+{% set title = "ESDS Tabs Testing Page" %}
+
+{% block body %}
+  <h1>ESDS Tabs Testing Page</h1>
+  <esds-tabs>
+    <esds-tab-panel label="Plain Text">
+      <h1>Tab 1 Content</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, et.</p>
+    </esds-tab-panel>
+
+    <esds-tab-panel label="List">
+      <h1>Tab 2 Content</h1>
+      <ul>
+        <li>Lorem ipsum dolor.</li>
+        <li>Lorem ipsum dolor.</li>
+        <li>Lorem ipsum dolor.</li>
+        <li>Lorem ipsum dolor.</li>
+        <li>Lorem ipsum dolor.</li>
+      </ul>
+    </esds-tab-panel>
+
+    <esds-tab-panel label="Table">
+      <table>
+        <thead>
+          <tr>
+            <th>Heading 1</th>
+            <th>Heading 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Column 1</td>
+            <td>Column 2</td>
+          </tr>
+          <tr>
+            <td>Column 1</td>
+            <td>Column 2</td>
+          </tr>
+          <tr>
+            <td>Column 1</td>
+            <td>Column 2</td>
+          </tr>
+          <tr>
+            <td>Column 1</td>
+            <td>Column 2</td>
+          </tr>
+        </tbody>
+      </table>
+    </esds-tab-panel>
+  </esds-tabs>
+{% endblock %}

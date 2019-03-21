@@ -1,0 +1,15 @@
+@import '../node_modules/esds-visual-style/styles/esds-visual-style';
+
+.esds-tabs-v1 {
+  .esds-tabs__label--active {
+    background: hotpink;
+  }
+  
+  .esds-tab-panel-v1 {
+    display: none;
+
+    &.esds-tab-panel--active {
+      display: block;
+    }
+  }
+} // end of .esds-tabs-v1
