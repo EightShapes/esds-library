@@ -1,0 +1,37 @@
+{% extends 'templates/base.njk' %}
+{% set title = "ESDS Input Proving Ground" %}
+
+{% block body %}
+  <h1>ESDS Input Proving Ground</h1>
+  <div class="avr">
+    <esds-input value="Default"></esds-input>
+  </div>
+  <br>
+  <div class="avr">
+    <esds-input value="Hover" class="esds-input--hover"></esds-input>
+  </div>
+  <br>
+  <div class="avr">
+    <esds-input value="Focus" class="esds-input--focus"></esds-input>
+  </div>
+  <br>
+  <div class="avr">
+    <esds-input value="Disabled" disabled></esds-input>
+  </div>
+  <br>
+  <div class="avr">
+    <esds-input value="Error" invalid></esds-input>
+  </div>
+  <br>
+  <div class="avr">
+    <esds-input placeholder="Placeholder"></esds-input>
+  </div>
+  <br>
+  <div class="avr">
+    <esds-input placeholder="Long Placeholder Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, laudantium?"></esds-input>
+  </div>
+  <br>
+  <div class="avr">
+    <esds-input value="Long Value Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, laudantium?"></esds-input>
+  </div>
+{% endblock %}

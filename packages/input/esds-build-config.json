@@ -1,0 +1,19 @@
+{
+  "concatenateScripts": false,
+  "concatenateMacros": false,
+  "copyScripts": true,
+  "copyTasks": [
+    {
+      "name": "ESDS Base Component",
+      "sources": ["./node_modules/esds-base-wc/dist/esds-base-wc.*"],
+      "destination": "_site/latest/scripts",
+      "watch": true
+    },
+    {
+      "name": "component-scripts",
+      "sources": ["./scripts/**/*"],
+      "destination": "_site/latest/scripts",
+      "watch": true
+    }
+  ]
+}

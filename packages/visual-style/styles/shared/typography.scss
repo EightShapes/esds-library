@@ -28,17 +28,28 @@
     }
 }
 
-@mixin esds-font-reset() {
-    font-family: $esds-font-family-sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: $esds-font-weight-regular;
-    letter-spacing: 0;
-    text-align: left;
-    text-decoration: none;
-    text-indent: 0;
-    text-shadow: none;
-    text-transform: none;
+@mixin esds-font-reset(
+  $font-family: $esds-font-family-sans-serif,
+  $font-size: $esds-font-size-body-m-default,
+  $font-style: normal,
+  $font-weight: $esds-font-weight-regular,
+  $letter-spacing: 0,
+  $text-align: left,
+  $text-decoration: none,
+  $text-indent: 0,
+  $text-shadow: none,
+  $text-transform: none
+) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    letter-spacing: $letter-spacing;
+    text-align: $text-align;
+    text-decoration: $text-decoration;
+    text-indent: $text-indent;
+    text-shadow: $text-shadow;
+    text-transform: $text-transform;
 }
 
 @mixin esds-heading-reset() {
@@ -49,7 +60,7 @@
 
 @mixin esds-responsive-font-size($type: 'body-m') {
     font-size: esds-token('font', 'size', $type, 'default');
-    
+
     @media screen and (min-width: 480px) {
         font-size: esds-token('font', 'size', $type, 'at-480');
     }
@@ -144,29 +155,29 @@
     @include esds-link();
 }
 
-.esds-typography-sink--level-1-heading { 
+.esds-typography-sink--level-1-heading {
     @include esds-text-crop();
     @include esds-level-1-heading();
 }
 
-.esds-typography-sink--level-2-heading { 
+.esds-typography-sink--level-2-heading {
     @include esds-text-crop();
-    @include esds-level-2-heading(); 
+    @include esds-level-2-heading();
 }
 
-.esds-typography-sink--level-3-heading { 
+.esds-typography-sink--level-3-heading {
     @include esds-text-crop();
-    @include esds-level-3-heading(); 
+    @include esds-level-3-heading();
 }
 
-.esds-typography-sink--level-4-heading { 
+.esds-typography-sink--level-4-heading {
     @include esds-text-crop();
-    @include esds-level-4-heading(); 
+    @include esds-level-4-heading();
 }
 
-.esds-typography-sink--eyebrow-heading { 
+.esds-typography-sink--eyebrow-heading {
     @include esds-text-crop();
-    @include esds-eyebrow-heading(); 
+    @include esds-eyebrow-heading();
 }
 
 .esds-typography-sink--body-text-lead {

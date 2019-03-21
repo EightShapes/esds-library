@@ -1,6 +1,6 @@
 @import '../node_modules/esds-visual-style/styles/esds-visual-style';
 
-$esds-button-active-box-shadow: 0 0 4px 4px rgba($esds-color-teal-37, .8);
+$esds-button-active-box-shadow: $esds-shadow-interactive-on-white;
 
 .esds-button-v1 {
     @include esds-font-reset();
