@@ -59,6 +59,7 @@ class EsdsInput extends EsdsBaseWc {
               form="${ifDefined(this.form)}"
               list="${ifDefined(this.list)}"
               spellcheck="${ifDefined(this.spellcheck)}"
+              aria-describedby="${ifDefined(this.describedby)}"
               type="${this.type}"
               ?readonly="${this.readonly}"
               ?required="${this.required}"
