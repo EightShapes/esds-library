@@ -14,5 +14,6 @@
   "dependencies": {
     "esds-base-wc": "^0.2.0",
     "esds-visual-style": "^0.2.0"
-  }
+  },
+  "gitHead": "421f29a4eb38373108f31b43f011d84af2a56cfe"
 }

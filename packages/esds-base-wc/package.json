@@ -18,5 +18,6 @@
     "esds-build": "github:eightshapes/esds-build#feature/web-components-upgrade",
     "rollup": "^1.7.0",
     "rollup-plugin-node-resolve": "^4.0.1"
-  }
+  },
+  "gitHead": "421f29a4eb38373108f31b43f011d84af2a56cfe"
 }
