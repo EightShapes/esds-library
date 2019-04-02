@@ -1,6 +1,6 @@
 {
   "name": "esds-icon",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@webcomponents/shadydom": "^1.5.0",
-    "esds-base-wc": "^0.2.1",
+    "esds-base-wc": "^0.3.0",
     "esds-icons": "^0.3.0",
     "esds-visual-style": "^0.2.1"
   },

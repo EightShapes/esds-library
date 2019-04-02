@@ -1,6 +1,6 @@
 {
   "name": "esds-base-wc",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "",
   "main": "scripts/esds-base-wc.js",
   "module": "scripts/esds-base-wc.js",
