@@ -17,7 +17,13 @@ class EsdsTabs extends EsdsBaseWc {
     this.activePanelId;
     this.panelLabels = [];
     this.panelIdMap = {};
+    this.panels = [];
+    this.initializePanels();
+  }
+
+  initializePanels() {
     this.panels = this.querySelectorAll('esds-tab-panel') || [];
+    console.log(`PANELS FOUND: ${this.panels.length}`);
     this.panels.forEach((p) => {
       let panelId = p.getAttribute('panel-id');
       const panelActive = p.hasAttribute('active');
@@ -42,16 +48,13 @@ class EsdsTabs extends EsdsBaseWc {
     });
 
     // If none of the panels were expressly set as the default, make the first panel the default
-    if (!this.activePanelId) {
+    if (!this.activePanelId && this.panelLabels.length > 0) {
       const firstPanelId = this.panelLabels[0].id;
       const firstPanel = this.panelIdMap[firstPanelId];
       // Set the first panel to be active
       firstPanel.setAttribute('active', true);
       this.activePanelId = firstPanelId;
     }
-
-    // Property defaults
-
   }
 
   deactivateAllPanels() {
@@ -91,6 +94,7 @@ class EsdsTabs extends EsdsBaseWc {
   }
 
   render(){
+    console.log("RENDER TABS");
     let blockLevelClass = this.defaultClass;
     if (this.size) {
      blockLevelClass += ` ${this.baseModifierClass}${this.size}`;
@@ -103,12 +107,12 @@ class EsdsTabs extends EsdsBaseWc {
           ${this.renderTabLabels()}
         </ul>
         <div class="esds-tabs__panels">
-          ${this.slots.default}
+          ${this.panels}
         </div>
       </div>
     `;
   }
-}
+}// end of EsdsTabs class
 
 export default EsdsTabs;
 
@@ -123,7 +127,7 @@ class EsdsTabPanel extends EsdsBaseWc {
   }
 
   constructor() {
-    super();
+    super("TAB PANEL");
     this.defaultClass = 'esds-tab-panel-v1';
     this.baseModifierClass = 'esds-tab-panel--';
     this.stylesheet = 'esds-tabs.css'; // Styles are in the same file as tabs styles

@@ -3,7 +3,14 @@
 
 {% block body %}
   <h1>ESDS Button Testing Page</h1>
-  <div class="test-examples">
+
+  <script>
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = '<esds-button>Some slotted text</esds-button>';
+    document.body.appendChild(wrapper);
+  </script>
+
+  {# <div class="test-examples">
     <!-- Render button examples here -->
   </div>
 
@@ -41,5 +48,5 @@
         });
     });
     render(output, outputTarget);
-  </script>
+  </script> #}
 {% endblock %}

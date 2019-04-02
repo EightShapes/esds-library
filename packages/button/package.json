@@ -14,6 +14,7 @@
     "esds-build": "github:eightshapes/esds-build#feature/web-components-upgrade"
   },
   "dependencies": {
+    "@stencil/core": "^1.0.0-alpha.3",
     "esds-base-wc": "^0.2.1",
     "esds-icon": "^0.3.0",
     "esds-icons": "^0.3.0",

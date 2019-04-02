@@ -1,8 +1,9 @@
 import { LitElement, html, render, directive, ifDefined, unsafeHTML } from './lit-exports-base.js';
 
 class EsdsBaseWc extends LitElement {
-  constructor() {
+  constructor(componentName = '') {
     super();
+    console.log(`ESDSBASEWC CALLED: ${componentName}`);
     this.slotsExtracted = false;
     if (!this.slotsExtracted) {
       this.slots = this.extractSlotContent();
@@ -27,6 +28,7 @@ class EsdsBaseWc extends LitElement {
 
     // If there are any remaining child nodes, copy them into a `default` slotable
     const remainingNodes = Array.from(this.childNodes); // make a copy of the childNodes, cause the this.childNodes reference will change after the component renders
+
     if (remainingNodes.length > 0) {
       slots['default'] = remainingNodes;
     }
