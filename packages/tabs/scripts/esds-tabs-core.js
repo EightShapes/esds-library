@@ -145,7 +145,7 @@ class EsdsTabPanel extends EsdsBaseWc {
 
     return html`
       <div id="${this.panelId}" class="${blockLevelClass}">
-        ${this.slots.default}
+        <slot></slot>
       </div>
     `;
   }
