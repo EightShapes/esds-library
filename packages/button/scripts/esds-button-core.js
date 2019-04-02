@@ -52,9 +52,9 @@ class EsdsButton extends EsdsBaseWc {
        this.text = false;
      }
 
-     if ((!this.text || this.text === this.defaultButtonText) && this.slots.default) {
-       this.text = this.slots.default;
-     }
+     // if ((!this.text || this.text === this.defaultButtonText) && this.slots.default) {
+     //   this.text = this.slots.default;
+     // }
 
      let component;
      let iconLeft;
@@ -79,14 +79,14 @@ class EsdsButton extends EsdsBaseWc {
        component = html`
        <button class="${blockLevelClass}" type="${this.type}" ?disabled=${this.disabled}>
          ${iconLeft}
-         ${text}
+         <slot>${text}</slot>
          ${iconRight}
        </button>`;
      } else if (this.element === 'a') {
        component = html`
        <a class="${blockLevelClass}" href="${this.href}">
          ${iconLeft}
-         ${text}
+         <slot>${text}</slot>
          ${iconRight}
        </a>`;
      }
