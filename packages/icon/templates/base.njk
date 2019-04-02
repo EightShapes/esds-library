@@ -11,6 +11,10 @@
     </head>
     <body>
         {% block body %}{% endblock body %}
+        <script>
+          window.ShadyDOM = { force: true };
+        </script>
+        <script src="/scripts/shadydom.min.js"></script>
         <script type="module" src="/scripts/esds-icon.js"></script>
         {% block closing_body_assets %}{% endblock closing_body_assets %}
     </body>

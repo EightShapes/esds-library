@@ -4,9 +4,15 @@
   "copyScripts": true,
   "copyTasks": [
     {
-      "name": "webified modules",
-      "sources": ["./web_modules/**/*"],
+      "name": "Shady DOM Polyfill",
+      "sources": ["./node_modules/esds-base-wc/dist/shadydom.min.*"],
       "destination": "_site/latest/scripts"
+    },
+    {
+      "name": "ESDS Base Component",
+      "sources": ["./node_modules/esds-base-wc/dist/esds-base-wc.*"],
+      "destination": "_site/latest/scripts",
+      "watch": true
     },
     {
       "name": "component-scripts",

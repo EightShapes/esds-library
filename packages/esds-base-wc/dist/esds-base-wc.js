@@ -2208,7 +2208,9 @@ const unsafeHTML = directive((value) => (part) => {
     const fragment = document.importNode(template.content, true);
     part.setValue(fragment);
     previousValues.set(part, { value, fragment });
-});class EsdsBaseWc extends LitElement {
+});// TODO, loading race condition prevents this from working dynamically
+
+class EsdsBaseWc extends LitElement {
   constructor(componentName = '') {
     super();
     console.log(`ESDSBASEWC CALLED: ${componentName}`);
@@ -2244,9 +2246,9 @@ const unsafeHTML = directive((value) => (part) => {
   }
 
   // Don't use ShadowDOM
-  createRenderRoot() {
-    return this;
-  }
+  // createRenderRoot() {
+  //   return this;
+  // }
 
   // Util methods
   static generateRandomNumber(max = 100000000) {

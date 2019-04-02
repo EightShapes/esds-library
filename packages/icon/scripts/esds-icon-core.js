@@ -1,7 +1,6 @@
-import { LitElement, html, directive, ifDefined, unsafeHTML } from './esds-base-wc.js';
+import { EsdsBaseWc, html, directive, ifDefined, unsafeHTML } from './esds-base-wc.js';
 
-// Extend the LitElement base class
-class EsdsIcon extends LitElement {
+class EsdsIcon extends EsdsBaseWc {
   static get properties() {
     return {
       externalSpritePath: {type: String},
@@ -51,9 +50,9 @@ class EsdsIcon extends LitElement {
     }
   }
 
-  createRenderRoot() {
-    return this;
-  }
+  // createRenderRoot() {
+  //   return this;
+  // }
 
   render(){
    let blockLevelClass = this.defaultClass;

@@ -1,3 +1,17 @@
+// TODO, loading race condition prevents this from working dynamically
+
+// Inject shadyDOM polyfill if it doesn't already exist
+// if (!document.getElementById('esds-shady-dom-polyfill')) {
+//   const forcePolyfillScript = document.createElement('script');
+//   forcePolyfillScript.textContent = 'window.ShadyDOM = { force: true };';
+//   document.head.appendChild(forcePolyfillScript);
+//
+//   const shadowDOMPolyfill = document.createElement('script');
+//   shadowDOMPolyfill.id = 'esds-shady-dom-polyfill';
+//   shadowDOMPolyfill.src = '/scripts/shadydom.min.js';
+//   document.head.appendChild(shadowDOMPolyfill);
+// }
+
 import { LitElement, html, render, directive, ifDefined, unsafeHTML } from './lit-exports-base.js';
 
 class EsdsBaseWc extends LitElement {
@@ -36,9 +50,9 @@ class EsdsBaseWc extends LitElement {
   }
 
   // Don't use ShadowDOM
-  createRenderRoot() {
-    return this;
-  }
+  // createRenderRoot() {
+  //   return this;
+  // }
 
   // Util methods
   static generateRandomNumber(max = 100000000) {
