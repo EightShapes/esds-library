@@ -12,11 +12,23 @@
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@babel/polyfill": "^7.4.3",
+    "@webcomponents/webcomponentsjs": "^2.2.7",
     "lit-element": "^2.0.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-decorators": "^7.4.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-syntax-import-meta": "^7.2.0",
+    "@babel/preset-env": "^7.4.3",
+    "babel-plugin-bundled-import-meta": "^0.3.0",
     "esds-build": "github:eightshapes/esds-build#feature/web-components-upgrade",
     "rollup": "^1.7.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.0",
     "rollup-plugin-node-resolve": "^4.0.1"
   },
   "gitHead": "056d2298a4e1889363511e20c057d60eaf566d82"

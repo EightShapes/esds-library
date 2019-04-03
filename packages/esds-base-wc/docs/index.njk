@@ -1,0 +1,22 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+
+
+    {# Web component polyfills #}
+    <script>
+      window.ShadyDOM = { force: true };
+    </script>
+    <script src="/scripts/webcomponents-bundle.js"></script>
+
+    <script type="module">
+      import { EsdsBaseWc } from '/scripts/esds-base-wc.js';
+      customElements.define('test-component', EsdsBaseWc);
+    </script>
+
+    <script nomodule src="/scripts/esds-base-wc-ie.js"></script>
+    <test-component></test-component>
+  </body>
+</html>

@@ -12,9 +12,15 @@
 //   document.head.appendChild(shadowDOMPolyfill);
 // }
 
-import { LitElement, html, render, directive, ifDefined, unsafeHTML } from './lit-exports-base.js';
+import "@babel/polyfill";
+import { LitElement } from '../node_modules/lit-element/lit-element.js';
+import { html, directive, render } from '../node_modules/lit-html/lit-html.js';
+import { ifDefined } from '../node_modules/lit-html/directives/if-defined.js';
+import { unsafeHTML } from '../node_modules/lit-html/directives/unsafe-html.js';
+
 class EsdsBaseWc extends LitElement {
   constructor(componentName = '') {
+    alert("TESTING");
     super();
     console.log(`ESDSBASEWC CALLED: ${componentName}`);
     // this.slotsExtracted = false;
@@ -28,30 +34,9 @@ class EsdsBaseWc extends LitElement {
     return html`<link rel="stylesheet" href="${stylesPath}/${this.stylesheet}"/>`;
   }
 
-  // extractSlotContent() {
-  //   // Iterate over the component on connectedCallback and extract all named slotables
-  //   const slots = this.slots || {};
-  //   const namedSlots = this.querySelectorAll("[slot]");
-  //   if (namedSlots) {
-  //     namedSlots.forEach(n => {
-  //       slots[n.getAttribute('slot')] = n;
-  //       n.parentNode.removeChild(n);
-  //     });
-  //   }
-  //
-  //   // If there are any remaining child nodes, copy them into a `default` slotable
-  //   const remainingNodes = Array.from(this.childNodes); // make a copy of the childNodes, cause the this.childNodes reference will change after the component renders
-  //
-  //   if (remainingNodes.length > 0) {
-  //     slots['default'] = remainingNodes;
-  //   }
-  //   return slots;
-  // }
-
-  // Don't use ShadowDOM
-  // createRenderRoot() {
-  //   return this;
-  // }
+  render() {
+    return html`<h1>You have to override me. I'm in the base EsdsBaseWc class!</h1>`;
+  }
 
   // Util methods
   static generateRandomNumber(max = 100000000) {

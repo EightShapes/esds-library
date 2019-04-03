@@ -1,13 +1,17 @@
 {
   "concatenateScripts": false,
   "concatenateMacros": false,
-  "copyScripts": true,
   "additionalWatchTasks": ["watch:scripts:rollup"],
   "copyTasks": [
     {
-      "name": "ShadyDOM Polyfill To Dist",
-      "sources": ["./node_modules/@webcomponents/shadydom/shadydom.min.*"],
+      "name": "WebComponents Polyfills To Dist",
+      "sources": ["./node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.*"],
       "destination": "./dist"
+    },
+    {
+      "name": "WebComponents Polyfills To webroot",
+      "sources": ["./node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.*"],
+      "destination": "./_site/latest/scripts"
     }
   ]
 }
