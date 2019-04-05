@@ -9,6 +9,12 @@
       "destination": "./dist"
     },
     {
+      "name": "Babek Polyfills To Dist",
+      "sources": ["./node_modules/@babel/polyfill/dist/polyfill.min.js"],
+      "destination": "./_site/latest/scripts",
+      "rename": "babel-polyfills.js"
+    },
+    {
       "name": "WebComponents Polyfills To webroot",
       "sources": ["./node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.*"],
       "destination": "./_site/latest/scripts"

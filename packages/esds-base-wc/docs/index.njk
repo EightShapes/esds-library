@@ -5,18 +5,17 @@
   <body>
 
 
-    {# Web component polyfills #}
-    {# <script>
-      window.ShadyDOM = { force: true };
-    </script> #}
-    <script type="module" src="/scripts/esds-base-wc.js"></script>
-
-    {# <script type="module">
-      import { EsdsBaseWc } from '/scripts/esds-base-wc.js';
-      customElements.define('test-component', EsdsBaseWc);
-    </script> #}
-
-    {# <script src="/scripts/bundle-new.js"></script> #}
     <test-component></test-component>
+
+    <script>
+      window.ShadyDOM = { force: true };
+    </script>
+    <script nomodule src="/scripts/babel-polyfills.js"></script>
+    <script src="/scripts/webcomponents-bundle.js"></script>
+    <script src="/scripts/system-loader.js"></script>
+    <script type="module" src="/scripts/esds-base-wc.js"></script>
+    <script nomodule="">
+      System.import('./scripts/legacy/esds-base-wc.js');
+    </script>
   </body>
 </html>
