@@ -11,10 +11,26 @@
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "esds-build": "github:eightshapes/esds-build#feature/web-components-upgrade"
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-decorators": "^7.4.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-syntax-import-meta": "^7.2.0",
+    "@babel/preset-env": "^7.4.3",
+    "@open-wc/building-rollup": "^0.2.3",
+    "babel-plugin-bundled-import-meta": "^0.3.0",
+    "esds-build": "github:eightshapes/esds-build#feature/web-components-upgrade",
+    "http-server": "^0.11.1",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.9.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.0",
+    "rollup-plugin-minify-html-literals": "^1.2.2",
+    "rollup-plugin-node-resolve": "^4.0.1",
+    "rollup-plugin-terser": "^4.0.4"
   },
   "dependencies": {
-    "@stencil/core": "^1.0.0-alpha.3",
     "esds-base-wc": "^0.3.0",
     "esds-icon": "^0.4.0",
     "esds-icons": "^0.3.0",

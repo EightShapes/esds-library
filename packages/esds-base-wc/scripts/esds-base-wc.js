@@ -29,7 +29,7 @@ class EsdsBaseWc extends LitElement {
 
   getStylesheet() {
     const stylesPath = window.stylesPath || '/styles';
-    return html`<link rel="stylesheet" href="${stylesPath}/${this.stylesheet}"/>`;
+    return html`<link rel="stylesheet" href="${stylesPath}/${this.stylesheet}" />`;
   }
 
   render() {
@@ -43,5 +43,3 @@ class EsdsBaseWc extends LitElement {
 }
 
 export { EsdsBaseWc, LitElement, render, html, directive, ifDefined, unsafeHTML };
-
-customElements.define('test-component', EsdsBaseWc);

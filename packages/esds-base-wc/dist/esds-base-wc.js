@@ -2221,7 +2221,7 @@ class EsdsBaseWc extends LitElement {
 
   getStylesheet() {
     const stylesPath = window.stylesPath || '/styles';
-    return html`<link rel="stylesheet" href="${stylesPath}/${this.stylesheet}"/>`;
+    return html`<link rel="stylesheet" href="${stylesPath}/${this.stylesheet}" />`;
   }
 
   render() {
@@ -2232,6 +2232,4 @@ class EsdsBaseWc extends LitElement {
   static generateRandomNumber(max = 100000000) {
     return Math.floor(Math.random() * Math.floor(max));
   }
-}
-
-customElements.define('test-component', EsdsBaseWc);export{EsdsBaseWc,LitElement,directive,html,ifDefined,render,unsafeHTML};//# sourceMappingURL=esds-base-wc.js.map
+}export{EsdsBaseWc,LitElement,directive,html,ifDefined,render,unsafeHTML};//# sourceMappingURL=esds-base-wc.js.map

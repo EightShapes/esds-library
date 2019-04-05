@@ -1,4 +1,4 @@
-import { EsdsBaseWc, html, ifDefined } from './esds-base-wc.js';
+import { EsdsBaseWc, html, ifDefined } from 'esds-base-wc/dist/esds-base-wc.js';
 
 // Extend the LitElement base class
 class EsdsButton extends EsdsBaseWc {
@@ -91,6 +91,7 @@ class EsdsButton extends EsdsBaseWc {
        </a>`;
      }
 
+     // getStylesheet is generating an opening angle bracket in IE for some reason
     return html`
       ${this.getStylesheet()}
       ${component}

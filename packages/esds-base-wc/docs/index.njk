@@ -18,5 +18,11 @@
     <script nomodule="">
       System.import('./scripts/legacy/esds-base-wc.js');
     </script>
+
+    {# Pulling this out of the core file and adding it here breaks IE11, it needs to be included in the transpiled IE11 file #}
+    <script type="module">
+      import { EsdsBaseWc } from '/scripts/esds-base-wc.js';
+      customElements.define('test-component', EsdsBaseWc);
+    </script>
   </body>
 </html>
