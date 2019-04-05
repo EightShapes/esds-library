@@ -5,6 +5,7 @@
   "main": "scripts/esds-base-wc.js",
   "module": "scripts/esds-base-wc.js",
   "scripts": {
+    "build": "rimraf dist && rollup -c rollup.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepack": "gulp build:all"
   },
@@ -24,12 +25,17 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-syntax-import-meta": "^7.2.0",
     "@babel/preset-env": "^7.4.3",
+    "@open-wc/building-rollup": "^0.2.3",
     "babel-plugin-bundled-import-meta": "^0.3.0",
     "esds-build": "github:eightshapes/esds-build#feature/web-components-upgrade",
-    "rollup": "^1.7.0",
+    "http-server": "^0.11.1",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.9.0",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.3.0",
-    "rollup-plugin-node-resolve": "^4.0.1"
+    "rollup-plugin-minify-html-literals": "^1.2.2",
+    "rollup-plugin-node-resolve": "^4.0.1",
+    "rollup-plugin-terser": "^4.0.4"
   },
   "gitHead": "056d2298a4e1889363511e20c057d60eaf566d82"
 }
