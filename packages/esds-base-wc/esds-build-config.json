@@ -1,6 +1,7 @@
 {
   "concatenateScripts": false,
   "concatenateMacros": false,
+  "copyScripts": true,
   "additionalWatchTasks": ["watch:scripts:rollup"],
   "copyTasks": [
     {
@@ -9,15 +10,33 @@
       "destination": "./dist"
     },
     {
-      "name": "Babek Polyfills To Dist",
-      "sources": ["./node_modules/@babel/polyfill/dist/polyfill.min.js"],
-      "destination": "./_site/latest/scripts",
-      "rename": "babel-polyfills.js"
-    },
-    {
       "name": "WebComponents Polyfills To webroot",
       "sources": ["./node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.*"],
       "destination": "./_site/latest/scripts"
+    },
+    {
+      "name": "Babel Polyfills To Dist",
+      "sources": ["./node_modules/@babel/polyfill/dist/polyfill.min.js"],
+      "destination": "./dist/legacy",
+      "rename": "babel-polyfills.js"
+    },
+    {
+      "name": "Babel Polyfills To webroot",
+      "sources": ["./node_modules/@babel/polyfill/dist/polyfill.min.js"],
+      "destination": "./_site/latest/scripts/legacy",
+      "rename": "babel-polyfills.js"
+    },
+    {
+      "name": "SystemJS To dist",
+      "sources": ["./node_modules/systemjs/dist/s.min.js"],
+      "destination": "./dist/legacy",
+      "rename": "system-loader.js"
+    },
+    {
+      "name": "SystemJS To webroot",
+      "sources": ["./node_modules/systemjs/dist/s.min.js"],
+      "destination": "./_site/latest/scripts/legacy",
+      "rename": "system-loader.js"
     }
   ]
 }

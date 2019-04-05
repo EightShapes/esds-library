@@ -15,7 +15,8 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.3",
     "@webcomponents/webcomponentsjs": "^2.2.7",
-    "lit-element": "^2.0.1"
+    "lit-element": "^2.0.1",
+    "systemjs": "^3.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.3",

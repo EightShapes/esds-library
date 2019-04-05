@@ -2,7 +2,6 @@ const resolve = require('rollup-plugin-node-resolve');
 const { terser } = require('rollup-plugin-terser');
 const babel = require('rollup-plugin-babel');
 const minifyHTML = require('rollup-plugin-minify-html-literals').default;
-// const modernWeb = require('@open-wc/building-rollup/plugins/rollup-plugin-modern-web/rollup-plugin-modern-web.js');
 
 const prefix = '[owc-building-rollup]';
 
@@ -25,14 +24,6 @@ module.exports = {
       minifyHTML({
         failOnError: true,
       }),
-
-    // parse input index.html as input, feed any modules found to rollup and add polyfills
-    // modernWeb({
-    //   legacy,
-    //   polyfillDynamicImports: !legacy,
-    //   polyfillBabel: legacy,
-    //   polyfillWebcomponents: legacy,
-    // }),
 
     // resolve bare import specifiers
     resolve(),
