@@ -1,4 +1,4 @@
-import { EsdsBaseWc, html, directive, ifDefined, unsafeHTML } from './esds-base-wc.js';
+import { EsdsBaseWc, html, directive, ifDefined, unsafeHTML } from 'esds-base-wc/dist/esds-base-wc.js';
 
 class EsdsIcon extends EsdsBaseWc {
   static get properties() {
@@ -42,9 +42,9 @@ class EsdsIcon extends EsdsBaseWc {
         })
         .then((rawSvg) => {
           const hiddenDiv = document.createElement('div');
-          hiddenDiv.style = 'display: none;';
+          hiddenDiv.style.cssText = 'display: none;';
           hiddenDiv.innerHTML = rawSvg;
-          document.head.appendChild(hiddenDiv);
+          document.body.appendChild(hiddenDiv);
         });
       }
     }
