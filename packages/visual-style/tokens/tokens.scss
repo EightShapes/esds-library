@@ -68,11 +68,11 @@ $esds-interactive-color-shadow-on-brand: #FFFFFF !default;
 $esds-interactive-color-shadow-on-dark: #20BDD5 !default;
 $esds-interactive-color-shadow-on-black: #20BDD5 !default;
 
-$esds-shadow-interactive-on-white: 0 0 8px #068194 !default;
-$esds-shadow-interactive-on-light: 0 0 8px #00798C !default;
-$esds-shadow-interactive-on-brand: 0 0 8px #FFFFFF !default;
-$esds-shadow-interactive-on-dark: 0 0 8px #20BDD5 !default;
-$esds-shadow-interactive-on-black: 0 0 8px #20BDD5 !default;
+$esds-shadow-interactive-on-white: 0 0 8px *color-teal-30 !default;
+$esds-shadow-interactive-on-light: 0 0 8px *color-teal-27 !default;
+$esds-shadow-interactive-on-brand: 0 0 8px *color-white !default;
+$esds-shadow-interactive-on-dark: 0 0 8px *color-teal-48 !default;
+$esds-shadow-interactive-on-black: 0 0 8px *color-teal-48 !default;
 
 $esds-font-family-sans-serif: Barlow, 'Lato', sans-serif !default;
 $esds-font-line-height-normal: 1.3 !default;
