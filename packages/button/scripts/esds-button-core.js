@@ -93,7 +93,6 @@ class EsdsButton extends EsdsBaseWc {
 
      // getStylesheet is generating an opening angle bracket in IE for some reason
     return html`
-      ${this.getStylesheet()}
       ${component}
     `;
   }

@@ -21,16 +21,27 @@ import { unsafeHTML } from '../node_modules/lit-html/directives/unsafe-html.js';
 class EsdsBaseWc extends LitElement {
   constructor(componentName = '') {
     super();
-    // this.slotsExtracted = false;
-    // if (!this.slotsExtracted) {
-    //   this.slots = this.extractSlotContent();
-    // }
   }
 
-  getStylesheet() {
-    const stylesPath = window.stylesPath || '/styles';
-    console.log("FULL STYLESHEET PATH:", ${stylesPath}/${this.stylesheet});
-    return html`<link rel="stylesheet" href="${stylesPath}/${this.stylesheet}" />`;
+  connectedCallback() {
+    super.connectedCallback();
+    this.renderStylesheet();
+  }
+
+  renderStylesheet() {
+    if (this.stylesheet) {
+      const stylesPath = window.stylesPath || '/styles';
+      const fullStylePath = `${stylesPath}/${this.stylesheet}`;
+      const styleGlobalVar = `esds${fullStylePath.replace(/\/|\./g, '_')}`;
+
+      if (!window[styleGlobalVar]) {
+        window[styleGlobalVar] = true;
+        const styleLink = document.createElement('link');
+        styleLink.rel = 'stylesheet';
+        styleLink.href= fullStylePath;
+        document.head.appendChild(styleLink);
+      }
+    }
   }
 
   render() {

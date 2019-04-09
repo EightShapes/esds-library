@@ -101,7 +101,6 @@ class EsdsTabs extends EsdsBaseWc {
     }
 
     return html`
-      ${this.getStylesheet()}
       <div class="${blockLevelClass}">
         <ul class="esds-tabs__labels">
           ${this.renderTabLabels()}

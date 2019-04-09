@@ -12,11 +12,6 @@ class EsdsIcon extends EsdsBaseWc {
     }
   }
 
-  getStylesheet() {
-    const stylesPath = window.stylesPath || '/styles';
-    return `${stylesPath}/${this.stylesheet}`;
-  }
-
   constructor() {
     super();
     // Property defaults
@@ -78,7 +73,6 @@ class EsdsIcon extends EsdsBaseWc {
    const xlinkNamespace = 'http://www.w3.org/1999/xlink';
 
     return html`
-      <link rel="stylesheet" href="${this.getStylesheet()}"/>
       <svg class="${blockLevelClass}" aria-labelledby="${ifDefined(titleId)}">
         ${title}
         <use href="${iconRef}" xlink:href="${namespaced(xlinkNamespace, iconRef)}" />
