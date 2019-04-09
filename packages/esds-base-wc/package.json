@@ -3,7 +3,6 @@
   "version": "0.4.0",
   "description": "",
   "main": "dist/esds-base-wc.js",
-  "module": "scripts/esds-base-wc.js",
   "scripts": {
     "build": "rimraf dist && rollup -c rollup.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
