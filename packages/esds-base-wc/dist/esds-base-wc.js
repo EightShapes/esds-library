@@ -2208,9 +2208,7 @@ const unsafeHTML = directive((value) => (part) => {
     const fragment = document.importNode(template.content, true);
     part.setValue(fragment);
     previousValues.set(part, { value, fragment });
-});// TODO, loading race condition prevents this from working dynamically
-
-class EsdsBaseWc extends LitElement {
+});class EsdsBaseWc extends LitElement {
   constructor(componentName = '') {
     super();
   }

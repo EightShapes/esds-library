@@ -2,7 +2,8 @@
   "name": "esds-icon",
   "version": "0.4.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/esds-icon.js",
+  "module": "dist/esds-icon-esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepack": "gulp build:all"

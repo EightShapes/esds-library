@@ -1,4 +1,5 @@
-import { EsdsBaseWc, html, directive, ifDefined, unsafeHTML } from 'esds-base-wc/dist/esds-base-wc.js';
+import 'whatwg-fetch';
+import { EsdsBaseWc, html, directive, ifDefined, unsafeHTML } from 'esds-base-wc';
 
 class EsdsIcon extends EsdsBaseWc {
   static get properties() {
@@ -44,10 +45,6 @@ class EsdsIcon extends EsdsBaseWc {
       }
     }
   }
-
-  // createRenderRoot() {
-  //   return this;
-  // }
 
   render(){
    let blockLevelClass = this.defaultClass;

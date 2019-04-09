@@ -42,6 +42,13 @@
       "sources": ["./node_modules/esds-base-wc/dist/legacy/system-loader.js"],
       "destination": "./_site/latest/scripts/legacy",
       "rename": "system-loader.js"
+    },
+    {
+      "name": "ESM Source",
+      "sources": ["./scripts/esds-button-core.js"],
+      "destination": "./dist",
+      "rename": "esds-button-esm.js",
+      "watch": true
     }
   ],
   "additionalWatchTasks": ["watch:scripts:rollup"]

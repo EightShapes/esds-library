@@ -1,4 +1,8 @@
 import EsdsIcon from './esds-icon-core.js';
-customElements.define('esds-icon', EsdsIcon);
+const tagName = 'esds-icon';
+
+if (!customElements.get(tagName)) {
+  customElements.define(tagName, EsdsIcon);
+}
 
 export default EsdsIcon;

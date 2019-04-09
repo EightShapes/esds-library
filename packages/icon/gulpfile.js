@@ -12,7 +12,7 @@ const production = true;
 const legacy = true;
 
 const rollupIeConfig = {
-  input: './scripts/esds-icon-ie.js',
+  input: './scripts/esds-icon.js',
   treeshake: !!production,
   output: {
     // output into given folder or default /dist. Output legacy into a /legacy subfolder

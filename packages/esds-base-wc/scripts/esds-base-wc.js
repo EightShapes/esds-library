@@ -1,18 +1,3 @@
-// TODO, loading race condition prevents this from working dynamically
-
-// Inject shadyDOM polyfill if it doesn't already exist
-// if (!document.getElementById('esds-shady-dom-polyfill')) {
-//   const forcePolyfillScript = document.createElement('script');
-//   forcePolyfillScript.textContent = 'window.ShadyDOM = { force: true };';
-//   document.head.appendChild(forcePolyfillScript);
-//
-//   const shadowDOMPolyfill = document.createElement('script');
-//   shadowDOMPolyfill.id = 'esds-shady-dom-polyfill';
-//   shadowDOMPolyfill.src = '/scripts/shadydom.min.js';
-//   document.head.appendChild(shadowDOMPolyfill);
-// }
-
-// import "@babel/polyfill";
 import { LitElement } from '../node_modules/lit-element/lit-element.js';
 import { html, directive, render } from '../node_modules/lit-html/lit-html.js';
 import { ifDefined } from '../node_modules/lit-html/directives/if-defined.js';

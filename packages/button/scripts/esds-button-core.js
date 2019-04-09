@@ -1,4 +1,12 @@
-import { EsdsBaseWc, html, ifDefined } from 'esds-base-wc/dist/esds-base-wc.js';
+import { EsdsBaseWc, html, ifDefined } from 'esds-base-wc';
+import EsdsIcon from 'esds-icon';
+
+// Define esds-icon custom element if it hasn't been already
+const tagName = 'esds-icon';
+
+if (!customElements.get(tagName)) {
+  customElements.define(tagName, EsdsIcon);
+}
 
 // Extend the LitElement base class
 class EsdsButton extends EsdsBaseWc {

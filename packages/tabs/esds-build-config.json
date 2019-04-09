@@ -36,6 +36,13 @@
       "sources": ["./node_modules/esds-base-wc/dist/legacy/system-loader.js"],
       "destination": "./_site/latest/scripts/legacy",
       "rename": "system-loader.js"
+    },
+    {
+      "name": "ESM Source",
+      "sources": ["./scripts/esds-tabs-core.js"],
+      "destination": "./dist",
+      "rename": "esds-tabs-esm.js",
+      "watch": true
     }
   ]
 }
