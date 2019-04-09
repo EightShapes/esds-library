@@ -1,6 +1,6 @@
 {
   "name": "esds-icon",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "",
   "main": "dist/esds-icon.js",
   "module": "dist/esds-icon-esm.js",
@@ -34,9 +34,9 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.3",
     "@webcomponents/webcomponentsjs": "^2.2.7",
-    "esds-base-wc": "^0.3.0",
+    "esds-base-wc": "^0.4.0",
     "esds-icons": "^0.3.0",
-    "esds-visual-style": "^0.2.1",
+    "esds-visual-style": "^0.3.0",
     "systemjs": "^3.1.0",
     "whatwg-fetch": "^3.0.0"
   },
