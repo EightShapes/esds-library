@@ -29,6 +29,7 @@ class EsdsBaseWc extends LitElement {
 
   getStylesheet() {
     const stylesPath = window.stylesPath || '/styles';
+    console.log("FULL STYLESHEET PATH:", ${stylesPath}/${this.stylesheet});
     return html`<link rel="stylesheet" href="${stylesPath}/${this.stylesheet}" />`;
   }
 

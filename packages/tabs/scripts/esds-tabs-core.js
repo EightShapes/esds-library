@@ -1,4 +1,4 @@
-import { EsdsBaseWc, html, ifDefined } from './esds-base-wc.js';
+import { EsdsBaseWc, html, ifDefined } from 'esds-base-wc/dist/esds-base-wc.js';
 
 class EsdsTabs extends EsdsBaseWc {
   static get properties() {
