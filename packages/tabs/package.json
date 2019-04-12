@@ -1,6 +1,6 @@
 {
 	"name": "esds-tabs",
-	"version": "0.6.0",
+	"version": "0.7.0",
 	"description": "",
 	"main": "dist/esds-tabs.js",
 	"module": "dist/esds-tabs-esm.js",
