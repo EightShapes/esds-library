@@ -3,7 +3,8 @@ import { EsdsBaseWc, html, ifDefined } from 'esds-base-wc';
 class EsdsTabs extends EsdsBaseWc {
   static get properties() {
     return {
-      size: {type: String}
+      size: {type: String},
+      variant: {type: String}
     }
   }
 
@@ -23,7 +24,6 @@ class EsdsTabs extends EsdsBaseWc {
 
   initializePanels() {
     this.panels = this.querySelectorAll('esds-tab-panel') || [];
-    console.log(`PANELS FOUND: ${this.panels.length}`);
     this.panels.forEach((p) => {
       let panelId = p.getAttribute('panel-id');
       const panelActive = p.hasAttribute('active');
@@ -94,10 +94,13 @@ class EsdsTabs extends EsdsBaseWc {
   }
 
   render(){
-    console.log("RENDER TABS");
     let blockLevelClass = this.defaultClass;
     if (this.size) {
-     blockLevelClass += ` ${this.baseModifierClass}${this.size}`;
+       blockLevelClass += ` ${this.baseModifierClass}${this.size}`;
+    }
+
+    if (this.variant) {
+       blockLevelClass += ` ${this.baseModifierClass}${this.variant}`;
     }
 
     return html`

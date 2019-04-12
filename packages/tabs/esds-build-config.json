@@ -4,6 +4,12 @@
   "copyScripts": true,
   "copyTasks": [
     {
+      "name": "Base WC Module",
+      "sources": ["./node_modules/esds-base-wc/dist/esds-base-wc.*"],
+      "destination": "./_site/latest/scripts",
+      "watch": true
+    },
+    {
       "name": "WebComponents Polyfills To Dist",
       "sources": ["./node_modules/esds-base-wc/dist/webcomponents-bundle.*"],
       "destination": "./dist"
@@ -44,5 +50,6 @@
       "rename": "esds-tabs-esm.js",
       "watch": true
     }
-  ]
+  ],
+  "additionalWatchTasks": ["watch:scripts:rollup"]
 }

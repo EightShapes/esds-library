@@ -3,6 +3,7 @@
 .esds-tabs-v1 {
   @include esds-box-sizing;
   @include esds-font-reset;
+  width: 100%;
 
   .esds-tabs__labels {
     border-bottom: $esds-border-default;
@@ -61,6 +62,22 @@
 
     &.esds-tab-panel--active {
       display: block;
+    }
+  }
+
+  &.esds-tabs--alt {
+    .esds-tabs__labels {
+      border-bottom: none;
+    }
+
+    .esds-tabs__label-link {
+      border: none;
+      border-bottom: solid 4px transparent;
+    }
+
+    .esds-tabs__label--active .esds-tabs__label-link {
+      border: none;
+      border-bottom: solid 4px $esds-text-color-link-on-white;
     }
   }
 } // end of .esds-tabs-v1

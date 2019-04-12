@@ -11,7 +11,7 @@
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "esds-build": "^0.48.1"
+    "esds-build": "github:eightshapes/esds-build#feature/web-components-upgrade"
   },
   "gitHead": "439fddc4bb31d5b1c0c14d2fe4f10dda5e219a44"
 }
