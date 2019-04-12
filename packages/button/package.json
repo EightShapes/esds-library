@@ -1,6 +1,6 @@
 {
   "name": "esds-button",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "",
   "main": "dist/esds-button.js",
   "module": "dist/esds-button-esm.js",
@@ -32,10 +32,10 @@
     "rollup-plugin-terser": "^4.0.4"
   },
   "dependencies": {
-    "esds-base-wc": "^0.5.0",
-    "esds-icon": "^0.6.0",
+    "esds-base-wc": "^0.6.0",
+    "esds-icon": "^0.7.0",
     "esds-icons": "^0.3.0",
-    "esds-visual-style": "^0.4.0"
+    "esds-visual-style": "^0.5.0"
   },
   "gitHead": "439fddc4bb31d5b1c0c14d2fe4f10dda5e219a44"
 }
