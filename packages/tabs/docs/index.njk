@@ -123,6 +123,24 @@
                   <h1>Redundant Tab Content</h1>
                 </esds-tab-panel>
               </esds-tabs>
+
+              <br /><br /><br /><br /><br />
+              <style>
+                .my-special-tabs-class {
+                  background: hotpink;
+                }
+              </style>
+
+              <esds-tabs size="${s}" variant="${variant}" tabs-class="my-special-tabs-class">
+                <esds-tab-panel label="With Additional Class">
+                  <h1>Additional Class Testing</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, et.</p>
+                </esds-tab-panel>
+                <esds-tab-panel label="Use the tabs-class attribute">
+                  <h1>Tabs-Class Attribute</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, et.</p>
+                </esds-tab-panel>
+              </esds-tabs>
             </div>
           `);
         });

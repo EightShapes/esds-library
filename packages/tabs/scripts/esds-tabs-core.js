@@ -4,6 +4,7 @@ class EsdsTabs extends EsdsBaseWc {
   static get properties() {
     return {
       size: {type: String},
+      tabsClass: {type: String, attribute: 'tabs-class'},
       variant: {type: String}
     }
   }
@@ -101,6 +102,10 @@ class EsdsTabs extends EsdsBaseWc {
 
     if (this.variant) {
        blockLevelClass += ` ${this.baseModifierClass}${this.variant}`;
+    }
+
+    if (this.tabsClass) {
+       blockLevelClass += ` ${this.tabsClass}`;
     }
 
     return html`
