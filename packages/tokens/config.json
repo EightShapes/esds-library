@@ -1,0 +1,19 @@
+{
+  "source": ["./src/tokens.json5"],
+  "platforms": {
+    "scss": {
+      "transformGroup": "scss",
+      "prefix": "esds",
+      "buildPath": "dist/scss/",
+      "files": [{
+        "destination": "_esds-tokens.scss",
+        "format": "scss/variables"
+      },
+      {
+        "destination": "_esds-tokens-map.scss",
+        "format": "scss/map-deep",
+        "mapName": "esds"
+      }]
+    }
+  }
+}

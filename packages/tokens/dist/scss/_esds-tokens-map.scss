@@ -1,0 +1,59 @@
+
+/*
+  Do not edit directly
+  Generated on Mon, 27 Jan 2020 13:55:28 GMT
+*/
+
+$esds-color-white: #ffffff !default;
+$esds-color-black: #000000 !default;
+$esds-color-orange-82: #d24b00 !default;
+$esds-color-orange-91: #e85200 !default;
+$esds-color-orange-93: #eeac8d !default;
+$esds-color-neutral-15: #262626 !default;
+$esds-color-neutral-25: #404040 !default;
+$esds-color-neutral-42: #6b6b6b !default;
+$esds-color-neutral-53: #888888 !default;
+$esds-color-neutral-70: #b3b1b1 !default;
+$esds-color-neutral-80: #cccaca !default;
+$esds-color-neutral-90: #e6e3e3 !default;
+$esds-color-neutral-95: #f3f1f1 !default;
+$esds-color-neutral-05: #0d0d0d !default;
+$esds-color-teal-27: #00798c !default;
+$esds-color-teal-30: #068194 !default;
+$esds-color-teal-37: #0a9db3 !default;
+$esds-color-teal-48: #20bdd5 !default;
+$esds-color-teal-96: #e7f4f6 !default;
+$esds-text-color-brand: #e85200 !default;
+
+$esds: (
+  'color': (
+    'white': $esds-color-white,
+    'black': $esds-color-black,
+    'orange': (
+      '82': $esds-color-orange-82,
+      '91': $esds-color-orange-91,
+      '93': $esds-color-orange-93
+    ),
+    'neutral': (
+      '15': $esds-color-neutral-15,
+      '25': $esds-color-neutral-25,
+      '42': $esds-color-neutral-42,
+      '53': $esds-color-neutral-53,
+      '70': $esds-color-neutral-70,
+      '80': $esds-color-neutral-80,
+      '90': $esds-color-neutral-90,
+      '95': $esds-color-neutral-95,
+      '05': $esds-color-neutral-05
+    ),
+    'teal': (
+      '27': $esds-color-teal-27,
+      '30': $esds-color-teal-30,
+      '37': $esds-color-teal-37,
+      '48': $esds-color-teal-48,
+      '96': $esds-color-teal-96
+    )
+  ),
+  'text-color': (
+    'brand': $esds-text-color-brand
+  )
+);
