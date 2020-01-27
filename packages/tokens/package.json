@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run watch",
     "build": "npx style-dictionary build",
-    "watch": "npm run build && chokidar \"src/tokens.json5\" -c \"npm run build\"",
+    "watch": "npm run build && chokidar \"src/**/*\" -c \"npm run build\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
