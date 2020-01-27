@@ -1,6 +1,8 @@
 {
   "packages": [
-    "packages/*"
+    "src/*",
+    "src/components/*",
+    "test/*"
   ],
   "version": "independent"
 }

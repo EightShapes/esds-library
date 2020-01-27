@@ -1,0 +1,36 @@
+import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
+
+import * as EsdsTokens from '@eightshapes/esds-tokens';
+const tokenNames = Object.keys(EsdsTokens);
+const textColorTokenNames = tokenNames.filter(t => t.includes('TextColor'));
+
+
+<Meta
+  title="Tokens"
+  parameters={{
+  }}
+/>
+
+# Tokens
+## Installation
+
+```bash
+npm install @eightshapes/esds-tokens
+```
+
+## Text Color
+<Story name="Text Color">
+  {html`
+    <table>
+    <thead>
+      <tr>
+        <th>Key</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+    ${textColorTokenNames.map(n => html`<tr><td>${n}</td><td>${EsdsTokens[n]}</td></tr>`)}
+    </tbody>
+    </table>
+  `}
+</Story>
