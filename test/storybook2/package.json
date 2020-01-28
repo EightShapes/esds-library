@@ -1,0 +1,27 @@
+{
+  "name": "storybook2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [],
+  "author": "Kevin Powell <kevinmpowell@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "lit-html": "^1.1.2",
+    "@eightshapes/esds-tokens": "0.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@storybook/addon-docs": "^5.3.9",
+    "@storybook/web-components": "^5.3.9",
+    "babel-loader": "^8.0.6",
+    "react": "^16.12.0",
+    "react-is": "^16.12.0",
+    "storybook-chromatic": "^3.5.0"
+  }
+}
