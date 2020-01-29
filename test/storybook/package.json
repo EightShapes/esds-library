@@ -1,22 +1,28 @@
 {
-  "name": "esds-storybook",
-  "version": "0.0.0",
-  "description": "Testing environment for the EightShapes Design System",
-  "license": "MIT",
+  "name": "storybook2",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "module": "index.js",
   "scripts": {
-    "start": "es-dev-server --app-index demo/index.html --node-resolve --open --watch",
-    "storybook": "start-storybook --node-resolve --watch --open",
-    "storybook:build": "build-storybook"
+    "start": "npm run storybook",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
+  "keywords": [],
+  "author": "Kevin Powell <kevinmpowell@gmail.com>",
+  "license": "ISC",
   "dependencies": {
     "lit-html": "^1.1.2",
-    "lit-element": "^2.2.1",
     "@eightshapes/esds-tokens": "0.1.0"
   },
   "devDependencies": {
-    "es-dev-server": "^1.23.0",
-    "@open-wc/demoing-storybook": "^1.0.1"
+    "@babel/core": "^7.8.3",
+    "@storybook/addon-docs": "^5.3.9",
+    "@storybook/web-components": "^5.3.9",
+    "babel-loader": "^8.0.6",
+    "react": "^16.12.0",
+    "react-is": "^16.12.0",
+    "storybook-chromatic": "^3.5.0"
   }
 }

@@ -2,31 +2,19 @@
   "version": 2,
   "tags": [
     {
-      "name": "esds-storybookrybook",
-      "description": "A component with a title and an action counter",
+      "name": "demo-wc-card",
       "properties": [
         {
-          "name": "title",
+          "name": "header",
           "type": "String",
-          "description": "The title of your component",
-          "default": "Hey there"
-        },
-        {
-          "name": "counter",
-          "type": "Number",
-          "description": "An action counter",
-          "default": 0
+          "attribute": "header",
+          "description": "Shown at the top of the card",
+          "default": "Your Message"
         }
       ],
       "events": [],
       "slots": [],
-      "cssProperties": [
-        {
-          "name": "--esds-storybookrybook-text-color",
-          "description": "Main Text Color",
-          "type": "Color"
-        }
-      ]
+      "cssProperties": []
     }
   ]
 }
