@@ -7,7 +7,7 @@
   "main": "index.js",
   "module": "index.js",
   "scripts": {
-    "start": "es-dev-server --app-index demo/index.html --node-resolve --open --watch",
+    "start": "es-dev-server --app-index demo/index.html --node-resolve --open --watch --preserve-symlinks='true'",
     "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
     "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
     "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore",
@@ -22,7 +22,8 @@
   },
   "dependencies": {
     "lit-html": "https://github.com/Polymer/lit-html.git",
-    "lit-element": "^2.2.1"
+    "lit-element": "^2.2.1",
+    "@eightshapes/esds-icons": "0.1.0"
   },
   "devDependencies": {
     "es-dev-server": "^1.23.0",

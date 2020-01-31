@@ -10,10 +10,27 @@ npm i esds-icon
 ## Usage
 ```html
 <script type="module">
-  import 'esds-icon/esds-icon.js';
+  import '@eightshapes/esds-icon/esds-icon.js';
 </script>
 
-<esds-icon></esds-icon>
+<div style="display: none;">
+  <!-- contents of esds-icons.svg (sprite sheet) -->
+</div>
+
+<esds-icon use="#stopwatch"></esds-icon>
+```
+
+```js
+// Using icons within another .js context (lit-html, another es6 module, etc)
+import { html, render } from 'lit-html';
+import '@eightshapes/esds-icon/esds-icon.js';
+import { EsdsIconStopwatch } from '@eightshapes/esds-icons/dist/EsdsIconStopwatch.svg.js';
+
+render(
+  html`
+    <esds-icon use="${EsdsIconStopwatch}">
+    </esds-icon>
+  `,
 ```
 
 ## Linting with ESLint, Prettier, and Types
