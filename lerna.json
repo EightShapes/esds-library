@@ -1,7 +1,8 @@
 {
   "packages": [
-    "src/*",
-    "src/components/*",
+    "icons",
+    "tokens",
+    "components/*",
     "test/*"
   ],
   "version": "independent"
