@@ -1,8 +1,10 @@
+'use strict';
+
 const fs = require('fs-extra');
 const path = require('path');
 const camelCase = require('camelcase');
 
-const sourceDir = 'src';
+const sourceDir = 'dist/icons'; // output directory for svgo optimized .svg's
 const outDir = 'dist';
 const namespace = 'esds';
 const es6ModuleNames = [];
@@ -29,7 +31,3 @@ const es6ManifestFilename = `index.js`;
 const es6ManifestFileContents = es6ModuleNames.map(n => `import { ${n} } from './${outDir}/${n}${es6ModuleExtension}'\nexport { ${n} }`).join('\n');
 const es6ManifestFilepath = path.join(es6ManifestFilename);
 fs.writeFileSync(es6ManifestFilepath, es6ManifestFileContents, 'UTF-8');
-
-
-console.log(sourceFiles);
-console.log(sourceFileNames);

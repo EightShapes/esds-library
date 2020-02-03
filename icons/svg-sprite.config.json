@@ -1,0 +1,12 @@
+{
+  "shape": {
+    "transform": []
+  },
+  "mode": {
+    "symbol": {
+      "dest": "dist",
+      "sprite": "esds-icons.svg",
+      "example": false
+    }
+  }
+}
