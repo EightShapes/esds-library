@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run svgo && npm run svg-sprite && npm run build-es6-modules",
-    "build-es6-modules": "node scrips/build-es6-modules.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build-es6-modules": "node scripts/build-es6-modules.js",
     "svgo": "npx svgo -f src -o dist/icons --config svgo.config.yml",
     "svg-sprite": "npx svg-sprite --config=svg-sprite.config.json dist/icons/*.svg"
   },
