@@ -1,0 +1,27 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+
+import { EsdsIcon } from '@eightshapes/esds-icon';
+import * as EsdsIcons from '@eightshapes/esds-icons';
+customElements.define('esds-icon', EsdsIcon); // TODO: This needs to be an export
+const iconNames = Object.keys(EsdsIcons);
+
+<Meta
+  title="Icon"
+  parameters={{
+  }}
+/>
+
+# Icon
+## Installation
+
+```bash
+npm install @eightshapes/esds-icon
+```
+
+## Text Color
+<Story name="Gallery">
+  {html`
+    ${iconNames.map(n => html`<esds-icon use="${EsdsIcons[n]}"></esds-icon>`)}
+  `}
+</Story>

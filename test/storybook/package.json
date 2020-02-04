@@ -14,7 +14,9 @@
   "license": "ISC",
   "dependencies": {
     "lit-html": "^1.1.2",
-    "@eightshapes/esds-tokens": "0.1.0"
+    "@eightshapes/esds-tokens": "0.1.0",
+    "@eightshapes/esds-icons": "0.1.0",
+    "@eightshapes/esds-icon": "0.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
