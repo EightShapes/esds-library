@@ -11,7 +11,7 @@ const es6ModuleNames = [];
 const es6ModuleExtension = '.svg.js';
 fs.mkdirpSync(outDir);
 
-const sourceFiles = fs.readdirSync(sourceDir);
+const sourceFiles = fs.readdirSync(sourceDir).filter(fn => path.parse(fn).ext === '.svg'); // Get only the .svg files from the dir
 const sourceFileNames = sourceFiles.map(fn => path.parse(fn).name);
 
 const iconNamesFilepath = path.join(outDir, `${namespace}-icon-names.json`);

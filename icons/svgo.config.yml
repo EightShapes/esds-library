@@ -1,9 +1,2 @@
 plugins:
-  - removeAttrs:
-      attrs:
-        - width
-        - height
-  - addAttributesToSVGElement:
-      attributes:
-        - width: 100%
-        - height: 100%
+  - removeDimensions: true

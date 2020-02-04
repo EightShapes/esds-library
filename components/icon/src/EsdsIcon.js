@@ -32,13 +32,19 @@ export class EsdsIcon extends LitElement {
   }
 
   render() {
-    console.log(window.document.cheese);
     return svg`
       <style>
         .esds-icon {
           height: 24px;
           width: 24px;
           fill: black;
+        }
+
+        .esds-icon svg {
+          display: inline-block;
+          vertical-align: middle;
+          height: 100%;
+          width: 100%;
         }
 
         .esds-icon--large {
