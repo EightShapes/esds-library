@@ -15,5 +15,9 @@
   "devDependencies": {
     "chokidar-cli": "^2.1.0",
     "style-dictionary": "^2.8.3"
+  },
+  "gitHead": "377ab75956df82e31e7ba0b289e7075b5280a763",
+  "publishConfig": {
+    "access": "public"
   }
 }
