@@ -22,10 +22,10 @@
   },
   "dependencies": {
     "lit-html": "https://github.com/Polymer/lit-html.git",
-    "lit-element": "^2.2.1",
-    "@eightshapes/esds-icons": "0.1.0"
+    "lit-element": "^2.2.1"
   },
   "devDependencies": {
+    "@eightshapes/esds-icons": "0.1.0",
     "es-dev-server": "^1.23.0",
     "eslint": "^6.1.0",
     "@open-wc/eslint-config": "^2.0.0",
