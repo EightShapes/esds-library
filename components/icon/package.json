@@ -1,5 +1,5 @@
 {
-  "name": "esds-icon",
+  "name": "@eightshapes/esds-icon",
   "version": "0.1.0",
   "description": "",
   "esnext": "src/esds-icon.js",
