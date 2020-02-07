@@ -1,0 +1,77 @@
+{
+  "name": "esds-button",
+  "version": "0.1.0",
+  "description": "",
+  "esnext": "src/esds-button.js",
+  "main": "dist/esds-button.js",
+  "module": "dist/esds-button-legacy.js",
+  "scripts": {
+    "start": "npm run build && npm run watch-build | browser-sync start --watch --config browser-sync-config.js --ignore 'src/**/*'",
+    "build": "npm run build-esm && npm run build-ie && npm run build-web-component && npm run build-styles",
+    "build-ie": "rollup -c rollup.config.ie.js",
+    "build-web-component": "rollup -c rollup.config.js -i src/esds-button-entry.js -o dist/esds-button-web-component.js -f esm",
+    "build-esm": "rollup -c rollup.config.js -i src/esds-button.js -o dist/esds-button.js -f esm",
+    "build-styles": "sass src:dist",
+    "watch-build": "npm run watch-build-esm | npm run watch-build-ie | npm run watch-build-web-component | npm run watch-build-styles",
+    "watch-build-ie": "rollup --watch -c rollup.config.ie.js",
+    "watch-build-web-component": "rollup --watch -c rollup.config.js -i src/esds-button-entry.js -o dist/esds-button-web-component.js -f esm",
+    "watch-build-esm": "rollup --watch -c rollup.config.js -i src/esds-button.js -o dist/esds-button.js -f esm",
+    "watch-build-styles": "sass src:dist --watch",
+    "prepack": "npm run build",
+    "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
+    "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
+    "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore",
+    "format:prettier": "prettier \"**/*.js\" --write --ignore-path .gitignore",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "format": "npm run format:eslint && npm run format:prettier"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@webcomponents/custom-elements": "^1.2.4",
+    "browser-sync": "^2.26.7",
+    "rollup": "^1.18.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "sass": "^1.22.9",
+    "eslint": "^6.1.0",
+    "@open-wc/eslint-config": "^2.0.0",
+    "@open-wc/prettier-config": "^0.1.10",
+    "husky": "^1.0.0",
+    "lint-staged": "^8.0.0"
+  },
+  "dependencies": {
+    "lit-element": "^2.2.1",
+    "regenerator-runtime": "^0.13.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@open-wc/eslint-config",
+      "eslint-config-prettier"
+    ],
+    "plugins": ["prettier"],
+    "rules": {
+      "prettier/prettier": "error",
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": true
+        }
+      ]
+    }
+  },
+  "prettier": "@open-wc/prettier-config",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

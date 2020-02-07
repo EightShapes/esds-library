@@ -37,8 +37,44 @@ Becomes:
 * Wires up browsersync and creates a sandbox for building the component
 * Creates a default scss file and a sass compilation pipeline that injects CSS into the web-component and generates a standalone CSS file
 
-## 2. Add linting...TBD
+## 2. Add linting
 
+### Install eslint and prettier
+_Within_ the newly created package run:
+
+```bash
+npm init @open-wc
 ```
-npx @eightshapes/esds-lint-generator
+
+Choose "Upgrade and existing package"
+Select "Linting" (arrow key and then spacebar to select, enter to proceed)
+Answer yes to modifying/overwriting files and installing dependencies via NPM
+
+After the @open-wc linting scaffold has run, make a few modifications to `package.json`
+
+Add the following to the eslintConfig key starting at `"plugins"`
+
+```js
+"eslintConfig": {
+  "extends": [
+    "@open-wc/eslint-config",
+    "eslint-config-prettier"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
+  }
+},
 ```
+
+### Test eslint/prettier install
+Run `npm run lint` and verify there are no linting errors in the project.
+
+### Install stylelint
+TBD
