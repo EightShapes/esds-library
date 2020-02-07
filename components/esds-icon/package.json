@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-icon",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "esnext": "src/esds-icon.js",
   "main": "dist/esds-icon.js",
@@ -28,9 +28,13 @@
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
-    "@eightshapes/esds-icons": "0.1.0",
+    "@eightshapes/esds-icons": "^0.1.1",
+    "@open-wc/testing": "^2.0.0",
+    "@open-wc/testing-karma": "^3.0.0",
+    "@open-wc/testing-karma-bs": "^1.0.0",
     "@webcomponents/custom-elements": "^1.2.4",
     "browser-sync": "^2.26.7",
+    "deepmerge": "^3.2.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
@@ -39,11 +43,7 @@
     "rollup": "^1.18.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "sass": "^1.22.9",
-    "@open-wc/testing-karma": "^3.0.0",
-    "deepmerge": "^3.2.0",
-    "@open-wc/testing-karma-bs": "^1.0.0",
-    "@open-wc/testing": "^2.0.0"
+    "sass": "^1.22.9"
   },
   "dependencies": {
     "lit-element": "^2.2.1",
