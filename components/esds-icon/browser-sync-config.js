@@ -1,6 +1,7 @@
 module.exports = {
   server: {
-    baseDir: "./",
+    baseDir: './',
   },
-  startPath: "/test/html/index.html",
-}
+  startPath: '/test/html/index.html',
+  notify: false,
+};
