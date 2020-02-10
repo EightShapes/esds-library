@@ -45,7 +45,11 @@
     "rollup": "^1.18.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "sass": "^1.25.0"
+    "sass": "^1.25.0",
+    "stylelint": "^13.1.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-prettier": "^1.1.2"
   },
   "dependencies": {
     "lit-element": "^2.2.1",
