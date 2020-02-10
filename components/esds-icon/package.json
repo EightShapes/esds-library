@@ -36,10 +36,13 @@
     "@babel/preset-env": "^7.5.5",
     "@eightshapes/esds-icons": "^0.1.1",
     "@eightshapes/esds-tokens": "^0.1.1",
+    "@open-wc/eslint-config": "^2.0.0",
+    "@open-wc/prettier-config": "^0.1.10",
     "@open-wc/testing": "^2.0.0",
     "@open-wc/testing-karma": "^3.0.0",
     "@open-wc/testing-karma-bs": "^1.0.0",
     "@webcomponents/custom-elements": "^1.2.4",
+    "autoprefixer": "^9.7.4",
     "browser-sync": "^2.26.7",
     "chokidar-cli": "^2.1.0",
     "deepmerge": "^3.2.0",
@@ -47,6 +50,9 @@
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-sort-class-members": "^1.6.0",
+    "husky": "^1.0.0",
+    "lint-staged": "^8.0.0",
+    "postcss": "^7.0.26",
     "prettier": "^1.19.1",
     "rollup": "^1.18.0",
     "rollup-plugin-babel": "^4.3.3",
@@ -55,11 +61,7 @@
     "stylelint": "^13.1.0",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-sass-guidelines": "^7.0.0",
-    "stylelint-prettier": "^1.1.2",
-    "@open-wc/eslint-config": "^2.0.0",
-    "@open-wc/prettier-config": "^0.1.10",
-    "husky": "^1.0.0",
-    "lint-staged": "^8.0.0"
+    "stylelint-prettier": "^1.1.2"
   },
   "dependencies": {
     "lit-element": "^2.2.1",
@@ -71,10 +73,17 @@
       "@open-wc/eslint-config",
       "eslint-config-prettier"
     ],
-    "plugins": ["prettier"],
+    "plugins": [
+      "prettier"
+    ],
     "rules": {
       "prettier/prettier": "error",
-      "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": true
+        }
+      ]
     }
   },
   "prettier": "@open-wc/prettier-config",
