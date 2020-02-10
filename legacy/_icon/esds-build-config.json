@@ -1,0 +1,54 @@
+{
+  "concatenateScripts": false,
+  "concatenateMacros": false,
+  "copyScripts": true,
+  "copyTasks": [
+    {
+      "name": "Esds Icons",
+      "sources": ["./node_modules/esds-icons/dist/esds-icons.svg"],
+      "destination": "_site/latest/icons",
+      "watch": true
+    },
+    {
+      "name": "WebComponents Polyfills To Dist",
+      "sources": ["./node_modules/esds-base-wc/dist/webcomponents-bundle.*"],
+      "destination": "./dist"
+    },
+    {
+      "name": "WebComponents Polyfills To webroot",
+      "sources": ["./node_modules/esds-base-wc/dist/webcomponents-bundle.*"],
+      "destination": "./_site/latest/scripts"
+    },
+    {
+      "name": "Babel Polyfills To Dist",
+      "sources": ["./node_modules/esds-base-wc/dist/legacy/babel-polyfills.js"],
+      "destination": "./dist/legacy",
+      "rename": "babel-polyfills.js"
+    },
+    {
+      "name": "Babel Polyfills To webroot",
+      "sources": ["./node_modules/esds-base-wc/dist/legacy/babel-polyfills.js"],
+      "destination": "./_site/latest/scripts/legacy",
+      "rename": "babel-polyfills.js"
+    },
+    {
+      "name": "SystemJS To dist",
+      "sources": ["./node_modules/esds-base-wc/dist/legacy/system-loader.js"],
+      "destination": "./dist/legacy",
+      "rename": "system-loader.js"
+    },
+    {
+      "name": "SystemJS To webroot",
+      "sources": ["./node_modules/esds-base-wc/dist/legacy/system-loader.js"],
+      "destination": "./_site/latest/scripts/legacy",
+      "rename": "system-loader.js"
+    },
+    {
+      "name": "ESM Source",
+      "sources": ["./scripts/esds-icon-core.js"],
+      "destination": "./dist",
+      "rename": "esds-icon-esm.js",
+      "watch": true
+    }
+  ]
+}

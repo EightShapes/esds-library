@@ -1,0 +1,22 @@
+{
+  "name": "@eightshapes/esds-tokens",
+  "version": "0.1.1",
+  "description": "",
+  "main": "dist/js/esds-tokens-es6.js",
+  "scripts": {
+    "start": "npm run watch",
+    "build": "npx style-dictionary build",
+    "watch": "npm run build && chokidar \"src/**/*\" -c \"npm run build\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kevin Powell <kevinmpowell@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chokidar-cli": "^2.1.0",
+    "style-dictionary": "^2.8.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

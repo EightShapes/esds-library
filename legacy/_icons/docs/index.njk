@@ -1,0 +1,33 @@
+{% extends 'templates/base.njk' %}
+{% set title = "Esds Icon <Set></Set>" %}
+
+{% block body %}
+
+  <div class="icon-grid" style="display: flex; width: 100%; flex-wrap: wrap;">
+
+  </div>
+  <script>
+    const iconGrid = document.querySelector('.icon-grid');
+    fetch('/icons/esds-icons.svg').then(function(response){
+      return response.text();
+    })
+    .then((rawSvg) => {
+      const hiddenDiv = document.createElement('div');
+      hiddenDiv.style = 'display: none;';
+      hiddenDiv.innerHTML = rawSvg;
+      document.body.appendChild(hiddenDiv);
+    });
+
+    fetch('/scripts/icons.json').then(function(response){
+        return response.json();
+      })
+      .then((iconNames) => {
+        iconNames.forEach(n => {
+          const iconWrap = document.createElement('div');
+          iconWrap.classList.add('avr');
+          iconWrap.innerHTML = `<svg><use xlink:href="#${n}"></use></svg>`;
+          iconGrid.appendChild(iconWrap);
+        });
+      });
+  </script>
+{% endblock %}

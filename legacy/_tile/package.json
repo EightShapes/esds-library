@@ -1,0 +1,16 @@
+{
+  "name": "esds-tile",
+  "version": "0.2.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kevin Powell <kevinmpowell@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "esds-build": "^0.48.1"
+  },
+  "gitHead": "056d2298a4e1889363511e20c057d60eaf566d82"
+}

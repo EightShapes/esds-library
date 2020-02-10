@@ -1,0 +1,85 @@
+{% extends 'templates/base.njk' %}
+{% set title = "Design System" %}
+
+{% block body %}
+  <div style="display: flex; justify-content: space-between;">
+    <div>
+      <h1>Design System Colors</h1>
+      <div class="color-swatches">
+
+      </div>
+    </div>
+
+    <div>
+      <h1>Background Colors</h1>
+      <div class="background-colors">
+
+      </div>
+    </div>
+
+    <div>
+      <h1>Text Colors</h1>
+      <div class="text-colors">
+
+      </div>
+    </div>
+
+    <div>
+      <h1>Interactive Colors</h1>
+      <div class="interactive-colors">
+
+      </div>
+    </div>
+
+    <div>
+      <h1>Alert Colors</h1>
+      <div class="alert-colors">
+
+      </div>
+    </div>
+</div>
+
+  <script>
+  getDsTokens().then((tokens) => {
+    tokens = tokens.esds_tokens;
+    for (var key in tokens.color) {
+      renderColorSwatch(key, tokens.color[key], '.color-swatches');
+    }
+
+    console.log(tokens);
+    for (var key in tokens['alert-color']) {
+      renderColorSwatch(key, tokens['alert-color'][key], '.alert-colors');
+    }
+
+    for (var key in tokens['background-color']) {
+      renderColorSwatch(key, tokens['background-color'][key], '.background-colors');
+    }
+
+    for (var key in tokens['text-color']) {
+      renderColorSwatch(key, tokens['text-color'][key], '.text-colors');
+    }
+
+    for (var key in tokens['interactive-color']) {
+      renderColorSwatch(key, tokens['interactive-color'][key], '.interactive-colors');
+    }
+  });
+
+  function renderColorSwatch(label, hex, target) {
+    const container = document.querySelector(target);
+
+    if (typeof hex === 'string') {
+      const swatch = document.createElement('div');
+      swatch.innerHTML = `
+      <div style="display: flex;">
+      <div style="height: 20px; width: 20px; background-color: ${hex}; border: solid 1px lightgray;"></div>
+      ${label}
+      </div>`;
+      container.appendChild(swatch);
+    } else {
+      for (var key in hex) {
+        renderColorSwatch(`${label}-${key}`, hex[key], target);
+      }
+    }
+  }
+  </script>
+{% endblock %}

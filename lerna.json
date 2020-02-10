@@ -1,0 +1,9 @@
+{
+  "packages": [
+    "icons",
+    "tokens",
+    "components/*",
+    "test/*"
+  ],
+  "version": "independent"
+}

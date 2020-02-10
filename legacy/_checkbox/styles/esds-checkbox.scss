@@ -1,0 +1,159 @@
+@import '../node_modules/esds-visual-style/styles/esds-visual-style';
+
+// <input[type='checkbox']/>
+$esds-checkbox-checkmark-size:          12px;
+$esds-checkbox-checkmark-size-l:        16px;
+$esds-checkbox-checkmark-size-s:        8px;
+$esds-checkbox-size:                    16px;
+$esds-checkbox-size-l:                  24px;
+$esds-checkbox-size-s:                  12px;
+$esds-checkbox-label-space:             4px;
+
+@mixin esds-required-indicator() {
+    @include esds-box-sizing;
+    color: $esds-alert-color-error-on-light;
+    text-decoration: none;
+}
+
+.esds-checkbox-v1 {
+  @include esds-font-reset;
+  @include esds-box-sizing();
+  cursor: pointer;
+  display: block;
+
+  .esds-checkbox__inner { // In order for a :focus state to wrap the psuedo checkbox and text, this element is required
+    align-items: flex-start;
+    display: inline-flex;
+  }
+
+
+  .esds-checkbox--focus & .esds-checkbox__inner,
+  .esds-checkbox__input:focus + .esds-checkbox__inner {
+    box-shadow: $esds-shadow-interactive-on-white;
+    outline: 0;
+  }
+
+  .esds-checkbox__input {
+    @include esds-accessibly-hidden();
+  }
+
+  .esds-checkbox__visual {
+      background: $esds-background-color-white;
+      border: $esds-border-control-on-white;
+      border-radius: 4px;
+      display: block;
+      flex: 0 0 auto;
+      height: $esds-checkbox-size;
+      margin-right: $esds-checkbox-label-space;
+      position: relative;
+      width: $esds-checkbox-size;
+
+    @at-root .esds-checkbox--large#{&} {
+      height: $esds-checkbox-size-l;
+      width: $esds-checkbox-size-l;
+    }
+
+    @at-root .esds-checkbox--small#{&} {
+      height: $esds-checkbox-size-s;
+      width: $esds-checkbox-size-s;
+    }
+  }
+
+  .esds-checkbox__input:indeterminate + .esds-checkbox__inner .esds-checkbox__visual,
+  .esds-checkbox__input:checked + .esds-checkbox__inner .esds-checkbox__visual {
+    background: $esds-background-color-brand;
+  }
+
+  .esds-checkbox--active & .esds-checkbox__visual,
+  .esds-checkbox--active & .esds-checkbox__input:checked + .esds-checkbox__inner .esds-checkbox__visual,
+  .esds-checkbox--active & .esds-checkbox__input:indeterminate + .esds-checkbox__inner .esds-checkbox__visual,
+  .esds-checkbox__input:active + .esds-checkbox__inner .esds-checkbox__visual {
+    background: darken($esds-background-color-brand, 10%);
+  }
+
+  &:hover .esds-checkbox__visual,
+  .esds-checkbox--hover & .esds-checkbox__visual {
+    border-color: $esds-color-black;
+  }
+  .esds-checkbox__input:disabled + .esds-checkbox__inner {
+    opacity: 0.5;
+  }
+
+  .esds-checkbox__input:disabled + .esds-checkbox__inner .esds-checkbox__visual {
+    border: $esds-border-control-on-white; // Prevent border color from changing on hover when input is disabled
+  }
+
+  .esds-checkbox__input:invalid + .esds-checkbox__inner .esds-checkbox__visual {
+    border: solid 1px $esds-alert-color-error-on-light;
+    box-shadow: 0 0 2px 2px $esds-alert-color-error-on-light;
+  }
+
+  @mixin checkbox-icon-styles {
+      display: none;
+
+      .esds-icon-v1 {
+        fill: $esds-text-color-primary-on-brand;
+        position: absolute;
+        top: 50%;
+        height: $esds-checkbox-checkmark-size;
+        left: 50%;
+        margin-left: -($esds-checkbox-checkmark-size / 2);
+        margin-top: -($esds-checkbox-checkmark-size / 2);
+        width: $esds-checkbox-checkmark-size;
+
+        @at-root .esds-checkbox--large#{&} {
+          height: $esds-checkbox-checkmark-size-l;
+          margin-left: -($esds-checkbox-checkmark-size-l / 2);
+          margin-top: -($esds-checkbox-checkmark-size-l / 2);
+          width: $esds-checkbox-checkmark-size-l;
+        }
+
+        @at-root .esds-checkbox--small#{&} {
+          height: $esds-checkbox-checkmark-size-s;
+          margin-left: -($esds-checkbox-checkmark-size-s / 2);
+          margin-top: -($esds-checkbox-checkmark-size-s / 2);
+          width: $esds-checkbox-checkmark-size-s;
+        }
+      }
+  }
+
+  .esds-checkbox__checked-icon {
+      @include checkbox-icon-styles();
+
+  }
+
+  .esds-checkbox__input:checked + .esds-checkbox__inner .esds-checkbox__checked-icon {
+    display: block;
+  }
+
+  .esds-checkbox__indeterminate-icon {
+      @include checkbox-icon-styles();
+  }
+
+  .esds-checkbox__input:indeterminate + .esds-checkbox__inner .esds-checkbox__indeterminate-icon {
+    display: block;
+  }
+
+  .esds-checkbox__label {
+      color: $esds-text-color-primary-on-white;
+      cursor: pointer;
+      font-family: $esds-font-family-sans-serif;
+      font-size: $esds-font-size-body-m-default;
+
+      @at-root .esds-checkbox--large#{&} {
+        font-size: $esds-font-size-body-l-default;
+      }
+
+      @at-root .esds-checkbox--small#{&} {
+        font-size: $esds-font-size-body-s-default;
+      }
+  }
+
+  .esds-checkbox__label-required-indicator {
+      @include esds-required-indicator;
+  }
+
+  .esds-checkbox__label-required-accessible-description {
+      @include esds-accessibly-hidden;
+  }
+}

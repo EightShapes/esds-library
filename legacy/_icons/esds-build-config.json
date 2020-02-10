@@ -1,0 +1,13 @@
+{
+  "concatenateScripts": false,
+  "concatenateMacros": false,
+  "copyScripts": true,
+  "copyTasks": [
+    {
+      "name": "iconsManifest",
+      "sources": ["./data/icons.json"],
+      "destination": "_site/latest/scripts",
+      "watch": true
+    }
+  ]
+}

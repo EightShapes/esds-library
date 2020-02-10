@@ -1,0 +1,37 @@
+{
+  "source": ["./src/tokens.json5", "./src/font-sizes.js"],
+  "platforms": {
+    "scss": {
+      "transformGroup": "scss",
+      "prefix": "esds",
+      "buildPath": "dist/scss/",
+      "files": [{
+        "destination": "_esds-tokens.scss",
+        "format": "scss/variables"
+      },
+      {
+        "destination": "_esds-tokens-map.scss",
+        "format": "scss/map-deep",
+        "mapName": "esds"
+      }]
+    },
+    "javascript": {
+      "transformGroup": "js",
+      "buildPath": "dist/js/",
+      "files": [
+        {
+          "destination": "esds-tokens.json",
+          "format": "json/nested"
+        },
+        {
+          "destination": "esds-tokens-es6.js",
+          "format": "javascript/es6"
+        },
+        {
+          "destination": "esds-tokens.js",
+          "format": "javascript/object"
+        }
+      ]
+    }
+  }
+}

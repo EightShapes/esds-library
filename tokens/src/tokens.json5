@@ -1,0 +1,189 @@
+{
+  // Base color palette
+  color: {
+    white: { value: '#FFFFFF' },
+    black : { value: '#000000' },
+    orange: {
+      '82': { value: '#D24B00'},
+      '91': { value: '#E85200'},
+      '93': { value: '#EEAC8D'} // Disabled primary button background and border color
+    },
+    neutral: {
+      '05' : { value: '#0D0D0D' },
+      '15' : { value: '#262626' },
+      '25' : { value: '#404040' },
+      '42' : { value: '#6B6B6B' },
+      '53' : { value: '#888888' },
+      '70' : { value: '#B3B1B1' },
+      '80' : { value: '#CCCACA' },
+      '90' : { value: '#E6E3E3' },
+      '95' : { value: '#F3F1F1' },
+    },
+    teal : {
+      '27' : { value: '#00798C' },
+      '30' : { value: '#068194' },
+      '37' : { value: '#0A9DB3' },
+      '48' : { value: '#20BDD5' },
+      '96' : { value: '#E7F4F6' }, //Tiles as link hover color
+    }
+  },
+  'text-color': {
+    brand: { value: '{color.orange.91.value}', comment: 'This is the primary EightShapes brand orange.'},
+    primary: {
+      'on-white' : { value: '{color.neutral.05.value}' },
+      'on-light' : { value: '{color.neutral.05.value}' },
+      'on-brand' : { value: '{color.white.value}' },
+      'on-dark'  : { value: '{color.white.value}' },
+      'on-black' : { value: '{color.neutral.95.value}' },
+      'on-dark-photograph' : { value: '{color.white.value}' },
+    },
+    secondary : {
+      'on-white' : { value: '{color.neutral.53.value}' },
+      'on-light' : { value: '{color.neutral.53.value}' },
+      'on-brand' : { value: '{color.neutral.90.value}' },
+      'on-dark'  : { value: '{color.neutral.53.value}' },
+      'on-black' : { value: '{color.neutral.53.value}' },
+      'on-dark-photograph' : { value: '{color.neutral.90.value}' },
+    },
+    link : {
+      'on-white' : { value: '{color.teal.30.value}' },
+      'on-light' : { value: '{color.teal.27.value}' },
+      'on-brand' : { value: '{color.white.value}' },
+      'on-dark'  : { value: '{color.teal.48.value}' },
+      'on-black' : { value: '{color.teal.48.value}' },
+      'on-dark-photograph' : { value: '{color.teal.48.value}' },
+    },
+  },
+  'background-color' : {
+    white : { value: '{color.white.value}' },
+    light : { value: '{color.neutral.95.value}' },
+    dark  : { value: '{color.neutral.15.value}' },
+    black : { value: '{color.neutral.05.value}' },
+    brand : { value: '{color.orange.91.value}' },
+    'dark-photograph' : { value: 'transparent' },
+  },
+  'alert-color' : {
+    error : {
+      'on-light' : { value: '#B90000' },
+      'on-dark' : { value: '#FF222B' },
+      fill : { value: '#EEDFDF' },
+    },
+    success : {
+      'on-light' : { value: '#158A06' },
+      'on-dark' : { value: '#26AD1B' },
+      fill : { value: '#E9F3E8' },
+    },
+    warning : {
+      'on-light' : { value: '#E1B800' },
+      fill : { value: '#F9F0D3' },
+    },
+    info : {
+      'on-light' : { value: '{color.teal.30.value}' },
+      fill : { value: '#DAECEF' },
+    },
+    new : {
+      'on-light' : { value: '{color.orange.91.value}'},
+      fill : { value: '#FBE5D9' },
+    }
+  },
+  'interactive-color' : {
+    hover : {
+      'on-light' : { value: '#E1F1F3' },
+      'on-dark'  : { value: '#004E5A' },
+    },
+    shadow : {
+      'on-white' : { value: '{color.teal.30.value}' },
+      'on-light' : { value: '{color.teal.27.value}' },
+      'on-brand' : { value: '{color.white.value}' },
+      'on-dark'  : { value: '{color.teal.48.value}' },
+    },
+  },
+  font : {
+    family : {
+      'sans-serif' : { value: 'Barlow, "Lato", sans-serif' },
+    },
+    'line-height' : {
+      normal : { value: '1.3' },
+      headings : { value: '1.2' },
+      tight : { value: '1.2' },
+    },
+    weight : {
+      light : { value: '300' },
+      regular : { value: '400' },
+      bold : { value: '600' },
+    },
+    'line-length' : {
+      'long-form' : { value: '800px' }
+    },
+  },
+  border : {
+    selected : {
+      width : { value: '5px' },
+      'on-white' : { value: 'solid {border.selected.width.value} {color.teal.30.value}' },
+      'on-light' : { value: 'solid {border.selected.width.value} {color.teal.30.value}' },
+      'on-dark'  : { value: 'solid {border.selected.width.value} {color.teal.48.value}' },
+      'on-black' : { value: 'solid {border.selected.width.value} {color.teal.48.value}' },
+    },
+    'interactive-image' : { value: 'solid 2px {color.teal.30.value}' },
+    control: {
+      'on-white': { value: 'solid 1px {color.neutral.70.value}' },
+    },
+    default : { value: 'solid 2px {color.neutral.42.value}' },
+    radius : {
+      default : { value: '8px' },
+    },
+  },
+  space : {
+    generic : {
+      '16-x' :             { value: '256px' },
+      '8-x' :              { value: '128px' },
+      '4-x' :              { value: '64px' },
+      '3-x' :              { value: '48px' },
+      '2-x' :              { value: '32px' },
+      '1-and-half-x' :     { value: '24px' },
+      '1-x' :              { value: '16px' },
+      'three-quarter-x' :  { value: '12px' },
+      'half-x' :           { value: '8px' },
+      'quarter-x' :        { value: '4px' },
+      'eighth-x' :         { value: '2px' },
+    },
+    inset : {
+      '8-x' :           { value: '128px' },
+      '4-x' :           { value: '64px' },
+      '2-x' :           { value: '32px' },
+      '1-and-half-x' :  { value: '24px' },
+      '1-x' :           { value: '16px' },
+      'half-x' :        { value: '8px' },
+      'quarter-x' :     { value: '4px' },
+      'eighth-x' :      { value: '2px' },
+    },
+    'inset-squish' : {
+      '4-x' :           { value: '32px 64px' },
+      '2-x' :           { value: '16px 32px' },
+      '1-and-half-x' :  { value: '12px 24px' },
+      '1-x' :           { value: '8px 16px' },
+      'half-x' :        { value: '4px 8px' },
+      'quarter-x' :     { value: '2px 4px' },
+    },
+    stack : {
+      '4-x' :              { value: '0 0 64px' },
+      '3-x' :              { value: '0 0 48px' },
+      '2-x' :              { value: '0 0 32px' },
+      '1-and-half-x' :     { value: '0 0  24px' },
+      '1-x' :              { value: '0 0 16px' },
+      'three-quarter-x' :  { value: '0 0 12px' },
+      'half-x' :           { value: '0 0 8px' },
+      'quarter-x' :        { value: '0 0 4px' },
+      'eighth-x' :         { value: '0 0 2px' },
+    },
+  },
+  transition : {
+    'interactive-hover-speed' : { value: '.2s' },
+  },
+  breakpoints: {
+    'width-500': { value: '500px' },
+    'width-768': { value: '768px' },
+    'width-1000': { value: '1000px' },
+    'width-1200': { value: '1200px' },
+  }
+}

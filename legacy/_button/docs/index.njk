@@ -1,0 +1,115 @@
+{# {% extends 'templates/base.njk' %}
+{% set title = "ESDS Button Testing Page" %}
+
+{% block body %}
+  <h1>ESDS Button Testing Page</h1>
+
+  <div class="test-examples">
+    <!-- Render button examples here -->
+  </div>
+
+
+  <script type="module">
+    import { html, render } from '/scripts/esds-base-wc.js';
+
+    const outputTarget = document.querySelector('.test-examples');
+    let output = [];
+
+    const variants = ['', 'secondary', 'flat'];
+    const sizes = ['', 'large', 'small'];
+    const states = ['hover', 'active', 'focus'];
+    variants.forEach((v) => {
+      const variantHeading = v.length > 0 ? v.charAt(0).toUpperCase() + v.slice(1) : 'Primary';
+      output.push(html`<h2>${variantHeading}</h2>`);
+      sizes.forEach((s) => {
+        const sizeHeading = s.length > 0 ? s.charAt(0).toUpperCase() + s.slice(1) : 'Medium';
+        output.push(html`
+          <h3>${sizeHeading}</h3>
+          <div class="avr">
+            <esds-button variant="${v}" size="${s}">Default</esds-button>
+            <esds-button variant="${v}" size="${s}" href="http://eightshapes.com">Link Button</esds-button>
+            <esds-button variant="${v}" size="${s}" class="esds-button--hover">Hover</esds-button>
+            <esds-button variant="${v}" size="${s}" class="esds-button--active">Active</esds-button>
+            <esds-button variant="${v}" size="${s}" class="esds-button--focus">Focus</esds-button>
+            <esds-button variant="${v}" size="${s}" disabled>Disabled</esds-button>
+            <br />
+            <br />
+            <esds-button variant="${v}" size="${s}" icon-left="angle-left">Icon Left</esds-button>
+            <esds-button variant="${v}" size="${s}" icon-right="angle-right">Icon Right</esds-button>
+            <esds-button variant="${v}" size="${s}" icon-left="eightshapes-mark" icon-right="eightshapes-mark">Button Text</esds-button>
+          </div>
+          `);
+        });
+    });
+    render(output, outputTarget);
+  </script>
+{% endblock %} #}
+
+<html>
+  <head>
+  </head>
+  <body>
+
+    <h1>ESDS Button Testing Page</h1>
+
+    <esds-button icon-left="angle-left" icon-right="angle-right">Left Angle</esds-button>
+    <esds-button></esds-button>
+    <esds-button></esds-button>
+    <esds-button></esds-button>
+    <esds-button></esds-button>
+
+    {# <div class="test-examples">
+      <!-- Render button examples here -->
+    </div>
+
+
+    <script type="module">
+      import { html, render } from '/scripts/esds-base-wc.js';
+
+      const outputTarget = document.querySelector('.test-examples');
+      let output = [];
+
+      const variants = ['', 'secondary', 'flat'];
+      const sizes = ['', 'large', 'small'];
+      const states = ['hover', 'active', 'focus'];
+      variants.forEach((v) => {
+        const variantHeading = v.length > 0 ? v.charAt(0).toUpperCase() + v.slice(1) : 'Primary';
+        output.push(html`<h2>${variantHeading}</h2>`);
+        sizes.forEach((s) => {
+          const sizeHeading = s.length > 0 ? s.charAt(0).toUpperCase() + s.slice(1) : 'Medium';
+          output.push(html`
+            <h3>${sizeHeading}</h3>
+            <div class="avr">
+              <esds-button variant="${v}" size="${s}">Default</esds-button>
+              <esds-button variant="${v}" size="${s}" href="http://eightshapes.com">Link Button</esds-button>
+              <esds-button variant="${v}" size="${s}" class="esds-button--hover">Hover</esds-button>
+              <esds-button variant="${v}" size="${s}" class="esds-button--active">Active</esds-button>
+              <esds-button variant="${v}" size="${s}" class="esds-button--focus">Focus</esds-button>
+              <esds-button variant="${v}" size="${s}" disabled>Disabled</esds-button>
+              <br />
+              <br />
+              <esds-button variant="${v}" size="${s}" icon-left="angle-left">Icon Left</esds-button>
+              <esds-button variant="${v}" size="${s}" icon-right="angle-right">Icon Right</esds-button>
+              <esds-button variant="${v}" size="${s}" icon-left="eightshapes-mark" icon-right="eightshapes-mark">Button Text</esds-button>
+            </div>
+            `);
+          });
+      });
+      render(output, outputTarget);
+    </script> #}
+
+
+
+    <script>
+    window.ShadyDOM = { force: true };
+    </script>
+    <script nomodule src="/scripts/legacy/babel-polyfills.js"></script> <!-- IE 11 -->
+    <script src="/scripts/webcomponents-bundle.js"></script>
+    <script src="/scripts/legacy/system-loader.js"></script> <!-- IE 11 -->
+    <script type="module" src="/scripts/esds-button.js"></script>
+     <!-- IE 11 -->
+    <script nomodule="">
+      System.import('./scripts/legacy/esds-button.js');
+    </script>
+  </body>
+</html>

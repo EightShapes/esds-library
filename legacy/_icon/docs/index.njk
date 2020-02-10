@@ -1,0 +1,71 @@
+{# {% extends 'templates/base.njk' %}
+{% set title = "Esds Icon Proving Ground" %}
+
+{% block body %}
+  <h1>Esds Icon</h1>
+
+  <div class="avr">
+    <h2>Default</h2>
+    <esds-icon></esds-icon>
+  </div>
+
+  <div class="avr">
+    <h2>Small</h2>
+    <esds-icon size="small"></esds-icon>
+  </div>
+
+  <div class="avr">
+    <h2>Large</h2>
+    <esds-icon size="large"></esds-icon>
+  </div>
+
+  <div class="avr">
+    <h2>Accessible (has a &lt;title&gt;)</h2>
+    <esds-icon title="what time is it?"></esds-icon>
+  </div>
+{% endblock %} #}
+
+
+<html>
+  <head>
+
+  </head>
+  <body>
+
+    <h1>Esds Icon</h1>
+
+    <div class="avr">
+      <h2>Default</h2>
+      <esds-icon></esds-icon>
+    </div>
+
+    <div class="avr">
+      <h2>Small</h2>
+      <esds-icon size="small"></esds-icon>
+    </div>
+
+    <div class="avr">
+      <h2>Large</h2>
+      <esds-icon size="large"></esds-icon>
+    </div>
+
+    <div class="avr">
+      <h2>Accessible (has a &lt;title&gt;)</h2>
+      <esds-icon title="what time is it?"></esds-icon>
+    </div>
+
+
+
+    <script>
+    window.ShadyDOM = { force: true };
+    </script>
+    <script nomodule src="/scripts/legacy/babel-polyfills.js"></script> <!-- IE 11 -->
+    <script src="/scripts/webcomponents-bundle.js"></script>
+    <script src="/scripts/legacy/system-loader.js"></script> <!-- IE 11 -->
+    <script type="module" src="/scripts/esds-icon.js"></script>
+     <!-- IE 11 -->
+    <script nomodule="">
+      System.import('./scripts/legacy/esds-icon-ie.js');
+    </script>
+  </body>
+</html>

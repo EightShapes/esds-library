@@ -1,0 +1,37 @@
+@import '../node_modules/esds-visual-style/styles/esds-visual-style';
+
+.esds-input-v1 {
+  @include esds-font-reset;
+  background: $esds-background-color-white;
+  border: $esds-border-control-on-white;
+  border-radius: $esds-border-radius-default;
+  color: $esds-text-color-primary-on-white;
+  padding: $esds-space-inset-squish-1-x;
+
+  .esds-input--hover &,
+  &:hover {
+    border-color: black;
+  }
+
+  .esds-input--focus &,
+  &:focus {
+    box-shadow: $esds-shadow-interactive-on-white;
+    outline: 0;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      border: $esds-border-control-on-white;
+    }
+  }
+
+  &:invalid {
+    border: solid 1px $esds-alert-color-error-on-light;
+    box-shadow: 0 0 2px 2px $esds-alert-color-error-on-light;
+  }
+}
