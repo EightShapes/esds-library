@@ -1,19 +1,9 @@
-import { svg, css, LitElement } from 'lit-element';
+import { svg, LitElement } from 'lit-element';
 import { unsafeSVG } from 'lit-html/directives/unsafe-svg.js';
 import { EsdsIconEightshapesMark } from '@eightshapes/esds-icons';
 import styles from './esds-icon-styles.js';
 
 export class EsdsIcon extends LitElement {
-  static get styles() {
-    return css`
-      .esds-icon {
-        height: 100px;
-        width: 100px;
-        fill: black;
-      }
-    `;
-  }
-
   static get properties() {
     return {
       size: { type: String },
