@@ -5,15 +5,15 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run watch",
-    "build": "npm run svgo && npm run svg-sprite && npm run build-es6-modules",
+    "build": "npm run build:optimized && npm run build:sprite && npm run build:es6-modules",
     "watch": "npm run build && chokidar \"src/**/*\" -c \"npm run build\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-es6-modules": "npm run clean-es6-modules && node scripts/build-es6-modules.js",
-    "clean-es6-modules": "npx trash dist/*.svg.js && npx trash index.js && npx trash dist/esds-icon-names.json",
-    "svgo": "npm run clean-svgo-icons && npx svgo -f src -o dist/icons --config svgo.config.yml",
-    "clean-svgo-icons": "npx trash dist/icons/*.svg",
-    "svg-sprite": "npm run clean-svg-sprite && npx svg-sprite --config=svg-sprite.config.json dist/icons/*.svg",
-    "clean-svg-sprite": "npx trash dist/esds-icons.svg"
+    "build:es6-modules": "npm run clean:es6-modules && node scripts/build-es6-modules.js",
+    "clean:es6-modules": "npx trash dist/*.svg.js && npx trash index.js && npx trash dist/esds-icon-names.json",
+    "build:optimized": "npm run clean:optimized && npx svgo -f src -o dist/icons --config svgo.config.yml",
+    "clean:optimized": "npx trash dist/icons/*.svg",
+    "build:sprite": "npm run clean:sprite && npx svg-sprite --config=svg-sprite.config.json dist/icons/*.svg",
+    "clean:sprite": "npx trash dist/esds-icons.svg",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
@@ -22,7 +22,6 @@
     "camelcase": "^5.3.1",
     "chokidar-cli": "^2.1.0",
     "fs-extra": "^8.1.0",
-    "husky": "^4.2.1",
     "svg-sprite": "^1.5.0",
     "svgo": "^1.3.2",
     "trash-cli": "^3.0.0"
