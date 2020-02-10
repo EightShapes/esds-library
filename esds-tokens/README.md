@@ -45,7 +45,7 @@ ctrl + C
 ## Adding New Tokens
 Add tokens to either the `tokens.json5` file or the `font-sizes.js` file. They will automatically be added to the compiled outputs.
 
-Amazon Style Dictionary supports [spreading tokens across multiple files](https://amzn.github.io/style-dictionary/#/architecture). 
+Amazon Style Dictionary supports [spreading tokens across multiple files](https://amzn.github.io/style-dictionary/#/architecture).
 If adding tokens in a new token file, the new filepath must be added to the `source` array in  `./config.json`.
 
 ## Adding New Output Formats
@@ -55,4 +55,5 @@ Amazon Style Dictionary supports a wide range of token file formats. Refer to th
 
 #### Repo Dependency Rationale
 * `chokidar-cli` - [Cross-platform file watcher](https://github.com/kimmobrunfeldt/chokidar-cli), used to trigger recompilation of tokens on save.
+* `trash-cli` - [Cross-platform File system deletion utility](https://github.com/sindresorhus/trash-cli#readme), used to delete compiled token files before each new build.
 * `style-dictionary` - [Amazon's Token Compiler](https://amzn.github.io/style-dictionary/#/)
