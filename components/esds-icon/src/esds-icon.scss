@@ -1,4 +1,19 @@
+@use '../node_modules/@eightshapes/esds-tokens/dist/scss/esds-tokens' as *;
+
 .esds-icon {
-  background: darkorange;
-  color: white;
+  fill: $esds-color-black;
+  height: 24px;
+  width: 24px;
+}
+
+.esds-icon svg {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.esds-icon--large {
+  height: 40px;
+  width: 40px;
 }
