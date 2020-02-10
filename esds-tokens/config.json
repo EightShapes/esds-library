@@ -22,14 +22,6 @@
         {
           "destination": "esds-tokens.json",
           "format": "json/nested"
-        },
-        {
-          "destination": "esds-tokens-es6.js",
-          "format": "javascript/es6"
-        },
-        {
-          "destination": "esds-tokens.js",
-          "format": "javascript/object"
         }
       ]
     }

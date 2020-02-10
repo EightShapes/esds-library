@@ -7,7 +7,8 @@
     "start": "npm run watch",
     "build": "npx style-dictionary build",
     "watch": "npm run build && chokidar \"src/**/*\" -c \"npm run build\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepack": "npm run build"
   },
   "keywords": [],
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
