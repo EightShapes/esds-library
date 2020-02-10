@@ -23,9 +23,7 @@ tableMarkup += `${headerRow}\n${alignmentRow}\n`;
 let columnCounter = 0;
 sourceFiles.forEach(fn => {
   const fileName = path.parse(fn).name;
-  let optimizedSource = fs.readFileSync(path.join(optimizedIcons, fn), 'UTF-8');
-  optimizedSource = optimizedSource.replace(/viewBox/, `height="${iconThumbnailSize}" width="${iconThumbnailSize}" viewBox`);
-  tableMarkup += `|${optimizedSource}<br>${fileName}`;
+  tableMarkup += `|<img height="${iconThumbnailSize}" width="${iconThumbnailSize}" src="src/${fn}" alt="${fileName}"/><br>${fileName}`;
   columnCounter++;
 
   if (columnCounter === galleryColumns) {
