@@ -1,6 +1,7 @@
 import { svg, css, LitElement } from 'lit-element';
 import { unsafeSVG } from 'lit-html/directives/unsafe-svg.js';
 import { EsdsIconEightshapesMark } from '@eightshapes/esds-icons';
+import styles from './esds-icon-styles.js';
 
 export class EsdsIcon extends LitElement {
   static get styles() {
@@ -32,32 +33,10 @@ export class EsdsIcon extends LitElement {
   render() {
     return svg`
       <style>
-        .esds-icon {
-          height: 24px;
-          width: 24px;
-          fill: black;
-        }
-
-        .esds-icon svg {
-          display: inline-block;
-          vertical-align: middle;
-          height: 100%;
-          width: 100%;
-        }
-
-        .esds-icon--large {
-          height: 40px;
-          width: 40px;
-        }
+        ${styles}
       </style>
-      <svg class="esds-icon esds-icon--${
-        this.size
-      }" xmlns="http://www.w3.org/2000/svg">
-        ${
-          this.use.indexOf('#') === 0
-            ? svg`<use href="${this.use}"/>`
-            : unsafeSVG(this.use)
-        }
+      <svg class="esds-icon esds-icon--${this.size}" xmlns="http://www.w3.org/2000/svg">
+        ${this.use.indexOf('#') === 0 ? svg`<use href="${this.use}"/>` : unsafeSVG(this.use)}
       </svg>
     `;
   }

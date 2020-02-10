@@ -7,35 +7,43 @@
   "module": "dist/esds-icon-legacy.js",
   "scripts": {
     "start": "npm run build && npm run watch-build | browser-sync start --watch --config browser-sync-config.js --ignore 'src/**/*'",
-    "build": "npm run build-esm && npm run build-ie && npm run build-web-component && npm run build-styles",
+    "build": "npm run build-styles && npm run build-esm && npm run build-ie && npm run build-web-component",
     "build-ie": "rollup -c rollup.config.ie.js",
     "build-web-component": "rollup -c rollup.config.js -i src/esds-icon-entry.js -o dist/esds-icon-web-component.js -f esm",
     "build-esm": "rollup -c rollup.config.js -i src/esds-icon.js -o dist/esds-icon.js -f esm",
-    "build-styles": "sass src:dist",
+    "build-styles": "node scripts/scss-to-lit.js",
     "watch-build": "npm run watch-build-esm | npm run watch-build-ie | npm run watch-build-web-component | npm run watch-build-styles",
     "watch-build-ie": "rollup --watch -c rollup.config.ie.js",
     "watch-build-web-component": "rollup --watch -c rollup.config.js -i src/esds-icon-entry.js -o dist/esds-icon-web-component.js -f esm",
     "watch-build-esm": "rollup --watch -c rollup.config.js -i src/esds-icon.js -o dist/esds-icon.js -f esm",
-    "watch-build-styles": "sass src:dist --watch",
+    "watch-build-styles": "chokidar \"src/**/*.scss\" -c \"npm run build-styles\"",
     "prepack": "npm run build",
     "test": "karma start --coverage",
     "test:watch": "karma start --auto-watch=true --single-run=false",
     "test:update-snapshots": "karma start --update-snapshots",
     "test:prune-snapshots": "karma start --prune-snapshots",
-    "test:bs": "karma start karma.bs.config.js --coverage"
+    "test:bs": "karma start karma.bs.config.js --coverage",
+    "lint:stylelint": "stylelint src/**/*.scss",
+    "format:stylelint": "stylelint src/**/*.scss --fix",
+    "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
+    "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
+    "lint": "npm run lint:eslint && npm run lint:stylelint",
+    "format": "npm run format:eslint && npm run format:stylelint"
   },
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@eightshapes/esds-icons": "^0.1.1",
+    "@eightshapes/esds-tokens": "^0.1.1",
     "@open-wc/testing": "^2.0.0",
     "@open-wc/testing-karma": "^3.0.0",
     "@open-wc/testing-karma-bs": "^1.0.0",
     "@webcomponents/custom-elements": "^1.2.4",
     "browser-sync": "^2.26.7",
+    "chokidar-cli": "^2.1.0",
     "deepmerge": "^3.2.0",
-    "eslint": "^6.8.0",
+    "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-sort-class-members": "^1.6.0",
@@ -43,11 +51,46 @@
     "rollup": "^1.18.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "sass": "^1.22.9"
+    "sass": "^1.25.0",
+    "stylelint": "^13.1.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-prettier": "^1.1.2",
+    "@open-wc/eslint-config": "^2.0.0",
+    "@open-wc/prettier-config": "^0.1.10",
+    "husky": "^1.0.0",
+    "lint-staged": "^8.0.0"
   },
   "dependencies": {
     "lit-element": "^2.2.1",
     "lit-html": "https://github.com/Polymer/lit-html.git",
     "regenerator-runtime": "^0.13.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@open-wc/eslint-config",
+      "eslint-config-prettier"
+    ],
+    "plugins": ["prettier"],
+    "rules": {
+      "prettier/prettier": "error",
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    }
+  },
+  "prettier": "@open-wc/prettier-config",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.scss": [
+      "stylelint --fix",
+      "git add"
+    ]
   }
 }

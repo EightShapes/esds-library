@@ -6,14 +6,14 @@ export default {
   input: 'src/esds-icon-entry-legacy.js',
   output: {
     file: 'dist/esds-icon-legacy.js',
-    format: 'cjs'
+    format: 'cjs',
   },
   plugins: [
-    resolve(),
     babel({
       presets: [
-        ["@babel/env", {"modules": false}] // Putting this in a separate .babelrc file doesn't seem to work
+        ['@babel/env', { modules: false }], // Putting this in a separate .babelrc file doesn't seem to work
       ],
-    })
-  ]
+    }),
+    resolve(),
+  ],
 };

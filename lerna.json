@@ -1,7 +1,7 @@
 {
   "packages": [
-    "icons",
-    "tokens",
+    "esds-icons",
+    "esds-tokens",
     "components/*",
     "test/*"
   ],

@@ -5,10 +5,7 @@
     <link rel="stylesheet" href="../../dist/esds-icon.css"/>
 
     <!-- Separate custom elements polyfill for Edge, IE11, etc. -->
-    <script>
-      window.ShadyCSS = { disableRuntime: true }; // Turn off ShadyCSS
-    </script>
-    <script type="text/javascript" src="../../node_modules/@webcomponents/custom-elements/custom-elements.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@webcomponents/webcomponentsjs@2.2.1/webcomponents-loader.js"></script>
 
     <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
     <script type="module" src="../../dist/esds-icon-web-component.js"></script>
@@ -28,6 +25,9 @@
       </li>
       <li>Babel is needed to compile the ES6 code down to ES5 code so IE11 will work</li>
     </ol>
+    <esds-icon></esds-icon>
+    <esds-icon></esds-icon>
+    <esds-icon></esds-icon>
     <esds-icon></esds-icon>
   </body>
 </html>
