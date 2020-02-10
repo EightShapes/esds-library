@@ -35,14 +35,8 @@ export class EsdsIcon extends LitElement {
       <style>
         ${styles}
       </style>
-      <svg class="esds-icon esds-icon--${
-        this.size
-      }" xmlns="http://www.w3.org/2000/svg">
-        ${
-          this.use.indexOf('#') === 0
-            ? svg`<use href="${this.use}"/>`
-            : unsafeSVG(this.use)
-        }
+      <svg class="esds-icon esds-icon--${this.size}" xmlns="http://www.w3.org/2000/svg">
+        ${this.use.indexOf('#') === 0 ? svg`<use href="${this.use}"/>` : unsafeSVG(this.use)}
       </svg>
     `;
   }
