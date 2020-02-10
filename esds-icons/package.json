@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run watch",
-    "build": "npm run build:optimized && npm run build:sprite && npm run build:es6-modules",
+    "build": "npm run build:optimized && npm run build:sprite && npm run build:es6-modules && npm run build:readme-gallery",
     "watch": "npm run build && chokidar \"src/**/*\" -c \"npm run build\"",
     "build:es6-modules": "npm run clean:es6-modules && node scripts/build-es6-modules.js",
     "clean:es6-modules": "npx trash dist/*.svg.js && npx trash index.js && npx trash dist/esds-icon-names.json",
@@ -13,6 +13,7 @@
     "clean:optimized": "npx trash dist/icons/*.svg",
     "build:sprite": "npm run clean:sprite && npx svg-sprite --config=svg-sprite.config.json dist/icons/*.svg",
     "clean:sprite": "npx trash dist/esds-icons.svg",
+    "build:readme-gallery": "node scripts/build-readme-markdown-gallery.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
