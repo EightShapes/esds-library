@@ -54,6 +54,11 @@ Amazon Style Dictionary supports a wide range of token file formats. Refer to th
 ---
 
 #### Repo Dependency Rationale
-* `chokidar-cli` - [Cross-platform file watcher](https://github.com/kimmobrunfeldt/chokidar-cli), used to trigger recompilation of tokens on save.
-* `trash-cli` - [Cross-platform File system deletion utility](https://github.com/sindresorhus/trash-cli#readme), used to delete compiled token files before each new build.
-* `style-dictionary` - [Amazon's Token Compiler](https://amzn.github.io/style-dictionary/#/)
+##### [chokidar-cli](https://github.com/kimmobrunfeldt/chokidar-cli)
+Cross-platform file watcher used to trigger recompilation of tokens on save.
+
+##### [trash-cli](https://github.com/sindresorhus/trash-cli#readme)
+Cross-platform File system deletion utility used to delete compiled token files before each new build.
+
+#####[style-dictionary](https://amzn.github.io/style-dictionary/#/)
+Amazon's Token Compiler tool
