@@ -13,11 +13,35 @@ EightShapes Design System Components are located in `./components/**`
 
 Components are versioned independently and distributed as individual node packages.
 
-### Running the component dev environment
-Each 
+### Running component dev environments
+**Before running any `npm` commands in the `esds-library` repo, run `lerna bootstrap` to install and link all necessary dependencies.** Install lerna globally in order to run lerna commands from anywhere within the repo:
+
+```
+npm install lerna -g
+```
+
+The dev environment start command is the same for all components:
+
+```
+cd components/[component-name]
+npm start
+```
+
+This will launch a browser preview that hot reloads as source `.js` and `.scss` files are modified.
+
+#### IE11 Compatibility
+The default dev environment does not build assets for IE11 for performance reasons. To start a dev environment compatible with IE11 run:
+
+```
+cd components/[component-name]
+npm start:legacy
+```
 
 
-### Linting
+
+## Linting
+Linting is performed at the repository level since it's tied to git commits. The same linting rules apply to esds-tokens, esds-icons, and all component packages.
+
 
 #### Javascript Linting
 Component styles are authored in 	Javascript (ES6). [ESLint](https://eslint.org) is used to enforce consistent syntax across components.
