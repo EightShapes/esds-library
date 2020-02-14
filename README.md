@@ -1,5 +1,22 @@
 # EightShapes Design System
 
+This repository houses multiple packages comprising the EightShapes Design System.
+
+## esds-tokens
+EightShapes Design System Tokens are key/value pairs representing visual style properties. [Tokens README](./esds-tokens/README.md)
+
+## esds-icons
+EightShapes Design System Icons are svg assets used throughout design system components. [Icons README](./esds-icons/README.md)
+
+## Components
+EightShapes Design System Components are located in `./components/**`
+
+Components are versioned independently and distributed as individual node packages.
+
+### Running the component dev environment
+Each 
+
+
 ### Linting
 
 #### Javascript Linting
