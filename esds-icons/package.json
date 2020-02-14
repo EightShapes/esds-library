@@ -9,7 +9,7 @@
     "watch": "npm run build && chokidar \"src/**/*\" -c \"npm run build\"",
     "build:es6-modules": "npm run clean:es6-modules && node scripts/build-es6-modules.js",
     "clean:es6-modules": "npx trash dist/*.svg.js && npx trash index.js && npx trash dist/esds-icon-names.json",
-    "build:optimized": "npm run clean:optimized && npx svgo -f src -o dist/icons --config svgo.config.yml",
+    "build:optimized": "npm run clean:optimized && npx svgo -f src -o dist/icons --config svgo.config.json",
     "clean:optimized": "npx trash dist/icons/*.svg",
     "build:sprite": "npm run clean:sprite && npx svg-sprite --config=svg-sprite.config.json dist/icons/*.svg",
     "clean:sprite": "npx trash dist/esds-icons.svg",

@@ -65,10 +65,10 @@ npm run build
 ```
 npm start
 ```
-#### Stop Watching
-```
-ctrl + C
-```
+
+### Build Config
+* [svg-sprite config](/svg-sprite.config.json)
+* [svgo config](/svgo.config.json)
 
 ##Adding New Icons
 Add raw `.svg` assets to `src/` and re-run the build commands to add new icons to the output.
