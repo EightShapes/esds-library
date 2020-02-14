@@ -1,7 +1,5 @@
 # EightShapes Design System Tokens
-EightShapes Design System Tokens are a series of key/value pairs that represent the fundamental design decisions within the design system. [Learn more about tokens](https://eightshapes.com/articles/tokens-in-design-systems.html).
-
-This repo uses [Amazon Style Dictionary](https://amzn.github.io/style-dictionary/#/) to compile token assets.
+EightShapes Design System Tokens are key/value pairs representing visual style properties, offered as a package compiled by [Amazon Style Dictionary](https://amzn.github.io/style-dictionary/#/). [Learn more about tokens](https://eightshapes.com/articles/tokens-in-design-systems.html).
 
 ## Token Source Files
 Source files for tokens are located in two files:
@@ -19,15 +17,24 @@ Contains the majority of the design system tokens. The file follows the style di
 Contains tokens for all font sizes within the system. These values are derived from a `baseFontSize` variable set in the top of the file. Because of the calculated nature of these tokens, they reside in a `.js` file separate from the static `tokens.json5` file.
 
 ## Token Outputs
-This repository currently builds three separate outputs based on the source token files:
+This repository builds multiple outputs based on the source token files:
 
 * `dist/js/esds-tokens.json`
 * `dist/scss/_edsds-tokens.scss`
 * `dist/scss/_esds-tokens-map.scss`
+* `dist/css/esds-tokens.css`
+* `dist/less/esds-tokens.less`
 
 
 ## Building Token Outputs
-**Before running any `npm` commands in the `esds-library` repo, run `lerna bootstrap` to install and link all necessary dependencies.**
+**Before running any `npm` commands in the `esds-library` repo, run `lerna bootstrap` to install and link all necessary dependencies.** Install lerna globally in order to run lerna commands from anywhere within the repo:
+
+```
+npm install lerna -g
+```
+
+### Running token scripts
+The following esds-token npm scripts should be run from the root of the tokens package: `./esds-tokens`
 
 ### Compile Tokens
 ```
@@ -37,10 +44,11 @@ npm run build
 ```
 npm start
 ```
+
 #### Stop Watching
-```
-ctrl + C
-```
+ ```
+ ctrl + C
+ ```
 
 ## Adding New Tokens
 Add tokens to either the `tokens.json5` file or the `font-sizes.js` file. They will automatically be added to the compiled outputs.
