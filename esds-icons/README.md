@@ -70,11 +70,12 @@ npm start
 * [svg-sprite config](./svg-sprite.config.json)
 * [svgo config](./svgo.config.json)
 
+
 ## Adding New Icons
 Add raw `.svg` assets to `src/` and re-run the build commands to add new icons to the output.
 
-##Consuming Icon Outputs
-###SVG Sprite
+## Consuming Icon Outputs
+### SVG Sprite
 Icons within the SVG sprite can be referenced by name via the `<use>` element.
 
 ```html
@@ -85,14 +86,14 @@ Icons within the SVG sprite can be referenced by name via the `<use>` element.
 </svg>
 ```
 
-###Optimized SVGs
+### Optimized SVGs
 Optimized SVGs can be injected into the page via HTML `<img>` tags among other means.
 
 ```html
 <img src="/path/to/caret-down.svg" alt="open menu"/>
 ```
 
-###ES6 Modules & ES6 manifest
+### ES6 Modules & ES6 manifest
 ES6 module assets can be imported into Javascript contexts.
 
 Single icon:
