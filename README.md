@@ -5,7 +5,7 @@
 #### Style Linting
 Component styles are authored in 	[scss](https://sass-lang.com). To keep syntax consistent across component files, [stylelint](https://stylelint.io) is used to enforce the coding styleguide.
 
-Stylelint configuration is in `/.stylelintrc.json`.
+[Stylelint configuration](./.stylelintrc.json)
 
 Stylelint is paired with [prettier](https://prettier.io) to automatically correct code style. In supported text editors this can be performed each time a file is edited.
 
