@@ -1,5 +1,3 @@
-'use strict';
-
 const fs = require('fs-extra');
 const path = require('path');
 const camelCase = require('camelcase');
@@ -20,7 +18,9 @@ fs.writeFileSync(iconNamesFilepath, JSON.stringify(sourceFileNames), 'UTF-8');
 sourceFiles.forEach(fn => {
   const sourceContents = fs.readFileSync(path.join(sourceDir, fn), 'UTF-8');
   const fileName = path.parse(fn).name;
-  const es6ModuleName = `${camelCase(namespace, {pascalCase: true})}Icon${camelCase(fileName, {pascalCase: true})}`;
+  const es6ModuleName = `${camelCase(namespace, { pascalCase: true })}Icon${camelCase(fileName, {
+    pascalCase: true,
+  })}`;
   const outfileContents = `export const ${es6ModuleName} = \`${sourceContents}\`; `;
   const outfilePath = path.join(outDir, `${es6ModuleName}${es6ModuleExtension}`);
   fs.writeFileSync(outfilePath, outfileContents, 'UTF-8');
@@ -28,6 +28,9 @@ sourceFiles.forEach(fn => {
 });
 
 const es6ManifestFilename = `index.js`;
-const es6ManifestFileContents = es6ModuleNames.map(n => `import { ${n} } from './${outDir}/${n}${es6ModuleExtension}'\nexport { ${n} }`).join('\n');
+let es6ManifestFileContents = es6ModuleNames
+  .map(n => `import { ${n} } from './${outDir}/${n}${es6ModuleExtension}';`)
+  .join('\n');
+es6ManifestFileContents += `\n\n${es6ModuleNames.map(n => `export { ${n} };`).join('\n')}\n`;
 const es6ManifestFilepath = path.join(es6ManifestFilename);
 fs.writeFileSync(es6ManifestFilepath, es6ManifestFileContents, 'UTF-8');

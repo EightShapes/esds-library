@@ -1,0 +1,7 @@
+{
+  "extends": ["stylelint-config-sass-guidelines", "stylelint-prettier/recommended"],
+  "rules": {
+    "color-hex-case": "upper",
+    "color-hex-length": "long"
+  }
+}

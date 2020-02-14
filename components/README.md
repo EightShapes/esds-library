@@ -1,48 +1,80 @@
-# EightShapes Design System Components
+# Creating a new component package
 
-## Dev Environment
+## 1. Set up the component build pipeline
+Be sure you're in the `/components` directory of the repo: `cd components`, then run:
 
-### Linting
-#### Javascript Linting
-Component styles are authored in 	Javascript (ES6). [ESLint](https://eslint.org) is used to enforce consistent syntax across components.
+```
+npx @eightshapes/esds-lit-element-project-generator
+```
 
-The ruleset for each component is managed in the `eslintConfig` key of each `components/**/package.json`. Component level rulesets enable future coding style changes to be applied on a component-by-component basis.
+1. Provide the name of your component (without a namespace) at the first prompt: icon, button, card, list-group
+2. Provide the `esds` namespace at the second prompt.
+3. In the newly generated `package.json` for your component, add the `@eightshapes` scope to the package name. Example:
 
-The ruleset is based on [@open-wc/eslint-config](https://github.com/open-wc/open-wc/blob/master/packages/eslint-config/index.js), an open-source lint config tailored for web component authoring.
+```js
+{
+  "name": "esds-button",
+  "version": "0.1.0",
+  ...
+```
 
-ESLint is paired with [prettier](https://prettier.io) to automatically correct code style. In supported text editors this can be performed each time a file is edited.
+Becomes:
 
-The prettier config uses [@open-wc/prettier-config](https://github.com/open-wc/open-wc/blob/master/packages/prettier-config/prettier.config.js).
+```js
+{
+  "name": "@eightshapes/esds-button",
+  "version": "0.1.0",
+  ...
+```
 
-##### Pre-commit hook
-ESLint and prettier are called automatically on each `git commit` using [husky](https://github.com/typicode/husky#readme). The pre-commit hook will attempt to correct any lint discrepancies automatically. If it cannot, an error will be shown at the command line describing any linting failures and the commit will be aborted.
+👆 This creates a new component starter package that:
 
-#### Style Linting
-Component styles are authored in 	[scss](https://sass-lang.com). [stylelint](https://stylelint.io) is used to enforce consistent syntax across components.
+* Provides lit-element as a base web component
+* Configures rollup to bundle your component source into three outputs:
+  * [name]-web-components.js, es6 consumable w/customElements.define call built-in
+  * [name].js, es6 consumable w/out customElements.define call
+  * [name]-legacy.js, es5 consumable suitable for use in IE11
+* Wires up browsersync and creates a sandbox for building the component
+* Creates a default scss file and a sass compilation pipeline that injects CSS into the web-component and generates a standalone CSS file
 
-The ruleset for each component is managed in `components/**/.stylelintrc.json`. Component level rulesets enable future coding style changes to be applied on a component-by-component basis.
+## 2. Add linting
 
-Stylelint is paired with [prettier](https://prettier.io) to automatically correct code style. In supported text editors this can be performed each time a file is edited.
+### Install eslint and prettier
+_Within_ the newly created package run:
 
-##### Pre-commit hook
-Stylelint and prettier are called automatically on each `git commit` using [husky](https://github.com/typicode/husky#readme). The pre-commit hook will attempt to correct any lint discrepancies automatically. If it cannot, an error will be shown at the command line describing any linting failures and the commit will be aborted.
+```bash
+npm init @open-wc
+```
 
----
-#### Repo Dependency Rationale
-##### [@open-wc/eslint-config](https://github.com/open-wc/open-wc/blob/master/packages/eslint-config/index.js)
-Linting ruleset for Web Component Javascript
+Choose "Upgrade and existing package"
+Select "Linting" (arrow key and then spacebar to select, enter to proceed)
+Answer yes to modifying/overwriting files and installing dependencies via NPM
 
-##### [@open-wc/prettier-config](https://github.com/open-wc/open-wc/blob/master/packages/prettier-config/prettier.config.js)
-Configuration to integrate open-wc's linting ruleset with prettier
+After the @open-wc linting scaffold has run, make a few modifications to `package.json`
 
-##### [eslint](https://eslint.org)
-Enforces `.js` coding styleguide
+Add the following to the eslintConfig key starting at `"plugins"`
 
-##### [husky](https://github.com/typicode/husky#readme)
-Binds tasks to git hooks via `package.json`
+```js
+"eslintConfig": {
+  "extends": [
+    "@open-wc/eslint-config",
+    "eslint-config-prettier"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
+  }
+},
+```
 
-##### [prettier](https://prettier.io)
-Automatically fix lint errors
+### Test eslint/prettier install
+Run `npm run lint` and verify there are no linting errors in the project.
 
-##### [stylelint](https://stylelint.io)
-Enforces `.scss` coding styleguide
+### Install stylelint
+TBD

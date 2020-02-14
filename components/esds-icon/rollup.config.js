@@ -6,9 +6,7 @@ export default {
   input: 'src/esds-icon-entry.js',
   output: {
     file: 'dist/esds-icon.js',
-    format: 'esm'
+    format: 'esm',
   },
-  plugins: [
-    resolve(),
-  ]
+  plugins: [resolve()],
 };
