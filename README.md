@@ -22,3 +22,12 @@ Automatically fix lint errors
 
 ##### [stylelint](https://stylelint.io)
 Enforces `.scss` coding styleguide
+
+##### [stylelint-config-prettier](https://github.com/prettier/stylelint-config-prettier)
+Turns off all rules that are unnecessary or might conflict with prettier.
+
+##### [stylelint-config-sass-guidelines](https://github.com/bjankord/stylelint-config-sass-guidelines)
+A stylelint config based on [https://sass-guidelin.es/](https://sass-guidelin.es/)
+
+##### [stylelint-prettier](https://github.com/prettier/stylelint-prettier)
+Stylelint plugin for Prettier formatting
