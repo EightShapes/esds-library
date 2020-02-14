@@ -2,10 +2,65 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "dependency-tree": "node dependency-tree.js"
+    "dependency-tree": "node dependency-tree.js",
+    "lint:stylelint": "stylelint **/*.scss --ignore-path .gitignore",
+    "format:stylelint": "stylelint **/*.scss --fix --ignore-path .gitignore",
+    "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
+    "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
+    "lint": "npm run lint:eslint && npm run lint:stylelint",
+    "format": "npm run format:eslint && npm run format:stylelint"
   },
   "devDependencies": {
-    "lerna": "^3.11.0"
+    "@lerna/package-graph": "^3.18.5",
+    "@lerna/project": "^3.18.0",
+    "@open-wc/eslint-config": "^2.0.0",
+    "@open-wc/prettier-config": "^0.1.10",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-sort-class-members": "^1.6.0",
+    "husky": "^1.0.0",
+    "lerna": "^3.11.0",
+    "lint-staged": "^8.0.0",
+    "prettier": "^1.19.1",
+    "stylelint": "^13.1.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-prettier": "^1.1.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "eslintConfig": {
+    "extends": [
+      "@open-wc/eslint-config",
+      "eslint-config-prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": true
+        }
+      ]
+    }
+  },
+  "prettier": "@open-wc/prettier-config",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.scss": [
+      "stylelint --fix",
+      "git add"
+    ]
+  }
 }

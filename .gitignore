@@ -8,3 +8,5 @@
 npm-debug.log
 node_modules
 css/*.css.map
+legacy
+dist
