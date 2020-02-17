@@ -14,7 +14,8 @@
     "build:sprite": "npm run clean:sprite && npx svg-sprite --config=svg-sprite.config.json dist/icons/*.svg",
     "clean:sprite": "npx trash dist/esds-icons.svg",
     "build:readme-gallery": "node scripts/build-readme-markdown-gallery.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepack": "npm run build"
   },
   "keywords": [],
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
