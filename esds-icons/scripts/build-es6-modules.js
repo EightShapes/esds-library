@@ -11,27 +11,26 @@ fs.mkdirpSync(outDir); // Create the outDir if it doesn't already exist
 
 const sourceFiles = fs.readdirSync(sourceDir).filter(fn => path.parse(fn).ext === '.svg'); // Get only the .svg files from the dir
 
-/******************************/
+/** *************************** */
 // Create esds-icon-names.json
-/******************************/
+/** *************************** */
 const sourceFileNames = sourceFiles.map(fn => path.parse(fn).name); // Trim the '.svg' from each filename
 const iconNamesFilepath = path.join(outDir, `${namespace}-icon-names.json`);
 fs.writeFileSync(iconNamesFilepath, JSON.stringify(sourceFileNames), 'UTF-8');
 
-/************************************/
+/** ********************************* */
 // Create ES6 modules for each icon
-/************************************/
+/** ********************************* */
 sourceFiles.forEach(fn => {
   // Trim the '.svg' from the filename
   const fileName = path.parse(fn).name;
   // Create the pascal cased ES6 module export name: caret-up.svg becomes EsdsIconCaretUp
-  const es6ModuleName = `${camelCase(namespace, {pascalCase: true})}Icon${camelCase(fileName, {pascalCase: true})}`;
-  // Read the icon source
-  const sourceContents = fs.readFileSync(path.join(sourceDir, fn), 'UTF-8');
-  // Wrap the icon source in the required ES6 export statement
   const es6ModuleName = `${camelCase(namespace, { pascalCase: true })}Icon${camelCase(fileName, {
     pascalCase: true,
   })}`;
+  // Read the icon source
+  const sourceContents = fs.readFileSync(path.join(sourceDir, fn), 'UTF-8');
+  // Wrap the icon source in the required ES6 export statement
   const outfileContents = `export const ${es6ModuleName} = \`${sourceContents}\`; `;
 
   // Write the ES6 module: caret-up.svg is written to: EsdsIconCaretUp.svg.js
@@ -42,9 +41,9 @@ sourceFiles.forEach(fn => {
   es6ModuleNames.push(es6ModuleName);
 });
 
-/************************************/
+/** ********************************* */
 // Create ES6 module manifest
-/************************************/
+/** ********************************* */
 const es6ManifestFilename = `index.js`;
 // Loop over each es6 module name and write an import & export statement for each
 let es6ManifestFileContents = es6ModuleNames
