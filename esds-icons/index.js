@@ -10,10 +10,6 @@ import { EsdsIconCaretUp } from './dist/EsdsIconCaretUp.svg.js'
 export { EsdsIconCaretUp }
 import { EsdsIconCheck } from './dist/EsdsIconCheck.svg.js'
 export { EsdsIconCheck }
-import { EsdsIconEightshapesLogo } from './dist/EsdsIconEightshapesLogo.svg.js'
-export { EsdsIconEightshapesLogo }
-import { EsdsIconEightshapesMark } from './dist/EsdsIconEightshapesMark.svg.js'
-export { EsdsIconEightshapesMark }
 import { EsdsIconLinkedin } from './dist/EsdsIconLinkedin.svg.js'
 export { EsdsIconLinkedin }
 import { EsdsIconMedium } from './dist/EsdsIconMedium.svg.js'
