@@ -102,6 +102,62 @@
     family : {
       'sans-serif' : { value: 'Barlow, "Lato", sans-serif' },
     },
+    size: {
+      'heading-level-1': {
+        'default': { value: '36px' },
+        'at-480':  { value: '40px' },
+        'at-768':  { value: '48px' },
+        'at-1000': { value: '64px' },
+      },
+      'heading-level-2': {
+        'default': { value: '27.64px' },
+        'at-480':  { value: '31.248px' },
+        'at-768':  { value: '37.904px' },
+        'at-1000': { value: '45.232px' },
+      },
+      'heading-level-3': {
+        'default': { value: '23.04px' },
+        'at-480':  { value: '25.008px' },
+        'at-768':  { value: '28.432px' },
+        'at-1000': { value: '32px' },
+      },
+      'heading-level-4': {
+        'default': { value: '19.2px' },
+        'at-480':  { value: '20px' },
+        'at-768':  { value: '21.328px' },
+        'at-1000': { value: '22.624px' },
+      },
+      'heading-eyebrow': {
+        'default': { value: '13px' },
+        'at-480':  { value: '14px' },
+        'at-768':  { value: '15px' },
+        'at-1000': { value: '15px' },
+      },
+      'body-l': {
+        'default': { value: '19.2px' },
+        'at-480':  { value: '20px' },
+        'at-768':  { value: '21.28px' },
+        'at-1000': { value: '22.624px' },
+      },
+      'body-lead': {
+        'default': { value: '20.8px' },
+        'at-480':  { value: '22.4px' },
+        'at-768':  { value: '25.6px' },
+        'at-1000': { value: '28.8px' },
+      },
+      'body-m': {
+        'default': { value: '16px' },
+        'at-480':  { value: '16px' },
+        'at-768':  { value: '19.2px' },
+        'at-1000': { value: '19.2px' },
+      },
+      'body-s': {
+        'default': { value: '12px' },
+        'at-480':  { value: '13,6px' },
+        'at-768':  { value: '14.4px' },
+        'at-1000': { value: '14.4px' },
+      },
+    },
     'line-height' : {
       normal : { value: '1.3' },
       headings : { value: '1.2' },

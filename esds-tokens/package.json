@@ -5,16 +5,20 @@
   "main": "dist/js/esds-tokens-es6.js",
   "scripts": {
     "start": "npm run watch",
-    "build": "npx style-dictionary build",
-    "watch": "npm run build && chokidar \"src/**/*\" -c \"npm run build\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run clean:dist && npx style-dictionary build",
+    "build:no-clean": "npx style-dictionary build",
+    "watch": "npm run build && chokidar \"src/**/*\" -c \"npm run build:no-clean\"",
+    "clean:dist": "npx trash dist/**/*",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepack": "npm run build"
   },
   "keywords": [],
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "chokidar-cli": "^2.1.0",
-    "style-dictionary": "^2.8.3"
+    "style-dictionary": "^2.8.3",
+    "trash-cli": "^3.0.0"
   },
   "publishConfig": {
     "access": "public"
