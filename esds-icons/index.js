@@ -1,24 +1,25 @@
-import { EsdsIconAngleLeft } from './dist/EsdsIconAngleLeft.svg.js'
-export { EsdsIconAngleLeft }
-import { EsdsIconAngleRight } from './dist/EsdsIconAngleRight.svg.js'
-export { EsdsIconAngleRight }
-import { EsdsIconBars } from './dist/EsdsIconBars.svg.js'
-export { EsdsIconBars }
-import { EsdsIconCaretDown } from './dist/EsdsIconCaretDown.svg.js'
-export { EsdsIconCaretDown }
-import { EsdsIconCaretUp } from './dist/EsdsIconCaretUp.svg.js'
-export { EsdsIconCaretUp }
-import { EsdsIconCheck } from './dist/EsdsIconCheck.svg.js'
-export { EsdsIconCheck }
-import { EsdsIconLinkedin } from './dist/EsdsIconLinkedin.svg.js'
-export { EsdsIconLinkedin }
-import { EsdsIconMedium } from './dist/EsdsIconMedium.svg.js'
-export { EsdsIconMedium }
-import { EsdsIconMinus } from './dist/EsdsIconMinus.svg.js'
-export { EsdsIconMinus }
-import { EsdsIconParticipants } from './dist/EsdsIconParticipants.svg.js'
-export { EsdsIconParticipants }
-import { EsdsIconStopwatch } from './dist/EsdsIconStopwatch.svg.js'
-export { EsdsIconStopwatch }
-import { EsdsIconTwitter } from './dist/EsdsIconTwitter.svg.js'
-export { EsdsIconTwitter }
+import { EsdsIconAngleLeft } from './dist/EsdsIconAngleLeft.svg.js';
+import { EsdsIconAngleRight } from './dist/EsdsIconAngleRight.svg.js';
+import { EsdsIconBars } from './dist/EsdsIconBars.svg.js';
+import { EsdsIconCaretDown } from './dist/EsdsIconCaretDown.svg.js';
+import { EsdsIconCaretUp } from './dist/EsdsIconCaretUp.svg.js';
+import { EsdsIconCheck } from './dist/EsdsIconCheck.svg.js';
+import { EsdsIconLinkedin } from './dist/EsdsIconLinkedin.svg.js';
+import { EsdsIconMedium } from './dist/EsdsIconMedium.svg.js';
+import { EsdsIconMinus } from './dist/EsdsIconMinus.svg.js';
+import { EsdsIconParticipants } from './dist/EsdsIconParticipants.svg.js';
+import { EsdsIconStopwatch } from './dist/EsdsIconStopwatch.svg.js';
+import { EsdsIconTwitter } from './dist/EsdsIconTwitter.svg.js';
+
+export { EsdsIconAngleLeft };
+export { EsdsIconAngleRight };
+export { EsdsIconBars };
+export { EsdsIconCaretDown };
+export { EsdsIconCaretUp };
+export { EsdsIconCheck };
+export { EsdsIconLinkedin };
+export { EsdsIconMedium };
+export { EsdsIconMinus };
+export { EsdsIconParticipants };
+export { EsdsIconStopwatch };
+export { EsdsIconTwitter };
