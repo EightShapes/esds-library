@@ -7,6 +7,7 @@ export class EsdsIcon extends LitElement {
   static get properties() {
     return {
       size: { type: String },
+      title: { type: String },
       use: { type: String },
     };
   }
@@ -16,8 +17,15 @@ export class EsdsIcon extends LitElement {
     this.use = EsdsIconEightshapesMark;
   }
 
+  /*
+   * @ignore
+   */
   createRenderRoot() {
     return this;
+  }
+
+  loadSpecialIconMethod() {
+    return true;
   }
 
   render() {
