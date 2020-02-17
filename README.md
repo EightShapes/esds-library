@@ -1,4 +1,4 @@
-#EightShapes Design System
+# EightShapes Design System
 
 ## Repository Structure
 The EightShapes Design system is a monorepo containing design system components, tokens, icons and visual assets. Each of these assets is published as an independently versioned node package.
