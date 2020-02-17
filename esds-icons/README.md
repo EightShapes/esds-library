@@ -41,11 +41,7 @@ dist/esds-icon-names.json
 A JSON array containing individual SVG filenames minus the extension. Useful for iterating over the icon set programmaticaly, to generate an icon gallery.
 
 ## Building Icon Outputs
-**Before running any `npm` commands in the `esds-library` repo, run `lerna bootstrap` to install and link all necessary dependencies.** Install lerna globally in order to run lerna commands from anywhere within the repo:
-
-```
-npm install lerna -g
-```
+**IMPORTANT** Follow the [lerna installation instructions](../documentation/lerna.md) before running any commands in this repository.
 
 ### Running icon scripts
 The following esds-icons npm scripts should be run from the root of the icons package: `./esds-icons`
