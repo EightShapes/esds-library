@@ -1,5 +1,5 @@
 {
-  "source": ["./src/tokens.json5", "./src/font-sizes.js"],
+  "source": ["./src/tokens.json5"],
   "platforms": {
     "css": {
       "transformGroup": "css",
