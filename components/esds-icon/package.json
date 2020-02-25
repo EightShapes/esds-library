@@ -1,10 +1,10 @@
 {
-  "name": "@eightshapes/esds-icon",
-  "version": "0.1.1",
-  "description": "",
-  "esnext": "src/esds-icon.js",
-  "main": "dist/esds-icon.js",
-  "module": "dist/esds-icon-legacy.js",
+	"name": "@eightshapes/esds-icon",
+	"version": "0.1.1",
+	"description": "",
+	"esnext": "src/esds-icon.js",
+	"main": "dist/esds-icon.js",
+	"module": "dist/esds-icon-legacy.js",
   "scripts": {
     "start": "npm run build && npm run watch:build | npm run start:browsersync",
     "start:browsersync": "browser-sync start --watch --config browser-sync-config.js --ignore 'src/**/*'",
@@ -22,6 +22,7 @@
     "build:legacy": "npm run build && npm run build:ie",
     "watch:build-legacy": "npm run watch:build | npm run watch:build-ie",
     "watch:build-ie": "rollup --watch -c rollup.config.ie.js",
+		"build:jsdoc": "npx web-component-analyzer src --format json --outFile dist/esds-icon-docs.json && npx web-component-analyzer src --format markdown --outFile dist/esds-icon-docs.md",
     "prepack": "npm run build",
     "test": "karma start --coverage",
     "test:watch": "karma start --auto-watch=true --single-run=false",
@@ -29,30 +30,31 @@
     "test:prune-snapshots": "karma start --prune-snapshots",
     "test:bs": "karma start karma.bs.config.js --coverage"
   },
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/core": "^7.5.5",
+		"@babel/preset-env": "^7.5.5",
     "@eightshapes/esds-icons": "^0.1.1",
     "@eightshapes/esds-tokens": "^0.1.1",
-    "@open-wc/testing": "^2.0.0",
-    "@open-wc/testing-karma": "^3.0.0",
-    "@open-wc/testing-karma-bs": "^1.0.0",
-    "@webcomponents/custom-elements": "^1.2.4",
-    "autoprefixer": "^9.7.4",
-    "browser-sync": "^2.26.7",
-    "chokidar-cli": "^2.1.0",
-    "deepmerge": "^3.2.0",
-    "postcss": "^7.0.26",
-    "rollup": "^1.18.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "sass": "^1.25.0",
-    "trash-cli": "^3.0.0"
-  },
-  "dependencies": {
-    "lit-element": "^2.2.1",
-    "lit-html": "https://github.com/Polymer/lit-html.git",
-    "regenerator-runtime": "^0.13.3"
-  }
+		"@open-wc/testing": "^2.0.0",
+		"@open-wc/testing-karma": "^3.0.0",
+		"@open-wc/testing-karma-bs": "^1.0.0",
+		"@webcomponents/custom-elements": "^1.2.4",
+		"autoprefixer": "^9.7.4",
+		"browser-sync": "^2.26.7",
+		"chokidar-cli": "^2.1.0",
+		"deepmerge": "^3.2.0",
+		"postcss": "^7.0.26",
+		"rollup": "^1.18.0",
+		"rollup-plugin-babel": "^4.3.3",
+		"rollup-plugin-node-resolve": "^5.2.0",
+		"sass": "^1.25.0",
+		"trash-cli": "^3.0.0",
+    "web-component-analyzer": "1.0.3"
+	},
+	"dependencies": {
+		"lit-element": "^2.2.1",
+		"lit-html": "https://github.com/Polymer/lit-html.git",
+		"regenerator-runtime": "^0.13.3"
+	}
 }
