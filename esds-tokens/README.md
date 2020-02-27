@@ -17,11 +17,7 @@ This repository builds multiple outputs based on the source token file:
 
 
 ## Building Token Outputs
-**Before running any `npm` commands in the `esds-library` repo, run `lerna bootstrap` to install and link all necessary dependencies.** Install lerna globally in order to run lerna commands from anywhere within the repo:
-
-```
-npm install lerna -g
-```
+Before running commands in this repository, [install lerna](./documentation/lerna.md).
 
 ### Running token scripts
 The following esds-token npm scripts should be run from the root of the tokens package: `./esds-tokens`
@@ -51,12 +47,12 @@ Amazon Style Dictionary supports a wide range of token file formats. Refer to th
 
 ---
 
-#### Repo Dependency Rationale
-##### [chokidar-cli](https://github.com/kimmobrunfeldt/chokidar-cli)
+## Dependencies
+* [chokidar-cli](https://github.com/kimmobrunfeldt/chokidar-cli)  
 Cross-platform file watcher used to trigger recompilation of tokens on save.
 
-##### [trash-cli](https://github.com/sindresorhus/trash-cli#readme)
+* [trash-cli](https://github.com/sindresorhus/trash-cli#readme)  
 Cross-platform File system deletion utility used to delete compiled token files before each new build.
 
-##### [style-dictionary](https://amzn.github.io/style-dictionary/#/)
+* [style-dictionary](https://amzn.github.io/style-dictionary/#/)  
 Amazon's Token Compiler tool

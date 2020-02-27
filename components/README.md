@@ -1,80 +1,66 @@
-# Creating a new component package
+# EightShapes Design System Components
 
-## 1. Set up the component build pipeline
-Be sure you're in the `/components` directory of the repo: `cd components`, then run:
+
+## Running component dev environments
+Before running commands in this repository, [install lerna](./documentation/lerna.md).
+
+The dev environment start command is the same for all components:
 
 ```
-npx @eightshapes/esds-lit-element-project-generator
+cd components/[component-name]
+npm start
 ```
 
-1. Provide the name of your component (without a namespace) at the first prompt: icon, button, card, list-group
-2. Provide the `esds` namespace at the second prompt.
-3. In the newly generated `package.json` for your component, add the `@eightshapes` scope to the package name. Example:
+This will launch a browser preview that hot reloads when  source `.js` and `.scss` files are modified.
 
-```js
-{
-  "name": "esds-button",
-  "version": "0.1.0",
-  ...
+#### IE11 Compatibility
+For performance reasons, the default dev environment does not build assets for IE11. To start an IE 11 compatible dev environment run:
+
+```
+cd components/[component-name]
+npm start:legacy
 ```
 
-Becomes:
+---
+## Dependencies
+* [@babel/core](https://github.com/babel/babel/tree/master/packages/babel-core)  
+Compiles ES6 source code to ES5 for IE11 Compatibility
 
-```js
-{
-  "name": "@eightshapes/esds-button",
-  "version": "0.1.0",
-  ...
-```
+* [@babel/preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)  
+Easy configuration for babel
 
-👆 This creates a new component starter package that:
+* [@open-wc/testing](https://open-wc.org/testing/)  
+Unit testing for web components
 
-* Provides lit-element as a base web component
-* Configures rollup to bundle your component source into three outputs:
-  * [name]-web-components.js, es6 consumable w/customElements.define call built-in
-  * [name].js, es6 consumable w/out customElements.define call
-  * [name]-legacy.js, es5 consumable suitable for use in IE11
-* Wires up browsersync and creates a sandbox for building the component
-* Creates a default scss file and a sass compilation pipeline that injects CSS into the web-component and generates a standalone CSS file
+* [@open-wc/testing-karma](https://open-wc.org/testing/#karma)  
+Browser environment for unit testing
 
-## 2. Add linting
+* [@open-wc/testing-karma-bs](https://open-wc.org/testing/testing-karma-bs.html)  
+Cross platform unit testing with Karma and [Browserstack](https://www.browserstack.com)
 
-### Install eslint and prettier
-_Within_ the newly created package run:
+* [autoprefixer](https://github.com/postcss/autoprefixer#readme)  
+[PostCSS](https://github.com/postcss/postcss) plugin to parse CSS and add vendor prefixes to CSS rules
 
-```bash
-npm init @open-wc
-```
+* [browser-sync](https://www.browsersync.io)  
+Local dev server with hot reloading built-in.
 
-Choose "Upgrade and existing package"
-Select "Linting" (arrow key and then spacebar to select, enter to proceed)
-Answer yes to modifying/overwriting files and installing dependencies via NPM
+* [chokidar-cli](https://github.com/kimmobrunfeldt/chokidar-cli)  
+Cross-platform file watcher, used to trigger compilation of scss on save.
 
-After the @open-wc linting scaffold has run, make a few modifications to `package.json`
+* [deepmerge](https://github.com/TehShrike/deepmerge)  
+Used by @open-wc/testing
 
-Add the following to the eslintConfig key starting at `"plugins"`
+* [postcss](https://github.com/postcss/postcss)  
+CSS Post processing package.
 
-```js
-"eslintConfig": {
-  "extends": [
-    "@open-wc/eslint-config",
-    "eslint-config-prettier"
-  ],
-  "plugins": ["prettier"],
-  "rules": {
-    "prettier/prettier": "error",
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": true
-      }
-    ]
-  }
-},
-```
+* [rollup](https://rollupjs.org/guide/en/)  
+Simple JS module bundler
 
-### Test eslint/prettier install
-Run `npm run lint` and verify there are no linting errors in the project.
+* [rollup-plugin-node-resolve](https://github.com/rollup/plugins/tree/master/packages/node-resolve)  
+A Rollup plugin which locates modules using the [Node resolution algorithm](https://nodejs.org/api/modules.html#modules_all_together), used to build both the ES6 and ES5 target outputs. Needed specifically to resolve lit-element & lit-html dependencies when bundling via rollup.
 
-### Install stylelint
-TBD
+* [sass](https://github.com/sass/dart-sass)  
+Compiles source .scss files to css
+
+* [trash-cli](https://github.com/sindresorhus/trash-cli#readme)  
+Cross-platform File system deletion utility, used to delete compiled scss assets before each new build.
