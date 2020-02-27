@@ -1,11 +1,8 @@
 import { svg, LitElement } from 'lit-element';
 import { unsafeSVG } from 'lit-html/directives/unsafe-svg.js';
-import { EsdsIconEightshapesMark } from '@eightshapes/esds-icons';
+import { EsdsIconStopwatch } from '@eightshapes/esds-icons';
 import styles from './esds-icon-styles.js';
 
-/**
- * @slot just-for-fun - This is the just-for-fun slot.
- */
 export class EsdsIcon extends LitElement {
   static get properties() {
     return {
@@ -31,7 +28,7 @@ export class EsdsIcon extends LitElement {
 
   constructor() {
     super();
-    this.use = EsdsIconEightshapesMark;
+    this.use = EsdsIconStopwatch;
   }
 
   /*
@@ -46,10 +43,10 @@ export class EsdsIcon extends LitElement {
       <style>
         ${styles}
       </style>
-      <svg class="esds-icon esds-icon--${this.size}" xmlns="http://www.w3.org/2000/svg"><span>
+      <svg class="esds-icon esds-icon--${this.size}" xmlns="http://www.w3.org/2000/svg">
+        ${this.title ? svg`<title>${this.title}</title>` : ''}
         ${this.use.indexOf('#') === 0 ? svg`<use href="${this.use}"/>` : unsafeSVG(this.use)}
       </svg>
-      <slot name="just-for-fun"></slot>
     `;
   }
 }
