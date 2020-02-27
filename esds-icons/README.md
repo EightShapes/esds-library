@@ -41,7 +41,7 @@ dist/esds-icon-names.json
 A JSON array containing individual SVG filenames minus the extension. Useful for iterating over the icon set programmaticaly, to generate an icon gallery.
 
 ## Building Icon Outputs
-**IMPORTANT** Follow the [lerna installation instructions](../documentation/lerna.md) before running any commands in this repository.
+Before running commands in this repository, [install lerna](./documentation/lerna.md).
 
 ### Running icon scripts
 The following esds-icons npm scripts should be run from the root of the icons package: `./esds-icons`
@@ -122,22 +122,22 @@ import { EsdsIconCaretDown, EsdsIconCaretUp } from '@eightshapes/esds-icons';
 <!-- ENDMARKDOWNGALLERY -->
 
 ---
-#### Repo Dependency Rationale
-##### [camelcase](https://github.com/sindresorhus/camelcase#readme)
+## Dependencies
+* [camelcase](https://github.com/sindresorhus/camelcase#readme)  
 Javascript string utility used to pascal-case source .svg files when
 creating ES6 modules
 
-##### [chokidar-cli](https://github.com/kimmobrunfeldt/chokidar-cli)
+* [chokidar-cli](https://github.com/kimmobrunfeldt/chokidar-cli)  
 Cross-platform file watcher, used to trigger recompilating of icon assets on save.
 
-##### [fs-extra](https://github.com/jprichardson/node-fs-extra)
+* [fs-extra](https://github.com/jprichardson/node-fs-extra)  
 Extension of default node module `fs`, adds more functionality under a similar API. A specific use case is the `mkdirpSync` method used in the `build-es6-modules.js` script to create the `dist` directory. There may be other use cases as well.
 
-##### [svg-sprite](https://github.com/jkphl/svg-sprite)
+* [svg-sprite](https://github.com/jkphl/svg-sprite)  
 Used to generate the svg sprite sheet from individual SVGs. **Note**: svg-sprite uses `svgo` internally, but does not expose that dependency outside of creating the sprite sheet. This is why `svgo` is included separately.
 
-##### [svgo](https://github.com/svg/svgo)
+* [svgo](https://github.com/svg/svgo)  
 Used to optimize src SVGs for direct consumption and for use in ES6 Module output.
 
-##### [trash-cli](https://github.com/sindresorhus/trash-cli#readme)
+* [trash-cli](https://github.com/sindresorhus/trash-cli#readme)  
 Cross-platform File system deletion utility, used to delete compiled icon assets before each new build.

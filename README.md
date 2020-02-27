@@ -5,7 +5,7 @@ The EightShapes Design system is a monorepo containing design system components,
 
 The dependencies between these assets are managed using [lerna](https://lerna.js.org).
 
-**IMPORTANT** Follow the [lerna installation instructions](./documentation/lerna.md) before running any commands in this repository.
+Before running commands in this repository, [install lerna](./documentation/lerna.md).
 
 ### Dependency Tree
 To view a dependency tree of the repository, in the _root_ of the repo run:
@@ -15,16 +15,13 @@ npm run dependency-tree
 ```
 
 ## Packages
-This repository houses multiple packages comprising the EightShapes Design System.
+This repository includes many packages across folders:
 
-### esds-tokens
-EightShapes Design System Tokens are key/value pairs representing visual style properties. [Tokens README](./esds-tokens/README.md)
+[EightShapes Design System Tokens](./esds-tokens/README.md), key/value pairs representing visual style properties. 
 
-### esds-icons
-EightShapes Design System Icons are svg assets used throughout design system components. [Icons README](./esds-icons/README.md)
+[EightShapes Design System Icons](./esds-icons/README.md), svg assets used throughout design system components.
 
-### components/[component]
-Components are versioned independently and distributed as individual node packages. [Components README](./components/README.md)
+[Design System Components](./components/README.md), independently versioned and distributed as individual node packages.
 
 ## Linting
 Linting is performed at the repository level since it's tied to git commits. The same linting rules apply to esds-tokens, esds-icons, and all component packages.
