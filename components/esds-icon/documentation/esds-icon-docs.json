@@ -1,0 +1,50 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "esds-icon",
+      "path": "./../src/esds-icon-entry.js",
+      "attributes": [
+        {
+          "name": "title",
+          "description": "Adds a visibly hidden `<title>` element with a corresponding `aria-labelledby` tag\nwhen provided. Used only when icons stand alone without other context.",
+          "type": "string"
+        },
+        {
+          "name": "use",
+          "description": "Determines which icon will be shown. When leveraging the Icon sprite, the id of the\nsprite symbol should be provided (ex: `#angle-right`). When using ES6 modules, pass the\nname of the module (ex: `EsdsIconAngleRight`). See usage examples below.",
+          "type": "string",
+          "default": "\"EsdsIconStopwatch\""
+        },
+        {
+          "name": "size",
+          "description": "Sets height and width of the icon",
+          "type": "'small'|'medium'|'large'",
+          "default": "\"medium\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Adds a visibly hidden `<title>` element with a corresponding `aria-labelledby` tag\nwhen provided. Used only when icons stand alone without other context.",
+          "type": "string"
+        },
+        {
+          "name": "use",
+          "attribute": "use",
+          "description": "Determines which icon will be shown. When leveraging the Icon sprite, the id of the\nsprite symbol should be provided (ex: `#angle-right`). When using ES6 modules, pass the\nname of the module (ex: `EsdsIconAngleRight`). See usage examples below.",
+          "type": "string",
+          "default": "\"EsdsIconStopwatch\""
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Sets height and width of the icon",
+          "type": "'small'|'medium'|'large'",
+          "default": "\"medium\""
+        }
+      ]
+    }
+  ]
+}
