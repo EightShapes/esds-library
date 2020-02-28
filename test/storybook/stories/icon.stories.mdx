@@ -5,17 +5,9 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 
 import '@eightshapes/esds-icon';
 import * as EsdsIcons from '@eightshapes/esds-icons';
-import * as svgSprite from '@eightshapes/esds-icons/dist/esds-icons.svg';
+import icons from '!!raw-loader!@eightshapes/esds-icons/dist/esds-icons.svg'
 import iconSpriteNames from '@eightshapes/esds-icons/dist/esds-icon-names.json';
 const iconClassNames = Object.keys(EsdsIcons);
-let spriteSheet = '';
-fetch(svgSprite)
-.then((response) => {
-  return response.text();
-})
-.then((svgString) => {
-  spriteSheet = svgString;
-})
 
 <Meta
   title="Icon"
@@ -62,7 +54,7 @@ npm install @eightshapes/esds-icon
   {
     html`
     <!-- Hidden div containing svg sprite sheet -->
-    <div style="display: none;">${unsafeHTML(spriteSheet)}</div>
+    <div style="display: none;">${unsafeHTML(icons)}</div>
     ${iconSpriteNames.map(n => html`<esds-icon use="#${n}"></esds-icon>`)}
   `}
 </Story>

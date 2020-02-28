@@ -1,4 +1,5 @@
 # EightShapes Design System
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/EightShapes-LLC/esds-storybook)
 
 ## Repository Structure
 The EightShapes Design system is a monorepo containing design system components, tokens, icons and visual assets. Each of these assets is published as an independently versioned node package.
@@ -17,7 +18,7 @@ npm run dependency-tree
 ## Packages
 This repository includes many packages across folders:
 
-[EightShapes Design System Tokens](./esds-tokens/README.md), key/value pairs representing visual style properties. 
+[EightShapes Design System Tokens](./esds-tokens/README.md), key/value pairs representing visual style properties.
 
 [EightShapes Design System Icons](./esds-icons/README.md), svg assets used throughout design system components.
 

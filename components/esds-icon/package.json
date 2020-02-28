@@ -6,7 +6,7 @@
 		"main": "dist/esds-icon-web-component.js",
 		"module": "dist/esds-icon-legacy.js",
 		"scripts": {
-				"start": "npm run build && npm run watch:build | npm run start:browsersync",
+				"start": "npm run build && npm run watch:build | cd ../../testing/storybook && npm run start",
 				"start:browsersync": "browser-sync start --watch --config browser-sync-config.js --ignore 'src/**/*'",
 				"clean:dist": "npx trash dist/**/*",
 				"build": "npm run clean:dist && npm run build:styles && npm run build:esm && npm run build:web-component | npm run build:jsdoc",
