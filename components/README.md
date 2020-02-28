@@ -23,6 +23,9 @@ cd components/[component-name]
 npm run start:legacy
 ```
 
+## Running the storybook test environment
+Full examples and visual testing are done in the [esds-storybook environment](../test/storybook/README.md).
+
 ---
 ## Dependencies
 * [@babel/core](https://github.com/babel/babel/tree/master/packages/babel-core)  
