@@ -1,7 +1,7 @@
 import { svg, LitElement } from 'lit-element';
 import { unsafeSVG } from 'lit-html/directives/unsafe-svg.js';
 import { ifDefined } from 'lit-html/directives/if-defined';
-import { EsdsIconStopwatch } from '@eightshapes/esds-icons';
+import { EsdsIconStar } from '@eightshapes/esds-icons';
 import styles from './esds-icon-styles.js';
 
 export class EsdsIcon extends LitElement {
@@ -38,7 +38,7 @@ export class EsdsIcon extends LitElement {
 
   constructor() {
     super();
-    this.use = EsdsIconStopwatch;
+    this.use = EsdsIconStar;
     this.size = 'medium';
   }
 

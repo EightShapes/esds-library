@@ -6,10 +6,14 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 
 import '@eightshapes/esds-icon';
 import * as EsdsIcons from '@eightshapes/esds-icons';
-import { EsdsIconBars } from '@eightshapes/esds-icons';
+import { EsdsIconMenu } from '@eightshapes/esds-icons';
 import icons from '!!raw-loader!@eightshapes/esds-icons/dist/esds-icons.svg'
 import iconSpriteNames from '@eightshapes/esds-icons/dist/esds-icon-names.json';
 const iconClassNames = Object.keys(EsdsIcons);
+const iconNamesForSelectKnob = {};
+iconSpriteNames.forEach(sn => {
+    iconNamesForSelectKnob[sn] = `#${sn}`;
+})
 
 <Meta
   title="Icon"
@@ -57,7 +61,7 @@ npm install @eightshapes/esds-icon
 ## Icon Module Usage
 <Preview>
   <Story name="Icon Module Usage">
-    {html`<esds-icon use="${EsdsIconBars}"></esds-icon>`}
+    {html`<esds-icon use="${EsdsIconMenu}"></esds-icon>`}
   </Story>
 </Preview>
 
@@ -65,7 +69,7 @@ npm install @eightshapes/esds-icon
 <Preview>
   <Story name="Sprite Symbol Usage">
     {html`<div style="display: none;">${unsafeHTML(icons)}</div>
-          <esds-icon use="#twitter"></esds-icon>`}
+          <esds-icon use="#trash"></esds-icon>`}
   </Story>
 </Preview>
 
@@ -93,6 +97,10 @@ npm install @eightshapes/esds-icon
 ## Knobs
 <Preview>
   <Story name="Knobs">
-    {`<esds-icon size="${select('Size', {Small: 'small', Medium: 'medium', Large: 'large'}, 'medium')}"></esds-icon>`}
+    {html`<div style="display: none;">${unsafeHTML(icons)}</div>
+    <esds-icon
+        size="${select('Size', {Small: 'small', Medium: 'medium', Large: 'large'}, 'medium')}"
+        use="${select('Use', iconNamesForSelectKnob, '#star')}"
+    ></esds-icon>`}
   </Story>
 </Preview>
