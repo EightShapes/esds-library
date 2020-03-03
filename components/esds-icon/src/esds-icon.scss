@@ -2,18 +2,18 @@
 
 .esds-icon {
   fill: currentColor;
-  height: $esds-icon-size-m;
-  width: $esds-icon-size-m;
+  height: $esds-size-icon-m;
+  width: $esds-size-icon-m;
 }
 
 .esds-icon--small {
-  height: $esds-icon-size-s;
-  width: $esds-icon-size-s;
+  height: $esds-size-icon-s;
+  width: $esds-size-icon-s;
 }
 
 .esds-icon--large {
-  height: $esds-icon-size-l;
-  width: $esds-icon-size-l;
+  height: $esds-size-icon-l;
+  width: $esds-size-icon-l;
 }
 
 // Used when a full svg string is passed to the use prop

@@ -233,10 +233,12 @@
       'eighth-x' :         { value: '0 0 2px' },
     },
   },
-  'icon-size': {
-    s: { value: '16px' },
-    m: { value: '24px' },
-    l: { value: '40px' },
+  size: {
+    icon: {
+      s: { value: '16px' },
+      m: { value: '20px' },
+      l: { value: '24px' },
+    },
   },
   transition : {
     'interactive-hover-speed' : { value: '.2s' },
