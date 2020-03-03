@@ -4,6 +4,8 @@
 ## Running component dev environments
 Before running commands in this repository, [install lerna](./documentation/lerna.md).
 
+Run `lerna bootstrap` to build and link dependencies.
+
 The dev environment start command is the same for all components:
 
 ```
@@ -18,8 +20,11 @@ For performance reasons, the default dev environment does not build assets for I
 
 ```
 cd components/[component-name]
-npm start:legacy
+npm run start:legacy
 ```
+
+## Running the storybook test environment
+Full examples and visual testing are done in the [esds-storybook environment](../test/storybook/README.md).
 
 ---
 ## Dependencies
@@ -64,3 +69,6 @@ Compiles source .scss files to css
 
 * [trash-cli](https://github.com/sindresorhus/trash-cli#readme)  
 Cross-platform File system deletion utility, used to delete compiled scss assets before each new build.
+
+* [web-component-analyzer](https://github.com/runem/web-component-analyzer)  
+CLI that analyzes web components and emits documentation.

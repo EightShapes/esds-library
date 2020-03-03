@@ -5,7 +5,7 @@ import babel from 'rollup-plugin-babel';
 export default {
   input: 'src/esds-icon-entry-legacy.js',
   output: {
-    file: 'dist/esds-icon-legacy.js',
+    file: 'dist/esds-icon-web-component-legacy.js',
     format: 'cjs',
   },
   plugins: [

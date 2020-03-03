@@ -14,6 +14,7 @@
     },
     "scss": {
       "transformGroup": "scss",
+      "transforms": ["attribute/cti", "name/cti/kebab", "time/seconds", "content/icon", "color/css"],
       "prefix": "esds",
       "buildPath": "dist/scss/",
       "files": [{

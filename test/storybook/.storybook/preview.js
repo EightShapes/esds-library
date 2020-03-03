@@ -3,12 +3,18 @@
 import {
   configure,
   addParameters,
+  addDecorator,
   setCustomElements,
 } from '@storybook/web-components';
+
+import { withA11y } from '@storybook/addon-a11y';
+
 
 import customElements from '../custom-elements.json';
 
 setCustomElements(customElements);
+
+addDecorator(withA11y);
 
 addParameters({
   docs: {
@@ -16,7 +22,7 @@ addParameters({
   },
 });
 
-configure(require.context('../stories', true, /\.stories\.(js|mdx)$/), module);
+// configure(require.context('../stories', true, /\.stories\.(js|mdx)$/), module);
 
 // force full reload to not reregister web components
 const req = require.context('../stories', true, /\.stories\.(js|mdx)$/);

@@ -13,13 +13,14 @@
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "lit-html": "^1.1.2",
-    "@eightshapes/esds-tokens": "0.1.0",
-    "@eightshapes/esds-icons": "0.1.0",
-    "@eightshapes/esds-icon": "0.1.0"
+    "@eightshapes/esds-icon": "0.1.1",
+    "@eightshapes/esds-icons": "0.1.1",
+    "@eightshapes/esds-tokens": "0.1.1",
+    "lit-html": "^1.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
+    "@storybook/addon-a11y": "^5.3.14",
     "@storybook/addon-docs": "^5.3.9",
     "@storybook/web-components": "^5.3.9",
     "babel-loader": "^8.0.6",

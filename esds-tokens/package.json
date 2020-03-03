@@ -10,7 +10,8 @@
     "watch": "npm run build && chokidar \"src/**/*\" -c \"npm run build:no-clean\"",
     "clean:dist": "npx trash dist/**/*",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "prepare": "npm run build"
   },
   "keywords": [],
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
