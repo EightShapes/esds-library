@@ -28,3 +28,8 @@ This repository includes many packages across folders:
 Linting is performed at the repository level since it's tied to git commits. The same linting rules apply to esds-tokens, esds-icons, and all component packages.
 
 [Linting doc](./documentation/linting.md)
+
+## Visual Regression Testing
+Visual Regression Testing (VRT) is performed at the repository level since changes to shared assets can affect multiple packages. A [Storybook](https://storybook.js.org) instance connected to [Percy](https://percy.io) is responsible for VRT.
+
+[VRT doc](./test/storybook/README.md)
