@@ -1,6 +1,6 @@
 {
 		"name": "@eightshapes/esds-icon",
-		"version": "0.1.1",
+		"version": "0.2.0",
 		"description": "",
 		"esnext": "dist/EsdsIcon.js",
 		"main": "dist/esds-icon-web-component.js",
@@ -38,8 +38,8 @@
 		"devDependencies": {
 				"@babel/core": "^7.5.5",
 				"@babel/preset-env": "^7.5.5",
-				"@eightshapes/esds-icons": "^0.1.1",
-				"@eightshapes/esds-tokens": "^0.1.1",
+				"@eightshapes/esds-icons": "^0.2.0",
+				"@eightshapes/esds-tokens": "^0.2.0",
 				"@open-wc/testing": "^2.0.0",
 				"@open-wc/testing-karma": "^3.0.0",
 				"@open-wc/testing-karma-bs": "^1.0.0",
