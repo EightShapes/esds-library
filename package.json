@@ -29,7 +29,6 @@
     "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-prettier": "^1.1.2"
   },
-  "dependencies": {},
   "eslintConfig": {
     "extends": [
       "@open-wc/eslint-config",

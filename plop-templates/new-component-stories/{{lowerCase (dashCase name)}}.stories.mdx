@@ -1,0 +1,23 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+
+import '@eightshapes/esds-{{ lowerCase (dashCase name) }}'; // The Web Component Import
+
+<Meta
+  title="{{ titleCase name }}"
+  component='esds-{{ lowerCase (dashCase name) }}'
+/>
+
+# {{ titleCase name }}
+## Installation
+
+```bash
+npm install @eightshapes/esds-{{ lowerCase (dashCase name) }}
+```
+
+## Default
+<Preview>
+  <Story name="Default">
+    {`<esds-{{ lowerCase (dashCase name) }}></esds-{{ lowerCase (dashCase name) }}>`}
+  </Story>
+</Preview>
