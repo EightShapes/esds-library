@@ -70,9 +70,21 @@ Each `<Story>` will be sent to [Percy](https://percy.io) as an individual screen
 ![Percy](./documentation/images/percy.png)
 
 ## Debugging VRT
+If VRT reveals failures that are not visible when running the storybook dev environment, take these steps to view an exact copy of what's uploaded to VRT.
+
 `npm run build-storybook`
 
-This will create a compiled version of storybook at `./storybook-static`. This build artifact is used by VRT. If there are discrepancies between VRT results and what's shown when running the local environment, manually build this static asset and confirm it matches what VRT is displaying.
+This will create a compiled version of storybook at `./storybook-static`.
+To view this compiled version in a browser:
+```bash
+cd storybook-static
+python -m SimpleHTTPServer 8000
+```
+This will start a simple web server on port 8000. Navigate to [http://localhost:8000](http://localhost:8000) to view the compiled storybook instance.
+
+Compare what you see in the browser to the results from VRT. If they match and a test is failing, inspect the browser console to look for errors that may only occur in the compiled version of storybook.
+
+These debugging steps _may_ reveal discrepancies between the regular storybook dev environment and the static build used by VRT.
 
 ## Accessibility Testing
 The [Storybook Accessibility Addon](https://github.com/storybookjs/storybook/tree/master/addons/a11y) is enabled for all stories in the project. If the accessibility pane is not visible, choose "Show Addons" from the Storybook menu.
