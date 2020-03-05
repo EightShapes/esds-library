@@ -1,0 +1,39 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "esds-card",
+      "path": "./../src/esds-card-entry.js",
+      "attributes": [
+        {
+          "name": "example",
+          "description": "Describe the prop here using JSDoc syntax",
+          "type": "'small'|'medium'|'large'",
+          "default": "\"medium\""
+        },
+        {
+          "name": "text",
+          "description": "The text displayed in the component",
+          "type": "string",
+          "default": "\"Hello World\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "example",
+          "attribute": "example",
+          "description": "Describe the prop here using JSDoc syntax",
+          "type": "'small'|'medium'|'large'",
+          "default": "\"medium\""
+        },
+        {
+          "name": "text",
+          "attribute": "text",
+          "description": "The text displayed in the component",
+          "type": "string",
+          "default": "\"Hello World\""
+        }
+      ]
+    }
+  ]
+}

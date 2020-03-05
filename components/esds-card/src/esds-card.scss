@@ -1,0 +1,5 @@
+@use '../node_modules/@eightshapes/esds-tokens/dist/scss/esds-tokens' as *;
+
+.esds-card {
+  font-size: $esds-font-size-body-m-default;
+}
