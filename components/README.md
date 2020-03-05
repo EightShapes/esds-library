@@ -17,7 +17,9 @@ This will:
 * monitor source `.js` and `.scss` files for changes and rebuild component outputs
 * launch the storybook test environment (`./test/storybook`) where test stories can be written for each component
 
-#### IE11 Compatibility
+### TODO: Document full dependency dev environment with watching
+
+### IE11 Compatibility
 For performance reasons, the default dev environment does not build assets for IE11. To start an IE 11 compatible dev environment run:
 
 ```

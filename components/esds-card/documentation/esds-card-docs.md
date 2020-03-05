@@ -2,7 +2,10 @@
 
 ## Properties
 
-| Property  | Attribute | Type                         | Default       | Description                               |
-|-----------|-----------|------------------------------|---------------|-------------------------------------------|
-| `example` | `example` | `'small'\|'medium'\|'large'` | "medium"      | Describe the prop here using JSDoc syntax |
-| `text`    | `text`    | `string`                     | "Hello World" | The text displayed in the component       |
+| Property   | Attribute  | Type     | Default       | Description                                      |
+|------------|------------|----------|---------------|--------------------------------------------------|
+| `content`  | `content`  | `string` |               | Content displayed on card. Overridden by the named "content" slot if present. |
+| `href`     | `href`     | `string` |               | Destination when card is clicked                 |
+| `imgSrc`   | `img-src`  | `string` |               | Relative path to the image displayed on the card |
+| `metadata` | `metadata` | `string` |               | Metadata text displayed on the card              |
+| `title`    | `title`    | `string` | "Hello World" | Title text displayed on the card                 |

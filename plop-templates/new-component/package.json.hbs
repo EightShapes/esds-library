@@ -7,6 +7,7 @@
 		"module": "dist/esds-{{ lowerCase (dashCase name) }}-legacy.js",
 		"scripts": {
 				"start": "npm-run-all build --parallel watch:build start:storybook",
+				"start:watch-dependencies": "npm-run-all --parallel start watch:build-visual-style-dependency watch:build-token-dependency",
 				"start:storybook": "npm run --prefix ../../test/storybook start",
 				"start:debug-environment": "npm-run-all build --parallel watch:build start:browsersync",
 				"start:browsersync": "browser-sync start --watch --config browser-sync-config.js --ignore 'src/**/*'",
@@ -19,6 +20,8 @@
 				"watch:build-esm": "rollup --watch -c rollup.config.js -i src/Esds{{ pascalCase name }}.js -o dist/Esds{{ pascalCase name }}.js -f esm",
 				"watch:build-web-component": "rollup --watch -c rollup.config.js -i src/esds-{{ lowerCase (dashCase name) }}-entry.js -o dist/esds-{{ lowerCase (dashCase name) }}-web-component.js -f esm",
 				"watch:build-styles": "chokidar \"src/**/*.scss\" -c \"npm run build:styles\"",
+				"watch:build-visual-style-dependency": "chokidar \"../../esds-visual-style/src/**/*.scss\" -c \"npm run build:styles\"",
+				"watch:build-token-dependency": "npm run --prefix ../../esds-tokens start",
 				"start:legacy": "npm-run-all build:legacy --parallel watch:build-legacy start:storybook",
 				"build:ie": "rollup -c rollup.config.ie.js",
 				"build:legacy": "npm-run-all build build:ie",
@@ -38,7 +41,7 @@
 		"devDependencies": {
 				"@babel/core": "^7.5.5",
 				"@babel/preset-env": "^7.5.5",
-				"@eightshapes/esds-tokens": "^0.2.0",
+				"@eightshapes/esds-visual-style": "^0.1.0",
 				"@open-wc/testing": "^2.0.0",
 				"@open-wc/testing-karma": "^3.0.0",
 				"@open-wc/testing-karma-bs": "^1.0.0",

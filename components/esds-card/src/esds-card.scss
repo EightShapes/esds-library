@@ -1,5 +1,19 @@
-@use '../node_modules/@eightshapes/esds-tokens/dist/scss/esds-tokens' as *;
+@use '../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
 
 .esds-card {
-  font-size: $esds-font-size-body-m-default;
+  @include esds-typography-reset;
+  @include esds-box-sizing;
+  background-color: $esds-background-color-light;
+  border-radius: $esds-border-radius-default;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.esds-card__body {
+  padding: $esds-space-inset-1-x;
+}
+
+.esds-card__title {
+  @include esds-heading-level-3;
 }

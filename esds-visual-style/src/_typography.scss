@@ -1,0 +1,71 @@
+@use '../node_modules/@eightshapes/esds-tokens/dist/scss/esds-tokens' as *;
+@use './color' as *;
+@use './utils' as *;
+
+@mixin esds-typography-reset(
+  $font-family: $esds-font-family-sans-serif,
+  $font-size: $esds-font-size-body-m-default,
+  $font-style: normal,
+  $font-weight: $esds-font-weight-regular,
+  $letter-spacing: 0,
+  $text-align: left,
+  $text-decoration: none,
+  $text-indent: 0,
+  $text-shadow: none,
+  $text-transform: none
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+  text-align: $text-align;
+  text-decoration: $text-decoration;
+  text-indent: $text-indent;
+  text-shadow: $text-shadow;
+  text-transform: $text-transform;
+}
+
+@mixin esds-responsive-font-size($type: 'body-m') {
+  font-size: esds-token('font', 'size', $type, 'default');
+
+  @media screen and (min-width: 480px) {
+    font-size: esds-token('font', 'size', $type, 'at-480');
+  }
+  @media screen and (min-width: 768px) {
+    font-size: esds-token('font', 'size', $type, 'at-768');
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: esds-token('font', 'size', $type, 'at-1000');
+  }
+}
+
+@mixin esds-heading-reset() {
+  @include esds-typography-reset($font-weight: $esds-font-weight-bold);
+  line-height: $esds-font-line-height-headings;
+  margin: 0;
+}
+
+@mixin esds-heading-level-1() {
+  @include esds-heading-reset;
+  @include esds-text-color($type: 'primary');
+  @include esds-responsive-font-size($type: 'heading-level-1');
+}
+
+@mixin esds-heading-level-2() {
+  @include esds-heading-reset;
+  @include esds-text-color($type: 'primary');
+  @include esds-responsive-font-size($type: 'heading-level-2');
+}
+
+@mixin esds-heading-level-3() {
+  @include esds-heading-reset;
+  @include esds-text-color($type: 'primary');
+  @include esds-responsive-font-size($type: 'heading-level-3');
+}
+
+@mixin esds-heading-level-4() {
+  @include esds-heading-reset;
+  @include esds-text-color($type: 'primary');
+  @include esds-responsive-font-size($type: 'heading-level-4');
+}

@@ -2,6 +2,7 @@
   "extends": ["stylelint-config-sass-guidelines", "stylelint-prettier/recommended"],
   "rules": {
     "color-hex-case": "upper",
-    "color-hex-length": "long"
+    "color-hex-length": "long",
+    "selector-class-pattern":"^(?:(?:o|c|u|t|s|is|has|_|js|qa)-)?[a-z0-9]+(?:-[a-z0-9]+)*(?:__[a-z0-9]+(?:-[a-z0-9]+)*)?(?:--[a-z0-9]+(?:-[a-z0-9]+)*)?(?:\\[.+\\])?$"
   }
 }

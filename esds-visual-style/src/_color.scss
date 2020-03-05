@@ -1,0 +1,14 @@
+@use '../node_modules/@eightshapes/esds-tokens/dist/scss/esds-tokens' as *;
+@use './utils' as *;
+
+@mixin esds-text-color($type: 'primary') {
+  $background-colors: esds-token('background-color');
+
+  color: esds-token('text-color', $type, 'on-white');
+
+  @each $background, $background-color in $background-colors {
+    .esds-container--#{$background} & {
+      color: esds-token('text-color', $type, 'on-#{$background}');
+    }
+  }
+}

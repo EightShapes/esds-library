@@ -100,7 +100,7 @@
   },
   font : {
     family : {
-      'sans-serif' : { value: 'Barlow, "Lato", sans-serif' },
+      'sans-serif' : { value: '"Barlow Semi Condensed", sans-serif' },
     },
     size: {
       'heading-level-1': {
@@ -166,7 +166,7 @@
     weight : {
       light : { value: '300' },
       regular : { value: '400' },
-      bold : { value: '600' },
+      bold : { value: '700' },
     },
     'line-length' : {
       'long-form' : { value: '800px' }

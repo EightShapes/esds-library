@@ -6,30 +6,61 @@
       "path": "./../src/esds-card-entry.js",
       "attributes": [
         {
-          "name": "example",
-          "description": "Describe the prop here using JSDoc syntax",
-          "type": "'small'|'medium'|'large'",
-          "default": "\"medium\""
+          "name": "content",
+          "description": "Content displayed on card. Overridden by the named \"content\" slot if present.",
+          "type": "string"
         },
         {
-          "name": "text",
-          "description": "The text displayed in the component",
+          "name": "href",
+          "description": "Destination when card is clicked",
+          "type": "string"
+        },
+        {
+          "name": "img-src",
+          "description": "Relative path to the image displayed on the card",
+          "type": "string"
+        },
+        {
+          "name": "metadata",
+          "description": "Metadata text displayed on the card",
+          "type": "string"
+        },
+        {
+          "name": "title",
+          "description": "Title text displayed on the card",
           "type": "string",
           "default": "\"Hello World\""
         }
       ],
       "properties": [
         {
-          "name": "example",
-          "attribute": "example",
-          "description": "Describe the prop here using JSDoc syntax",
-          "type": "'small'|'medium'|'large'",
-          "default": "\"medium\""
+          "name": "content",
+          "attribute": "content",
+          "description": "Content displayed on card. Overridden by the named \"content\" slot if present.",
+          "type": "string"
         },
         {
-          "name": "text",
-          "attribute": "text",
-          "description": "The text displayed in the component",
+          "name": "href",
+          "attribute": "href",
+          "description": "Destination when card is clicked",
+          "type": "string"
+        },
+        {
+          "name": "imgSrc",
+          "attribute": "img-src",
+          "description": "Relative path to the image displayed on the card",
+          "type": "string"
+        },
+        {
+          "name": "metadata",
+          "attribute": "metadata",
+          "description": "Metadata text displayed on the card",
+          "type": "string"
+        },
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Title text displayed on the card",
           "type": "string",
           "default": "\"Hello World\""
         }
