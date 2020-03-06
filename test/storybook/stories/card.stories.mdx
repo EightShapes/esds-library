@@ -2,6 +2,7 @@ import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import { html } from 'lit-html';
 
 import '@eightshapes/esds-card'; // The Web Component Import
+import './styles/card.stories.scss'; // Demo styles to show component states
 
 <Meta
   title="Card"
@@ -60,5 +61,52 @@ npm install @eightshapes/esds-card
         title="One Dollar"
         metadata="Washington"
       ></esds-card>`}
+  </Story>
+</Preview>
+
+## Link
+<Preview>
+  <Story name="Link">
+    {`<esds-card
+        title="Design System Intermediaries"
+        metadata="February 2018"
+        content="Relating to the distributors, translators, and themers in between"
+        img-src="./images/card/medium.png"
+        href="http://eightshapes.com"></esds-card>`}
+  </Story>
+</Preview>
+
+## Link States
+<Preview>
+  <Story name="Link States">
+    {html`
+      <esds-card
+          class="storybook-esds-card-state"
+          title="Default"
+          metadata="February 2018"
+          content="Relating to the distributors, translators, and themers in between"
+          img-src="./images/card/medium.png"
+          href="http://eightshapes.com"></esds-card>
+      <esds-card
+        class="storybook-esds-card-state storybook-esds-card-state--hover"
+        title="Hover"
+        metadata="February 2018"
+        content="Relating to the distributors, translators, and themers in between"
+        img-src="./images/card/medium.png"
+        href="http://eightshapes.com"></esds-card>
+      <esds-card
+        class="storybook-esds-card-state storybook-esds-card-state--focus"
+        title="Focus"
+        metadata="February 2018"
+        content="Relating to the distributors, translators, and themers in between"
+        img-src="./images/card/medium.png"
+        href="http://eightshapes.com"></esds-card>
+      <esds-card
+        class="storybook-esds-card-state storybook-esds-card-state--active"
+        title="Active"
+        metadata="February 2018"
+        content="Relating to the distributors, translators, and themers in between"
+        img-src="./images/card/medium.png"
+        href="http://eightshapes.com"></esds-card>`}
   </Story>
 </Preview>

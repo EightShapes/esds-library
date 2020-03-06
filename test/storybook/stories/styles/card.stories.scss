@@ -1,0 +1,24 @@
+@use '../../node_modules/@eightshapes/esds-card/src/esds-card' as *;
+@use '../../node_modules/@eightshapes/esds-tokens/dist/scss/esds-tokens' as *;
+
+// Storybook specific override to show component state without interaction
+.storybook-esds-card-state {
+  margin-right: $esds-space-generic-1-x;
+  pointer-events: none; // Prevent interaction from changing state
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.storybook-esds-card-state--hover .esds-card {
+  @include esds-card-hover;
+}
+
+.storybook-esds-card-state--focus .esds-card {
+  @include esds-card-focus;
+}
+
+.storybook-esds-card-state--active .esds-card {
+  @include esds-card-active;
+}

@@ -58,7 +58,7 @@ export class EsdsCard extends LitElement {
   }
 
   _renderCardBody() {
-    let body = html`
+    return html`
       ${this._renderCardImage()}
       <div class="esds-card__body">
         ${this.metadata
@@ -70,14 +70,6 @@ export class EsdsCard extends LitElement {
         <div class="esds-card__content">${this.content}</div>
       </div>
     `;
-
-    if (this.href) {
-      body = html`
-        <a href="${this.href}" class="esds-card__link">${body}</a>
-      `;
-    }
-
-    return body;
   }
 
   render() {
@@ -86,9 +78,13 @@ export class EsdsCard extends LitElement {
         ${styles}
       </style>
 
-      <div class="esds-card">
-        ${this._renderCardBody()}
-      </div>
+      ${this.href
+        ? html`
+            <a class="esds-card esds-card--link" href="${this.href}">${this._renderCardBody()}</a>
+          `
+        : html`
+            <div class="esds-card">${this._renderCardBody()}</div>
+          `}
     `;
   }
 }

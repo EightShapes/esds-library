@@ -2,6 +2,23 @@
 
 $esds-card-min-width: 300px;
 $esds-card-max-width: 336px;
+$esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+
+// Mixins for states so they can be leveraged on test pages for static state examples
+@mixin esds-card-hover() {
+  background-color: $esds-interactive-color-hover-on-light;
+  box-shadow: $esds-card-hover-shadow;
+}
+
+@mixin esds-card-focus() {
+  box-shadow: 0 0 0 4px $esds-color-teal-27;
+  outline: none;
+}
+
+@mixin esds-card-active() {
+  background-color: $esds-interactive-color-hover-on-light;
+  box-shadow: none;
+}
 
 .esds-card {
   @include esds-typography-reset;
@@ -16,16 +33,21 @@ $esds-card-max-width: 336px;
   width: 100%;
 }
 
-.esds-card__body {
-  padding: $esds-space-inset-1-and-half-x;
-}
+.esds-card--link {
+  cursor: pointer;
+  text-decoration: none;
 
-.esds-card__title {
-  @include esds-heading-level-3;
-}
+  &:hover {
+    @include esds-card-hover;
+  }
 
-.esds-card__metadata {
-  @include esds-heading-eyebrow;
+  &:focus {
+    @include esds-card-focus;
+  }
+
+  &:active {
+    @include esds-card-active;
+  }
 }
 
 .esds-card__image-wrap {
@@ -47,4 +69,20 @@ $esds-card-max-width: 336px;
   object-fit: cover;
   object-position: 50% 50%; // centered crop by default
   width: 100%;
+}
+
+.esds-card__body {
+  padding: $esds-space-inset-1-and-half-x;
+}
+
+.esds-card__title {
+  @include esds-heading-level-3;
+}
+
+.esds-card__metadata {
+  @include esds-heading-eyebrow;
+}
+
+.esds-card__content {
+  @include esds-text-color('primary');
 }
