@@ -50,7 +50,7 @@ export class EsdsCard extends LitElement {
       ? html`
           <div class="esds-card__image-wrap">
             <div class="esds-card__image-wrap-inner">
-              <img class="esds-card__image" src="${this.imgSrc}" />
+              <img role="presentation" class="esds-card__image" src="${this.imgSrc}" />
             </div>
           </div>
         `
