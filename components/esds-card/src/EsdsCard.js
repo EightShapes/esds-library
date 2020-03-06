@@ -1,7 +1,8 @@
 import { html, LitElement } from 'lit-element';
+import { Slotify } from '@eightshapes/slotify';
 import styles from './esds-card-styles.js';
 
-export class EsdsCard extends LitElement {
+export class EsdsCard extends Slotify(LitElement) {
   static get properties() {
     return {
       /*
@@ -38,13 +39,6 @@ export class EsdsCard extends LitElement {
     this.title = 'Card Title';
   }
 
-  /*
-   * @ignore
-   */
-  createRenderRoot() {
-    return this; // Prevents lit-element from rendering in shadowDOM
-  }
-
   _renderCardImage() {
     return this.imgSrc
       ? html`
@@ -67,7 +61,9 @@ export class EsdsCard extends LitElement {
             `
           : ''}
         <h3 class="esds-card__title">${this.title}</h3>
-        <div class="esds-card__content">${this.content}</div>
+        <div class="esds-card__content">
+          <s-slot name="content">${this.content}</s-slot>
+        </div>
       </div>
     `;
   }

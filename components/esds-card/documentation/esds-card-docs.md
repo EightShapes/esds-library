@@ -1,5 +1,7 @@
 # esds-card
 
+**Mixins:** Slotify
+
 ## Properties
 
 | Property   | Attribute  | Type     | Default      | Description                                      |

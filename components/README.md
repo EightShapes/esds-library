@@ -54,6 +54,8 @@ This repository is equipped with a new component generator. This will scaffold o
 npx plop
 ```  
 This will prompt you for the new component's name. 'esds' will be prepended automatically, so just provide the name of the component itself, for example: "button" or "data table."
+
+# TODO: Document slots question
 2. ```bash
 lerna bootstrap
 ```  
@@ -107,3 +109,5 @@ Cross-platform File system deletion utility, used to delete compiled scss assets
 
 * [web-component-analyzer](https://github.com/runem/web-component-analyzer)  
 CLI that analyzes web components and emits documentation.
+
+# TODO: Document slotify dependency

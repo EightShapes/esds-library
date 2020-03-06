@@ -18,6 +18,6 @@ npm install @eightshapes/esds-{{ lowerCase (dashCase name) }}
 ## Default
 <Preview>
   <Story name="Default">
-    {`<esds-{{ lowerCase (dashCase name) }}></esds-{{ lowerCase (dashCase name) }}>`}
+    {`<esds-{{ lowerCase (dashCase name) }}>{{#if slots}}<h3>Default Slot Heading</h3><h4 slot="content">Named Slot Heading</h4>{{/if}}</esds-{{ lowerCase (dashCase name) }}>`}
   </Story>
 </Preview>
