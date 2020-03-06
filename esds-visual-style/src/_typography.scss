@@ -69,3 +69,11 @@
   @include esds-text-color($type: 'primary');
   @include esds-responsive-font-size($type: 'heading-level-4');
 }
+
+@mixin esds-heading-eyebrow() {
+  @include esds-heading-reset;
+  @include esds-text-color($type: 'secondary');
+  @include esds-responsive-font-size($type: 'heading-eyebrow');
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}

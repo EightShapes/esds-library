@@ -35,7 +35,7 @@ export class EsdsCard extends LitElement {
   constructor() {
     super();
     // Prop Defaults
-    this.title = 'Hello World';
+    this.title = 'Card Title';
   }
 
   /*
@@ -45,26 +45,29 @@ export class EsdsCard extends LitElement {
     return this; // Prevents lit-element from rendering in shadowDOM
   }
 
+  _renderCardImage() {
+    return this.imgSrc
+      ? html`
+          <div class="esds-card__image-wrap">
+            <div class="esds-card__image-wrap-inner">
+              <img class="esds-card__image" src="${this.imgSrc}" />
+            </div>
+          </div>
+        `
+      : '';
+  }
+
   _renderCardBody() {
     let body = html`
+      ${this._renderCardImage()}
       <div class="esds-card__body">
-        <div class="esds-card__image">
-          <div class="esds-card__image-inner-wrap">
-            <div
-              class="esds-card__image-inner"
-              style="background-image: url('${this.imgSrc}')"
-            ></div>
-          </div>
-        </div>
-        <div class="esds-card__content">
-          ${this.metadata
-            ? html`
-                <h4 class="esds-card__metadata">${this.metadata}</h4>
-              `
-            : ''}
-          <h3 class="esds-card__title">${this.title}</h3>
-          <div class="esds-card__content">${this.content}</div>
-        </div>
+        ${this.metadata
+          ? html`
+              <h4 class="esds-card__metadata">${this.metadata}</h4>
+            `
+          : ''}
+        <h3 class="esds-card__title">${this.title}</h3>
+        <div class="esds-card__content">${this.content}</div>
       </div>
     `;
 

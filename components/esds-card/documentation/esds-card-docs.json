@@ -29,7 +29,7 @@
           "name": "title",
           "description": "Title text displayed on the card",
           "type": "string",
-          "default": "\"Hello World\""
+          "default": "\"Card Title\""
         }
       ],
       "properties": [
@@ -62,7 +62,7 @@
           "attribute": "title",
           "description": "Title text displayed on the card",
           "type": "string",
-          "default": "\"Hello World\""
+          "default": "\"Card Title\""
         }
       ]
     }

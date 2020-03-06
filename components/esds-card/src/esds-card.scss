@@ -1,19 +1,50 @@
 @use '../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
 
+$esds-card-min-width: 300px;
+$esds-card-max-width: 336px;
+
 .esds-card {
   @include esds-typography-reset;
   @include esds-box-sizing;
   background-color: $esds-background-color-light;
   border-radius: $esds-border-radius-default;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
+  max-width: $esds-card-max-width;
+  min-width: $esds-card-min-width;
   overflow: hidden;
+  width: 100%;
 }
 
 .esds-card__body {
-  padding: $esds-space-inset-1-x;
+  padding: $esds-space-inset-1-and-half-x;
 }
 
 .esds-card__title {
   @include esds-heading-level-3;
+}
+
+.esds-card__metadata {
+  @include esds-heading-eyebrow;
+}
+
+.esds-card__image-wrap {
+  padding-bottom: 54.8%; // aspect ratio for image`
+  position: relative;
+  width: 100%;
+}
+
+.esds-card__image-wrap-inner {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.esds-card__image {
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%; // centered crop by default
+  width: 100%;
 }

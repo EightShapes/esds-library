@@ -6,9 +6,9 @@
   "scripts": {
     "start": "npm run storybook",
     "test": "npm run vrt",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "vrt": "build-storybook && percy-storybook --widths=1280"
+    "storybook": "start-storybook -p 6006 -s ./static",
+    "build-storybook": "build-storybook  -s ./static",
+    "vrt": "build-storybook -s ./static && percy-storybook --widths=1280"
   },
   "keywords": [],
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
