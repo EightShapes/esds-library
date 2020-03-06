@@ -77,12 +77,15 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 
 .esds-card__title {
   @include esds-heading-level-3;
+  margin: $esds-space-stack-half-x;
 }
 
 .esds-card__metadata {
   @include esds-heading-eyebrow;
+  margin: $esds-space-stack-quarter-x;
 }
 
 .esds-card__content {
   @include esds-text-color('primary');
+  @include esds-responsive-font-size($type: 'body-m');
 }
