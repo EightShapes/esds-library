@@ -8,6 +8,8 @@ import {
 
 import { withA11y } from '@storybook/addon-a11y';
 import customElements from '../custom-elements.json';
+import '../stories/styles/hostile-styles.scss'; // Hostile CSS defaults
+
 
 setCustomElements(customElements);
 

@@ -1,0 +1,10 @@
+@use '../../node_modules/@eightshapes/esds-hostile-css/esds-hostile-mixins' as *;
+
+html,
+body {
+  @include esds-hostile-css-global-styles;
+}
+
+@include esds-hostile-typographic-styles;
+@include esds-hostile-list-styles;
+@include esds-hostile-table-styles;

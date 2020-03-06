@@ -61,7 +61,7 @@ export class EsdsCard extends Slotify(LitElement) {
             `
           : ''}
         <h3 class="esds-card__title">${this.title}</h3>
-        <div class="esds-card__content">
+        <div class="esds-card__content${this.content ? ' esds-card__content--styled' : ''}">
           <s-slot name="content">${this.content}</s-slot>
         </div>
       </div>

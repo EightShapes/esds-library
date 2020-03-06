@@ -85,7 +85,7 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   margin: $esds-space-stack-quarter-x;
 }
 
-.esds-card__content {
+.esds-card__content--styled {
   @include esds-text-color('primary');
-  @include esds-responsive-font-size($type: 'body-m');
+  @include esds-body-text-m;
 }
