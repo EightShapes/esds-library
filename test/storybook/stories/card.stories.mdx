@@ -1,8 +1,13 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import { html } from 'lit-html';
 
+import '../stories/styles/hostile-styles.scss'; // Hostile CSS defaults
 import '@eightshapes/esds-card'; // The Web Component Import
+import '@eightshapes/esds-icon'; // The Web Component Import
+import { EsdsIconHelp, EsdsIconPencil, EsdsIconStar } from '@eightshapes/esds-icons';
 import './styles/card.stories.scss'; // Demo styles to show component states
+const storybookCardMaxWidth = 336;
+const demoStyles = `max-width: ${storybookCardMaxWidth}px;`;
 
 <Meta
   title="Card"
@@ -19,14 +24,14 @@ npm install @eightshapes/esds-card
 ## Default
 <Preview>
   <Story name="Default">
-    {`<esds-card></esds-card>`}
+    {`<esds-card style="${demoStyles}"></esds-card>`}
   </Story>
 </Preview>
 
 ## With Image
 <Preview>
   <Story name="With Image">
-    {`<esds-card img-src="./images/card/color.png"></esds-card>`}
+    {`<esds-card style="${demoStyles}" img-src="./images/card/color.png"></esds-card>`}
   </Story>
 </Preview>
 
@@ -34,6 +39,7 @@ npm install @eightshapes/esds-card
 <Preview>
   <Story name="With Metadata">
     {`<esds-card
+        style="${demoStyles}"
         img-src="./images/card/morningstar.png"
         title="Morningstar"
         metadata="Design System"
@@ -45,6 +51,7 @@ npm install @eightshapes/esds-card
 <Preview>
   <Story name="With Content Prop">
     {`<esds-card
+        style="${demoStyles}"
         img-src="./images/card/rei.png"
         title="Cedar"
         metadata="Design System"
@@ -57,12 +64,66 @@ npm install @eightshapes/esds-card
 <Preview>
   <Story name="With Content Slot">
     {`<esds-card
+        style="${demoStyles}"
         img-src="./images/card/rei.png"
         title="Cedar"
         metadata="Design System"
       >
-        <p slot="content">lorem ipsum dolor sanctum</p>
-        <p slot="content">Paragraph 2</p>
+        <p slot="content">slot content</p>
+      </esds-card>`}
+  </Story>
+</Preview>
+
+## With Button Action
+<Preview>
+  <Story name="With Button Action">
+    {`<esds-card
+        style="${demoStyles}"
+        img-src="./images/card/usac.png"
+        title="USAC"
+        metadata="2017"
+        content="A system for the Universal Service Administrative Co."
+      >
+        <button slot="actions" style="margin: 0; font-size: 16px; text-indent: 0; text-shadow: none;">Action 1</button>
+        <button slot="actions" style="margin: 0; font-size: 16px; text-indent: 0; text-shadow: none;">Action 2</button>
+      </esds-card>`}
+  </Story>
+</Preview>
+
+## With Link Action
+<Preview>
+  <Story name="With Link Action">
+    {`<esds-card
+        style="${demoStyles}"
+        img-src="./images/card/morningstar.png"
+        title="Morningstar"
+        metadata="Design System"
+        content="Style, UI components and charts for digital products."
+      >
+        <a slot="actions" href="#">View the Library</a>
+      </esds-card>`}
+  </Story>
+</Preview>
+
+## With Icon Button Action
+<Preview>
+  <Story name="With Icon Buttons">
+    {html`<esds-card
+        style="${demoStyles}"
+        img-src="./images/card/morningstar.png"
+        title="Morningstar"
+        metadata="Design System"
+        content="Style, UI components and charts for digital products."
+      >
+        <button slot="actions" style="padding: 0; margin: 0; background: transparent; line-height: 1; text-indent: 0; font-size: 16px; border: 0; width: 21px;">
+          <esds-icon use="${EsdsIconHelp}"></esds-icon>
+        </button>
+        <button slot="actions" style="padding: 0; margin: 0; background: transparent; line-height: 1; text-indent: 0; font-size: 16px; border: 0; width: 21px;">
+          <esds-icon use="${EsdsIconPencil}"></esds-icon>
+        </button>
+        <button slot="actions" style="padding: 0; margin: 0; background: transparent; line-height: 1; text-indent: 0; font-size: 16px; border: 0; width: 21px;">
+          <esds-icon use="${EsdsIconStar}"></esds-icon>
+        </button>
       </esds-card>`}
   </Story>
 </Preview>
@@ -71,6 +132,7 @@ npm install @eightshapes/esds-card
 <Preview>
   <Story name="Cropped Portrait Image">
     {`<esds-card
+        style="${demoStyles}"
         img-src="./images/card/dollar-portrait.jpg"
         title="One Dollar"
         metadata="Washington"
@@ -82,11 +144,12 @@ npm install @eightshapes/esds-card
 <Preview>
   <Story name="Link">
     {`<esds-card
+        style="${demoStyles}"
         title="Design System Intermediaries"
         metadata="February 2018"
         content="Relating to the distributors, translators, and themers in between"
         img-src="./images/card/medium.png"
-        href="http://eightshapes.com"></esds-card>`}
+        href="#"></esds-card>`}
   </Story>
 </Preview>
 
@@ -94,33 +157,45 @@ npm install @eightshapes/esds-card
 <Preview>
   <Story name="Link States">
     {html`
-      <esds-card
-          class="storybook-esds-card-state"
-          title="Default"
+      <div class="storybook-esds-card-grid">
+        <esds-card
+            class="storybook-esds-card-state"
+            title="Default"
+            metadata="February 2018"
+            content="Relating to the distributors, translators, and themers in between"
+            img-src="./images/card/medium.png"
+            href="http://eightshapes.com"></esds-card>
+        <esds-card
+          class="storybook-esds-card-state storybook-esds-card-state--hover"
+          title="Hover"
           metadata="February 2018"
           content="Relating to the distributors, translators, and themers in between"
           img-src="./images/card/medium.png"
           href="http://eightshapes.com"></esds-card>
+        <esds-card
+          class="storybook-esds-card-state storybook-esds-card-state--focus"
+          title="Focus"
+          metadata="February 2018"
+          content="Relating to the distributors, translators, and themers in between"
+          img-src="./images/card/medium.png"
+          href="http://eightshapes.com"></esds-card>
+        <esds-card
+          class="storybook-esds-card-state storybook-esds-card-state--active"
+          title="Active"
+          metadata="February 2018"
+          content="Relating to the distributors, translators, and themers in between"
+          img-src="./images/card/medium.png"
+          href="http://eightshapes.com"></esds-card>
+      </div>`}
+  </Story>
+</Preview>
+
+## EightShapes.com Examples
+<Preview>
+  <Story name="EightShapes.com Examples">
+    {html`
       <esds-card
-        class="storybook-esds-card-state storybook-esds-card-state--hover"
-        title="Hover"
-        metadata="February 2018"
-        content="Relating to the distributors, translators, and themers in between"
-        img-src="./images/card/medium.png"
-        href="http://eightshapes.com"></esds-card>
-      <esds-card
-        class="storybook-esds-card-state storybook-esds-card-state--focus"
-        title="Focus"
-        metadata="February 2018"
-        content="Relating to the distributors, translators, and themers in between"
-        img-src="./images/card/medium.png"
-        href="http://eightshapes.com"></esds-card>
-      <esds-card
-        class="storybook-esds-card-state storybook-esds-card-state--active"
-        title="Active"
-        metadata="February 2018"
-        content="Relating to the distributors, translators, and themers in between"
-        img-src="./images/card/medium.png"
-        href="http://eightshapes.com"></esds-card>`}
+          title='Concept Prototype (the "What")'
+          content="Capturing the overall design direction, the concept prototype shows the crucial parts of the user experience"></esds-card>`}
   </Story>
 </Preview>

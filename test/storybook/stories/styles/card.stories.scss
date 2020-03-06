@@ -22,3 +22,13 @@
 .storybook-esds-card-state--active .esds-card {
   @include esds-card-active;
 }
+
+.storybook-esds-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  text-indent: 0;
+}
+
+.storybook-esds-card-grid > * {
+  max-width: 336px;
+}

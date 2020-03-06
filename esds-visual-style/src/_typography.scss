@@ -8,6 +8,7 @@
   $font-style: normal,
   $font-weight: $esds-font-weight-regular,
   $letter-spacing: 0,
+  $line-height: $esds-font-line-height-normal,
   $text-align: left,
   $text-decoration: none,
   $text-indent: 0,
@@ -19,6 +20,7 @@
   font-style: $font-style;
   font-weight: $font-weight;
   letter-spacing: $letter-spacing;
+  line-height: $line-height;
   text-align: $text-align;
   text-decoration: $text-decoration;
   text-indent: $text-indent;

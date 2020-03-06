@@ -1,7 +1,6 @@
 @use '../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
 
 $esds-card-min-width: 300px;
-$esds-card-max-width: 336px;
 $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 
 // Mixins for states so they can be leveraged on test pages for static state examples
@@ -20,6 +19,18 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   box-shadow: none;
 }
 
+esds-card {
+  @include esds-typography-reset;
+  @include esds-box-sizing;
+  display: inline-flex;
+  line-height: 0;
+
+  // Slotify specific styles
+  s-root {
+    display: inline-flex;
+  }
+}
+
 .esds-card {
   @include esds-typography-reset;
   @include esds-box-sizing;
@@ -27,7 +38,6 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   border-radius: $esds-border-radius-default;
   display: inline-flex;
   flex-direction: column;
-  max-width: $esds-card-max-width;
   min-width: $esds-card-min-width;
   overflow: hidden;
   width: 100%;
