@@ -13,7 +13,9 @@ cd components/[component-name]
 npm start
 ```
 
-This will launch a browser preview that hot reloads when  source `.js` and `.scss` files are modified.
+This will:
+* monitor source `.js` and `.scss` files for changes and rebuild component outputs
+* launch the storybook test environment (`./test/storybook`) where test stories can be written for each component
 
 #### IE11 Compatibility
 For performance reasons, the default dev environment does not build assets for IE11. To start an IE 11 compatible dev environment run:
@@ -23,8 +25,25 @@ cd components/[component-name]
 npm run start:legacy
 ```
 
-## Running the storybook test environment
-Full examples and visual testing are done in the [esds-storybook environment](../test/storybook/README.md).
+This will _not_ launch storybook, but instead a debugging environment that's compatible with IE11.
+
+## Running component debugging environment
+If the component needs to be tested in isolation or debugging needs to be performed without storybook running:
+
+```
+cd components/[component-name]
+npm run start:debug-environment
+```
+
+This will load the component in a debug page: (`components/[component-name]/test/html/index.html`)
+
+## Running VRT
+```
+cd components/[component-name]
+npm test
+```
+
+This will build the storybook instance and run visual regression tests for _all_ components. Per component VRT cannot be performed at this time.
 
 ---
 ## Dependencies

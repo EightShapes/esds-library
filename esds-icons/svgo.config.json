@@ -2,6 +2,9 @@
   "plugins": [
     {
       "removeDimensions": true
+    },
+    {
+      "removeAttrs": { "attrs": "(fill|stroke)" }
     }
   ]
 }

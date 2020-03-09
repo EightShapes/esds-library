@@ -1,6 +1,19 @@
 {
   "shape": {
-    "transform": []
+    "transform": [
+      {
+        "svgo": {
+          "plugins": [
+            {
+              "removeDimensions": true
+            },
+            {
+              "removeAttrs": { "attrs": "(fill|stroke)" }
+            }
+          ]
+        }
+      }
+    ]
   },
   "mode": {
     "symbol": {

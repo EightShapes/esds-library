@@ -14,7 +14,7 @@
           "name": "use",
           "description": "Determines which icon will be shown. When leveraging the Icon sprite, the id of the\nsprite symbol should be provided (ex: `#angle-right`). When using ES6 modules, pass the\nname of the module (ex: `EsdsIconAngleRight`). See usage examples below.",
           "type": "string",
-          "default": "\"EsdsIconStopwatch\""
+          "default": "\"EsdsIconStar\""
         },
         {
           "name": "size",
@@ -35,7 +35,7 @@
           "attribute": "use",
           "description": "Determines which icon will be shown. When leveraging the Icon sprite, the id of the\nsprite symbol should be provided (ex: `#angle-right`). When using ES6 modules, pass the\nname of the module (ex: `EsdsIconAngleRight`). See usage examples below.",
           "type": "string",
-          "default": "\"EsdsIconStopwatch\""
+          "default": "\"EsdsIconStar\""
         },
         {
           "name": "size",
