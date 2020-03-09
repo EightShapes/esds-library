@@ -1,0 +1,55 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+
+import '../stories/styles/hostile-styles.scss'; // Hostile CSS defaults
+import '@eightshapes/esds-thumbnail'; // The Web Component Import
+const thumbnailWidth = 400;
+const demoStyles = `width: ${thumbnailWidth}px; display: block;`;
+
+<Meta
+  title="Thumbnail"
+  component='esds-thumbnail'
+/>
+
+# Thumbnail
+## Installation
+
+```bash
+npm install @eightshapes/esds-thumbnail
+```
+
+## Default
+<Preview>
+  <Story name="Default">
+    {`<esds-thumbnail style="${demoStyles}"></esds-thumbnail>`}
+  </Story>
+</Preview>
+
+## Landscape Source
+<Preview>
+  <Story name="Landscape Source">
+    {`<esds-thumbnail style="${demoStyles}" src="./images/thumbnail/landscape.png"></esds-thumbnail>`}
+  </Story>
+</Preview>
+
+## Portrait Source
+<Preview>
+  <Story name="Portrait Source">
+    {`<esds-thumbnail style="${demoStyles}" src="./images/thumbnail/portrait.jpg"></esds-thumbnail>`}
+  </Story>
+</Preview>
+
+## Object Fit Options
+<Preview>
+  <Story name="Object Fit Options">
+    {html`
+      <div style="display:flex;">
+        <esds-thumbnail style="${demoStyles}" src="./images/thumbnail/portrait.jpg"></esds-thumbnail>
+        <esds-thumbnail style="${demoStyles}" object-fit="contain" src="./images/thumbnail/portrait.jpg"></esds-thumbnail>
+        <esds-thumbnail style="${demoStyles}" object-fit="fill" src="./images/thumbnail/portrait.jpg"></esds-thumbnail>
+        <esds-thumbnail style="${demoStyles}" object-fit="none" src="./images/thumbnail/portrait.jpg"></esds-thumbnail>
+        <esds-thumbnail style="${demoStyles}" object-fit="scale-down" src="./images/thumbnail/portrait.jpg"></esds-thumbnail>
+      </div>
+    `}
+  </Story>
+</Preview>

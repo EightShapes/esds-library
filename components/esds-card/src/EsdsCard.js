@@ -1,4 +1,6 @@
 import { html, LitElement } from 'lit-element';
+import { ifDefined } from 'lit-html/directives/if-defined';
+import { EsdsThumbnail } from '@eightshapes/esds-thumbnail/dist/EsdsThumbnail.js';
 import { Slotify } from '@eightshapes/slotify';
 import styles from './esds-card-styles.js';
 
@@ -37,18 +39,15 @@ export class EsdsCard extends Slotify(LitElement) {
     super();
     // Prop Defaults
     this.title = 'Card Title';
+    if (customElements.get('esds-card-thumbnail') === undefined) {
+      customElements.define('esds-card-thumbnail', EsdsThumbnail);
+    }
   }
 
   _renderCardImage() {
-    return this.imgSrc
-      ? html`
-          <div class="esds-card__image-wrap">
-            <div class="esds-card__image-wrap-inner">
-              <img role="presentation" class="esds-card__image" src="${this.imgSrc}" />
-            </div>
-          </div>
-        `
-      : '';
+    return html`
+      <esds-card-thumbnail src="${ifDefined(this.imgSrc)}" object-fit="cover"></esds-card-thumbnail>
+    `;
   }
 
   _renderCardBody() {
