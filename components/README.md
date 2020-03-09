@@ -52,7 +52,7 @@ This repository is equipped with a new component generator. This will scaffold o
 ```bash
 npx plop
 ```  
-This will prompt you for the new component's name. 'esds' will be prepended automatically, so just provide the name of the component itself, for example: "button" or "data table."
+This will prompt for the new component's name. 'esds' will be prepended automatically, so just provide the name of the component itself, for example: "button" or "data table."
 
 2. After the scaffold is generated run:  
 ```bash
