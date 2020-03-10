@@ -4,13 +4,16 @@ import { Slotify } from '@eightshapes/slotify';
 {{/if}}
 import styles from './esds-{{ lowerCase (dashCase name) }}-styles.js';
 
-{{#if slots}}
 /**
+ * @element esds-{{ lowerCase (dashCase name) }}
+{{#if slots}}
+ *
  * @slot - Default slot, put whatever you want in here.
  * @slot content - Insert content in the named "content" slot.
- */
-
 {{/if}}
+*
+*/
+
 export class Esds{{ pascalCase name }} extends {{#if slots}}Slotify({{/if}}LitElement{{#if slots}}){{/if}} {
   static get properties() {
     return {

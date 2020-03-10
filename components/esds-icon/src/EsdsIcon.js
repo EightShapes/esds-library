@@ -4,6 +4,11 @@ import { ifDefined } from 'lit-html/directives/if-defined';
 import { EsdsIconStar } from '@eightshapes/esds-icons';
 import styles from './esds-icon-styles.js';
 
+/**
+ * @element esds-icon
+ *
+ */
+
 export class EsdsIcon extends LitElement {
   static get properties() {
     return {

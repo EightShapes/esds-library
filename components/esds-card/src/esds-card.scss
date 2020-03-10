@@ -75,7 +75,7 @@ esds-card {
   margin: $esds-space-stack-quarter-x;
 }
 
-.esds-card__content--styled {
+.esds-card__description {
   @include esds-text-color('primary');
   @include esds-body-text-m;
 }

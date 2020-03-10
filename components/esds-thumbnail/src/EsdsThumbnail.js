@@ -3,6 +3,11 @@ import { EsdsIcon } from '@eightshapes/esds-icon/dist/EsdsIcon.js';
 import { EsdsIconCalendarNumbered } from '@eightshapes/esds-icons';
 import styles from './esds-thumbnail-styles.js';
 
+/**
+ * @element esds-thumbnail
+ *
+ */
+
 export class EsdsThumbnail extends LitElement {
   static get properties() {
     return {
