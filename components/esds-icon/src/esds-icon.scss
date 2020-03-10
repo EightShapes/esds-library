@@ -1,6 +1,13 @@
-@use '../node_modules/@eightshapes/esds-tokens/dist/scss/esds-tokens' as *;
+@use '../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
+
+esds-icon {
+  @include esds-typography-reset;
+  @include esds-box-sizing;
+  display: inline-flex;
+}
 
 .esds-icon {
+  @include esds-typography-reset;
   fill: currentColor;
   height: $esds-size-icon-m;
   width: $esds-size-icon-m;

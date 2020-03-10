@@ -1,6 +1,7 @@
 @use '../../node_modules/@eightshapes/esds-hostile-css/esds-hostile-mixins' as *;
 
-.esds-hostile-style-context > * {
+[class^='esds-'] {
+  // Apply hostile styles to every element having a class that begins with `esds-`
   @include esds-hostile-css-global-styles;
 }
 

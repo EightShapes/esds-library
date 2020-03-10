@@ -47,6 +47,10 @@
   }
 }
 
+.esds-thumbnail__placeholder-icon {
+  @include esds-typography-reset;
+}
+
 .esds-thumbnail__placeholder-icon .esds-icon {
   color: $esds-color-black;
   height: 64px;
