@@ -1,7 +1,6 @@
 @use '../../node_modules/@eightshapes/esds-hostile-css/esds-hostile-mixins' as *;
 
-html,
-body {
+.esds-hostile-style-context > * {
   @include esds-hostile-css-global-styles;
 }
 

@@ -6,8 +6,8 @@ import '@eightshapes/esds-card'; // The Web Component Import
 import '@eightshapes/esds-icon'; // The Web Component Import
 import { EsdsIconHelp, EsdsIconPencil, EsdsIconStar } from '@eightshapes/esds-icons';
 import './styles/card.stories.scss'; // Demo styles to show component states
-const storybookCardMaxWidth = 336;
-const demoStyles = `max-width: ${storybookCardMaxWidth}px;`;
+const storybookCardWidth = 336;
+const demoStyles = `width: ${storybookCardWidth}px;`;
 
 <Meta
   title="Card"
@@ -105,7 +105,7 @@ npm install @eightshapes/esds-card
   </Story>
 </Preview>
 
-## With Icon Button Action
+## With Icon Buttons
 <Preview>
   <Story name="With Icon Buttons">
     {html`<esds-card

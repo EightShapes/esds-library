@@ -20,6 +20,14 @@ addParameters({
   },
 });
 
+const rootElement = document.getElementById('root');
+const rootInnerElement = document.getElementById('root-inner');
+if (rootInnerElement !== null) {
+  rootInnerElement.classList.add('esds-hostile-style-context');
+} else {
+  rootElement.classList.add('esds-hostile-style-context');
+}
+
 // configure(require.context('../stories', true, /\.stories\.(js|mdx)$/), module);
 
 // force full reload to not reregister web components
