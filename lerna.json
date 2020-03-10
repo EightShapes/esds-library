@@ -2,8 +2,8 @@
   "packages": [
     "esds-icons",
     "esds-tokens",
-    "components/*",
-    "test/*"
+    "components/**/*",
+    "test/**/*"
   ],
   "version": "independent"
 }

@@ -17,6 +17,8 @@ const componentSassFiles = fs
   .readdirSync(path.join('src'))
   .filter(f => path.parse(f).ext === '.scss');
 
+fs.mkdirSync('dist', { recursive: true });
+
 componentSassFiles.forEach(s => {
   const fileWithoutExtension = path.parse(s).name;
 
