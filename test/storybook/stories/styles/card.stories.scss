@@ -1,5 +1,5 @@
 @use '../../node_modules/@eightshapes/esds-card/src/esds-card' as *;
-@use '../../node_modules/@eightshapes/esds-tokens/dist/scss/esds-tokens' as *;
+@use '../../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
 
 // Storybook specific override to show component state without interaction
 .storybook-esds-card-state {
@@ -21,14 +21,4 @@
 
 .storybook-esds-card-state--active .esds-card {
   @include esds-card-active;
-}
-
-.storybook-esds-card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  text-indent: 0;
-}
-
-.storybook-esds-card-grid > * {
-  max-width: 336px;
 }

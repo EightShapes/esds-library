@@ -8,6 +8,9 @@ import {
 
 import { withA11y } from '@storybook/addon-a11y';
 import customElements from '../custom-elements.json';
+import '../stories/styles/annotation-styles.scss';
+import '../stories/styles/hostile-styles.scss';
+
 
 setCustomElements(customElements);
 

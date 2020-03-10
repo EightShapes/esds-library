@@ -1,0 +1,18 @@
+@use '../../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
+
+.storybook-annotation {
+  @include esds-box-sizing;
+  @include esds-typography-reset($font-size: $esds-font-size-body-m-default);
+  color: $esds-text-color-brand;
+  display: block;
+  margin: $esds-space-stack-half-x;
+}
+
+.storybook-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    margin: 0 $esds-space-generic-1-x $esds-space-generic-1-x 0;
+  }
+}

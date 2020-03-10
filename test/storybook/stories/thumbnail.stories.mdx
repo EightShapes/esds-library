@@ -1,10 +1,10 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import { html } from 'lit-html';
 
-import '../stories/styles/hostile-styles.scss'; // Hostile CSS defaults
 import '@eightshapes/esds-thumbnail'; // The Web Component Import
 const thumbnailWidth = 400;
 const demoStyles = `width: ${thumbnailWidth}px; display: block;`;
+const objectFitValues = ['cover', 'contain', 'fill', 'none', 'scale-down']; // TODO Pull this from the class as a constant
 
 <Meta
   title="Thumbnail"
@@ -43,12 +43,13 @@ npm install @eightshapes/esds-thumbnail
 <Preview>
   <Story name="Object Fit Options">
     {html`
-      <div class="storybook-esds-thumbnail-grid">
-        <esds-thumbnail style="${demoStyles}" src="./images/thumbnail/portrait.jpg"></esds-thumbnail>
-        <esds-thumbnail style="${demoStyles}" object-fit="contain" src="./images/thumbnail/portrait.jpg"></esds-thumbnail>
-        <esds-thumbnail style="${demoStyles}" object-fit="fill" src="./images/thumbnail/portrait.jpg"></esds-thumbnail>
-        <esds-thumbnail style="${demoStyles}" object-fit="none" src="./images/thumbnail/portrait.jpg"></esds-thumbnail>
-        <esds-thumbnail style="${demoStyles}" object-fit="scale-down" src="./images/thumbnail/portrait.jpg"></esds-thumbnail>
+      <div class="storybook-grid">
+        ${objectFitValues.map(v => {
+          return html`<div>
+            <span class="storybook-annotation">${v}</span>
+            <esds-thumbnail style="${demoStyles}" object-fit="${v}" src="./images/thumbnail/portrait.jpg"></esds-thumbnail>
+          </div>`;
+        })}
       </div>
     `}
   </Story>

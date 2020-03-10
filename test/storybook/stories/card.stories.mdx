@@ -1,13 +1,13 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import { html } from 'lit-html';
 
-import '../stories/styles/hostile-styles.scss'; // Hostile CSS defaults
 import '@eightshapes/esds-card'; // The Web Component Import
 import '@eightshapes/esds-icon'; // The Web Component Import
 import { EsdsIconHelp, EsdsIconPencil, EsdsIconStar } from '@eightshapes/esds-icons';
 import './styles/card.stories.scss'; // Demo styles to show component states
 const storybookCardWidth = 336;
 const demoStyles = `width: ${storybookCardWidth}px;`;
+const cardLinkStates = ['default', 'hover', 'focus', 'active'];
 
 <Meta
   title="Card"
@@ -157,35 +157,22 @@ npm install @eightshapes/esds-card
 <Preview>
   <Story name="Link States">
     {html`
-      <div class="storybook-esds-card-grid">
-        <esds-card
-            class="storybook-esds-card-state"
-            title="Default"
-            metadata="February 2018"
-            content="Relating to the distributors, translators, and themers in between"
-            img-src="./images/card/medium.png"
-            href="http://eightshapes.com"></esds-card>
-        <esds-card
-          class="storybook-esds-card-state storybook-esds-card-state--hover"
-          title="Hover"
-          metadata="February 2018"
-          content="Relating to the distributors, translators, and themers in between"
-          img-src="./images/card/medium.png"
-          href="http://eightshapes.com"></esds-card>
-        <esds-card
-          class="storybook-esds-card-state storybook-esds-card-state--focus"
-          title="Focus"
-          metadata="February 2018"
-          content="Relating to the distributors, translators, and themers in between"
-          img-src="./images/card/medium.png"
-          href="http://eightshapes.com"></esds-card>
-        <esds-card
-          class="storybook-esds-card-state storybook-esds-card-state--active"
-          title="Active"
-          metadata="February 2018"
-          content="Relating to the distributors, translators, and themers in between"
-          img-src="./images/card/medium.png"
-          href="http://eightshapes.com"></esds-card>
+      <div class="storybook-grid">
+        ${cardLinkStates.map(s => {
+          return html`
+            <div>
+              <span class="storybook-annotation">${s}</span>
+              <esds-card
+                style="${demoStyles}"
+                class="storybook-esds-card-state storybook-esds-card-state--${s}"
+                title="Design System Intermediaries"
+                metadata="February 2018"
+                content="Relating to the distributors, translators, and themers in between"
+                img-src="./images/card/medium.png"
+                href="http://eightshapes.com"></esds-card>
+            </div>
+          `;
+          })}
       </div>`}
   </Story>
 </Preview>
