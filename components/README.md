@@ -50,16 +50,20 @@ This will build the storybook instance and run visual regression tests for _all_
 ## Creating New Components
 This repository is equipped with a new component generator. This will scaffold out all files needed to build and test new components.
 
-1. ```bash
+1. From anywhere in the repository run:  
+```bash
 npx plop
 ```  
-This will prompt you for the new component's name. 'esds' will be prepended automatically, so just provide the name of the component itself, for example: "button" or "data table."
+This will prompt for the new component's name. 'esds' will be prepended automatically, so just provide the name of the component itself, for example: "button" or "data table."
 
 # TODO: Document slots question
-2. ```bash
-lerna bootstrap
+
+2. After the scaffold is generated run:  
+```bash
+lerna bootstrap  
 ```  
 This will install the dependencies needed by the new component and link the component to the test environment.
+
 3. That's it. See above for how to run the new component's dev environment.
 
 

@@ -31,6 +31,7 @@
 				"build:jsdoc": "npx web-component-analyzer src --format json --outFile documentation/esds-{{ lowerCase (dashCase name) }}-docs.json && npx web-component-analyzer src --format markdown --outFile documentation/esds-{{ lowerCase (dashCase name) }}-docs.md",
 				"watch:build-jsdoc": "chokidar \"src/**/*.js\" -c \"npm run build:jsdoc\"",
 				"prepack": "npm run build:legacy",
+				"prepare": "npm run build:legacy",
 				"test": "npm run --prefix ../../test/storybook test",
 				"test:unit": "karma start --coverage",
 				"test:watch": "karma start --auto-watch=true --single-run=false",

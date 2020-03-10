@@ -3,8 +3,8 @@
     "esds-icons",
     "esds-tokens",
     "esds-visual-style",
-    "components/*",
-    "test/*"
+    "components/**/*",
+    "test/**/*"
   ],
   "version": "independent"
 }
