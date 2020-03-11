@@ -3,6 +3,7 @@ import { html } from 'lit-html';
 
 import '@eightshapes/esds-card'; // The Web Component Import
 import '@eightshapes/esds-icon'; // The Web Component Import
+import '@eightshapes/esds-background-demo'; // The Web Component Import
 import { EsdsIconHelp, EsdsIconPencil, EsdsIconStar } from '@eightshapes/esds-icons';
 import './styles/card.stories.scss'; // Demo styles to show component states
 const storybookCardWidth = 336;
@@ -195,6 +196,30 @@ npm install @eightshapes/esds-card
           `;
           })}
       </div>`}
+  </Story>
+</Preview>
+
+## On Backgrounds
+<Preview>
+  <Story name="On Backgrounds">
+    {html`
+      <esds-background-demo>
+        ${cardLinkStates.map(s => {
+          return html`
+            <div>
+              <span class="storybook-annotation">${s}</span>
+              <esds-card
+                style="${demoStyles}"
+                class="storybook-esds-card-state storybook-esds-card-state--${s}"
+                title="Design System Intermediaries"
+                metadata="February 2018"
+                description="Relating to the distributors, translators, and themers in between"
+                img-src="./images/card/medium.png"
+                href="http://eightshapes.com"></esds-card>
+            </div>
+          `;
+          })}
+      </esds-background-demo>`}
   </Story>
 </Preview>
 

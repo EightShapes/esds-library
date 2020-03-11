@@ -75,7 +75,7 @@ export class EsdsCard extends Slotify(LitElement) {
     if (slotName === 'default') {
       // get all nodes outside s-root that aren't assigned to another slot
       slotableContent = Array.from(this.childNodes).filter(
-        n => n.tagName().toLowerCase !== 's-root' && n.getAttribute('slot') === null,
+        n => n.tagName.toLowerCase() !== 's-root' && n.getAttribute('slot') === null,
       );
     } else {
       slotableContent = Array.from(this.querySelectorAll(`*[slot='${slotName}']`));
