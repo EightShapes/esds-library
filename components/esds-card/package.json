@@ -64,7 +64,7 @@
 		},
 		"dependencies": {
 				"lit-element": "^2.2.1",
-				"lit-html": "https://github.com/Polymer/lit-html.git",
+				"lit-html": "^1.1.2",
 				"regenerator-runtime": "^0.13.3"
 		}
 }
