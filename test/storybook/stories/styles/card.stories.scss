@@ -11,14 +11,31 @@
   }
 }
 
-.storybook-esds-card-state--hover .esds-card {
-  @include esds-card-hover;
+.esds-container--light .storybook-esds-card-state--hover,
+.esds-container--dark .storybook-esds-card-state--hover,
+.esds-container--black .storybook-esds-card-state--hover,
+.storybook-esds-card-state--hover {
+  .esds-card {
+    @include esds-card-hover;
+  }
 }
 
 .storybook-esds-card-state--focus .esds-card {
   @include esds-card-focus;
 }
 
-.storybook-esds-card-state--active .esds-card {
-  @include esds-card-active;
+.esds-container--dark .storybook-esds-card-state--focus,
+.esds-container--black .storybook-esds-card-state--focus {
+  .esds-card {
+    @include esds-card-focus('on-dark');
+  }
+}
+
+.esds-container--light .storybook-esds-card-state--active,
+.esds-container--dark .storybook-esds-card-state--active,
+.esds-container--black .storybook-esds-card-state--active,
+.storybook-esds-card-state--active {
+  .esds-card {
+    @include esds-card-active;
+  }
 }

@@ -9,8 +9,12 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   box-shadow: $esds-card-hover-shadow;
 }
 
-@mixin esds-card-focus() {
-  box-shadow: 0 0 0 4px $esds-color-teal-27;
+@mixin esds-card-focus($background: 'on-light') {
+  @if ($background == 'on-dark') {
+    box-shadow: 0 0 0 4px $esds-color-teal-48;
+  } @else {
+    box-shadow: 0 0 0 4px $esds-color-teal-27;
+  }
   outline: none;
 }
 
@@ -42,13 +46,22 @@ esds-card {
   min-width: $esds-card-min-width;
   overflow: hidden;
   width: 100%;
+
+  .esds-container--light &,
+  .esds-container--dark &,
+  .esds-container--black & {
+    background-color: $esds-background-color-white;
+  }
 }
 
 .esds-card--link {
   cursor: pointer;
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  .esds-container--light &:hover,
+  .esds-container--dark &:hover,
+  .esds-container--black &:hover {
     @include esds-card-hover;
   }
 
@@ -56,7 +69,15 @@ esds-card {
     @include esds-card-focus;
   }
 
-  &:active {
+  .esds-container--dark &:focus,
+  .esds-container--black &:focus {
+    @include esds-card-focus('on-dark');
+  }
+
+  &:active,
+  .esds-container--light &:active,
+  .esds-container--dark &:active,
+  .esds-container--black &:active {
     @include esds-card-active;
   }
 }
@@ -67,6 +88,7 @@ esds-card {
 
 .esds-card__title {
   @include esds-heading-level-3;
+  color: $esds-text-color-primary-on-light;
   margin: $esds-space-stack-half-x;
 
   &:last-child {
@@ -76,12 +98,13 @@ esds-card {
 
 .esds-card__metadata {
   @include esds-heading-eyebrow;
+  color: $esds-text-color-secondary-on-light;
   margin: $esds-space-stack-half-x;
 }
 
 .esds-card__description {
-  @include esds-text-color('primary');
   @include esds-body-text-m;
+  color: $esds-text-color-primary-on-light;
   margin: $esds-space-stack-half-x;
 
   &:last-child {

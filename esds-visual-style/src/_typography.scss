@@ -50,39 +50,34 @@
 
 @mixin esds-heading-level-1() {
   @include esds-heading-reset;
-  @include esds-text-color($type: 'primary');
   @include esds-responsive-font-size($type: 'heading-level-1');
 }
 
 @mixin esds-heading-level-2() {
   @include esds-heading-reset;
-  @include esds-text-color($type: 'primary');
   @include esds-responsive-font-size($type: 'heading-level-2');
 }
 
 @mixin esds-heading-level-3() {
   @include esds-heading-reset;
-  @include esds-text-color($type: 'primary');
   @include esds-responsive-font-size($type: 'heading-level-3');
 }
 
 @mixin esds-heading-level-4() {
   @include esds-heading-reset;
-  @include esds-text-color($type: 'primary');
   @include esds-responsive-font-size($type: 'heading-level-4');
 }
 
 @mixin esds-heading-eyebrow() {
   @include esds-heading-reset;
-  @include esds-text-color($type: 'secondary');
   @include esds-responsive-font-size($type: 'heading-eyebrow');
+  color: $esds-text-color-secondary-on-light;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
 @mixin esds-body-text-lead() {
   @include esds-typography-reset;
-  @include esds-text-color($type: 'primary');
   @include esds-responsive-font-size($type: 'heading-level-4');
   font-weight: $esds-font-weight-light;
   line-height: $esds-font-line-height-normal;
@@ -90,7 +85,6 @@
 
 @mixin esds-body-text-l() {
   @include esds-typography-reset;
-  @include esds-text-color($type: 'primary');
   @include esds-responsive-font-size($type: 'body-l');
   font-weight: $esds-font-weight-light;
   line-height: $esds-font-line-height-normal;
@@ -98,7 +92,6 @@
 
 @mixin esds-body-text-m() {
   @include esds-typography-reset;
-  @include esds-text-color($type: 'primary');
   @include esds-responsive-font-size($type: 'body-m');
   font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
@@ -106,7 +99,6 @@
 
 @mixin esds-body-text-s() {
   @include esds-typography-reset;
-  @include esds-text-color($type: 'secondary');
   @include esds-responsive-font-size($type: 'body-s');
   font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
