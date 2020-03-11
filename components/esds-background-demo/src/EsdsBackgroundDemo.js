@@ -1,3 +1,4 @@
+// TODO: Migrate this entire component to esds-doc repo
 import { html, LitElement } from 'lit-element';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import { Slotify } from '@eightshapes/slotify';
@@ -27,23 +28,9 @@ export class EsdsBackgroundDemo extends Slotify(LitElement) {
     this.text = 'Hello World';
   }
 
-  _getSlotableContent(slotName = 'default') {
-    let slotableContent;
-    if (slotName === 'default') {
-      // get all nodes outside s-root that aren't assigned to another slot
-      slotableContent = Array.from(this.childNodes).filter(
-        n => n.tagName && n.tagName.toLowerCase() !== 's-root' && n.getAttribute('slot') === null,
-      );
-    } else {
-      slotableContent = Array.from(this.querySelectorAll(`*[slot='${slotName}']`));
-    }
-
-    return slotableContent;
-  }
-
   render() {
     const backgrounds = ['white', 'light', 'dark', 'black'];
-    const slotableContent = this._getSlotableContent()
+    const slotableContent = this.getSlotableContent()
       .map(n => n.outerHTML)
       .join('');
 

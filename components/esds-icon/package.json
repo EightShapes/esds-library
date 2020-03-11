@@ -19,7 +19,7 @@
 				"watch:build-esm": "rollup --watch -c rollup.config.js -i src/EsdsIcon.js -o dist/EsdsIcon.js -f esm",
 				"watch:build-web-component": "rollup --watch -c rollup.config.js -i src/esds-icon-entry.js -o dist/esds-icon-web-component.js -f esm",
 				"watch:build-styles": "chokidar \"src/**/*.scss\" -c \"npm run build:styles\"",
-				"start:legacy": "npm-run-all build:legacy --parallel watch:build-legacy start:storybook",
+				"start:legacy": "npm-run-all build:legacy --parallel watch:build-legacy start:debug-environment",
 				"build:ie": "rollup -c rollup.config.ie.js",
 				"build:legacy": "npm-run-all build build:ie",
 				"watch:build-legacy": "npm-run-all --parallel watch:build watch:build-ie",

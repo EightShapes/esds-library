@@ -16,6 +16,11 @@
           "type": "string"
         },
         {
+          "name": "img-crop-type",
+          "description": "Image crop behavior",
+          "type": "'fill'|'contain'|'cover'|'none'|'scale-down'"
+        },
+        {
           "name": "img-src",
           "description": "Relative path to the image displayed on the card",
           "type": "string"
@@ -46,6 +51,12 @@
           "type": "string"
         },
         {
+          "name": "imgCropType",
+          "attribute": "img-crop-type",
+          "description": "Image crop behavior",
+          "type": "'fill'|'contain'|'cover'|'none'|'scale-down'"
+        },
+        {
           "name": "imgSrc",
           "attribute": "img-src",
           "description": "Relative path to the image displayed on the card",
@@ -63,6 +74,11 @@
           "description": "Title text displayed on the card",
           "type": "string",
           "default": "\"Card Title\""
+        },
+        {
+          "name": "imgObjectFit",
+          "type": "string",
+          "default": "\"cover\""
         }
       ],
       "slots": [
@@ -91,6 +107,11 @@
           "type": "string"
         },
         {
+          "name": "img-crop-type",
+          "description": "Image crop behavior",
+          "type": "'fill'|'contain'|'cover'|'none'|'scale-down'"
+        },
+        {
           "name": "img-src",
           "description": "Relative path to the image displayed on the card",
           "type": "string"
@@ -121,6 +142,12 @@
           "type": "string"
         },
         {
+          "name": "imgCropType",
+          "attribute": "img-crop-type",
+          "description": "Image crop behavior",
+          "type": "'fill'|'contain'|'cover'|'none'|'scale-down'"
+        },
+        {
           "name": "imgSrc",
           "attribute": "img-src",
           "description": "Relative path to the image displayed on the card",
@@ -138,6 +165,11 @@
           "description": "Title text displayed on the card",
           "type": "string",
           "default": "\"Card Title\""
+        },
+        {
+          "name": "imgObjectFit",
+          "type": "string",
+          "default": "\"cover\""
         }
       ],
       "slots": [

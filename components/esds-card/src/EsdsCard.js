@@ -25,6 +25,11 @@ export class EsdsCard extends Slotify(LitElement) {
        */
       href: { type: String },
       /*
+       * Image crop behavior
+       * @type {'fill'|'contain'|'cover'|'none'|'scale-down'}
+       */
+      imgCropType: { type: String, attribute: 'img-crop-type' },
+      /*
        * Relative path to the image displayed on the card
        * @type String
        */
@@ -46,47 +51,19 @@ export class EsdsCard extends Slotify(LitElement) {
     super();
     // Prop Defaults
     this.title = 'Card Title';
+    this.imgObjectFit = 'cover';
+
     if (customElements.get('esds-card-thumbnail') === undefined) {
       customElements.define('esds-card-thumbnail', EsdsThumbnail);
     }
   }
 
-  _getSlottedContent(slotName = 'default') {
-    let slot;
-    if (slotName === 'default') {
-      slot = Array.from(this.querySelectorAll('s-slot'))
-        .filter(n => n.getAttribute('name') === null)
-        .pop();
-    } else {
-      slot = this.querySelector(`s-slot[name='${slotName}']`);
-    }
-
-    if (!slot) return undefined; // Component hasn't rendered yet, no slot to query
-
-    const slotContent = slot.querySelector('s-assigned-wrapper');
-    if (slotContent.childNodes) {
-      return slotContent.childNodes;
-    }
-    return undefined;
-  }
-
-  _hasSlotableContent(slotName = 'default') {
-    let slotableContent;
-    if (slotName === 'default') {
-      // get all nodes outside s-root that aren't assigned to another slot
-      slotableContent = Array.from(this.childNodes).filter(
-        n => n.tagName.toLowerCase() !== 's-root' && n.getAttribute('slot') === null,
-      );
-    } else {
-      slotableContent = Array.from(this.querySelectorAll(`*[slot='${slotName}']`));
-    }
-
-    return slotableContent.length > 0;
-  }
-
   _renderCardImage() {
     return html`
-      <esds-card-thumbnail src="${ifDefined(this.imgSrc)}" object-fit="cover"></esds-card-thumbnail>
+      <esds-card-thumbnail
+        src="${ifDefined(this.imgSrc)}"
+        object-fit="${this.imgCropType}"
+      ></esds-card-thumbnail>
     `;
   }
 
@@ -99,7 +76,7 @@ export class EsdsCard extends Slotify(LitElement) {
   }
 
   _renderContent() {
-    return this._hasSlotableContent('content')
+    return this.hasSlotableContent('content')
       ? html`
           <div class="esds-card__content">
             <s-slot name="content">${this.content}</s-slot>
@@ -109,7 +86,7 @@ export class EsdsCard extends Slotify(LitElement) {
   }
 
   _renderActions() {
-    return this._hasSlotableContent('actions')
+    return this.hasSlotableContent('actions')
       ? html`
           <div class="esds-card__actions">
             <s-slot name="actions"></s-slot>
