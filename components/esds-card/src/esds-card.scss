@@ -68,14 +68,37 @@ esds-card {
 .esds-card__title {
   @include esds-heading-level-3;
   margin: $esds-space-stack-half-x;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .esds-card__metadata {
   @include esds-heading-eyebrow;
-  margin: $esds-space-stack-quarter-x;
+  margin: $esds-space-stack-half-x;
 }
 
 .esds-card__description {
   @include esds-text-color('primary');
   @include esds-body-text-m;
+  margin: $esds-space-stack-half-x;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.esds-card__content {
+  @include esds-typography-reset;
+  margin: $esds-space-stack-half-x;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.esds-card__actions {
+  @include esds-typography-reset;
+  margin-top: $esds-space-generic-1-x;
 }

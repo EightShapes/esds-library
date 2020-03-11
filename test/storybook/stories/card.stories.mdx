@@ -60,23 +60,25 @@ npm install @eightshapes/esds-card
   </Story>
 </Preview>
 
-## With Content Slot
+## Content Slot
 <Preview>
-  <Story name="With Content Slot">
+  <Story name="Content Slot">
     {`<esds-card
         style="${demoStyles}"
-        img-src="./images/card/rei.png"
-        title="Cedar"
-        metadata="Design System"
+        img-src="./images/card/usac.png"
+        title="USAC"
+        metadata="2017"
+        description="A system for the Universal Service Administrative Co."
       >
-        <p slot="content">slot content</p>
+        <p slot="content" style="line-height: 1.2; text-align: left; text-indent: 0; font-size: 16px; margin: 0 0 16px 0; text-shadow: none; text-transform: none; font-style: normal; letter-spacing: 0; font-weight: normal;">This is some <strong>content</strong> in the content slot.</p>
+        <p slot="content" style="line-height: 1.2; text-align: left; text-indent: 0; font-size: 16px; margin: 0 0 16px 0; text-shadow: none; text-transform: none; font-style: normal; letter-spacing: 0; font-weight: normal;">This is some <strong>content</strong> in the content slot.</p>
       </esds-card>`}
   </Story>
 </Preview>
 
-## With Button Action
+## Action Slot, Buttons
 <Preview>
-  <Story name="With Button Action">
+  <Story name="Action Slot, Buttons">
     {`<esds-card
         style="${demoStyles}"
         img-src="./images/card/usac.png"
@@ -90,9 +92,9 @@ npm install @eightshapes/esds-card
   </Story>
 </Preview>
 
-## With Link Action
+## Action Slot, Link
 <Preview>
-  <Story name="With Link Action">
+  <Story name="Action Slot, Link">
     {`<esds-card
         style="${demoStyles}"
         img-src="./images/card/morningstar.png"
@@ -105,9 +107,9 @@ npm install @eightshapes/esds-card
   </Story>
 </Preview>
 
-## With Icon Buttons
+## Action Slot, Icon Button
 <Preview>
-  <Story name="With Icon Buttons">
+  <Story name="Action Slot, Icon Button">
     {html`<esds-card
         style="${demoStyles}"
         img-src="./images/card/morningstar.png"
@@ -124,6 +126,25 @@ npm install @eightshapes/esds-card
         <button slot="actions" style="padding: 0; margin: 0; background: transparent; line-height: 1; text-indent: 0; font-size: 16px; border: 0; width: 21px;">
           <esds-icon use="${EsdsIconStar}"></esds-icon>
         </button>
+      </esds-card>`}
+  </Story>
+</Preview>
+
+## All Props and Slots
+<Preview>
+  <Story name="All Props and Slots">
+    {`<esds-card
+        style="${demoStyles}"
+        img-src="./images/card/rei.png"
+        title="Cedar"
+        metadata="Design System"
+      >
+        <div slot="content" class="storybook-slotholder">
+          <span>content</span>
+        </div>
+        <div slot="actions" class="storybook-slotholder">
+          <span>actions</span>
+        </div>
       </esds-card>`}
   </Story>
 </Preview>

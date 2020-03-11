@@ -9,10 +9,37 @@
 }
 
 .storybook-grid {
+  @include esds-box-sizing;
   display: flex;
   flex-wrap: wrap;
 
   > * {
     margin: 0 $esds-space-generic-1-x $esds-space-generic-1-x 0;
+  }
+}
+
+.storybook-slotholder {
+  @include esds-box-sizing;
+  @include esds-typography-reset($font-size: $esds-font-size-body-l-default);
+  align-items: center;
+  background: $esds-color-orange-93;
+  border: dashed 2px $esds-text-color-brand;
+  color: $esds-text-color-brand;
+  display: flex;
+  justify-content: center;
+  padding-top: $esds-space-generic-half-x;
+  position: relative;
+  width: 100%;
+
+  &::after {
+    content: 'SLOT';
+    font-size: $esds-font-size-body-s-default;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  > * {
+    display: block;
   }
 }
