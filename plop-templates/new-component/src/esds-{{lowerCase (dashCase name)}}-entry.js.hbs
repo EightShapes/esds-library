@@ -1,5 +1,3 @@
 import { Esds{{ pascalCase name }} } from './Esds{{ pascalCase name }}.js';
 
-if (window.customElements.get('esds-{{ lowerCase (dashCase name) }}') === undefined) {
-  window.customElements.define('esds-{{ lowerCase (dashCase name) }}', Esds{{ pascalCase name }});
-}
+Esds{{ pascalCase name }}.define();

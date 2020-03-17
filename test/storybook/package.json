@@ -18,6 +18,7 @@
     "@eightshapes/esds-card": "^0.1.0",
     "@eightshapes/esds-icon": "^0.2.0",
     "@eightshapes/esds-icons": "^0.2.0",
+    "@eightshapes/esds-tokens": "^0.2.0",
     "@eightshapes/esds-visual-style": "^0.1.0",
     "@storybook/addon-a11y": "^5.3.14",
     "@storybook/addon-docs": "^5.3.14",

@@ -13,12 +13,22 @@
     <title>ESDS Card</title>
   </head>
   <body>
+    <script type="module">
+      import { EsdsCard } from '../../dist/EsdsCard.js';
+      EsdsCard.define('unicorn');
+    </script>
     <h1>ESDS Card</h1>
     <p>
       To view this page in IE11, run<br/>
       <code>npm run start:legacy</code>
     </p>
     <h2>Default</h2>
-    <esds-card></esds-card>
+    <esds-card>
+      <h4 slot="content">Slots still work</h4>
+    </esds-card>
+
+    <unicorn-card title="Unicorn Card">
+      <button slot="actions">Test Button</button>
+    </unicorn-card>
   </body>
 </html>

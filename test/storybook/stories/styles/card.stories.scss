@@ -15,18 +15,18 @@
 .esds-container--dark .storybook-esds-card-state--hover,
 .esds-container--black .storybook-esds-card-state--hover,
 .storybook-esds-card-state--hover {
-  .esds-card {
+  .esds-card__root {
     @include esds-card-hover;
   }
 }
 
-.storybook-esds-card-state--focus .esds-card {
+.storybook-esds-card-state--focus .esds-card__root {
   @include esds-card-focus;
 }
 
 .esds-container--dark .storybook-esds-card-state--focus,
 .esds-container--black .storybook-esds-card-state--focus {
-  .esds-card {
+  .esds-card__root {
     @include esds-card-focus('on-dark');
   }
 }
@@ -35,7 +35,7 @@
 .esds-container--dark .storybook-esds-card-state--active,
 .esds-container--black .storybook-esds-card-state--active,
 .storybook-esds-card-state--active {
-  .esds-card {
+  .esds-card__root {
     @include esds-card-active;
   }
 }

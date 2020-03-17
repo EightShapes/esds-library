@@ -1,5 +1,6 @@
 @use '../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
 
+$esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
 $esds-card-min-width: 300px;
 $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 
@@ -23,7 +24,7 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   box-shadow: none;
 }
 
-esds-card {
+#{$esds-custom-element-namespace}-card {
   @include esds-typography-reset;
   @include esds-box-sizing;
   display: inline-flex;
@@ -36,7 +37,8 @@ esds-card {
   }
 }
 
-.esds-card {
+// .esds-card__root is necessary as the root selector for IE11/ShadyCSS compatibility - TODO: document why
+.#{$esds-custom-element-namespace}-card__root {
   @include esds-typography-reset;
   @include esds-box-sizing;
   background-color: $esds-background-color-light;
@@ -52,76 +54,76 @@ esds-card {
   .esds-container--black & {
     background-color: $esds-background-color-white;
   }
-}
 
-.esds-card--link {
-  cursor: pointer;
-  text-decoration: none;
+  &.esds-card--link {
+    cursor: pointer;
+    text-decoration: none;
 
-  &:hover,
-  .esds-container--light &:hover,
-  .esds-container--dark &:hover,
-  .esds-container--black &:hover {
-    @include esds-card-hover;
+    &:hover,
+    .esds-container--light &:hover,
+    .esds-container--dark &:hover,
+    .esds-container--black &:hover {
+      @include esds-card-hover;
+    }
+
+    &:focus {
+      @include esds-card-focus;
+    }
+
+    .esds-container--dark &:focus,
+    .esds-container--black &:focus {
+      @include esds-card-focus('on-dark');
+    }
+
+    &:active,
+    .esds-container--light &:active,
+    .esds-container--dark &:active,
+    .esds-container--black &:active {
+      @include esds-card-active;
+    }
   }
 
-  &:focus {
-    @include esds-card-focus;
+  .esds-card__body {
+    padding: $esds-space-inset-1-and-half-x;
   }
 
-  .esds-container--dark &:focus,
-  .esds-container--black &:focus {
-    @include esds-card-focus('on-dark');
+  .esds-card__title {
+    @include esds-heading-level-3;
+    color: $esds-text-color-primary-on-light;
+    margin: $esds-space-stack-half-x;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
-  &:active,
-  .esds-container--light &:active,
-  .esds-container--dark &:active,
-  .esds-container--black &:active {
-    @include esds-card-active;
+  .esds-card__metadata {
+    @include esds-heading-eyebrow;
+    color: $esds-text-color-secondary-on-light;
+    margin: $esds-space-stack-half-x;
   }
-}
 
-.esds-card__body {
-  padding: $esds-space-inset-1-and-half-x;
-}
+  .esds-card__description {
+    @include esds-body-text-m;
+    color: $esds-text-color-primary-on-light;
+    margin: $esds-space-stack-half-x;
 
-.esds-card__title {
-  @include esds-heading-level-3;
-  color: $esds-text-color-primary-on-light;
-  margin: $esds-space-stack-half-x;
-
-  &:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
-}
 
-.esds-card__metadata {
-  @include esds-heading-eyebrow;
-  color: $esds-text-color-secondary-on-light;
-  margin: $esds-space-stack-half-x;
-}
+  .esds-card__content {
+    @include esds-typography-reset;
+    margin: $esds-space-stack-half-x;
 
-.esds-card__description {
-  @include esds-body-text-m;
-  color: $esds-text-color-primary-on-light;
-  margin: $esds-space-stack-half-x;
-
-  &:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
-}
 
-.esds-card__content {
-  @include esds-typography-reset;
-  margin: $esds-space-stack-half-x;
-
-  &:last-child {
-    margin-bottom: 0;
+  .esds-card__actions {
+    @include esds-typography-reset;
+    margin-top: $esds-space-generic-1-x;
   }
-}
-
-.esds-card__actions {
-  @include esds-typography-reset;
-  margin-top: $esds-space-generic-1-x;
 }

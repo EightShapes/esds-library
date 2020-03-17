@@ -2,6 +2,8 @@ import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import { html } from 'lit-html';
 
 import '@eightshapes/esds-card'; // The Web Component Import
+import { EsdsCard } from '@eightshapes/esds-card/dist/EsdsCard.js'; // The Custom Element Class
+EsdsCard.define('esds-v10'); // Define a <esds-v10-card> component
 import '@eightshapes/esds-icon'; // The Web Component Import
 import '@eightshapes/esds-background-demo'; // The Web Component Import
 import { EsdsIconHelp, EsdsIconPencil, EsdsIconStar } from '@eightshapes/esds-icons';
@@ -252,6 +254,18 @@ npm install @eightshapes/esds-card
                   <span>actions</span>
                 </div>
               </esds-card>`}
+  </Story>
+</Preview>
+
+## Scoped
+<Preview>
+  <Story name="Scoped">
+    {html`<div class="storybook-grid">
+        <div>
+          <span class="storybook-annotation">&lt;esds-v10-card>&lt;/esds-v10-card></span>
+          <esds-v10-card></esds-v10-card>
+        </div>
+      </div>`}
   </Story>
 </Preview>
 

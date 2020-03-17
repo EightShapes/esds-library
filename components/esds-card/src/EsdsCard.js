@@ -2,7 +2,8 @@ import { html, LitElement } from 'lit-element';
 import { ifDefined } from 'lit-html/directives/if-defined';
 import { EsdsThumbnail } from '@eightshapes/esds-thumbnail/dist/EsdsThumbnail.js';
 import { Slotify } from '@eightshapes/slotify';
-import styles from './esds-card-styles.js';
+import { Scopify } from '@eightshapes/scopify';
+import { namespacedStyles } from './esds-card-styles.js';
 
 /**
  * @element esds-card
@@ -11,7 +12,11 @@ import styles from './esds-card-styles.js';
  * @slot actions - Accepts links or buttons as actions at the bottom of the card
  */
 
-export class EsdsCard extends Slotify(LitElement) {
+export class EsdsCard extends Slotify(Scopify(LitElement, 'esds')) {
+  static get customElementName() {
+    return 'card';
+  }
+
   static get properties() {
     return {
       /*
@@ -113,15 +118,21 @@ export class EsdsCard extends Slotify(LitElement) {
   render() {
     return html`
       <style>
-        ${styles}
+        ${namespacedStyles(this.constructor.customElementNamespace)}
       </style>
 
       ${this.href
         ? html`
-            <a class="esds-card esds-card--link" href="${this.href}">${this._renderCardBody()}</a>
+            <a
+              class="${this.constructor.customElementNamespace}-card__root esds-card--link"
+              href="${this.href}"
+              >${this._renderCardBody()}</a
+            >
           `
         : html`
-            <div class="esds-card">${this._renderCardBody()}</div>
+            <div class="${this.constructor.customElementNamespace}-card__root">
+              ${this._renderCardBody()}
+            </div>
           `}
     `;
   }

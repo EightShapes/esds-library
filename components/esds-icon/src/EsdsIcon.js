@@ -1,6 +1,7 @@
 import { svg, LitElement } from 'lit-element';
 import { ifDefined } from 'lit-html/directives/if-defined';
 import { EsdsIconStar } from '@eightshapes/esds-icons';
+import { Scopify } from '@eightshapes/scopify';
 
 /* unsafeSVG directive poached from upcoming 1.2.0 lit-html release */
 /**
@@ -18,7 +19,7 @@ import { EsdsIconStar } from '@eightshapes/esds-icons';
  */
 import { isPrimitive } from 'lit-html/lib/parts';
 import { directive, NodePart, reparentNodes } from 'lit-html/lit-html';
-import styles from './esds-icon-styles.js';
+import { namespacedStyles } from './esds-icon-styles.js';
 // For each part, remember the value that was last rendered to the part by the
 // unsafeSVG directive, and the DocumentFragment that was last set as a value.
 // The DocumentFragment is used as a unique key to check if the last value
@@ -61,7 +62,11 @@ export const unsafeSVG = directive(value => part => {
  *
  */
 
-export class EsdsIcon extends LitElement {
+export class EsdsIcon extends Scopify(LitElement, 'esds') {
+  static get customElementName() {
+    return 'icon';
+  }
+
   static get properties() {
     return {
       /*
@@ -131,11 +136,11 @@ export class EsdsIcon extends LitElement {
 
     return svg`
       <style>
-        ${styles}
+        ${namespacedStyles(this.constructor.customElementNamespace)}
       </style>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="esds-icon esds-icon--${this.size}"
+        class="${this.constructor.customElementNamespace}-icon esds-icon--${this.size}"
         aria-labelledby="${ifDefined(titleId)}"
         aria-hidden="${this.title ? 'false' : 'true'}"
         role="${this.title ? 'img' : 'presentation'}"
