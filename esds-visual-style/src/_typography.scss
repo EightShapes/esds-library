@@ -112,3 +112,44 @@
     text-decoration: underline;
   }
 }
+
+@mixin esds-text-crop(
+  $line-height: $esds-font-line-height-normal,
+  $top-adjustment: 0,
+  $bottom-adjustment: 0
+) {
+  // Configured in Step 1
+  $top-crop: 18;
+  $bottom-crop: 12;
+  $crop-font-size: 61;
+  $crop-line-height: 1.2;
+
+  // Apply values to calculate em-based margins that work with any font size
+  $dynamic-top-crop: max(
+      ($top-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)),
+      0
+    ) / $crop-font-size;
+  $dynamic-bottom-crop: max(
+      ($bottom-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)),
+      0
+    ) / $crop-font-size;
+
+  // Mixin output
+  line-height: $line-height;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+  }
+
+  &::before {
+    margin-bottom: calc(-#{$dynamic-top-crop}em + #{$top-adjustment}px);
+  }
+
+  &::after {
+    margin-top: calc(-#{$dynamic-bottom-crop}em + #{$bottom-adjustment}px);
+  }
+}

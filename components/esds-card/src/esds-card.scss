@@ -89,8 +89,9 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 
   .esds-card__title {
     @include esds-heading-level-3;
+    @include esds-text-crop($line-height: $esds-font-line-height-headings);
     color: $esds-text-color-primary-on-light;
-    margin: $esds-space-stack-half-x;
+    margin: $esds-space-stack-1-x;
 
     &:last-child {
       margin-bottom: 0;
@@ -99,14 +100,16 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 
   .esds-card__metadata {
     @include esds-heading-eyebrow;
+    @include esds-text-crop($line-height: $esds-font-line-height-headings);
     color: $esds-text-color-secondary-on-light;
     margin: $esds-space-stack-half-x;
   }
 
   .esds-card__description {
     @include esds-body-text-m;
+    @include esds-text-crop;
     color: $esds-text-color-primary-on-light;
-    margin: $esds-space-stack-half-x;
+    margin: $esds-space-stack-1-x;
 
     &:last-child {
       margin-bottom: 0;
