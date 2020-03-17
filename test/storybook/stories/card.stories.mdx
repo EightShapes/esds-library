@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import { html } from 'lit-html';
 
@@ -26,6 +26,9 @@ const cropTypes = ['cover','fill','contain','none','scale-down'];
 ```bash
 npm install @eightshapes/esds-card
 ```
+
+<Props of='esds-card' />
+
 ## Default
 <Preview>
   <Story name="Default">

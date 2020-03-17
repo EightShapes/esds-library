@@ -7,7 +7,7 @@ import {
 } from '@storybook/web-components';
 
 import { withA11y } from '@storybook/addon-a11y';
-import customElements from '../custom-elements.json';
+import customElements from '@eightshapes/esds-card/documentation/esds-card-docs.json'; // TODO: Aggregate all component prop docs
 import '../stories/styles/annotation-styles.scss';
 import '../stories/styles/hostile-styles.scss';
 

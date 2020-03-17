@@ -10,6 +10,13 @@
           "attribute": "header",
           "description": "Shown at the top of the card",
           "default": "Your Message"
+        },
+        {
+          "name": "sumfin else",
+          "type": "String",
+          "attribute": "header",
+          "description": "Shown at the top of the card",
+          "default": "Your Message"
         }
       ],
       "events": [],
