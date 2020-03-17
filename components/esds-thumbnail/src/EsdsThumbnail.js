@@ -1,14 +1,19 @@
 import { html, LitElement } from 'lit-element';
+import { Scopify } from '@eightshapes/scopify';
 import { EsdsIcon } from '@eightshapes/esds-icon/dist/EsdsIcon.js';
 import { EsdsIconCalendarNumbered } from '@eightshapes/esds-icons';
-import styles from './esds-thumbnail-styles.js';
+import { namespacedStyles } from './esds-thumbnail-styles.js';
 
 /**
  * @element esds-thumbnail
  *
  */
 
-export class EsdsThumbnail extends LitElement {
+export class EsdsThumbnail extends Scopify(LitElement, 'esds') {
+  static get customElementName() {
+    return 'thumbnail';
+  }
+
   static get properties() {
     return {
       /*
@@ -27,9 +32,7 @@ export class EsdsThumbnail extends LitElement {
   constructor() {
     super();
     this.objectFit = 'cover';
-    if (customElements.get('esds-thumbnail-icon') === undefined) {
-      customElements.define('esds-thumbnail-icon', EsdsIcon);
-    }
+    EsdsIcon.define(`esds-thumbnail`); // Will create <esds-thumbnail-icon> custom element tag
   }
 
   /*
@@ -42,9 +45,12 @@ export class EsdsThumbnail extends LitElement {
   render() {
     return html`
       <style>
-        ${styles}
+        ${namespacedStyles(this.constructor.customElementNamespace)}
       </style>
-      <div class="esds-thumbnail esds-thumbnail--${this.objectFit}">
+      <div
+        class="${this.constructor.customElementNamespace}-thumbnail esds-thumbnail--${this
+          .objectFit}"
+      >
         <div class="esds-thumbnail__inner-wrap">
           ${this.src
             ? html`

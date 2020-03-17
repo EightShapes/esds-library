@@ -32,38 +32,6 @@
           "default": "\"cover\""
         }
       ]
-    },
-    {
-      "name": "esds-thumbnail",
-      "path": "./../src/esds-thumbnail-entry.js",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "Path to the thumbnail's image",
-          "type": "string"
-        },
-        {
-          "name": "object-fit",
-          "description": "Image crop behavior",
-          "type": "'fill'|'contain'|'cover'|'none'|'scale-down'",
-          "default": "\"cover\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "src",
-          "attribute": "src",
-          "description": "Path to the thumbnail's image",
-          "type": "string"
-        },
-        {
-          "name": "objectFit",
-          "attribute": "object-fit",
-          "description": "Image crop behavior",
-          "type": "'fill'|'contain'|'cover'|'none'|'scale-down'",
-          "default": "\"cover\""
-        }
-      ]
     }
   ]
 }

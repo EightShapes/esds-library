@@ -5,6 +5,8 @@
   @include esds-hostile-css-global-styles;
 }
 
-@include esds-hostile-typographic-styles;
-@include esds-hostile-list-styles;
-@include esds-hostile-table-styles;
+iframe .sb-show-main {
+  @include esds-hostile-typographic-styles;
+  @include esds-hostile-list-styles;
+  @include esds-hostile-table-styles;
+}

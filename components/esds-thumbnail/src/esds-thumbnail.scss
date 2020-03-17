@@ -1,6 +1,7 @@
 @use '../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
+$esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
 
-.esds-thumbnail {
+.#{$esds-custom-element-namespace}-thumbnail {
   @include esds-typography-reset;
   @include esds-box-sizing;
   align-items: center;
@@ -10,51 +11,51 @@
   padding-bottom: 54.8%; // aspect ratio for image crop
   position: relative;
   width: 100%;
-}
 
-.esds-thumbnail__inner-wrap {
-  align-items: center;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
+  .esds-thumbnail__inner-wrap {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 
-.esds-thumbnail__image {
-  border: 0;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 50%; // centered crop by default
-  width: 100%;
+  .esds-thumbnail__image {
+    border: 0;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%; // centered crop by default
+    width: 100%;
+  }
 
-  .esds-thumbnail--fill & {
+  &.esds-thumbnail--fill .esds-thumbnail__image {
     object-fit: fill;
   }
 
-  .esds-thumbnail--contain & {
+  &.esds-thumbnail--contain .esds-thumbnail__image {
     object-fit: contain;
   }
 
-  .esds-thumbnail--none & {
+  &.esds-thumbnail--none .esds-thumbnail__image {
     object-fit: none;
   }
 
-  .esds-thumbnail--scale-down & {
+  &.esds-thumbnail--scale-down .esds-thumbnail__image {
     object-fit: scale-down;
   }
-}
 
-.esds-thumbnail__placeholder-icon {
-  @include esds-typography-reset;
-}
+  .esds-thumbnail__placeholder-icon {
+    @include esds-typography-reset;
+  }
 
-.esds-thumbnail__placeholder-icon .esds-icon {
-  color: $esds-color-black;
-  height: 64px;
-  opacity: 0.6;
-  transform: rotate(-7deg);
-  width: 64px;
+  .esds-thumbnail-icon {
+    color: $esds-color-black;
+    height: 64px;
+    opacity: 0.6;
+    transform: rotate(-7deg);
+    width: 64px;
+  }
 }
