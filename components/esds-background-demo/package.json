@@ -44,7 +44,7 @@
 				"@babel/core": "^7.5.5",
 				"@babel/preset-env": "^7.5.5",
 				"@eightshapes/esds-visual-style": "^0.1.0",
-				"@eightshapes/slotify": "^0.5.2",
+				"@eightshapes/slotify": "^0.5.3",
 				"@open-wc/testing": "^2.0.0",
 				"@open-wc/testing-karma": "^3.0.0",
 				"@open-wc/testing-karma-bs": "^1.0.0",

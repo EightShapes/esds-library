@@ -1,7 +1,7 @@
 @use '../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
 $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
 
-.#{$esds-custom-element-namespace}-thumbnail {
+.#{$esds-custom-element-namespace}-thumbnail__root {
   @include esds-typography-reset;
   @include esds-box-sizing;
   align-items: center;

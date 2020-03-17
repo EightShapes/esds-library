@@ -48,7 +48,7 @@ export class EsdsThumbnail extends Scopify(LitElement, 'esds') {
         ${namespacedStyles(this.constructor.customElementNamespace)}
       </style>
       <div
-        class="${this.constructor.customElementNamespace}-thumbnail esds-thumbnail--${this
+        class="${this.constructor.customElementNamespace}-thumbnail__root esds-thumbnail--${this
           .objectFit}"
       >
         <div class="esds-thumbnail__inner-wrap">
