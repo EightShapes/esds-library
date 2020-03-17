@@ -98,17 +98,31 @@ export class EsdsCard extends Slotify(Scopify(LitElement, 'esds')) {
       : '';
   }
 
+  _renderTitle() {
+    return html`
+      <h3 class="esds-card__title">
+        ${this.href
+          ? html`
+              <a class="esds-card__title-link" href="${this.href}">${this.title}</a>
+            `
+          : this.title}
+      </h3>
+    `;
+  }
+
   _renderCardBody() {
     return html`
-      ${this._renderCardImage()}
       <div class="esds-card__body">
         ${this.metadata
           ? html`
               <h4 class="esds-card__metadata">${this.metadata}</h4>
             `
           : ''}
-        <h3 class="esds-card__title">${this.title}</h3>
-        ${this._renderDescription()} ${this._renderContent()} ${this._renderActions()}
+        ${this._renderTitle()} ${this._renderDescription()} ${this._renderContent()}
+        ${this._renderActions()}
+      </div>
+      <div class="esds-card__image">
+        ${this._renderCardImage()}
       </div>
     `;
   }
@@ -118,20 +132,13 @@ export class EsdsCard extends Slotify(Scopify(LitElement, 'esds')) {
       <style>
         ${namespacedStyles(this.constructor.customElementNamespace)}
       </style>
-
-      ${this.href
-        ? html`
-            <a
-              class="${this.constructor.customElementNamespace}-card__root esds-card--link"
-              href="${this.href}"
-              >${this._renderCardBody()}</a
-            >
-          `
-        : html`
-            <div class="${this.constructor.customElementNamespace}-card__root">
-              ${this._renderCardBody()}
-            </div>
-          `}
+      <div
+        class="${this.constructor.customElementNamespace}-card__root ${this.href
+          ? 'esds-card--link'
+          : ''}"
+      >
+        ${this._renderCardBody()}
+      </div>
     `;
   }
 }

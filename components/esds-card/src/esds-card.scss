@@ -57,6 +57,7 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 
   &.esds-card--link {
     cursor: pointer;
+    position: relative;
     text-decoration: none;
 
     &:hover,
@@ -66,12 +67,16 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
       @include esds-card-hover;
     }
 
-    &:focus {
+    &:focus-within {
       @include esds-card-focus;
     }
 
-    .esds-container--dark &:focus,
-    .esds-container--black &:focus {
+    &:focus-within .esds-card__title-link:focus {
+      text-decoration: none;
+    }
+
+    .esds-container--dark &:focus-within,
+    .esds-container--black &:focus-within {
       @include esds-card-focus('on-dark');
     }
 
@@ -87,6 +92,10 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     padding: $esds-space-inset-1-and-half-x;
   }
 
+  .esds-card__image {
+    order: -1;
+  }
+
   .esds-card__title {
     @include esds-heading-level-3;
     @include esds-text-crop($line-height: $esds-font-line-height-headings);
@@ -95,6 +104,27 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  .esds-card__title-link {
+    @include esds-heading-level-3;
+    color: $esds-text-color-primary-on-light;
+    text-decoration: none;
+
+    &::after {
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    // This focus style will be overridden in browsers that support :focus-within
+    &:focus {
+      outline: none;
+      text-decoration: underline;
     }
   }
 
@@ -128,5 +158,6 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   .esds-card__actions {
     @include esds-typography-reset;
     margin-top: $esds-space-generic-1-x;
+    position: relative; // Allows actions to be available even when the entire card is a link
   }
 }
