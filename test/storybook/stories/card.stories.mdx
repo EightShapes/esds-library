@@ -1,4 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import { html } from 'lit-html';
 
 import '@eightshapes/esds-card'; // The Web Component Import
@@ -16,6 +17,7 @@ const cropTypes = ['cover','fill','contain','none','scale-down'];
 <Meta
   title="Card"
   component='esds-card'
+  decorators={[withKnobs({ escapeHTML: false })]}
 />
 
 # Card
@@ -24,6 +26,12 @@ const cropTypes = ['cover','fill','contain','none','scale-down'];
 ```bash
 npm install @eightshapes/esds-card
 ```
+## Default
+<Preview>
+  <Story name="Default">
+  {`<esds-card style="${demoStyles}"></esds-card>`}
+</Story>
+</Preview>
 
 ## Component Anatomy
 <Preview>
@@ -41,13 +49,6 @@ npm install @eightshapes/esds-card
           <span>actions</span>
         </div>
       </esds-card>`}
-  </Story>
-</Preview>
-
-## Default
-<Preview>
-  <Story name="Default">
-    {`<esds-card style="${demoStyles}"></esds-card>`}
   </Story>
 </Preview>
 
@@ -254,6 +255,27 @@ npm install @eightshapes/esds-card
                   <span>actions</span>
                 </div>
               </esds-card>`}
+  </Story>
+</Preview>
+
+## Knobs
+<Preview>
+  <Story name="Knobs">
+    {`
+    <esds-card
+        style="${demoStyles}"
+        description="${text('Description', 'Lorem ipsum dolor sit amet.')}"
+        img-src="${select('Image', {Dollar: './images/card/dollar-portrait.jpg', Medium: './images/card/medium.png', Morningstar: './images/card/morningstar.png', 'No Image': '', REI: './images/card/rei.png', 'USAC': './images/card/usac.png'}, './images/card/dollar-portrait.jpg')}"
+        img-crop-type="${select('Image Crop', {Contain: 'contain', Cover: 'cover', Fill: 'fill', None: 'none', 'Scale Down': 'scale-down'}, 'cover')}"
+        metadata="${text('Metadata', '')}"
+        title="${text('Title', 'Card Title')}"
+    >${ boolean('Actions Slot', false) ?
+        `<div slot="actions" class="storybook-slotholder">
+          <span>actions</span>
+        </div>`: ''}${ boolean('Content Slot', false) ?
+        `<div slot="content" class="storybook-slotholder">
+          <span>content</span>
+        </div>`: ''}</esds-card>`}
   </Story>
 </Preview>
 

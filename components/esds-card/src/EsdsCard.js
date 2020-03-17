@@ -58,9 +58,7 @@ export class EsdsCard extends Slotify(Scopify(LitElement, 'esds')) {
     this.title = 'Card Title';
     this.imgObjectFit = 'cover';
 
-    if (customElements.get('esds-card-thumbnail') === undefined) {
-      customElements.define('esds-card-thumbnail', EsdsThumbnail);
-    }
+    EsdsThumbnail.define('esds-card'); // Defines <esds-card-thumbnail>
   }
 
   _renderCardImage() {
