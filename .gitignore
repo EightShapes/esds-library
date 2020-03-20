@@ -10,3 +10,5 @@ node_modules
 css/*.css.map
 legacy
 dist
+test/storybook/storybook-static
+lerna-debug.log

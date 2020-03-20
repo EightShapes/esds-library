@@ -1,10 +1,10 @@
 {
-		"name": "@eightshapes/esds-icon",
-		"version": "0.2.0",
+		"name": "@eightshapes/esds-{{ lowerCase (dashCase name) }}",
+		"version": "0.1.0",
 		"description": "",
-		"esnext": "dist/EsdsIcon.js",
-		"main": "dist/esds-icon-web-component.js",
-		"module": "dist/esds-icon-legacy.js",
+		"esnext": "dist/Esds{{ pascalCase name }}.js",
+		"main": "dist/esds-{{ lowerCase (dashCase name) }}-web-component.js",
+		"module": "dist/esds-{{ lowerCase (dashCase name) }}-legacy.js",
 		"scripts": {
 				"start": "npm-run-all build --parallel watch:build start:storybook",
 				"start:storybook": "npm run --prefix ../../test/storybook start",
@@ -12,19 +12,19 @@
 				"start:browsersync": "browser-sync start --watch --config browser-sync-config.js --ignore 'src/**/*'",
 				"clean:dist": "npx trash dist/**/*",
 				"build": "npm-run-all clean:dist build:styles build:esm build:web-component --parallel build:jsdoc",
-				"build:web-component": "rollup -c rollup.config.js -i src/esds-icon-entry.js -o dist/esds-icon-web-component.js -f esm",
-				"build:esm": "rollup -c rollup.config.js -i src/EsdsIcon.js -o dist/EsdsIcon.js -f esm",
+				"build:web-component": "rollup -c rollup.config.js -i src/esds-{{ lowerCase (dashCase name) }}-entry.js -o dist/esds-{{ lowerCase (dashCase name) }}-web-component.js -f esm",
+				"build:esm": "rollup -c rollup.config.js -i src/Esds{{ pascalCase name }}.js -o dist/Esds{{ pascalCase name }}.js -f esm",
 				"build:styles": "node scripts/scss-to-lit.js",
 				"watch:build": "npm-run-all --parallel watch:build-esm watch:build-web-component watch:build-styles watch:build-jsdoc",
-				"watch:build-esm": "rollup --watch -c rollup.config.js -i src/EsdsIcon.js -o dist/EsdsIcon.js -f esm",
-				"watch:build-web-component": "rollup --watch -c rollup.config.js -i src/esds-icon-entry.js -o dist/esds-icon-web-component.js -f esm",
+				"watch:build-esm": "rollup --watch -c rollup.config.js -i src/Esds{{ pascalCase name }}.js -o dist/Esds{{ pascalCase name }}.js -f esm",
+				"watch:build-web-component": "rollup --watch -c rollup.config.js -i src/esds-{{ lowerCase (dashCase name) }}-entry.js -o dist/esds-{{ lowerCase (dashCase name) }}-web-component.js -f esm",
 				"watch:build-styles": "chokidar \"src/**/*.scss\" -c \"npm run build:styles\"",
 				"start:legacy": "npm-run-all build:legacy --parallel watch:build-legacy start:storybook",
 				"build:ie": "rollup -c rollup.config.ie.js",
 				"build:legacy": "npm-run-all build build:ie",
 				"watch:build-legacy": "npm-run-all --parallel watch:build watch:build-ie",
 				"watch:build-ie": "rollup --watch -c rollup.config.ie.js",
-				"build:jsdoc": "npx web-component-analyzer src --format json --outFile documentation/esds-icon-docs.json && npx web-component-analyzer src --format markdown --outFile documentation/esds-icon-docs.md",
+				"build:jsdoc": "npx web-component-analyzer src --format json --outFile documentation/esds-{{ lowerCase (dashCase name) }}-docs.json && npx web-component-analyzer src --format markdown --outFile documentation/esds-{{ lowerCase (dashCase name) }}-docs.md",
 				"watch:build-jsdoc": "chokidar \"src/**/*.js\" -c \"npm run build:jsdoc\"",
 				"prepack": "npm run build:legacy",
 				"prepare": "npm run build:legacy",
@@ -39,7 +39,6 @@
 		"devDependencies": {
 				"@babel/core": "^7.5.5",
 				"@babel/preset-env": "^7.5.5",
-				"@eightshapes/esds-icons": "^0.2.0",
 				"@eightshapes/esds-tokens": "^0.2.0",
 				"@open-wc/testing": "^2.0.0",
 				"@open-wc/testing-karma": "^3.0.0",
@@ -59,7 +58,7 @@
 		},
 		"dependencies": {
 				"lit-element": "^2.2.1",
-				"lit-html": "https://github.com/kevinmpowell/lit-html.git",
+				"lit-html": "https://github.com/Polymer/lit-html.git",
 				"regenerator-runtime": "^0.13.3"
 		}
 }
