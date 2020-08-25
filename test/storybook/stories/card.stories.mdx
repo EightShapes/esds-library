@@ -12,31 +12,28 @@ import './styles/card.stories.scss'; // Demo styles to show component states
 const storybookCardWidth = 300;
 const demoStyles = `width: ${storybookCardWidth}px;`;
 const cardLinkStates = ['default', 'hover', 'focus', 'active'];
-const cropTypes = ['cover','fill','contain','none','scale-down'];
+const cropTypes = ['cover', 'fill', 'contain', 'none', 'scale-down'];
 
-<Meta
-  title="Card"
-  component='esds-card'
-  decorators={[withKnobs({ escapeHTML: false })]}
-/>
+<Meta title="Card" component="esds-card" decorators={[withKnobs({ escapeHTML: false })]} />
 
 # Card
+
 ## Installation
 
 ```bash
 npm install @eightshapes/esds-card
 ```
 
-<Props of='esds-card' />
+<Props of="esds-card" />
 
 ## Default
+
 <Preview>
-  <Story name="Default">
-  {`<esds-card style="${demoStyles}"></esds-card>`}
-</Story>
+  <Story name="Default">{`<esds-card style="${demoStyles}"></esds-card>`}</Story>
 </Preview>
 
 ## Component Anatomy
+
 <Preview>
   <Story name="Component Anatomy">
     {`<esds-card
@@ -57,6 +54,7 @@ npm install @eightshapes/esds-card
 </Preview>
 
 ## With Image
+
 <Preview>
   <Story name="With Image">
     {`<esds-card style="${demoStyles}" img-src="./images/card/color.png"></esds-card>`}
@@ -64,6 +62,7 @@ npm install @eightshapes/esds-card
 </Preview>
 
 ## With Metadata
+
 <Preview>
   <Story name="With Metadata">
     {`<esds-card
@@ -76,6 +75,7 @@ npm install @eightshapes/esds-card
 </Preview>
 
 ## With Description
+
 <Preview>
   <Story name="With Description">
     {`<esds-card
@@ -89,6 +89,7 @@ npm install @eightshapes/esds-card
 </Preview>
 
 ## Content Slot
+
 <Preview>
   <Story name="Content Slot">
     {`<esds-card
@@ -105,6 +106,7 @@ npm install @eightshapes/esds-card
 </Preview>
 
 ## Action Slot, Buttons
+
 <Preview>
   <Story name="Action Slot, Buttons">
     {`<esds-card
@@ -121,6 +123,7 @@ npm install @eightshapes/esds-card
 </Preview>
 
 ## Action Slot, Link
+
 <Preview>
   <Story name="Action Slot, Link">
     {`<esds-card
@@ -136,29 +139,42 @@ npm install @eightshapes/esds-card
 </Preview>
 
 ## Action Slot, Icon Button
+
 <Preview>
   <Story name="Action Slot, Icon Button">
-    {html`<esds-card
+    {html`
+      <esds-card
         style="${demoStyles}"
         img-src="./images/card/morningstar.png"
         title="Morningstar"
         metadata="Design System"
         description="Style, UI components and charts for digital products."
       >
-        <button slot="actions" style="padding: 0; margin: 0; background: transparent; line-height: 1; text-indent: 0; font-size: 16px; border: 0; width: 21px;">
+        <button
+          slot="actions"
+          style="padding: 0; margin: 0; background: transparent; line-height: 1; text-indent: 0; font-size: 16px; border: 0; width: 21px;"
+        >
           <esds-icon use="${EsdsIconHelp}"></esds-icon>
         </button>
-        <button slot="actions" style="padding: 0; margin: 0; background: transparent; line-height: 1; text-indent: 0; font-size: 16px; border: 0; width: 21px;">
+        <button
+          slot="actions"
+          style="padding: 0; margin: 0; background: transparent; line-height: 1; text-indent: 0; font-size: 16px; border: 0; width: 21px;"
+        >
           <esds-icon use="${EsdsIconPencil}"></esds-icon>
         </button>
-        <button slot="actions" style="padding: 0; margin: 0; background: transparent; line-height: 1; text-indent: 0; font-size: 16px; border: 0; width: 21px;">
+        <button
+          slot="actions"
+          style="padding: 0; margin: 0; background: transparent; line-height: 1; text-indent: 0; font-size: 16px; border: 0; width: 21px;"
+        >
           <esds-icon use="${EsdsIconStar}"></esds-icon>
         </button>
-      </esds-card>`}
+      </esds-card>
+    `}
   </Story>
 </Preview>
 
 ## Crop Options
+
 <Preview>
   <Story name="Crop Options">
     {html`
@@ -168,20 +184,22 @@ npm install @eightshapes/esds-card
             <div>
               <span class="storybook-annotation">${c}</span>
               <esds-card
-                  style="${demoStyles}"
-                  img-src="./images/card/dollar-portrait.jpg"
-                  img-crop-type="${c}"
-                  title="One Dollar"
-                  metadata="Washington"
-                ></esds-card>
+                style="${demoStyles}"
+                img-src="./images/card/dollar-portrait.jpg"
+                img-crop-type="${c}"
+                title="One Dollar"
+                metadata="Washington"
+              ></esds-card>
             </div>
           `;
-          })}
-      </div>`}
+        })}
+      </div>
+    `}
   </Story>
 </Preview>
 
 ## Link
+
 <Preview>
   <Story name="Link">
     {`<esds-card
@@ -195,6 +213,7 @@ npm install @eightshapes/esds-card
 </Preview>
 
 ## Link with Actions
+
 <Preview>
   <Story name="Link with Actions">
     {`<esds-card
@@ -211,6 +230,7 @@ npm install @eightshapes/esds-card
 </Preview>
 
 ## Link States
+
 <Preview>
   <Story name="Link States">
     {html`
@@ -226,15 +246,18 @@ npm install @eightshapes/esds-card
                 metadata="February 2018"
                 description="Relating to the distributors, translators, and themers in between"
                 img-src="./images/card/medium.png"
-                href="http://eightshapes.com"></esds-card>
+                href="http://eightshapes.com"
+              ></esds-card>
             </div>
           `;
-          })}
-      </div>`}
+        })}
+      </div>
+    `}
   </Story>
 </Preview>
 
 ## On Backgrounds
+
 <Preview>
   <Story name="On Backgrounds">
     {html`
@@ -250,63 +273,100 @@ npm install @eightshapes/esds-card
                 metadata="February 2018"
                 description="Relating to the distributors, translators, and themers in between"
                 img-src="./images/card/medium.png"
-                href="http://eightshapes.com"></esds-card>
+                href="http://eightshapes.com"
+              ></esds-card>
             </div>
           `;
-          })}
-      </esds-background-demo>`}
+        })}
+      </esds-background-demo>
+    `}
   </Story>
 </Preview>
 
 ## Content Resilience
+
 <Preview>
   <Story name="Content Resilience">
-    {html`<esds-card
-                style="${demoStyles}"
-                title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis id rerum, necessitatibus! Earum voluptatum quas animi voluptas quos, voluptates possimus?"
-                metadata="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, eum."
-                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ipsa numquam nihil laudantium asperiores quo molestiae non deleniti harum aperiam voluptas veniam vel eaque inventore aspernatur dolor veritatis similique distinctio accusantium, cupiditate. Voluptatum impedit, molestias iusto laboriosam dignissimos. Quisquam aliquid, est culpa odit nesciunt amet voluptatem voluptates quos iusto accusamus!"
-                img-src="./images/card/medium.png"
-                href="http://eightshapes.com">
-                <div slot="content" class="storybook-slotholder" style="height: 200px;">
-                  <span>content</span>
-                </div>
-                <div slot="actions" class="storybook-slotholder" style="height: 200px;">
-                  <span>actions</span>
-                </div>
-              </esds-card>`}
+    {html`
+      <esds-card
+        style="${demoStyles}"
+        title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis id rerum, necessitatibus! Earum voluptatum quas animi voluptas quos, voluptates possimus?"
+        metadata="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, eum."
+        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ipsa numquam nihil laudantium asperiores quo molestiae non deleniti harum aperiam voluptas veniam vel eaque inventore aspernatur dolor veritatis similique distinctio accusantium, cupiditate. Voluptatum impedit, molestias iusto laboriosam dignissimos. Quisquam aliquid, est culpa odit nesciunt amet voluptatem voluptates quos iusto accusamus!"
+        img-src="./images/card/medium.png"
+        href="http://eightshapes.com"
+      >
+        <div slot="content" class="storybook-slotholder" style="height: 200px;">
+          <span>content</span>
+        </div>
+        <div slot="actions" class="storybook-slotholder" style="height: 200px;">
+          <span>actions</span>
+        </div>
+      </esds-card>
+    `}
   </Story>
 </Preview>
 
 ## Knobs
+
 <Preview>
   <Story name="Knobs">
     {`
     <esds-card
         style="${demoStyles}"
         description="${text('Description', 'Lorem ipsum dolor sit amet.')}"
-        img-src="${select('Image', {Dollar: './images/card/dollar-portrait.jpg', Medium: './images/card/medium.png', Morningstar: './images/card/morningstar.png', 'No Image': '', REI: './images/card/rei.png', 'USAC': './images/card/usac.png'}, './images/card/dollar-portrait.jpg')}"
-        img-crop-type="${select('Image Crop', {Contain: 'contain', Cover: 'cover', Fill: 'fill', None: 'none', 'Scale Down': 'scale-down'}, 'cover')}"
+        img-src="${select(
+          'Image',
+          {
+            Dollar: './images/card/dollar-portrait.jpg',
+            Medium: './images/card/medium.png',
+            Morningstar: './images/card/morningstar.png',
+            'No Image': '',
+            REI: './images/card/rei.png',
+            USAC: './images/card/usac.png',
+          },
+          './images/card/dollar-portrait.jpg',
+        )}"
+        img-crop-type="${select(
+          'Image Crop',
+          {
+            Contain: 'contain',
+            Cover: 'cover',
+            Fill: 'fill',
+            None: 'none',
+            'Scale Down': 'scale-down',
+          },
+          'cover',
+        )}"
         metadata="${text('Metadata', '')}"
         title="${text('Title', 'Card Title')}"
-    >${ boolean('Actions Slot', false) ?
-        `<div slot="actions" class="storybook-slotholder">
+    >${
+      boolean('Actions Slot', false)
+        ? `<div slot="actions" class="storybook-slotholder">
           <span>actions</span>
-        </div>`: ''}${ boolean('Content Slot', false) ?
-        `<div slot="content" class="storybook-slotholder">
+        </div>`
+        : ''
+    }${
+      boolean('Content Slot', false)
+        ? `<div slot="content" class="storybook-slotholder">
           <span>content</span>
-        </div>`: ''}</esds-card>`}
+        </div>`
+        : ''
+    }</esds-card>`}
   </Story>
 </Preview>
 
 ## Scoped
+
 <Preview>
   <Story name="Scoped">
-    {html`<div class="storybook-grid">
+    {html`
+      <div class="storybook-grid">
         <div>
           <span class="storybook-annotation">&lt;esds-v10-card>&lt;/esds-v10-card></span>
           <esds-v10-card></esds-v10-card>
         </div>
-      </div>`}
+      </div>
+    `}
   </Story>
 </Preview>

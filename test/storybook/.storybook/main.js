@@ -1,12 +1,14 @@
 const path = require('path');
 
 module.exports = {
-  stories: ['../stories/**/*.stories.(js|mdx)'],
+  stories: ['../stories/**/*.stories.@(js|mdx)'],
   addons: [
-    '@storybook/addon-a11y/register',
+    '@storybook/addon-a11y',
     '@storybook/addon-docs',
-    '@storybook/addon-knobs/register',
-    '@storybook/addon-viewport/register',
+    '@storybook/addon-actions',
+    '@storybook/addon-viewport',
+    '@storybook/addon-backgrounds',
+    '@storybook/addon-knobs',
   ],
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
@@ -22,8 +24,8 @@ module.exports = {
         {
           loader: 'sass-loader',
           options: {
-            implementation: require('sass')
-          }
+            implementation: require('sass'),
+          },
         },
       ],
       include: path.resolve(__dirname, '../'),
