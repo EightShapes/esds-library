@@ -55,7 +55,6 @@ export class EsdsCard extends Slotify(Scopify(LitElement, 'esds')) {
   constructor() {
     super();
     // Prop Defaults
-    this.title = 'Card Title';
     this.imgCropType = 'cover';
 
     EsdsThumbnail.define('esds-card'); // Defines <esds-card-thumbnail>
@@ -128,6 +127,12 @@ export class EsdsCard extends Slotify(Scopify(LitElement, 'esds')) {
   }
 
   render() {
+    if (!this.title && this.metadata) {
+      console.warn(
+        'The metadata attribute can only be used in conjunction with a title. Provide a title value or remove the metadata attribute.',
+      );
+    }
+
     return html`
       <style>
         ${namespacedStyles(this.constructor.customElementNamespace)}

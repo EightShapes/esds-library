@@ -2,7 +2,7 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import { html } from 'lit-html';
 
-import '@eightshapes/esds-card'; // The Web Component Import
+import '@eightshapes/esds-card/dist/esds-card-web-component.js'; // The Web Component Import
 import { EsdsCard } from '@eightshapes/esds-card/dist/EsdsCard.js'; // The Custom Element Class
 EsdsCard.define('esds-v10'); // Define a <esds-v10-card> component
 import '@eightshapes/esds-icon'; // The Web Component Import
@@ -29,7 +29,7 @@ npm install @eightshapes/esds-card
 ## Default
 
 <Preview>
-  <Story name="Default">{`<esds-card style="${demoStyles}"></esds-card>`}</Story>
+  <Story name="Default">{`<esds-card style="${demoStyles}" title="Card Title"></esds-card>`}</Story>
 </Preview>
 
 ## Component Anatomy
@@ -57,7 +57,7 @@ npm install @eightshapes/esds-card
 
 <Preview>
   <Story name="With Image">
-    {`<esds-card style="${demoStyles}" img-src="./images/card/color.png"></esds-card>`}
+    {`<esds-card style="${demoStyles}" img-src="./images/card/color.png" title="Card Title"></esds-card>`}
   </Story>
 </Preview>
 
@@ -364,7 +364,7 @@ npm install @eightshapes/esds-card
       <div class="storybook-grid">
         <div>
           <span class="storybook-annotation">&lt;esds-v10-card>&lt;/esds-v10-card></span>
-          <esds-v10-card></esds-v10-card>
+          <esds-v10-card title="Card Title"></esds-v10-card>
         </div>
       </div>
     `}

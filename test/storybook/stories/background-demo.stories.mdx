@@ -1,15 +1,13 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import { html } from 'lit-html';
 
-import '@eightshapes/esds-background-demo'; // The Web Component Import
-import '@eightshapes/esds-card'; // The Web Component Import
+import '@eightshapes/esds-background-demo/dist/esds-background-demo-web-component.js'; // The Web Component Import
+import '@eightshapes/esds-card/dist/esds-card-web-component.js'; // The Web Component Import
 
-<Meta
-  title="Background Demo"
-  component='esds-background-demo'
-/>
+<Meta title="Background Demo" component="esds-background-demo" />
 
 # Background Demo
+
 ## Installation
 
 ```bash
@@ -17,15 +15,15 @@ npm install @eightshapes/esds-background-demo
 ```
 
 ## Default
+
 <Preview>
-  <Story name="Default">
-    {`<esds-background-demo><h1>Testing</h1></esds-background-demo>`}
-  </Story>
+  <Story name="Default">{`<esds-background-demo><h1>Testing</h1></esds-background-demo>`}</Story>
 </Preview>
 
 ## With Card
+
 <Preview>
   <Story name="With Card">
-    {`<esds-background-demo><esds-card></esds-card><esds-card></esds-card><esds-card></esds-card><esds-card></esds-card></esds-background-demo>`}
+    {`<esds-background-demo><esds-card title="Card Title"></esds-card><esds-card title="Card Title"></esds-card><esds-card title="Card Title"></esds-card><esds-card title="Card Title"></esds-card></esds-background-demo>`}
   </Story>
 </Preview>

@@ -28,8 +28,7 @@
         {
           "name": "title",
           "description": "Title text displayed on the card",
-          "type": "string",
-          "default": "\"Card Title\""
+          "type": "string"
         },
         {
           "name": "img-crop-type",
@@ -67,8 +66,7 @@
           "name": "title",
           "attribute": "title",
           "description": "Title text displayed on the card",
-          "type": "string",
-          "default": "\"Card Title\""
+          "type": "string"
         },
         {
           "name": "imgCropType",
