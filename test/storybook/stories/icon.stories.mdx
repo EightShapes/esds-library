@@ -1,10 +1,11 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, text, select } from '@storybook/addon-knobs';
 import { html } from 'lit-html';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 
-
 import '@eightshapes/esds-icon'; // The Web Component Import
+import { EsdsIcon } from '@eightshapes/esds-icon/dist/EsdsIcon.js'; // The Custom Element Class
+EsdsIcon.define('esds-v10'); // Define a <esds-v10-icon> component
 
 import * as EsdsIcons from '@eightshapes/esds-icons'; // Additional Icon Specific Variables and Imports
 import { EsdsIconMenu } from '@eightshapes/esds-icons';
@@ -30,6 +31,8 @@ iconSpriteNames.forEach(sn => {
 ```bash
 npm install @eightshapes/esds-icon
 ```
+
+<Props of='esds-icon' />
 
 ## Default
 <Preview>
@@ -103,5 +106,17 @@ npm install @eightshapes/esds-icon
         size="${select('Size', {Small: 'small', Medium: 'medium', Large: 'large'}, 'medium')}"
         use="${select('Use', iconNamesForSelectKnob, '#star')}"
     ></esds-icon>`}
+  </Story>
+</Preview>
+
+## Scoped
+<Preview>
+  <Story name="Scoped">
+    {html`<div class="storybook-grid">
+        <div>
+          <span class="storybook-annotation">&lt;esds-v10-icon>&lt;/esds-v10-icon></span>
+          <esds-v10-icon></esds-v10-icon>
+        </div>
+      </div>`}
   </Story>
 </Preview>

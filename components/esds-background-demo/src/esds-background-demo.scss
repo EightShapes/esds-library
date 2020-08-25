@@ -1,0 +1,40 @@
+@use '../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
+
+.esds-background-demo {
+  @include esds-box-sizing;
+  @include esds-typography-reset;
+  display: flex;
+  font-size: $esds-font-size-body-m-default;
+  width: 100%;
+}
+
+$background-colors: esds-token('background-color');
+
+@each $background, $background-color in $background-colors {
+  .esds-container--#{$background} {
+    @include esds-box-sizing;
+    @include esds-typography-reset;
+    background: $background-color;
+    padding: $esds-space-inset-1-x;
+  }
+}
+
+.esds-background-demo__column {
+  align-items: center;
+  display: flex;
+  flex: 1 1 25%;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  > * {
+    margin: $esds-space-stack-1-x;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.esds-background-demo__hidden-slot-content {
+  display: none;
+}

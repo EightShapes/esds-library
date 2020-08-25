@@ -19,7 +19,7 @@
 				"watch:build-esm": "rollup --watch -c rollup.config.js -i src/EsdsIcon.js -o dist/EsdsIcon.js -f esm",
 				"watch:build-web-component": "rollup --watch -c rollup.config.js -i src/esds-icon-entry.js -o dist/esds-icon-web-component.js -f esm",
 				"watch:build-styles": "chokidar \"src/**/*.scss\" -c \"npm run build:styles\"",
-				"start:legacy": "npm-run-all build:legacy --parallel watch:build-legacy start:storybook",
+				"start:legacy": "npm-run-all build:legacy --parallel watch:build-legacy start:debug-environment",
 				"build:ie": "rollup -c rollup.config.ie.js",
 				"build:legacy": "npm-run-all build build:ie",
 				"watch:build-legacy": "npm-run-all --parallel watch:build watch:build-ie",
@@ -40,7 +40,8 @@
 				"@babel/core": "^7.5.5",
 				"@babel/preset-env": "^7.5.5",
 				"@eightshapes/esds-icons": "^0.2.0",
-				"@eightshapes/esds-tokens": "^0.2.0",
+				"@eightshapes/esds-visual-style": "^0.1.0",
+				"@eightshapes/scopify": "^0.1.0",
 				"@open-wc/testing": "^2.0.0",
 				"@open-wc/testing-karma": "^3.0.0",
 				"@open-wc/testing-karma-bs": "^1.0.0",
@@ -59,7 +60,7 @@
 		},
 		"dependencies": {
 				"lit-element": "^2.2.1",
-				"lit-html": "https://github.com/kevinmpowell/lit-html.git",
+				"lit-html": "^1.1.2",
 				"regenerator-runtime": "^0.13.3"
 		}
 }

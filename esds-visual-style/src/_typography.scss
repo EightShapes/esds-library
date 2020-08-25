@@ -1,0 +1,155 @@
+@use '../node_modules/@eightshapes/esds-tokens/dist/scss/esds-tokens' as *;
+@use './color' as *;
+@use './utils' as *;
+
+@mixin esds-typography-reset(
+  $font-family: $esds-font-family-sans-serif,
+  $font-size: $esds-font-size-body-m-default,
+  $font-style: normal,
+  $font-weight: $esds-font-weight-regular,
+  $letter-spacing: 0,
+  $line-height: $esds-font-line-height-normal,
+  $text-align: left,
+  $text-decoration: none,
+  $text-indent: 0,
+  $text-shadow: none,
+  $text-transform: none
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+  line-height: $line-height;
+  text-align: $text-align;
+  text-decoration: $text-decoration;
+  text-indent: $text-indent;
+  text-shadow: $text-shadow;
+  text-transform: $text-transform;
+}
+
+@mixin esds-responsive-font-size($type: 'body-m') {
+  font-size: esds-token('font', 'size', $type, 'default');
+
+  @media screen and (min-width: 480px) {
+    font-size: esds-token('font', 'size', $type, 'at-480');
+  }
+  @media screen and (min-width: 768px) {
+    font-size: esds-token('font', 'size', $type, 'at-768');
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: esds-token('font', 'size', $type, 'at-1000');
+  }
+}
+
+@mixin esds-heading-reset() {
+  @include esds-typography-reset($font-weight: $esds-font-weight-bold);
+  line-height: $esds-font-line-height-headings;
+  margin: 0;
+}
+
+@mixin esds-heading-level-1() {
+  @include esds-heading-reset;
+  @include esds-responsive-font-size($type: 'heading-level-1');
+}
+
+@mixin esds-heading-level-2() {
+  @include esds-heading-reset;
+  @include esds-responsive-font-size($type: 'heading-level-2');
+}
+
+@mixin esds-heading-level-3() {
+  @include esds-heading-reset;
+  @include esds-responsive-font-size($type: 'heading-level-3');
+}
+
+@mixin esds-heading-level-4() {
+  @include esds-heading-reset;
+  @include esds-responsive-font-size($type: 'heading-level-4');
+}
+
+@mixin esds-heading-eyebrow() {
+  @include esds-heading-reset;
+  @include esds-responsive-font-size($type: 'heading-eyebrow');
+  color: $esds-text-color-secondary-on-light;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@mixin esds-body-text-lead() {
+  @include esds-typography-reset;
+  @include esds-responsive-font-size($type: 'heading-level-4');
+  font-weight: $esds-font-weight-light;
+  line-height: $esds-font-line-height-normal;
+}
+
+@mixin esds-body-text-l() {
+  @include esds-typography-reset;
+  @include esds-responsive-font-size($type: 'body-l');
+  font-weight: $esds-font-weight-light;
+  line-height: $esds-font-line-height-normal;
+}
+
+@mixin esds-body-text-m() {
+  @include esds-typography-reset;
+  @include esds-responsive-font-size($type: 'body-m');
+  font-weight: $esds-font-weight-regular;
+  line-height: $esds-font-line-height-normal;
+}
+
+@mixin esds-body-text-s() {
+  @include esds-typography-reset;
+  @include esds-responsive-font-size($type: 'body-s');
+  font-weight: $esds-font-weight-regular;
+  line-height: $esds-font-line-height-normal;
+}
+
+@mixin esds-link() {
+  @include esds-text-color($type: 'link');
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin esds-text-crop(
+  $line-height: $esds-font-line-height-normal,
+  $top-adjustment: 0,
+  $bottom-adjustment: 0
+) {
+  // Configured in Step 1
+  $top-crop: 18;
+  $bottom-crop: 12;
+  $crop-font-size: 61;
+  $crop-line-height: 1.2;
+
+  // Apply values to calculate em-based margins that work with any font size
+  $dynamic-top-crop: max(
+      ($top-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)),
+      0
+    ) / $crop-font-size;
+  $dynamic-bottom-crop: max(
+      ($bottom-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)),
+      0
+    ) / $crop-font-size;
+
+  // Mixin output
+  line-height: $line-height;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+  }
+
+  &::before {
+    margin-bottom: calc(-#{$dynamic-top-crop}em + #{$top-adjustment}px);
+  }
+
+  &::after {
+    margin-top: calc(-#{$dynamic-bottom-crop}em + #{$bottom-adjustment}px);
+  }
+}

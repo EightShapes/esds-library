@@ -1,7 +1,9 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { html } from 'lit-html';
 
 import '@eightshapes/esds-{{ lowerCase (dashCase name) }}'; // The Web Component Import
+import { Esds{{ pascalCase name }} } from '@eightshapes/esds-{{ lowerCase (dashCase name) }}/dist/Esds{{ pascalCase name }}.js'; // The Custom Element Class
+EsdsCard.define('esds-v10'); // Define a <esds-v10-{{ lowerCase (dashCase name) }}> component
 
 <Meta
   title="{{ titleCase name }}"
@@ -15,9 +17,23 @@ import '@eightshapes/esds-{{ lowerCase (dashCase name) }}'; // The Web Component
 npm install @eightshapes/esds-{{ lowerCase (dashCase name) }}
 ```
 
+<Props of='{ lowerCase (dashCase name) }' />
+
 ## Default
 <Preview>
   <Story name="Default">
-    {`<esds-{{ lowerCase (dashCase name) }}></esds-{{ lowerCase (dashCase name) }}>`}
+    {`<esds-{{ lowerCase (dashCase name) }}>{{#if slots}}<h3>Default Slot Heading</h3><h4 slot="content">Named Slot Heading</h4>{{/if}}</esds-{{ lowerCase (dashCase name) }}>`}
+  </Story>
+</Preview>
+
+## Scoped
+<Preview>
+  <Story name="Scoped">
+    {html`<div class="storybook-grid">
+        <div>
+          <span class="storybook-annotation">&lt;esds-v10-{{ lowerCase (dashCase name) }}>&lt;/esds-v10-{{ lowerCase (dashCase name) }}></span>
+          <esds-v10-{{ lowerCase (dashCase name) }}></esds-v10-{{ lowerCase (dashCase name) }}>
+        </div>
+      </div>`}
   </Story>
 </Preview>

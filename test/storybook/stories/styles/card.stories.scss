@@ -1,0 +1,41 @@
+@use '../../node_modules/@eightshapes/esds-card/src/esds-card' as *;
+@use '../../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
+
+// Storybook specific override to show component state without interaction
+.storybook-esds-card-state {
+  margin-right: $esds-space-generic-1-x;
+  pointer-events: none; // Prevent interaction from changing state
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.esds-container--light .storybook-esds-card-state--hover,
+.esds-container--dark .storybook-esds-card-state--hover,
+.esds-container--black .storybook-esds-card-state--hover,
+.storybook-esds-card-state--hover {
+  .esds-card__root {
+    @include esds-card-hover;
+  }
+}
+
+.storybook-esds-card-state--focus .esds-card__root {
+  @include esds-card-focus;
+}
+
+.esds-container--dark .storybook-esds-card-state--focus,
+.esds-container--black .storybook-esds-card-state--focus {
+  .esds-card__root {
+    @include esds-card-focus('on-dark');
+  }
+}
+
+.esds-container--light .storybook-esds-card-state--active,
+.esds-container--dark .storybook-esds-card-state--active,
+.esds-container--black .storybook-esds-card-state--active,
+.storybook-esds-card-state--active {
+  .esds-card__root {
+    @include esds-card-active;
+  }
+}

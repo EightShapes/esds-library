@@ -1,8 +1,26 @@
 import { html, LitElement } from 'lit-element';
-import styles from './esds-{{ lowerCase (dashCase name) }}-styles.js';
+import { Scopity } from '@eightshapes/scopify';
+{{#if slots}}
+import { Slotify } from '@eightshapes/slotify';
+{{/if}}
+import { namespacedStyles } from './esds-{{ lowerCase (dashCase name) }}-styles.js';
 
-export class Esds{{ pascalCase name }} extends LitElement {
-  static get properties() {
+/**
+ * @element esds-{{ lowerCase (dashCase name) }}
+{{#if slots}}
+ *
+ * @slot - Default slot, put whatever you want in here.
+ * @slot content - Insert content in the named "content" slot.
+{{/if}}
+*
+*/
+
+export class Esds{{ pascalCase name }} extends {{#if slots}}Slotify({{/if}}Scopify(LitElement, 'esds'){{#if slots}}){{/if}} {
+  static get customElementName() {
+    return '{{ lowerCase (dashCase name) }}';
+  }
+
+  tatic get properties() {
     return {
       /*
        * Describe the prop here using JSDoc syntax
@@ -24,6 +42,7 @@ export class Esds{{ pascalCase name }} extends LitElement {
     this.text = 'Hello World';
   }
 
+  {{#unless slots}}
   /*
    * @ignore
    */
@@ -31,10 +50,11 @@ export class Esds{{ pascalCase name }} extends LitElement {
     return this; // Prevents lit-element from rendering in shadowDOM
   }
 
+  {{/unless}}
   render() {
     return html`
       <style>
-        ${styles}
+        ${namespacedStyles(this.constructor.customElementNamespace)}
       </style>
       <h1
         class="esds-{{ lowerCase (dashCase name) }}
@@ -42,6 +62,10 @@ export class Esds{{ pascalCase name }} extends LitElement {
       >
         ${this.text}
       </h1>
+      {{#if slots}}
+      <s-slot></s-slot>
+      <s-slot name="content"></s-slot>
+      {{/if}}
     `;
   }
 }

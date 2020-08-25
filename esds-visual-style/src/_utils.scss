@@ -1,0 +1,19 @@
+@use '../node_modules/@eightshapes/esds-tokens/dist/scss/esds-tokens-map' as *;
+
+@mixin esds-accessibly-hidden() {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+@function esds-token($keys...) {
+  $map: $esds;
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}

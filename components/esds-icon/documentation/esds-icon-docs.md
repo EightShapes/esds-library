@@ -1,5 +1,7 @@
 # esds-icon
 
+**Mixins:** Scopify
+
 ## Properties
 
 | Property | Attribute | Type                         | Default        | Description                                      |

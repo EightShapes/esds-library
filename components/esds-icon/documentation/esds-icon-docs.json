@@ -3,7 +3,7 @@
   "tags": [
     {
       "name": "esds-icon",
-      "path": "./../src/esds-icon-entry.js",
+      "path": "./../src/EsdsIcon.js",
       "attributes": [
         {
           "name": "title",

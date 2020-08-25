@@ -24,7 +24,11 @@ This repository includes many packages across folders:
 
 [EightShapes Design System Icons](./esds-icons/README.md), svg assets used throughout design system components.
 
+[EightShapes Visual Style](./esds-visual-style/README.md), scss mixins that leverage tokens.
+
 [Design System Components](./components/README.md), independently versioned and distributed as individual node packages.
+
+TODO: Document Font Requirements `<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,700&display=swap" rel="stylesheet">`
 
 ## Linting
 Linting is performed at the repository level since it's tied to git commits. The same linting rules apply to esds-tokens, esds-icons, and all component packages.

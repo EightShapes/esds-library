@@ -8,6 +8,12 @@ module.exports = plop => {
         name: 'name',
         message: `What is the name of the component you're creating?`,
       },
+      {
+        type: 'confirm',
+        default: true,
+        name: 'slots',
+        message: `Will this component use slots?`,
+      },
     ],
     actions: [
       {

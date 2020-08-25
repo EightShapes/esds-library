@@ -17,7 +17,9 @@ This will:
 * monitor source `.js` and `.scss` files for changes and rebuild component outputs
 * launch the storybook test environment (`./test/storybook`) where test stories can be written for each component
 
-#### IE11 Compatibility
+### TODO: Document full dependency dev environment with watching
+
+### IE11 Compatibility
 For performance reasons, the default dev environment does not build assets for IE11. To start an IE 11 compatible dev environment run:
 
 ```
@@ -53,6 +55,8 @@ This repository is equipped with a new component generator. This will scaffold o
 npx plop
 ```  
 This will prompt for the new component's name. 'esds' will be prepended automatically, so just provide the name of the component itself, for example: "button" or "data table."
+
+# TODO: Document slots question
 
 2. After the scaffold is generated run:  
 ```bash
@@ -109,3 +113,5 @@ Cross-platform File system deletion utility, used to delete compiled scss assets
 
 * [web-component-analyzer](https://github.com/runem/web-component-analyzer)  
 CLI that analyzes web components and emits documentation.
+
+# TODO: Document slotify dependency

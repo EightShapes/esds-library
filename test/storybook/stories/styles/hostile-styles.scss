@@ -1,0 +1,12 @@
+@use '../../node_modules/@eightshapes/esds-hostile-css/esds-hostile-mixins' as *;
+
+[class^='esds-'] {
+  // Apply hostile styles to every element having a class that begins with `esds-`
+  @include esds-hostile-css-global-styles;
+}
+
+iframe .sb-show-main {
+  @include esds-hostile-typographic-styles;
+  @include esds-hostile-list-styles;
+  @include esds-hostile-table-styles;
+}

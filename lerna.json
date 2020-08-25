@@ -2,6 +2,7 @@
   "packages": [
     "esds-icons",
     "esds-tokens",
+    "esds-visual-style",
     "components/**/*",
     "test/**/*"
   ],
