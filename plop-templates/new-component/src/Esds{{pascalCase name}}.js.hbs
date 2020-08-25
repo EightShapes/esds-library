@@ -6,66 +6,72 @@ import { Slotify } from '@eightshapes/slotify';
 import { namespacedStyles } from './esds-{{ lowerCase (dashCase name) }}-styles.js';
 
 /**
- * @element esds-{{ lowerCase (dashCase name) }}
+* @element esds-{{ lowerCase (dashCase name) }}
 {{#if slots}}
- *
- * @slot - Default slot, put whatever you want in here.
- * @slot content - Insert content in the named "content" slot.
+*
+* @slot - Default slot, put whatever you want in here.
+* @slot content - Insert content in the named "content" slot.
 {{/if}}
 *
 */
 
-export class Esds{{ pascalCase name }} extends {{#if slots}}Slotify({{/if}}Scopify(LitElement, 'esds'){{#if slots}}){{/if}} {
-  static get customElementName() {
-    return '{{ lowerCase (dashCase name) }}';
-  }
+export class Esds{{ pascalCase name }} extends {{#if slots}}Slotify({{/if}}Scopify(LitElement,
+'esds'){{#if slots}}){{/if}} {
+static get customElementName() {
+return '{{ lowerCase (dashCase name) }}';
+}
 
-  tatic get properties() {
-    return {
-      /*
-       * Describe the prop here using JSDoc syntax
-       * @type {'small'|'medium'|'large'}
-       */
-      example: { type: String },
-      /*
-       * The text displayed in the component
-       * @type String
-       */
-      text: { type: String },
-    };
-  }
+tatic get properties() {
+return {
+/*
+* Describe the prop here using JSDoc syntax
+* @type {'small'|'medium'|'large'}
+*/
+example: { type: String },
+/*
+* The text displayed in the component
+* @type String
+*/
+text: { type: String },
+};
+}
 
-  constructor() {
-    super();
-    // Prop Defaults
-    this.example = 'medium';
-    this.text = 'Hello World';
-  }
+constructor() {
+super();
+// Prop Defaults
+this.example = 'medium';
+this.text = 'Hello World';
+}
 
-  {{#unless slots}}
-  /*
-   * @ignore
-   */
-  createRenderRoot() {
-    return this; // Prevents lit-element from rendering in shadowDOM
-  }
+{{#unless slots}}
+/*
+* @ignore
+*/
+createRenderRoot() {
+return this; // Prevents lit-element from rendering in shadowDOM
+}
 
-  {{/unless}}
-  render() {
-    return html`
-      <style>
-        ${namespacedStyles(this.constructor.customElementNamespace)}
-      </style>
-      <h1
-        class="esds-{{ lowerCase (dashCase name) }}
-        esds-{{ lowerCase (dashCase name) }}--${this.example}"
-      >
-        ${this.text}
-      </h1>
-      {{#if slots}}
-      <s-slot></s-slot>
-      <s-slot name="content"></s-slot>
-      {{/if}}
-    `;
+{{/unless}}
+render() {
+// Placeholder attribute validation warning. Delete this after confirming unit tests work.
+if (this.text !== 'Hello World') {
+console.warn('text is not "Hello World", delete this silly test and console warning to make this go away.');
+}
+
+return html`
+<style>
+  $ {
+    namespacedStyles(this.constructor.customElementNamespace)
   }
+</style>
+<h1 class="esds-{{ lowerCase (dashCase name) }}
+        esds-{{ lowerCase (dashCase name) }}--${this.example}">
+  ${this.text}
+</h1>
+{{#if slots}}
+<s-slot></s-slot>
+<s-slot name="content"></s-slot>
+{{/if}}
+`;
+}
 }
