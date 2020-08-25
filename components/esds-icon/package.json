@@ -4,7 +4,7 @@
   "description": "",
   "esnext": "dist/EsdsIcon.js",
   "main": "dist/esds-icon-web-component.js",
-  "module": "dist/esds-icon-legacy.js",
+  "module": "dist/EsdsIcon.js",
   "scripts": {
     "start": "npm-run-all build --parallel watch:build start:storybook",
     "start:storybook": "npm run --prefix ../../test/storybook start",

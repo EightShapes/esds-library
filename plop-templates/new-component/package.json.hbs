@@ -4,7 +4,7 @@
   "description": "",
   "esnext": "dist/Esds{{ pascalCase name }}.js",
   "main": "dist/esds-{{ lowerCase (dashCase name) }}-web-component.js",
-  "module": "dist/esds-{{ lowerCase (dashCase name) }}-legacy.js",
+  "module": "dist/Esds{{ pascalCase name }}.js",
   "scripts": {
     "start": "npm-run-all build --parallel watch:build start:storybook",
     "start:watch-dependencies": "npm-run-all --parallel start watch:build-visual-style-dependency watch:build-tokens watch:build-token-dependency",

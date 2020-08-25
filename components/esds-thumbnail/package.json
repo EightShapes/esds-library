@@ -4,7 +4,7 @@
   "description": "",
   "esnext": "dist/EsdsThumbnail.js",
   "main": "dist/esds-thumbnail-web-component.js",
-  "module": "dist/esds-thumbnail-legacy.js",
+  "module": "dist/EsdsThumbnail.js",
   "scripts": {
     "start": "npm-run-all build --parallel watch:build start:storybook",
     "start:watch-dependencies": "npm-run-all --parallel start watch:build-visual-style-dependency watch:build-tokens watch:build-token-dependency",

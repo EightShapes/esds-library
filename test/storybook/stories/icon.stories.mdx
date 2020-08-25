@@ -3,90 +3,99 @@ import { withKnobs, text, select } from '@storybook/addon-knobs';
 import { html } from 'lit-html';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 
-import '@eightshapes/esds-icon'; // The Web Component Import
+import '@eightshapes/esds-icon/dist/esds-icon-web-component.js'; // The Web Component Import
 import { EsdsIcon } from '@eightshapes/esds-icon/dist/EsdsIcon.js'; // The Custom Element Class
 EsdsIcon.define('esds-v10'); // Define a <esds-v10-icon> component
 
 import * as EsdsIcons from '@eightshapes/esds-icons'; // Additional Icon Specific Variables and Imports
 import { EsdsIconMenu } from '@eightshapes/esds-icons';
-import icons from '!!raw-loader!@eightshapes/esds-icons/dist/esds-icons.svg'
+import icons from '!!raw-loader!@eightshapes/esds-icons/dist/esds-icons.svg';
 import iconSpriteNames from '@eightshapes/esds-icons/dist/esds-icon-names.json';
 const iconClassNames = Object.keys(EsdsIcons);
 const iconNamesForSelectKnob = {};
 iconSpriteNames.forEach(sn => {
-    iconNamesForSelectKnob[sn] = `#${sn}`;
-})
+  iconNamesForSelectKnob[sn] = `#${sn}`;
+});
 
 <Meta
   title="Icon"
-  component='esds-icon'
+  component="esds-icon"
   decorators={[withKnobs({ escapeHTML: false })]}
-  parameters={{
-  }}
+  parameters={{}}
 />
 
 # Icon
+
 ## Installation
 
 ```bash
 npm install @eightshapes/esds-icon
 ```
 
-<Props of='esds-icon' />
+<Props of="esds-icon" />
 
 ## Default
+
 <Preview>
-  <Story name="Default">
-    {`<esds-icon></esds-icon>`}
-  </Story>
+  <Story name="Default">{`<esds-icon></esds-icon>`}</Story>
 </Preview>
 
 ## Small
+
 <Preview>
-  <Story name="Small">
-    {`<esds-icon size="small"></esds-icon>`}
-  </Story>
+  <Story name="Small">{`<esds-icon size="small"></esds-icon>`}</Story>
 </Preview>
 
 ## Large
+
 <Preview>
-  <Story name="Large">
-    {`<esds-icon size="large"></esds-icon>`}
-  </Story>
+  <Story name="Large">{`<esds-icon size="large"></esds-icon>`}</Story>
 </Preview>
 
 ## Standalone, Accessible Title
+
 <Preview>
-  <Story name="Standalone, Accessible Title">
-    {`<esds-icon title="stopwatch"></esds-icon>`}
-  </Story>
+  <Story name="Standalone, Accessible Title">{`<esds-icon title="stopwatch"></esds-icon>`}</Story>
 </Preview>
 
 ## Icon Module Usage
+
 <Preview>
   <Story name="Icon Module Usage">
-    {html`<esds-icon use="${EsdsIconMenu}"></esds-icon>`}
+    {html`
+      <esds-icon use="${EsdsIconMenu}"></esds-icon>
+    `}
   </Story>
 </Preview>
 
 ## Sprite Symbol Usage
+
 <Preview>
   <Story name="Sprite Symbol Usage">
-    {html`<div style="display: none;">${unsafeHTML(icons)}</div>
-          <esds-icon use="#trash"></esds-icon>`}
+    {html`
+      <div style="display: none;">${unsafeHTML(icons)}</div>
+      <esds-icon use="#trash"></esds-icon>
+    `}
   </Story>
 </Preview>
 
 ## Gallery, Icon Module
+
 <Preview>
   <Story name="Gallery, Icon Module">
     {html`
-      ${iconClassNames.map(n => html`<esds-icon use="${EsdsIcons[n]}"></esds-icon>`)}
+      ${iconClassNames.map(
+        n =>
+          html`
+            <esds-icon use="${EsdsIcons[n]}"></esds-icon>
+          `,
+      )}
     `}
   </Story>
 </Preview>
 
 ## Gallery, Sprite Sheet
+
 <Preview>
   <Story name="Gallery, Sprite Sheet">
     {
@@ -99,24 +108,30 @@ npm install @eightshapes/esds-icon
 </Preview>
 
 ## Knobs
+
 <Preview>
   <Story name="Knobs">
-    {html`<div style="display: none;">${unsafeHTML(icons)}</div>
-    <esds-icon
-        size="${select('Size', {Small: 'small', Medium: 'medium', Large: 'large'}, 'medium')}"
+    {html`
+      <div style="display: none;">${unsafeHTML(icons)}</div>
+      <esds-icon
+        size="${select('Size', { Small: 'small', Medium: 'medium', Large: 'large' }, 'medium')}"
         use="${select('Use', iconNamesForSelectKnob, '#star')}"
-    ></esds-icon>`}
+      ></esds-icon>
+    `}
   </Story>
 </Preview>
 
 ## Scoped
+
 <Preview>
   <Story name="Scoped">
-    {html`<div class="storybook-grid">
+    {html`
+      <div class="storybook-grid">
         <div>
           <span class="storybook-annotation">&lt;esds-v10-icon>&lt;/esds-v10-icon></span>
           <esds-v10-icon></esds-v10-icon>
         </div>
-      </div>`}
+      </div>
+    `}
   </Story>
 </Preview>
