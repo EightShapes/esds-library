@@ -19,7 +19,7 @@ describe('esds-{{ lowerCase (dashCase name) }}', () => {
 
     const el = await fixture(
       html`
-        <esds-card text="Goodbye World"></esds-card>
+        <esds-{{ lowerCase (dashCase name) }} text="Goodbye World"></esds-{{ lowerCase (dashCase name) }}>
       `,
     );
 

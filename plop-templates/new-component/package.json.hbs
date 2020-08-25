@@ -28,8 +28,9 @@
   "prepack": "npm run build",
   "prepare": "npm run build",
   "test": "karma start",
-  "test:vrt": "npm run --prefix ../../test/storybook test",
-  "test:watch": "karma start --auto-watch=true --single-run=false"
+  "test:watch": "npm-run-all --parallel watch:build karma:watch",
+  "karma:watch": "karma start --auto-watch=true --single-run=false",
+  "test:vrt": "npm run --prefix ../../test/storybook test"
 },
 "license": "MIT",
 "devDependencies": {
