@@ -53,5 +53,6 @@
   "dependencies": {
     "lit-element": "^2.2.1",
     "lit-html": "^1.1.2"
-  }
+  },
+  "gitHead": "36477521257b4de68756f919dea94ff0f89e1249"
 }

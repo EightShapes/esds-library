@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node scripts/copy-tokens.js",
+    "prepack": "npm run build",
+    "prepare": "npm run build"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@eightshapes/esds-tokens": "^0.2.1"
   },
   "keywords": [],
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "gitHead": "36477521257b4de68756f919dea94ff0f89e1249"
 }

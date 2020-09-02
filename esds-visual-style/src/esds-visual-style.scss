@@ -1,5 +1,11 @@
-@forward '../node_modules/@eightshapes/esds-tokens/dist/scss/esds-tokens-map';
+@forward 'esds-tokens-map';
 @forward 'color';
 @forward 'space';
 @forward 'typography';
 @forward 'utils';
+
+// When visual-style is installed by itself tokens are:
+// ../node_modules/@eightshapes/esds-tokens
+
+// When visual-style is installed alongside tokens:
+// ../../esds-tokens

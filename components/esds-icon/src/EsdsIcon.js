@@ -125,6 +125,7 @@ export class EsdsIcon extends Scopify(LitElement, 'esds') {
    * If the use prop does not contain a '#', a raw SVG string is being used. Render it directly as unsafeSVG content
    */
   _renderUse() {
+    console.log(this.use);
     return svg`${
       // Using indexOf instead of includes for IE11 compatibility
       this.use.indexOf('#') !== -1 ? svg`<use href="${this.use}"/>` : unsafeSVG(this.use)
