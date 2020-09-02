@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-thumbnail",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "esnext": "dist/EsdsThumbnail.js",
   "main": "dist/esds-thumbnail-web-component.js",
@@ -34,9 +34,9 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@eightshapes/esds-icon": "^0.3.0",
-    "@eightshapes/esds-icons": "^0.3.0",
-    "@eightshapes/esds-visual-style": "^0.2.0",
+    "@eightshapes/esds-icon": "^0.3.1",
+    "@eightshapes/esds-icons": "^0.3.1",
+    "@eightshapes/esds-visual-style": "^0.2.1",
     "@eightshapes/scopify": "^0.1.0",
     "@open-wc/testing": "^2.0.0",
     "@open-wc/testing-karma": "^3.0.0",
