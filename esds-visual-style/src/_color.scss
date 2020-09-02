@@ -1,4 +1,4 @@
-@use '../node_modules/@eightshapes/esds-tokens/dist/scss/esds-tokens' as *;
+@use './esds-tokens-map' as *;
 @use './utils' as *;
 
 @mixin esds-text-color($type: 'primary') {

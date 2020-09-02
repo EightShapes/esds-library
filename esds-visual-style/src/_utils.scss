@@ -1,4 +1,4 @@
-@use '../node_modules/@eightshapes/esds-tokens/dist/scss/esds-tokens-map' as *;
+@use 'esds-tokens-map' as *;
 
 @mixin esds-accessibly-hidden() {
   border: 0 !important;
