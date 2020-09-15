@@ -169,7 +169,7 @@
         default: { value: '27.64px' },
         'at-480': { value: '31.248px' },
         'at-768': { value: '37.904px' },
-        'at-1000': { value: '45.232px' },
+        'at-1000': { value: '45px' },
       },
       'heading-level-3': {
         default: { value: '23.04px' },
@@ -181,7 +181,13 @@
         default: { value: '19.2px' },
         'at-480': { value: '20px' },
         'at-768': { value: '21.328px' },
-        'at-1000': { value: '22.624px' },
+        'at-1000': { value: '24px' },
+      },
+      'heading-level-5': {
+        default: { value: '15.36px' },
+        'at-480': { value: '16px' },
+        'at-768': { value: '17px' },
+        'at-1000': { value: '19.2px' },
       },
       'heading-eyebrow': {
         default: { value: '13px' },
@@ -189,17 +195,23 @@
         'at-768': { value: '15px' },
         'at-1000': { value: '15px' },
       },
-      'body-l': {
-        default: { value: '19.2px' },
-        'at-480': { value: '20px' },
-        'at-768': { value: '21.28px' },
-        'at-1000': { value: '22.624px' },
+      'heading-eyebrow-small': {
+        default: { value: '11px' },
+        'at-480': { value: '12px' },
+        'at-768': { value: '13px' },
+        'at-1000': { value: '13px' },
       },
       'body-lead': {
         default: { value: '20.8px' },
         'at-480': { value: '22.4px' },
         'at-768': { value: '25.6px' },
         'at-1000': { value: '28.8px' },
+      },
+      'body-l': {
+        default: { value: '19.2px' },
+        'at-480': { value: '20px' },
+        'at-768': { value: '21.28px' },
+        'at-1000': { value: '22.624px' },
       },
       'body-m': {
         default: { value: '16px' },
@@ -208,10 +220,16 @@
         'at-1000': { value: '19.2px' },
       },
       'body-s': {
-        default: { value: '12px' },
-        'at-480': { value: '13,6px' },
-        'at-768': { value: '14.4px' },
-        'at-1000': { value: '14.4px' },
+        default: { value: '13.3px' },
+        'at-480': { value: '13.3px' },
+        'at-768': { value: '16px' },
+        'at-1000': { value: '16px' },
+      },
+      'body-xs': {
+        default: { value: '11px' },
+        'at-480': { value: '11px' },
+        'at-768': { value: '13px' },
+        'at-1000': { value: '13px' },
       },
     },
     'line-height': {
@@ -220,8 +238,8 @@
       tight: { value: '1.2' },
     },
     weight: {
-      light: { value: '300' },
       regular: { value: '400' },
+      'semi-bold': { value: '600' },
       bold: { value: '700' },
     },
     'line-length': {
