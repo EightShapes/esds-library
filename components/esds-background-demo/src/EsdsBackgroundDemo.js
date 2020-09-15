@@ -38,7 +38,7 @@ export class EsdsBackgroundDemo extends Slotify(LitElement) {
       <style>
         ${styles}
       </style>
-      <div class="esds-background-demo SANITY CHECK">
+      <div class="esds-background-demo">
         ${backgrounds.map(
           bg => html`
             <div class="esds-background-demo__column esds-container--${bg}">

@@ -3,7 +3,7 @@
 .storybook-annotation {
   @include esds-box-sizing;
   @include esds-typography-reset($font-size: $esds-font-size-body-m-default);
-  color: $esds-text-color-brand;
+  color: $esds-color-brand;
   display: block;
   margin: $esds-space-stack-half-x;
 }
@@ -22,9 +22,9 @@
   @include esds-box-sizing;
   @include esds-typography-reset($font-size: $esds-font-size-body-l-default);
   align-items: center;
-  background: $esds-color-orange-93;
-  border: dashed 2px $esds-text-color-brand;
-  color: $esds-text-color-brand;
+  background: $esds-color-orange-98;
+  border: dashed 2px $esds-color-brand;
+  color: $esds-color-brand;
   display: flex;
   justify-content: center;
   min-height: 60px;
