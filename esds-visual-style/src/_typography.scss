@@ -71,7 +71,7 @@
 @mixin esds-heading-eyebrow() {
   @include esds-heading-reset;
   @include esds-responsive-font-size($type: 'heading-eyebrow');
-  color: $esds-text-color-secondary-on-light;
+  color: $esds-color-text-secondary-on-light;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }

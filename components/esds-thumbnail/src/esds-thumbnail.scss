@@ -5,7 +5,7 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
   @include esds-typography-reset;
   @include esds-box-sizing;
   align-items: center;
-  background: $esds-background-color-brand;
+  background: $esds-color-brand;
   display: flex;
   justify-content: center;
   padding-bottom: 54.8%; // aspect ratio for image crop

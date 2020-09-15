@@ -29,7 +29,7 @@ export class EsdsBackgroundDemo extends Slotify(LitElement) {
   }
 
   render() {
-    const backgrounds = ['white', 'light', 'dark', 'black'];
+    const backgrounds = ['light-primary', 'light-secondary', 'dark-primary', 'dark-secondary'];
     const slotableContent = this.getSlotableContent()
       .map(n => n.outerHTML)
       .join('');
@@ -38,7 +38,7 @@ export class EsdsBackgroundDemo extends Slotify(LitElement) {
       <style>
         ${styles}
       </style>
-      <div class="esds-background-demo">
+      <div class="esds-background-demo SANITY CHECK">
         ${backgrounds.map(
           bg => html`
             <div class="esds-background-demo__column esds-container--${bg}">

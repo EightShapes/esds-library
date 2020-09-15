@@ -14,7 +14,7 @@
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@eightshapes/esds-card": "^0.1.0",
+    "@eightshapes/esds-card": "^0.2.1",
     "@eightshapes/esds-icon": "^0.2.0",
     "@eightshapes/esds-icons": "^0.2.0",
     "@eightshapes/esds-tokens": "^0.2.0",
@@ -22,8 +22,8 @@
     "babel-loader": "^8.0.6",
     "lit-html": "^1.1.2",
     "react-is": "^16.12.0",
-    "@eightshapes/esds-thumbnail": "^0.1.0",
-    "@eightshapes/esds-background-demo": "^0.1.0"
+    "@eightshapes/esds-thumbnail": "^0.2.0",
+    "@eightshapes/esds-background-demo": "^0.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
