@@ -1,5 +1,12 @@
 /* global window */
-import { setCustomElements } from '@storybook/web-components';
+import {
+  configure,
+  addParameters,
+  addDecorator,
+  setCustomElements,
+} from '@storybook/web-components';
+import { withA11y } from '@storybook/addon-a11y';
+
 import * as esdsTokens from '@eightshapes/esds-tokens';
 
 // TODO: Make this more scalable
@@ -15,15 +22,20 @@ customElements.tags.push(...thumbnailDocs.tags);
 
 setCustomElements(customElements);
 
-const backgroundColors = [];
-for (const bgName in esdsTokens['background-color']) {
-  backgroundColors.push({
-    name: bgName,
-    value: esdsTokens['background-color'][bgName],
-  });
-}
+addDecorator(withA11y);
 
-export const parameters = {
+const backgroundColors = [
+  {
+    name: 'Light Primary',
+    value: esdsTokens.color.background.light.primary,
+  },
+  {
+    name: 'Light Secondary',
+    value: esdsTokens.color.background.light.secondary,
+  },
+];
+
+addParameters({
   a11y: {
     element: '#root',
     config: {},
@@ -38,4 +50,15 @@ export const parameters = {
     default: backgroundColors[0].name,
     values: backgroundColors,
   },
-};
+});
+
+// force full reload to not reregister web components
+const req = require.context('../stories', true, /\.stories\.(js|mdx)$/);
+configure(req, module);
+if (module.hot) {
+  module.hot.accept(req.id, () => {
+    const currentLocationHref = window.location.href;
+    window.history.pushState(null, null, currentLocationHref);
+    window.location.reload();
+  });
+}

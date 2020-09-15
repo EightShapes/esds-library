@@ -29,7 +29,7 @@ export class EsdsBackgroundDemo extends Slotify(LitElement) {
   }
 
   render() {
-    const backgrounds = ['white', 'light', 'dark', 'black'];
+    const backgrounds = ['light-primary', 'light-secondary', 'dark-primary', 'dark-secondary'];
     const slotableContent = this.getSlotableContent()
       .map(n => n.outerHTML)
       .join('');

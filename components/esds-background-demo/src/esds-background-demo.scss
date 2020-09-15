@@ -8,14 +8,16 @@
   width: 100%;
 }
 
-$background-colors: esds-token('background-color');
+$background-colors: esds-token('color', 'background');
 
-@each $background, $background-color in $background-colors {
-  .esds-container--#{$background} {
-    @include esds-box-sizing;
-    @include esds-typography-reset;
-    background: $background-color;
-    padding: $esds-space-inset-1-x;
+@each $background-level-1, $background-data in $background-colors {
+  @each $background-level-2, $background-hex in $background-data {
+    .esds-container--#{$background-level-1}-#{$background-level-2} {
+      @include esds-box-sizing;
+      @include esds-typography-reset;
+      background: $background-hex;
+      padding: $esds-space-inset-1-x;
+    }
   }
 }
 

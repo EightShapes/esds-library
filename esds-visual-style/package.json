@@ -8,8 +8,8 @@
     "prepack": "npm run build",
     "prepare": "npm run build"
   },
-  "peerDependencies": {
-    "@eightshapes/esds-tokens": "^0.2.1"
+  "dependencies": {
+    "@eightshapes/esds-tokens": "^0.3.1"
   },
   "keywords": [],
   "author": "Kevin Powell <kevinmpowell@gmail.com>",

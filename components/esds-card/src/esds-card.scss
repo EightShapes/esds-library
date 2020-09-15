@@ -6,21 +6,21 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 
 // Mixins for states so they can be leveraged on test pages for static state examples
 @mixin esds-card-hover() {
-  background-color: $esds-interactive-color-hover-on-light;
+  background-color: $esds-color-interactive-hover-on-light;
   box-shadow: $esds-card-hover-shadow;
 }
 
 @mixin esds-card-focus($background: 'on-light') {
   @if ($background == 'on-dark') {
-    box-shadow: 0 0 0 4px $esds-color-teal-48;
+    box-shadow: 0 0 0 4px $esds-color-interactive-focus-on-dark;
   } @else {
-    box-shadow: 0 0 0 4px $esds-color-teal-27;
+    box-shadow: 0 0 0 4px $esds-color-interactive-focus-on-light;
   }
   outline: none;
 }
 
 @mixin esds-card-active() {
-  background-color: $esds-interactive-color-hover-on-light;
+  background-color: $esds-color-interactive-hover-on-light;
   box-shadow: none;
 }
 
@@ -41,7 +41,7 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 .#{$esds-custom-element-namespace}-card__root {
   @include esds-typography-reset;
   @include esds-box-sizing;
-  background-color: $esds-background-color-light;
+  background-color: $esds-color-background-light-secondary;
   border-radius: $esds-border-radius-default;
   display: inline-flex;
   flex-direction: column;
@@ -49,10 +49,10 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   width: 100%;
 
-  .esds-container--light &,
-  .esds-container--dark &,
-  .esds-container--black & {
-    background-color: $esds-background-color-white;
+  .esds-container--light-secondary &,
+  .esds-container--dark-primary &,
+  .esds-container--dark-secondary & {
+    background-color: $esds-color-background-light-primary;
   }
 
   &.esds-card--link {
@@ -99,7 +99,7 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   .esds-card__title {
     @include esds-heading-level-3;
     @include esds-text-crop($line-height: $esds-font-line-height-headings);
-    color: $esds-text-color-primary-on-light;
+    color: $esds-color-text-primary-on-light;
     margin: $esds-space-stack-1-x;
 
     &:last-child {
@@ -109,7 +109,7 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 
   .esds-card__title-link {
     @include esds-heading-level-3;
-    color: $esds-text-color-primary-on-light;
+    color: $esds-color-text-primary-on-light;
     text-decoration: none;
 
     &::after {
@@ -131,14 +131,14 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   .esds-card__metadata {
     @include esds-heading-eyebrow;
     @include esds-text-crop($line-height: $esds-font-line-height-headings);
-    color: $esds-text-color-secondary-on-light;
+    color: $esds-color-text-secondary-on-light;
     margin: $esds-space-stack-half-x;
   }
 
   .esds-card__description {
     @include esds-body-text-m;
     @include esds-text-crop;
-    color: $esds-text-color-primary-on-light;
+    color: $esds-color-text-primary-on-light;
     margin: $esds-space-stack-1-x;
 
     &:last-child {

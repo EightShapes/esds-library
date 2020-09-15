@@ -1,70 +1,87 @@
 /*
   Do not edit directly
-  Generated on Wed, 02 Sep 2020 19:38:49 GMT
+  Generated on Tue, 15 Sep 2020 18:49:04 GMT
 */
 
 $esds-color-white: #FFFFFF !default;
 $esds-color-black: #000000 !default;
-$esds-color-orange-82: #D24B00 !default;
-$esds-color-orange-91: #E85200 !default;
-$esds-color-orange-93: #EEAC8D !default;
+$esds-color-orange-41: #D24B00 !default;
+$esds-color-orange-45: #E85200 !default;
+$esds-color-orange-74: #EEAC8D !default;
+$esds-color-orange-98: #FBE5D9 !default;
 $esds-color-neutral-15: #262626 !default;
 $esds-color-neutral-25: #404040 !default;
 $esds-color-neutral-42: #6B6B6B !default;
-$esds-color-neutral-53: #888888 !default;
+$esds-color-neutral-55: #8C8C8C !default;
 $esds-color-neutral-70: #B3B1B1 !default;
 $esds-color-neutral-80: #CCCACA !default;
 $esds-color-neutral-90: #E6E3E3 !default;
 $esds-color-neutral-95: #F3F1F1 !default;
 $esds-color-neutral-05: #0D0D0D !default;
-$esds-color-teal-27: #00798C !default;
-$esds-color-teal-30: #068194 !default;
-$esds-color-teal-37: #0A9DB3 !default;
-$esds-color-teal-48: #20BDD5 !default;
-$esds-color-teal-96: #E7F4F6 !default;
-$esds-text-color-brand: #E85200 !default; // This is the primary EightShapes brand orange.
-$esds-text-color-primary-on-white: #0D0D0D !default;
-$esds-text-color-primary-on-light: #0D0D0D !default;
-$esds-text-color-primary-on-brand: #FFFFFF !default;
-$esds-text-color-primary-on-dark: #FFFFFF !default;
-$esds-text-color-primary-on-black: #F3F1F1 !default;
-$esds-text-color-primary-on-dark-photograph: #FFFFFF !default;
-$esds-text-color-secondary-on-white: #888888 !default;
-$esds-text-color-secondary-on-light: #888888 !default;
-$esds-text-color-secondary-on-brand: #E6E3E3 !default;
-$esds-text-color-secondary-on-dark: #888888 !default;
-$esds-text-color-secondary-on-black: #888888 !default;
-$esds-text-color-secondary-on-dark-photograph: #E6E3E3 !default;
-$esds-text-color-link-on-white: #068194 !default;
-$esds-text-color-link-on-light: #00798C !default;
-$esds-text-color-link-on-brand: #FFFFFF !default;
-$esds-text-color-link-on-dark: #20BDD5 !default;
-$esds-text-color-link-on-black: #20BDD5 !default;
-$esds-text-color-link-on-dark-photograph: #20BDD5 !default;
-$esds-background-color-white: #FFFFFF !default;
-$esds-background-color-light: #F3F1F1 !default;
-$esds-background-color-dark: #262626 !default;
-$esds-background-color-black: #0D0D0D !default;
-$esds-background-color-brand: #E85200 !default;
-$esds-background-color-dark-photograph: transparent !default;
-$esds-alert-color-error-on-light: #B90000 !default;
-$esds-alert-color-error-on-dark: #FF222B !default;
-$esds-alert-color-error-fill: #EEDFDF !default;
-$esds-alert-color-success-on-light: #158A06 !default;
-$esds-alert-color-success-on-dark: #26AD1B !default;
-$esds-alert-color-success-fill: #E9F3E8 !default;
-$esds-alert-color-warning-on-light: #E1B800 !default;
-$esds-alert-color-warning-fill: #F9F0D3 !default;
-$esds-alert-color-info-on-light: #068194 !default;
-$esds-alert-color-info-fill: #DAECEF !default;
-$esds-alert-color-new-on-light: #E85200 !default;
-$esds-alert-color-new-fill: #FBE5D9 !default;
-$esds-interactive-color-hover-on-light: #E1F1F3 !default;
-$esds-interactive-color-hover-on-dark: #004E5A !default;
-$esds-interactive-color-shadow-on-white: #068194 !default;
-$esds-interactive-color-shadow-on-light: #00798C !default;
-$esds-interactive-color-shadow-on-brand: #FFFFFF !default;
-$esds-interactive-color-shadow-on-dark: #20BDD5 !default;
+$esds-color-teal-19: #005663 !default;
+$esds-color-teal-22: #006170 !default;
+$esds-color-teal-28: #007A8D !default;
+$esds-color-teal-45: #43AAB5 !default;
+$esds-color-teal-66: #81C8D0 !default;
+$esds-color-teal-80: #B4DFE3 !default;
+$esds-color-teal-94: #D6ECEF !default;
+$esds-color-red-36: #B90000 !default;
+$esds-color-red-64: #FF464B !default;
+$esds-color-red-90: #EEDFDF !default;
+$esds-color-green-54: #1E8915 !default;
+$esds-color-green-68: #26AD1B !default;
+$esds-color-green-95: #E9F3E8 !default;
+$esds-color-yellow-88: #E1B800 !default;
+$esds-color-yellow-98: #F9F0D3 !default;
+$esds-color-brand: #E85200 !default;
+$esds-color-background-light-primary: #FFFFFF !default;
+$esds-color-background-light-secondary: #F3F1F1 !default;
+$esds-color-background-dark-primary: #262626 !default;
+$esds-color-background-dark-secondary: #0D0D0D !default;
+$esds-color-text-primary-on-light: #0D0D0D !default;
+$esds-color-text-primary-on-dark: #FFFFFF !default;
+$esds-color-text-secondary-on-light: #6B6B6B !default;
+$esds-color-text-secondary-on-dark: #8C8C8C !default;
+$esds-color-text-link-on-light: #005663 !default;
+$esds-color-text-link-on-dark: #43AAB5 !default;
+$esds-color-text-error-on-light: #B90000 !default;
+$esds-color-text-error-on-dark: #FF464B !default;
+$esds-color-text-disabled-on-light: #B3B1B1 !default;
+$esds-color-text-disabled-on-dark: #6B6B6B !default;
+$esds-color-icon-secondary-on-light: #6B6B6B !default;
+$esds-color-icon-secondary-on-dark: #8C8C8C !default;
+$esds-color-interactive-default-on-light: #007A8D !default;
+$esds-color-interactive-default-on-dark: #43AAB5 !default;
+$esds-color-interactive-hover-on-light: #006170 !default;
+$esds-color-interactive-hover-on-dark: #81C8D0 !default;
+$esds-color-interactive-focus-on-light: #007A8D !default;
+$esds-color-interactive-focus-on-dark: #43AAB5 !default;
+$esds-color-interactive-selected-on-light: #007A8D !default;
+$esds-color-interactive-selected-on-dark: #43AAB5 !default;
+$esds-color-interactive-active-on-light: #005663 !default;
+$esds-color-interactive-active-on-dark: #B4DFE3 !default;
+$esds-color-interactive-pressed-on-light: #005663 !default;
+$esds-color-interactive-pressed-on-dark: #B4DFE3 !default;
+$esds-color-interactive-disabled-on-light: #CCCACA !default;
+$esds-color-interactive-disabled-on-dark: #404040 !default;
+$esds-color-border-control-default-on-light: #B3B1B1 !default;
+$esds-color-border-control-default-on-dark: #B3B1B1 !default;
+$esds-color-border-control-focus-on-light: #005663 !default;
+$esds-color-border-control-focus-on-dark: #43AAB5 !default;
+$esds-color-border-control-error-on-light: #B90000 !default;
+$esds-color-border-control-error-on-dark: #FF464B !default;
+$esds-color-alert-error-on-light: #B90000 !default;
+$esds-color-alert-error-on-dark: #FF464B !default;
+$esds-color-alert-error-fill: #EEDFDF !default;
+$esds-color-alert-success-on-light: #1E8915 !default;
+$esds-color-alert-success-on-dark: #26AD1B !default;
+$esds-color-alert-success-fill: #E9F3E8 !default;
+$esds-color-alert-warning-on-light: #E1B800 !default;
+$esds-color-alert-warning-fill: #F9F0D3 !default;
+$esds-color-alert-info-on-light: #007A8D !default;
+$esds-color-alert-info-fill: #D6ECEF !default;
+$esds-color-alert-new-on-light: #E85200 !default;
+$esds-color-alert-new-fill: #FBE5D9 !default;
 $esds-font-family-sans-serif: 'Barlow Semi Condensed', sans-serif !default;
 $esds-font-size-heading-level-1-default: 36px !default;
 $esds-font-size-heading-level-1-at-480: 40px !default;
@@ -109,14 +126,12 @@ $esds-font-weight-light: 300 !default;
 $esds-font-weight-regular: 400 !default;
 $esds-font-weight-bold: 700 !default;
 $esds-font-line-length-long-form: 800px !default;
-$esds-border-selected-width: 5px !default;
-$esds-border-selected-on-white: solid 5px #068194 !default;
-$esds-border-selected-on-light: solid 5px #068194 !default;
-$esds-border-selected-on-dark: solid 5px #20BDD5 !default;
-$esds-border-selected-on-black: solid 5px #20BDD5 !default;
-$esds-border-interactive-image: solid 2px #068194 !default;
-$esds-border-control-on-white: solid 1px #B3B1B1 !default;
-$esds-border-default: solid 2px #6B6B6B !default;
+$esds-border-control-default-on-light: undefined !default;
+$esds-border-control-default-on-dark: undefined !default;
+$esds-border-control-focus-on-light: undefined !default;
+$esds-border-control-focus-on-dark: undefined !default;
+$esds-border-control-error-on-light: undefined !default;
+$esds-border-control-error-on-dark: undefined !default;
 $esds-border-radius-default: 8px !default;
 $esds-space-generic-16-x: 256px !default;
 $esds-space-generic-8-x: 128px !default;
@@ -166,15 +181,16 @@ $esds: (
     'white': $esds-color-white,
     'black': $esds-color-black,
     'orange': (
-      '82': $esds-color-orange-82,
-      '91': $esds-color-orange-91,
-      '93': $esds-color-orange-93,
+      '41': $esds-color-orange-41,
+      '45': $esds-color-orange-45,
+      '74': $esds-color-orange-74,
+      '98': $esds-color-orange-98,
     ),
     'neutral': (
       '15': $esds-color-neutral-15,
       '25': $esds-color-neutral-25,
       '42': $esds-color-neutral-42,
-      '53': $esds-color-neutral-53,
+      '55': $esds-color-neutral-55,
       '70': $esds-color-neutral-70,
       '80': $esds-color-neutral-80,
       '90': $esds-color-neutral-90,
@@ -182,82 +198,136 @@ $esds: (
       '05': $esds-color-neutral-05,
     ),
     'teal': (
-      '27': $esds-color-teal-27,
-      '30': $esds-color-teal-30,
-      '37': $esds-color-teal-37,
-      '48': $esds-color-teal-48,
-      '96': $esds-color-teal-96,
+      '19': $esds-color-teal-19,
+      '22': $esds-color-teal-22,
+      '28': $esds-color-teal-28,
+      '45': $esds-color-teal-45,
+      '66': $esds-color-teal-66,
+      '80': $esds-color-teal-80,
+      '94': $esds-color-teal-94,
     ),
-  ),
-  'text-color': (
-    'brand': $esds-text-color-brand,
-    'primary': (
-      'on-white': $esds-text-color-primary-on-white,
-      'on-light': $esds-text-color-primary-on-light,
-      'on-brand': $esds-text-color-primary-on-brand,
-      'on-dark': $esds-text-color-primary-on-dark,
-      'on-black': $esds-text-color-primary-on-black,
-      'on-dark-photograph': $esds-text-color-primary-on-dark-photograph,
+    'red': (
+      '36': $esds-color-red-36,
+      '64': $esds-color-red-64,
+      '90': $esds-color-red-90,
     ),
-    'secondary': (
-      'on-white': $esds-text-color-secondary-on-white,
-      'on-light': $esds-text-color-secondary-on-light,
-      'on-brand': $esds-text-color-secondary-on-brand,
-      'on-dark': $esds-text-color-secondary-on-dark,
-      'on-black': $esds-text-color-secondary-on-black,
-      'on-dark-photograph': $esds-text-color-secondary-on-dark-photograph,
+    'green': (
+      '54': $esds-color-green-54,
+      '68': $esds-color-green-68,
+      '95': $esds-color-green-95,
     ),
-    'link': (
-      'on-white': $esds-text-color-link-on-white,
-      'on-light': $esds-text-color-link-on-light,
-      'on-brand': $esds-text-color-link-on-brand,
-      'on-dark': $esds-text-color-link-on-dark,
-      'on-black': $esds-text-color-link-on-black,
-      'on-dark-photograph': $esds-text-color-link-on-dark-photograph,
+    'yellow': (
+      '88': $esds-color-yellow-88,
+      '98': $esds-color-yellow-98,
     ),
-  ),
-  'background-color': (
-    'white': $esds-background-color-white,
-    'light': $esds-background-color-light,
-    'dark': $esds-background-color-dark,
-    'black': $esds-background-color-black,
-    'brand': $esds-background-color-brand,
-    'dark-photograph': $esds-background-color-dark-photograph,
-  ),
-  'alert-color': (
-    'error': (
-      'on-light': $esds-alert-color-error-on-light,
-      'on-dark': $esds-alert-color-error-on-dark,
-      'fill': $esds-alert-color-error-fill,
+    'brand': $esds-color-brand,
+    'background': (
+      'light': (
+        'primary': $esds-color-background-light-primary,
+        'secondary': $esds-color-background-light-secondary,
+      ),
+      'dark': (
+        'primary': $esds-color-background-dark-primary,
+        'secondary': $esds-color-background-dark-secondary,
+      ),
     ),
-    'success': (
-      'on-light': $esds-alert-color-success-on-light,
-      'on-dark': $esds-alert-color-success-on-dark,
-      'fill': $esds-alert-color-success-fill,
+    'text': (
+      'primary': (
+        'on-light': $esds-color-text-primary-on-light,
+        'on-dark': $esds-color-text-primary-on-dark,
+      ),
+      'secondary': (
+        'on-light': $esds-color-text-secondary-on-light,
+        'on-dark': $esds-color-text-secondary-on-dark,
+      ),
+      'link': (
+        'on-light': $esds-color-text-link-on-light,
+        'on-dark': $esds-color-text-link-on-dark,
+      ),
+      'error': (
+        'on-light': $esds-color-text-error-on-light,
+        'on-dark': $esds-color-text-error-on-dark,
+      ),
+      'disabled': (
+        'on-light': $esds-color-text-disabled-on-light,
+        'on-dark': $esds-color-text-disabled-on-dark,
+      ),
     ),
-    'warning': (
-      'on-light': $esds-alert-color-warning-on-light,
-      'fill': $esds-alert-color-warning-fill,
+    'icon': (
+      'secondary': (
+        'on-light': $esds-color-icon-secondary-on-light,
+        'on-dark': $esds-color-icon-secondary-on-dark,
+      ),
     ),
-    'info': (
-      'on-light': $esds-alert-color-info-on-light,
-      'fill': $esds-alert-color-info-fill,
+    'interactive': (
+      'default': (
+        'on-light': $esds-color-interactive-default-on-light,
+        'on-dark': $esds-color-interactive-default-on-dark,
+      ),
+      'hover': (
+        'on-light': $esds-color-interactive-hover-on-light,
+        'on-dark': $esds-color-interactive-hover-on-dark,
+      ),
+      'focus': (
+        'on-light': $esds-color-interactive-focus-on-light,
+        'on-dark': $esds-color-interactive-focus-on-dark,
+      ),
+      'selected': (
+        'on-light': $esds-color-interactive-selected-on-light,
+        'on-dark': $esds-color-interactive-selected-on-dark,
+      ),
+      'active': (
+        'on-light': $esds-color-interactive-active-on-light,
+        'on-dark': $esds-color-interactive-active-on-dark,
+      ),
+      'pressed': (
+        'on-light': $esds-color-interactive-pressed-on-light,
+        'on-dark': $esds-color-interactive-pressed-on-dark,
+      ),
+      'disabled': (
+        'on-light': $esds-color-interactive-disabled-on-light,
+        'on-dark': $esds-color-interactive-disabled-on-dark,
+      ),
     ),
-    'new': (
-      'on-light': $esds-alert-color-new-on-light,
-      'fill': $esds-alert-color-new-fill,
+    'border': (
+      'control': (
+        'default': (
+          'on-light': $esds-color-border-control-default-on-light,
+          'on-dark': $esds-color-border-control-default-on-dark,
+        ),
+        'focus': (
+          'on-light': $esds-color-border-control-focus-on-light,
+          'on-dark': $esds-color-border-control-focus-on-dark,
+        ),
+        'error': (
+          'on-light': $esds-color-border-control-error-on-light,
+          'on-dark': $esds-color-border-control-error-on-dark,
+        ),
+      ),
     ),
-  ),
-  'interactive-color': (
-    'hover': (
-      'on-light': $esds-interactive-color-hover-on-light,
-      'on-dark': $esds-interactive-color-hover-on-dark,
-    ),
-    'shadow': (
-      'on-white': $esds-interactive-color-shadow-on-white,
-      'on-light': $esds-interactive-color-shadow-on-light,
-      'on-brand': $esds-interactive-color-shadow-on-brand,
-      'on-dark': $esds-interactive-color-shadow-on-dark,
+    'alert': (
+      'error': (
+        'on-light': $esds-color-alert-error-on-light,
+        'on-dark': $esds-color-alert-error-on-dark,
+        'fill': $esds-color-alert-error-fill,
+      ),
+      'success': (
+        'on-light': $esds-color-alert-success-on-light,
+        'on-dark': $esds-color-alert-success-on-dark,
+        'fill': $esds-color-alert-success-fill,
+      ),
+      'warning': (
+        'on-light': $esds-color-alert-warning-on-light,
+        'fill': $esds-color-alert-warning-fill,
+      ),
+      'info': (
+        'on-light': $esds-color-alert-info-on-light,
+        'fill': $esds-color-alert-info-fill,
+      ),
+      'new': (
+        'on-light': $esds-color-alert-new-on-light,
+        'fill': $esds-color-alert-new-fill,
+      ),
     ),
   ),
   'font': (
@@ -335,18 +405,20 @@ $esds: (
     ),
   ),
   'border': (
-    'selected': (
-      'width': $esds-border-selected-width,
-      'on-white': $esds-border-selected-on-white,
-      'on-light': $esds-border-selected-on-light,
-      'on-dark': $esds-border-selected-on-dark,
-      'on-black': $esds-border-selected-on-black,
-    ),
-    'interactive-image': $esds-border-interactive-image,
     'control': (
-      'on-white': $esds-border-control-on-white,
+      'default': (
+        'on-light': $esds-border-control-default-on-light,
+        'on-dark': $esds-border-control-default-on-dark,
+      ),
+      'focus': (
+        'on-light': $esds-border-control-focus-on-light,
+        'on-dark': $esds-border-control-focus-on-dark,
+      ),
+      'error': (
+        'on-light': $esds-border-control-error-on-light,
+        'on-dark': $esds-border-control-error-on-dark,
+      ),
     ),
-    'default': $esds-border-default,
     'radius': (
       'default': $esds-border-radius-default,
     ),

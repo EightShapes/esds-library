@@ -1,10 +1,4 @@
 {
-  "packages": [
-    "esds-icons",
-    "esds-tokens",
-    "esds-visual-style",
-    "components/**/*",
-    "test/**/*"
-  ],
+  "packages": ["esds-icons", "esds-tokens", "esds-visual-style", "components/**/*", "test/**/*"],
   "version": "independent"
 }
