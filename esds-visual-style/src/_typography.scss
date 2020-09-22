@@ -74,7 +74,7 @@
 }
 
 @mixin esds-heading-eyebrow() {
-  @include esds-typography-reset($font-weight: $esds-font-weight-bold);
+  @include esds-heading-reset;
   @include esds-responsive-font-size($type: 'heading-eyebrow');
   letter-spacing: 0.2em;
   line-height: $esds-font-line-height-headings;
@@ -83,7 +83,6 @@
 }
 
 @mixin esds-heading-eyebrow-small() {
-  @include esds-typography-reset($font-weight: $esds-font-weight-bold);
   @include esds-heading-reset;
   @include esds-responsive-font-size($type: 'heading-eyebrow-small');
   letter-spacing: 0.2em;
@@ -92,7 +91,7 @@
   text-transform: uppercase;
 }
 
-@mixin esds-paragraph-lead() {
+@mixin esds-body-lead() {
   @include esds-typography-reset;
   @include esds-responsive-font-size($type: 'heading-level-4');
   font-weight: $esds-font-weight-regular;
@@ -100,7 +99,7 @@
   margin: 0;
 }
 
-@mixin esds-paragraph-l() {
+@mixin esds-body-l() {
   @include esds-typography-reset;
   @include esds-responsive-font-size($type: 'body-l');
   font-weight: $esds-font-weight-regular;
@@ -108,7 +107,7 @@
   margin: 0;
 }
 
-@mixin esds-paragraph-m() {
+@mixin esds-body-m() {
   @include esds-typography-reset;
   @include esds-responsive-font-size($type: 'body-m');
   font-weight: $esds-font-weight-regular;
@@ -116,14 +115,14 @@
   margin: 0;
 }
 
-@mixin esds-paragraph-s() {
+@mixin esds-body-s() {
   @include esds-typography-reset;
   @include esds-responsive-font-size($type: 'body-s');
   font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
   margin: 0;
 }
-@mixin esds-paragraph-xs() {
+@mixin esds-body-xs() {
   @include esds-typography-reset;
   @include esds-responsive-font-size($type: 'body-xs');
   font-weight: $esds-font-weight-regular;

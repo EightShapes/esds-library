@@ -1,6 +1,6 @@
 /*
   Do not edit directly
-  Generated on Tue, 15 Sep 2020 19:50:26 GMT
+  Generated on Tue, 22 Sep 2020 19:10:26 GMT
 */
 
 $esds-color-white: #FFFFFF !default;
@@ -136,7 +136,6 @@ $esds-font-line-height-headings: 1.2 !default;
 $esds-font-line-height-tight: 1.2 !default;
 $esds-font-weight-regular: 400 !default;
 $esds-font-weight-semi-bold: 600 !default;
-$esds-font-weight-bold: 700 !default;
 $esds-font-line-length-long-form: 800px !default;
 $esds-border-control-default-on-light: undefined !default;
 $esds-border-control-default-on-dark: undefined !default;
@@ -428,7 +427,6 @@ $esds: (
     'weight': (
       'regular': $esds-font-weight-regular,
       'semi-bold': $esds-font-weight-semi-bold,
-      'bold': $esds-font-weight-bold,
     ),
     'line-length': (
       'long-form': $esds-font-line-length-long-form,

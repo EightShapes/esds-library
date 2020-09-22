@@ -35,28 +35,28 @@
   color: $esds-color-text-primary-on-light;
 }
 
-.esds-paragraph--lead {
-  @include esds-paragraph-lead;
+.esds-body--lead {
+  @include esds-body-lead;
   color: $esds-color-text-primary-on-light;
 }
 
-.esds-paragraph--large {
-  @include esds-paragraph-l;
+.esds-body--large {
+  @include esds-body-l;
   color: $esds-color-text-primary-on-light;
 }
 
-.esds-paragraph--medium {
-  @include esds-paragraph-m;
+.esds-body--medium {
+  @include esds-body-m;
   color: $esds-color-text-primary-on-light;
 }
 
-.esds-paragraph--small {
-  @include esds-paragraph-s;
+.esds-body--small {
+  @include esds-body-s;
   color: $esds-color-text-primary-on-light;
 }
 
-.esds-paragraph--extra-small {
-  @include esds-paragraph-xs;
+.esds-body--extra-small {
+  @include esds-body-xs;
   color: $esds-color-text-primary-on-light;
 }
 
