@@ -7,8 +7,6 @@ import {
 } from '@storybook/web-components';
 import { withA11y } from '@storybook/addon-a11y';
 
-import * as esdsTokens from '@eightshapes/esds-tokens';
-
 // TODO: Make this more scalable
 import cardDocs from '@eightshapes/esds-card/documentation/esds-card-docs.json';
 import iconDocs from '@eightshapes/esds-icon/documentation/esds-icon-docs.json';
@@ -24,17 +22,6 @@ setCustomElements(customElements);
 
 addDecorator(withA11y);
 
-const backgroundColors = [
-  {
-    name: 'Light Primary',
-    value: esdsTokens.color.background.light.primary,
-  },
-  {
-    name: 'Light Secondary',
-    value: esdsTokens.color.background.light.secondary,
-  },
-];
-
 addParameters({
   a11y: {
     element: '#root',
@@ -46,10 +33,8 @@ addParameters({
     iframeHeight: '200px',
     inlineStories: false,
   },
-  backgrounds: {
-    default: backgroundColors[0].name,
-    values: backgroundColors,
-  },
+  // disables Chromatic on a global level
+  chromatic: { disable: true },
 });
 
 // force full reload to not reregister web components

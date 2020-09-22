@@ -1,0 +1,65 @@
+@use '../../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
+
+.esds-heading--level-1 {
+  @include esds-heading-level-1;
+  color: $esds-color-text-primary-on-light;
+}
+
+.esds-heading--level-2 {
+  @include esds-heading-level-2;
+  color: $esds-color-text-primary-on-light;
+}
+
+.esds-heading--level-3 {
+  @include esds-heading-level-3;
+  color: $esds-color-text-primary-on-light;
+}
+
+.esds-heading--level-4 {
+  @include esds-heading-level-4;
+  color: $esds-color-text-primary-on-light;
+}
+
+.esds-heading--level-5 {
+  @include esds-heading-level-5;
+  color: $esds-color-text-primary-on-light;
+}
+
+.esds-heading--eyebrow {
+  @include esds-heading-eyebrow;
+  color: $esds-color-text-primary-on-light;
+}
+
+.esds-heading--eyebrow-small {
+  @include esds-heading-eyebrow-small;
+  color: $esds-color-text-primary-on-light;
+}
+
+.esds-body--lead {
+  @include esds-body-lead;
+  color: $esds-color-text-primary-on-light;
+}
+
+.esds-body--large {
+  @include esds-body-l;
+  color: $esds-color-text-primary-on-light;
+}
+
+.esds-body--medium {
+  @include esds-body-m;
+  color: $esds-color-text-primary-on-light;
+}
+
+.esds-body--small {
+  @include esds-body-s;
+  color: $esds-color-text-primary-on-light;
+}
+
+.esds-body--extra-small {
+  @include esds-body-xs;
+  color: $esds-color-text-primary-on-light;
+}
+
+.esds-link {
+  @include esds-link;
+}

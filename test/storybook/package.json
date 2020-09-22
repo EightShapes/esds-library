@@ -8,7 +8,9 @@
     "test": "npm run vrt",
     "storybook": "start-storybook -p 6006 -s ./static",
     "build-storybook": "build-storybook  -s ./static",
-    "vrt": "build-storybook -s ./static && percy-storybook --widths=1280"
+    "vrt": "npm run chromatic",
+    "chromatic": "npx chromatic --project-token ux0pptqmlsi",
+    "percy": "build-storybook -s ./static && percy-storybook --widths=1280"
   },
   "keywords": [],
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
@@ -34,6 +36,7 @@
     "@storybook/addon-knobs": "^5.3.14",
     "@storybook/addon-viewport": "^5.3.14",
     "@storybook/web-components": "^5.3.14",
+    "chromatic": "^5.2.0",
     "react": "^16.13.1",
     "sass": "^1.26.2",
     "sass-loader": "^8.0.2"

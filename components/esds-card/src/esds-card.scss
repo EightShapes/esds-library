@@ -136,7 +136,7 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   }
 
   .esds-card__description {
-    @include esds-body-text-m;
+    @include esds-body-m;
     @include esds-text-crop;
     color: $esds-color-text-primary-on-light;
     margin: $esds-space-stack-1-x;

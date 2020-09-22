@@ -43,7 +43,7 @@
 }
 
 @mixin esds-heading-reset() {
-  @include esds-typography-reset($font-weight: $esds-font-weight-bold);
+  @include esds-typography-reset($font-weight: $esds-font-weight-semi-bold);
   line-height: $esds-font-line-height-headings;
   margin: 0;
 }
@@ -68,44 +68,71 @@
   @include esds-responsive-font-size($type: 'heading-level-4');
 }
 
+@mixin esds-heading-level-5() {
+  @include esds-heading-reset;
+  @include esds-responsive-font-size($type: 'heading-level-5');
+}
+
 @mixin esds-heading-eyebrow() {
   @include esds-heading-reset;
   @include esds-responsive-font-size($type: 'heading-eyebrow');
-  color: $esds-color-text-secondary-on-light;
   letter-spacing: 0.2em;
+  line-height: $esds-font-line-height-headings;
+  margin: 0;
   text-transform: uppercase;
 }
 
-@mixin esds-body-text-lead() {
+@mixin esds-heading-eyebrow-small() {
+  @include esds-heading-reset;
+  @include esds-responsive-font-size($type: 'heading-eyebrow-small');
+  letter-spacing: 0.2em;
+  line-height: $esds-font-line-height-headings;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@mixin esds-body-lead() {
   @include esds-typography-reset;
   @include esds-responsive-font-size($type: 'heading-level-4');
-  font-weight: $esds-font-weight-light;
+  font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
+  margin: 0;
 }
 
-@mixin esds-body-text-l() {
+@mixin esds-body-l() {
   @include esds-typography-reset;
   @include esds-responsive-font-size($type: 'body-l');
-  font-weight: $esds-font-weight-light;
+  font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
+  margin: 0;
 }
 
-@mixin esds-body-text-m() {
+@mixin esds-body-m() {
   @include esds-typography-reset;
   @include esds-responsive-font-size($type: 'body-m');
   font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
+  margin: 0;
 }
 
-@mixin esds-body-text-s() {
+@mixin esds-body-s() {
   @include esds-typography-reset;
   @include esds-responsive-font-size($type: 'body-s');
   font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
+  margin: 0;
+}
+@mixin esds-body-xs() {
+  @include esds-typography-reset;
+  @include esds-responsive-font-size($type: 'body-xs');
+  font-weight: $esds-font-weight-regular;
+  line-height: $esds-font-line-height-normal;
+  margin: 0;
 }
 
 @mixin esds-link() {
-  @include esds-text-color($type: 'link');
+  @include esds-typography-reset;
+  color: $esds-color-text-link-on-light;
   text-decoration: none;
 
   &:hover {
