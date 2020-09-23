@@ -1,0 +1,97 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "esds-button",
+      "path": "./../src/EsdsButton.js",
+      "attributes": [
+        {
+          "name": "href",
+          "description": "Href for a button link, will switch the element tag to an <a> if an href is provided",
+          "type": "string"
+        },
+        {
+          "name": "icon",
+          "description": "Full SVG of icon to be injected into component",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "description": "text for the button, overridden by default prop",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "description": "visual style of the button",
+          "type": "'button'|'submit'|'reset'"
+        },
+        {
+          "name": "variant",
+          "description": "visual style of the button",
+          "type": "'primary'|'secondary'|'flat'|'outline'",
+          "default": "\"primary\""
+        },
+        {
+          "name": "size",
+          "description": "size of the button",
+          "type": "'small'|'medium'|'large'",
+          "default": "\"medium\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "href",
+          "attribute": "href",
+          "description": "Href for a button link, will switch the element tag to an <a> if an href is provided",
+          "type": "string"
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Full SVG of icon to be injected into component",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "attribute": "text",
+          "description": "text for the button, overridden by default prop",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "attribute": "type",
+          "description": "visual style of the button",
+          "type": "'button'|'submit'|'reset'"
+        },
+        {
+          "name": "cssClassObject",
+          "type": "{ default: string; prefix: string; size: { conditional: string; class: string; }; variant: { conditional: string; class: string; }; }"
+        },
+        {
+          "name": "variant",
+          "attribute": "variant",
+          "description": "visual style of the button",
+          "type": "'primary'|'secondary'|'flat'|'outline'",
+          "default": "\"primary\""
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "size of the button",
+          "type": "'small'|'medium'|'large'",
+          "default": "\"medium\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "Default slot, put whatever you want in here."
+        },
+        {
+          "name": "content",
+          "description": "Insert content in the named \"content\" slot."
+        }
+      ]
+    }
+  ]
+}

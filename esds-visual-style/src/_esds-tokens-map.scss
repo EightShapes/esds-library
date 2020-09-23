@@ -1,6 +1,6 @@
 /*
   Do not edit directly
-  Generated on Tue, 22 Sep 2020 19:10:26 GMT
+  Generated on Wed, 23 Sep 2020 00:37:31 GMT
 */
 
 $esds-color-white: #FFFFFF !default;
@@ -143,6 +143,7 @@ $esds-border-control-focus-on-light: undefined !default;
 $esds-border-control-focus-on-dark: undefined !default;
 $esds-border-control-error-on-light: undefined !default;
 $esds-border-control-error-on-dark: undefined !default;
+$esds-border-radius-control: 4px !default;
 $esds-border-radius-default: 8px !default;
 $esds-space-generic-16-x: 256px !default;
 $esds-space-generic-8-x: 128px !default;
@@ -166,8 +167,8 @@ $esds-space-inset-eighth-x: 2px !default;
 $esds-space-inset-squish-4-x: 32px 64px !default;
 $esds-space-inset-squish-2-x: 16px 32px !default;
 $esds-space-inset-squish-1-and-half-x: 12px 24px !default;
-$esds-space-inset-squish-1-x: 8px 16px !default;
-$esds-space-inset-squish-half-x: 4px 8px !default;
+$esds-space-inset-squish-1-x: 8px 12px !default;
+$esds-space-inset-squish-half-x: 6px 8px !default;
 $esds-space-inset-squish-quarter-x: 2px 4px !default;
 $esds-space-stack-4-x: 0 0 64px !default;
 $esds-space-stack-3-x: 0 0 48px !default;
@@ -448,6 +449,7 @@ $esds: (
       ),
     ),
     'radius': (
+      'control': $esds-border-radius-control,
       'default': $esds-border-radius-default,
     ),
   ),
