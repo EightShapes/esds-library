@@ -24,28 +24,33 @@ export class EsdsButton extends Slotify(Scopify(CSSClassify(LitElement), 'esds')
        * @type String
        */
       href: { type: String },
+
       /*
-       * Full SVG of icon to be injected into component
+       * Full SVG string of an icon to be injected into component.
        * @type String
        */
       icon: { type: String },
+
       /*
-       * size of the button
+       * Sets the button size.
        * @type {'small'|'medium'|'large'}
        */
       size: { type: String },
+
       /*
-       * text for the button, overridden by default prop
+       * The text on the button. Overridden by the default prop.
        * @type String
        */
       text: { type: String },
+
       /*
-       * visual style of the button
+       * The type attribute of the underlying HTML button.
        * @type {'button'|'submit'|'reset'}
        */
       type: { type: String },
+
       /*
-       * visual style of the button
+       * Visual style of the button.
        * @type {'primary'|'secondary'|'flat'|'outline'}
        */
       variant: { type: String },
@@ -57,6 +62,7 @@ export class EsdsButton extends Slotify(Scopify(CSSClassify(LitElement), 'esds')
     // Prop Defaults
     this.variant = 'primary';
     this.size = 'medium';
+    this.type = 'button';
   }
 
   get cssClassObject() {
