@@ -3,6 +3,7 @@ import { ifDefined } from 'lit-html/directives/if-defined';
 import '@eightshapes/esds-button/dist/esds-button-web-component.js'; // The Web Component Import
 import { EsdsButton } from '@eightshapes/esds-button/dist/EsdsButton.js';
 import { EsdsIconPlus } from '@eightshapes/esds-icons';
+import { addParameters } from '@storybook/web-components';
 
 import { sinkFor } from './scripts/utilities.js';
 
@@ -84,6 +85,4 @@ export const Scoped = () => {
 };
 
 export const Sink = sinkFor(Primary, Secondary, Flat, Outline, Scoped);
-Sink.parameters = {
-  chromatic: { disable: false },
-};
+addParameters({ chromatic: { disable: false } }, Sink);
