@@ -82,7 +82,7 @@
         'on-dark': { value: '{color.neutral.55.value}' },
       },
     },
-    interactive: {
+    action: {
       default: {
         'on-light': { value: '{color.teal.28.value}' },
         'on-dark': { value: '{color.teal.45.value}' },

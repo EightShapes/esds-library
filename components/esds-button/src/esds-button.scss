@@ -19,8 +19,8 @@ $esds-button-color-background-secondary-hover: $esds-color-neutral-42;
   @include esds-typography-reset;
   @include esds-box-sizing;
   align-items: center;
-  background: $esds-color-interactive-default-on-light;
-  border: solid #{$esds-button-border-width} #{$esds-color-interactive-default-on-light};
+  background: $esds-color-action-default-on-light;
+  border: solid #{$esds-button-border-width} #{$esds-color-action-default-on-light};
   border-radius: $esds-border-radius-control;
   color: $esds-color-text-primary-on-dark; // inherited by icon & text elements
   cursor: pointer;
@@ -32,8 +32,8 @@ $esds-button-color-background-secondary-hover: $esds-color-neutral-42;
   }
 
   &:hover {
-    background: $esds-color-interactive-hover-on-light;
-    border-color: $esds-color-interactive-hover-on-light;
+    background: $esds-color-action-hover-on-light;
+    border-color: $esds-color-action-hover-on-light;
   }
 }
 
@@ -54,22 +54,22 @@ $esds-button-color-background-secondary-hover: $esds-color-neutral-42;
 .esds-button--flat {
   background: transparent;
   border-color: transparent;
-  color: $esds-color-interactive-default-on-light; // inherited by icon & text elements
+  color: $esds-color-action-default-on-light; // inherited by icon & text elements
 
   &:hover {
     background: transparent;
     border-color: transparent;
-    color: $esds-color-interactive-hover-on-light;
+    color: $esds-color-action-hover-on-light;
   }
 }
 
 .esds-button--outline {
   background: transparent;
-  color: $esds-color-interactive-default-on-light; // inherited by icon & text elements
+  color: $esds-color-action-default-on-light; // inherited by icon & text elements
 
   &:hover {
     background: transparent;
-    color: $esds-color-interactive-hover-on-light; // inherited by icon & text elements
+    color: $esds-color-action-hover-on-light; // inherited by icon & text elements
   }
 }
 

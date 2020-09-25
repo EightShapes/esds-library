@@ -1,6 +1,6 @@
 /*
   Do not edit directly
-  Generated on Wed, 23 Sep 2020 00:37:31 GMT
+  Generated on Fri, 25 Sep 2020 19:41:16 GMT
 */
 
 $esds-color-white: #FFFFFF !default;
@@ -50,20 +50,20 @@ $esds-color-text-disabled-on-light: #B3B1B1 !default;
 $esds-color-text-disabled-on-dark: #6B6B6B !default;
 $esds-color-icon-secondary-on-light: #6B6B6B !default;
 $esds-color-icon-secondary-on-dark: #8C8C8C !default;
-$esds-color-interactive-default-on-light: #007A8D !default;
-$esds-color-interactive-default-on-dark: #43AAB5 !default;
-$esds-color-interactive-hover-on-light: #006170 !default;
-$esds-color-interactive-hover-on-dark: #81C8D0 !default;
-$esds-color-interactive-focus-on-light: #007A8D !default;
-$esds-color-interactive-focus-on-dark: #43AAB5 !default;
-$esds-color-interactive-selected-on-light: #007A8D !default;
-$esds-color-interactive-selected-on-dark: #43AAB5 !default;
-$esds-color-interactive-active-on-light: #005663 !default;
-$esds-color-interactive-active-on-dark: #B4DFE3 !default;
-$esds-color-interactive-pressed-on-light: #005663 !default;
-$esds-color-interactive-pressed-on-dark: #B4DFE3 !default;
-$esds-color-interactive-disabled-on-light: #CCCACA !default;
-$esds-color-interactive-disabled-on-dark: #404040 !default;
+$esds-color-action-default-on-light: #007A8D !default;
+$esds-color-action-default-on-dark: #43AAB5 !default;
+$esds-color-action-hover-on-light: #006170 !default;
+$esds-color-action-hover-on-dark: #81C8D0 !default;
+$esds-color-action-focus-on-light: #007A8D !default;
+$esds-color-action-focus-on-dark: #43AAB5 !default;
+$esds-color-action-selected-on-light: #007A8D !default;
+$esds-color-action-selected-on-dark: #43AAB5 !default;
+$esds-color-action-active-on-light: #005663 !default;
+$esds-color-action-active-on-dark: #B4DFE3 !default;
+$esds-color-action-pressed-on-light: #005663 !default;
+$esds-color-action-pressed-on-dark: #B4DFE3 !default;
+$esds-color-action-disabled-on-light: #CCCACA !default;
+$esds-color-action-disabled-on-dark: #404040 !default;
 $esds-color-border-control-default-on-light: #B3B1B1 !default;
 $esds-color-border-control-default-on-dark: #B3B1B1 !default;
 $esds-color-border-control-focus-on-light: #005663 !default;
@@ -271,34 +271,34 @@ $esds: (
         'on-dark': $esds-color-icon-secondary-on-dark,
       ),
     ),
-    'interactive': (
+    'action': (
       'default': (
-        'on-light': $esds-color-interactive-default-on-light,
-        'on-dark': $esds-color-interactive-default-on-dark,
+        'on-light': $esds-color-action-default-on-light,
+        'on-dark': $esds-color-action-default-on-dark,
       ),
       'hover': (
-        'on-light': $esds-color-interactive-hover-on-light,
-        'on-dark': $esds-color-interactive-hover-on-dark,
+        'on-light': $esds-color-action-hover-on-light,
+        'on-dark': $esds-color-action-hover-on-dark,
       ),
       'focus': (
-        'on-light': $esds-color-interactive-focus-on-light,
-        'on-dark': $esds-color-interactive-focus-on-dark,
+        'on-light': $esds-color-action-focus-on-light,
+        'on-dark': $esds-color-action-focus-on-dark,
       ),
       'selected': (
-        'on-light': $esds-color-interactive-selected-on-light,
-        'on-dark': $esds-color-interactive-selected-on-dark,
+        'on-light': $esds-color-action-selected-on-light,
+        'on-dark': $esds-color-action-selected-on-dark,
       ),
       'active': (
-        'on-light': $esds-color-interactive-active-on-light,
-        'on-dark': $esds-color-interactive-active-on-dark,
+        'on-light': $esds-color-action-active-on-light,
+        'on-dark': $esds-color-action-active-on-dark,
       ),
       'pressed': (
-        'on-light': $esds-color-interactive-pressed-on-light,
-        'on-dark': $esds-color-interactive-pressed-on-dark,
+        'on-light': $esds-color-action-pressed-on-light,
+        'on-dark': $esds-color-action-pressed-on-dark,
       ),
       'disabled': (
-        'on-light': $esds-color-interactive-disabled-on-light,
-        'on-dark': $esds-color-interactive-disabled-on-dark,
+        'on-light': $esds-color-action-disabled-on-light,
+        'on-dark': $esds-color-action-disabled-on-dark,
       ),
     ),
     'border': (

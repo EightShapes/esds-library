@@ -6,21 +6,21 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 
 // Mixins for states so they can be leveraged on test pages for static state examples
 @mixin esds-card-hover() {
-  background-color: $esds-color-interactive-hover-on-light;
+  background-color: $esds-color-action-hover-on-light;
   box-shadow: $esds-card-hover-shadow;
 }
 
 @mixin esds-card-focus($background: 'on-light') {
   @if ($background == 'on-dark') {
-    box-shadow: 0 0 0 4px $esds-color-interactive-focus-on-dark;
+    box-shadow: 0 0 0 4px $esds-color-action-focus-on-dark;
   } @else {
-    box-shadow: 0 0 0 4px $esds-color-interactive-focus-on-light;
+    box-shadow: 0 0 0 4px $esds-color-action-focus-on-light;
   }
   outline: none;
 }
 
 @mixin esds-card-active() {
-  background-color: $esds-color-interactive-hover-on-light;
+  background-color: $esds-color-action-hover-on-light;
   box-shadow: none;
 }
 
