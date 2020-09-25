@@ -1,37 +1,35 @@
 import { html } from 'lit-html';
+// The Web Component Import
+import '@eightshapes/esds-{{ lowerCase (dashCase name) }}/dist/esds-{{ lowerCase (dashCase name) }}-web-component.js';
+// The Custom Element Class
 import { sinkFor } from './scripts/utilities.js';
 
 
 import '@eightshapes/esds-{{ lowerCase (dashCase name) }}/dist/esds-{{ lowerCase (dashCase name) }}-web-component.js';
-// The Web Component Import
-import { Esds{{ pascalCase name }} } from
-'@eightshapes/esds-{{ lowerCase (dashCase name) }}/dist/Esds{{ pascalCase name }}.js'; // The Custom Element Class
 Esds{{ pascalCase name }}.define('esds-v10'); // Define a <esds-v10-{{ lowerCase (dashCase name) }}> component
 
-  export default {
-  title: '{{ titleCase name }}',
-  };
+export default {
+title: '{{ titleCase name }}',
+};
 
 
-  export const Default = () => {
-  return html`
-  <esds-{{ lowerCase (dashCase name) }}>{{#if slots}}<h3>Default Slot Heading</h3>
-    <h4 slot="content">Named Slot Heading</h4>{{/if}}
-  </esds-{{ lowerCase (dashCase name) }}>
-  `;
-  };
+export const Default = () => {
+return html`
+<esds-{{ lowerCase (dashCase name) }}>{{#if slots}}<h3>Default Slot Heading</h3>
+  <h4 slot="content">Named Slot Heading</h4>{{/if}}
+</esds-{{ lowerCase (dashCase name) }}>
+`;
+};
 
-  export const Scoped = () => {
-  return html`<div class="storybook-grid">
-    <div>
-      <span
-        class="storybook-annotation">&lt;esds-v10-{{ lowerCase (dashCase name) }}>&lt;/esds-v10-{{ lowerCase (dashCase name) }}></span>
-      <esds-v10-{{ lowerCase (dashCase name) }}></esds-v10-{{ lowerCase (dashCase name) }}>
-    </div>
-  </div>`;
-  };
+export const Scoped = () => {
+return html`<div class="storybook-grid">
+  <div>
+    <span
+      class="storybook-annotation">&lt;esds-v10-{{ lowerCase (dashCase name) }}>&lt;/esds-v10-{{ lowerCase (dashCase name) }}></span>
+    <esds-v10-{{ lowerCase (dashCase name) }}></esds-v10-{{ lowerCase (dashCase name) }}>
+  </div>
+</div>`;
+};
 
-  export const Sink = sinkFor(Default, Scoped);
-  Sink.parameters = {
-  chromatic: { disable: false },
-  };
+export const Sink = sinkFor(Default, Scoped);
+Sink.story = { parameters: { chromatic: { disable: false } } };

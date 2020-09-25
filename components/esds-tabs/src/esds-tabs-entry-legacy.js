@@ -1,2 +1,2 @@
 import 'regenerator-runtime/runtime'; // This is only needed for IE11
-import './esds-{{ lowerCase (dashCase name) }}-entry.js';
+import './esds-tabs-entry.js';
