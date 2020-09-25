@@ -27,7 +27,8 @@
     "@eightshapes/esds-thumbnail": "^0.2.0",
     "@eightshapes/esds-background-demo": "^0.2.0",
     "@eightshapes/esds-button": "^0.1.0",
-    "@eightshapes/esds-tabs": "^0.1.0"
+    "@eightshapes/esds-tabs": "^0.1.0",
+    "@eightshapes/esds-tab": "^0.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",

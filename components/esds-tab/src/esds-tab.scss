@@ -1,17 +1,11 @@
 @use '../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
 $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
 
-#{$esds-custom-element-namespace}-tabs {
+#{$esds-custom-element-namespace}-tab {
   display: contents;
 }
 
-.#{$esds-custom-element-namespace}-tabs {
+.#{$esds-custom-element-namespace}-tab {
   @include esds-box-sizing;
-
-  s-root,
-  s-slot,
-  s-assigned-wrapper,
-  s-fallback-wrapper {
-    display: contents;
-  }
+  @include esds-typography-reset;
 }

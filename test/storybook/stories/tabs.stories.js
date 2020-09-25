@@ -1,5 +1,6 @@
 import { html } from 'lit-html';
 import '@eightshapes/esds-tabs/dist/esds-tabs-web-component.js';
+import '@eightshapes/esds-tab/dist/esds-tab-web-component.js';
 import { sinkFor } from './scripts/utilities.js';
 
 // The Web Component Import
@@ -12,9 +13,10 @@ export default {
 
 export const Default = () => {
   return html`
-    <esds-tabs
-      ><h3>Default Slot Heading</h3>
-      <h4 slot="content">Named Slot Heading</h4>
+    <esds-tabs>
+      <esds-tab label="Tab 1">
+        <h1>Some tab content</h1>
+      </esds-tab>
     </esds-tabs>
   `;
 };
