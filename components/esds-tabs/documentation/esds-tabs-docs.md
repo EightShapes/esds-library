@@ -4,15 +4,12 @@
 
 ## Properties
 
-| Property         | Attribute | Modifiers | Type                                   | Default       | Description                               |
-|------------------|-----------|-----------|----------------------------------------|---------------|-------------------------------------------|
-| `cssClassObject` |           | readonly  | `{ default: string; prefix: string; }` |               |                                           |
-| `example`        | `example` |           | `'small'\|'medium'\|'large'`           | "medium"      | Describe the prop here using JSDoc syntax |
-| `text`           | `text`    |           | `string`                               | "Hello World" | The text displayed in the component       |
+| Property         | Modifiers | Type                                   |
+|------------------|-----------|----------------------------------------|
+| `cssClassObject` | readonly  | `{ default: string; prefix: string; }` |
 
 ## Slots
 
-| Name      | Description                                  |
-|-----------|----------------------------------------------|
-|           | Default slot, put whatever you want in here. |
-| `content` | Insert content in the named "content" slot.  |
+| Name | Description                                      |
+|------|--------------------------------------------------|
+|      | Default slot, insert <esds-tab> components in the default slot |

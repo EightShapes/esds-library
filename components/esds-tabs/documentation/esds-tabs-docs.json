@@ -4,48 +4,16 @@
     {
       "name": "esds-tabs",
       "path": "./../src/EsdsTabs.js",
-      "attributes": [
-        {
-          "name": "example",
-          "description": "Describe the prop here using JSDoc syntax",
-          "type": "'small'|'medium'|'large'",
-          "default": "\"medium\""
-        },
-        {
-          "name": "text",
-          "description": "The text displayed in the component",
-          "type": "string",
-          "default": "\"Hello World\""
-        }
-      ],
       "properties": [
         {
           "name": "cssClassObject",
           "type": "{ default: string; prefix: string; }"
-        },
-        {
-          "name": "example",
-          "attribute": "example",
-          "description": "Describe the prop here using JSDoc syntax",
-          "type": "'small'|'medium'|'large'",
-          "default": "\"medium\""
-        },
-        {
-          "name": "text",
-          "attribute": "text",
-          "description": "The text displayed in the component",
-          "type": "string",
-          "default": "\"Hello World\""
         }
       ],
       "slots": [
         {
           "name": "",
-          "description": "Default slot, put whatever you want in here."
-        },
-        {
-          "name": "content",
-          "description": "Insert content in the named \"content\" slot."
+          "description": "Default slot, insert <esds-tab> components in the default slot"
         }
       ]
     }

@@ -1,6 +1,10 @@
 @use '../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
 $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
 
+#{$esds-custom-element-namespace}-tabs {
+  display: contents;
+}
+
 .#{$esds-custom-element-namespace}-tabs {
-  font-size: $esds-font-size-body-m-default;
+  @include esds-box-sizing;
 }
