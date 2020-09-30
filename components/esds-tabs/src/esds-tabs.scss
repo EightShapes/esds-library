@@ -14,4 +14,9 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
   s-fallback-wrapper {
     display: contents;
   }
+
+  s-assigned-wrapper[hidden],
+  s-fallback-wrapper[hidden] {
+    display: none;
+  }
 }

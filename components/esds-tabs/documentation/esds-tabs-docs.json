@@ -8,6 +8,21 @@
         {
           "name": "cssClassObject",
           "type": "{ default: string; prefix: string; }"
+        },
+        {
+          "name": "tabCounter",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "KEYCODES",
+          "type": "object",
+          "default": "{\"DOWN\":40,\"LEFT\":37,\"RIGHT\":39,\"UP\":38,\"HOME\":36,\"END\":35}"
+        },
+        {
+          "name": "linkedTabs",
+          "type": "never[]",
+          "default": "[]"
         }
       ],
       "slots": [

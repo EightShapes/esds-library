@@ -23,7 +23,7 @@
     "watch:build-visual-style-dependency": "chokidar \"../../esds-visual-style/src/**/*.scss\" -c \"npm run build:styles\"",
     "watch:build-token-dependency": "chokidar \"../../esds-tokens/dist/**/*.scss\" -c \"npm run build:styles\"",
     "watch:build-tokens": "npm run --prefix ../../esds-tokens start",
-    "watch:build-tab": "npm run --prefix ../esds-tab start",
+    "watch:build-tab": "npm run --prefix ../esds-tab start:no-storybook",
     "build:jsdoc": "npx web-component-analyzer src --format json --outFile documentation/esds-tabs-docs.json && npx web-component-analyzer src --format markdown --outFile documentation/esds-tabs-docs.md",
     "watch:build-jsdoc": "chokidar \"src/**/*.js\" -c \"npm run build:jsdoc\"",
     "prepack": "npm run build",

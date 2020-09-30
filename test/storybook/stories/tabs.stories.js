@@ -14,8 +14,26 @@ export default {
 export const Default = () => {
   return html`
     <esds-tabs>
-      <esds-tab label="Tab 1">
-        <h1>Some tab content</h1>
+      <esds-tab>
+        <h2 slot="label">Tab 1</h2>
+        <p>
+          Tab 1 content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ea
+          obcaecati tempora vel eius officiis nisi fuga impedit deleniti asperiores!
+        </p>
+      </esds-tab>
+      <esds-tab selected>
+        <h2 slot="label">Tab 2</h2>
+        <p>
+          Tab 2 content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ea
+          obcaecati tempora vel eius officiis nisi fuga impedit deleniti asperiores!
+        </p>
+      </esds-tab>
+      <esds-tab>
+        <h2 slot="label">Tab 3 <em>With a KICK!</em></h2>
+        <p>
+          Tab 3 content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ea
+          obcaecati tempora vel eius officiis nisi fuga impedit deleniti asperiores!
+        </p>
       </esds-tab>
     </esds-tabs>
   `;
