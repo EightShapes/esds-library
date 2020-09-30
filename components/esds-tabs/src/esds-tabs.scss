@@ -7,6 +7,7 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
 
 .#{$esds-custom-element-namespace}-tabs {
   @include esds-box-sizing;
+  @include esds-typography-reset;
 
   s-root,
   s-slot,
@@ -18,5 +19,51 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
   s-assigned-wrapper[hidden],
   s-fallback-wrapper[hidden] {
     display: none;
+  }
+}
+
+#{$esds-custom-element-namespace}-tab {
+  display: contents;
+}
+
+.#{$esds-custom-element-namespace}-tab {
+  @include esds-box-sizing;
+  @include esds-typography-reset;
+}
+
+.esds-tabs__tablist {
+  @include esds-typography-reset;
+  align-items: flex-end;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.esds-tabs__tab {
+  @include esds-typography-reset;
+  color: $esds-color-text-primary-on-light;
+  padding: $esds-space-inset-squish-1-x;
+  position: relative;
+
+  &:hover {
+    color: $esds-color-action-hover-on-light;
+  }
+}
+
+.esds-tabs__tab--selected {
+  &:hover {
+    color: $esds-color-text-primary-on-light;
+    cursor: default;
+  }
+
+  &::after {
+    background: $esds-color-brand;
+    content: '';
+    height: 4px;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
   }
 }

@@ -2,7 +2,6 @@ import { html, LitElement } from 'lit-element';
 import { CSSClassify } from '@eightshapes/css-classify';
 import { Scopify } from '@eightshapes/scopify';
 import { Slotify } from '@eightshapes/slotify';
-import { namespacedStyles } from './esds-tab-styles.js';
 
 /**
  * @element esds-tab
@@ -77,9 +76,6 @@ export class EsdsTab extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) {
   render() {
     const label = this.panelId ? '' : this.label; // Show the tab label only if the label and panel haven't been linked up by the parent esds-tabs component
     return html`
-      <style>
-        ${namespacedStyles(this.constructor.customElementNamespace)}
-      </style>
       <section
         class="${this.getClassName()}"
         id="${this.panelId}"
