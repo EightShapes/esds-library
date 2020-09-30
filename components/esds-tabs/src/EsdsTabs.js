@@ -80,6 +80,7 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
       this.reset();
       newTab.selected = true;
       newTab.focus();
+      window.history.pushState(null, null, `#${tabPanelId}`);
     }
 
     const linkedTabData = this.linkedTabs.find(lt => lt.panelId === tabPanelId);
@@ -107,11 +108,6 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
     this.requestUpdate(); // Manually trigger lit-element render since linkedTabs is not a prop, but an internal value
     const selectedTab = this.linkedTabs.find(tab => tab.selected) || tabs[0];
     this.selectTab(selectedTab.panelId);
-  }
-
-  onLabelClick(event) {
-    const tabId = event.currentTarget.getAttribute('aria-controls');
-    this.selectTab(tabId);
   }
 
   /**
@@ -153,6 +149,12 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
     const tabs = this.allTabs();
     const newIdx = tabs.findIndex(tab => tab.selected) + 1;
     return tabs[newIdx % tabs.length];
+  }
+
+  onLabelClick(event) {
+    event.preventDefault();
+    const tabId = event.currentTarget.getAttribute('aria-controls');
+    this.selectTab(tabId);
   }
 
   onLabelKeyDown(event) {
@@ -212,7 +214,7 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
                   aria-controls="${t.panelId}"
                   @click="${this.onLabelClick}"
                   @keydown="${this.onLabelKeyDown}"
-                  >${unsafeHTML(t.label)}</a
+                  ><span class="esds-tabs__tab-text">${unsafeHTML(t.label)}</span></a
                 >
               </li>
             `;
