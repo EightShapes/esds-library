@@ -82,7 +82,7 @@
         'on-dark': { value: '{color.neutral.55.value}' },
       },
     },
-    interactive: {
+    action: {
       default: {
         'on-light': { value: '{color.teal.28.value}' },
         'on-dark': { value: '{color.teal.45.value}' },
@@ -261,6 +261,7 @@
       },
     },
     radius: {
+      control: { value: '4px' },
       default: { value: '8px' },
     },
   },
@@ -292,8 +293,8 @@
       '4-x': { value: '32px 64px' },
       '2-x': { value: '16px 32px' },
       '1-and-half-x': { value: '12px 24px' },
-      '1-x': { value: '8px 16px' },
-      'half-x': { value: '4px 8px' },
+      '1-x': { value: '8px 12px' },
+      'half-x': { value: '6px 8px' },
       'quarter-x': { value: '2px 4px' },
     },
     stack: {

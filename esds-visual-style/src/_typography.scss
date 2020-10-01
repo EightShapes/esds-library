@@ -146,9 +146,9 @@
   $bottom-adjustment: 0
 ) {
   // Configured in Step 1
-  $top-crop: 18;
-  $bottom-crop: 12;
-  $crop-font-size: 61;
+  $top-crop: 11;
+  $bottom-crop: 7;
+  $crop-font-size: 36;
   $crop-line-height: 1.2;
 
   // Apply values to calculate em-based margins that work with any font size

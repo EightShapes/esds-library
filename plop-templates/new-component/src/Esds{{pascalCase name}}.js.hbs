@@ -1,4 +1,5 @@
 import { html, LitElement } from 'lit-element';
+import { CSSClassify } from '@eightshapes/css-classify';
 import { Scopify } from '@eightshapes/scopify';
 {{#if slots}}
 import { Slotify } from '@eightshapes/slotify';
@@ -15,7 +16,7 @@ import { namespacedStyles } from './esds-{{ lowerCase (dashCase name) }}-styles.
 *
 */
 
-export class Esds{{ pascalCase name }} extends {{#if slots}}Slotify({{/if}}Scopify(LitElement,
+export class Esds{{ pascalCase name }} extends {{#if slots}}Slotify({{/if}}Scopify(CSSClassify(LitElement),
 'esds'){{#if slots}}){{/if}} {
 static get customElementName() {
 return '{{ lowerCase (dashCase name) }}';
@@ -52,6 +53,15 @@ return this; // Prevents lit-element from rendering in shadowDOM
 }
 
 {{/unless}}
+
+get cssClassObject() {
+return {
+default: `${this.constructor.customElementNamespace}-{{ lowerCase (dashCase name) }}`,
+prefix: `${this.constructor.customElementNamespace}-{{ lowerCase (dashCase name) }}`, // will cause `active` to become
+`my-card--active`
+}
+};
+
 render() {
 // Placeholder attribute validation warning. Delete this after confirming unit tests work.
 if (this.text !== 'Hello World') {
@@ -64,8 +74,7 @@ return html`
     namespacedStyles(this.constructor.customElementNamespace)
   }
 </style>
-<h1 class="esds-{{ lowerCase (dashCase name) }}
-        esds-{{ lowerCase (dashCase name) }}--${this.example}">
+<h1 class="${this.getClassName()}">
   ${this.text}
 </h1>
 {{#if slots}}

@@ -5,7 +5,7 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
 #{$esds-custom-element-namespace}-icon {
   @include esds-typography-reset;
   @include esds-box-sizing;
-  display: inline-flex;
+  display: contents;
 }
 
 .#{$esds-custom-element-namespace}-icon {

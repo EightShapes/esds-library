@@ -1,0 +1,98 @@
+@use '../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
+$esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
+
+$esds-button-border-width: 1px;
+$esds-button-color-background-secondary-default: $esds-color-neutral-55;
+$esds-button-color-background-secondary-hover: $esds-color-neutral-42;
+
+#{$esds-custom-element-namespace}-button {
+  &,
+  s-root,
+  s-slot,
+  s-fallback-wrapper,
+  s-assigned-wrapper {
+    display: contents;
+  }
+}
+
+.#{$esds-custom-element-namespace}-button {
+  @include esds-typography-reset;
+  @include esds-box-sizing;
+  align-items: center;
+  background: $esds-color-action-default-on-light;
+  border: solid #{$esds-button-border-width} #{$esds-color-action-default-on-light};
+  border-radius: $esds-border-radius-control;
+  color: $esds-color-text-primary-on-dark; // inherited by icon & text elements
+  cursor: pointer;
+  display: inline-flex;
+  padding: $esds-space-inset-squish-1-x;
+
+  .#{$esds-custom-element-namespace}-icon {
+    color: inherit;
+  }
+
+  &:hover {
+    background: $esds-color-action-hover-on-light;
+    border-color: $esds-color-action-hover-on-light;
+  }
+}
+
+.esds-button--small {
+  padding: $esds-space-inset-squish-half-x;
+}
+
+.esds-button--secondary {
+  background: $esds-button-color-background-secondary-default;
+  border-color: $esds-button-color-background-secondary-default;
+
+  &:hover {
+    background: $esds-button-color-background-secondary-hover;
+    border-color: $esds-button-color-background-secondary-hover;
+  }
+}
+
+.esds-button--flat {
+  background: transparent;
+  border-color: transparent;
+  color: $esds-color-action-default-on-light; // inherited by icon & text elements
+
+  &:hover {
+    background: transparent;
+    border-color: transparent;
+    color: $esds-color-action-hover-on-light;
+  }
+}
+
+.esds-button--outline {
+  background: transparent;
+  color: $esds-color-action-default-on-light; // inherited by icon & text elements
+
+  &:hover {
+    background: transparent;
+    color: $esds-color-action-hover-on-light; // inherited by icon & text elements
+  }
+}
+
+.esds-button__text {
+  @include esds-text-crop;
+  @include esds-typography-reset($font-size: $esds-font-size-body-m-at-1000);
+  color: inherit;
+  font-size: $esds-font-size-body-m-at-1000;
+
+  .esds-button--small & {
+    font-size: $esds-font-size-body-s-at-1000;
+  }
+
+  .esds-button--large & {
+    font-size: $esds-font-size-body-l-at-1000;
+  }
+
+  .esds-button__icon + & {
+    margin-left: $esds-space-generic-half-x;
+  }
+}
+
+.esds-button__icon {
+  @include esds-typography-reset;
+  color: inherit;
+}

@@ -1,0 +1,99 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "esds-button",
+      "path": "./../src/EsdsButton.js",
+      "attributes": [
+        {
+          "name": "href",
+          "description": "Href for a button link, will switch the element tag to an <a> if an href is provided",
+          "type": "string"
+        },
+        {
+          "name": "icon",
+          "description": "Full SVG string of an icon to be injected into component.",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "description": "The text on the button. Overridden by the default prop.",
+          "type": "string"
+        },
+        {
+          "name": "variant",
+          "description": "Visual style of the button.",
+          "type": "'primary'|'secondary'|'flat'|'outline'",
+          "default": "\"primary\""
+        },
+        {
+          "name": "size",
+          "description": "Sets the button size.",
+          "type": "'small'|'medium'|'large'",
+          "default": "\"medium\""
+        },
+        {
+          "name": "type",
+          "description": "The type attribute of the underlying HTML button.",
+          "type": "'button'|'submit'|'reset'",
+          "default": "\"button\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "href",
+          "attribute": "href",
+          "description": "Href for a button link, will switch the element tag to an <a> if an href is provided",
+          "type": "string"
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Full SVG string of an icon to be injected into component.",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "attribute": "text",
+          "description": "The text on the button. Overridden by the default prop.",
+          "type": "string"
+        },
+        {
+          "name": "cssClassObject",
+          "type": "{ default: string; prefix: string; size: { conditional: string; class: string; }; variant: { conditional: string; class: string; }; }"
+        },
+        {
+          "name": "variant",
+          "attribute": "variant",
+          "description": "Visual style of the button.",
+          "type": "'primary'|'secondary'|'flat'|'outline'",
+          "default": "\"primary\""
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Sets the button size.",
+          "type": "'small'|'medium'|'large'",
+          "default": "\"medium\""
+        },
+        {
+          "name": "type",
+          "attribute": "type",
+          "description": "The type attribute of the underlying HTML button.",
+          "type": "'button'|'submit'|'reset'",
+          "default": "\"button\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "Default slot, put whatever you want in here."
+        },
+        {
+          "name": "content",
+          "description": "Insert content in the named \"content\" slot."
+        }
+      ]
+    }
+  ]
+}

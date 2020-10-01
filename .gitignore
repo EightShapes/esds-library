@@ -12,3 +12,4 @@ legacy
 dist
 test/storybook/storybook-static
 lerna-debug.log
+build-storybook.log
