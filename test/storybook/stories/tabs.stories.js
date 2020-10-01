@@ -398,6 +398,8 @@ export const ContentResilience = () => {
 };
 
 export const Sink = sinkFor(Default, ContentResilience);
-Sink.parameters = {
-  chromatic: { disable: false },
+Sink.story = {
+  parameters: {
+    chromatic: { disable: false },
+  },
 };

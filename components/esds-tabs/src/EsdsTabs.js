@@ -80,7 +80,6 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
       this.reset();
       newTab.selected = true;
       newTab.focus();
-      window.history.pushState(null, null, `#${tabPanelId}`);
     }
 
     const linkedTabData = this.linkedTabs.find(lt => lt.panelId === tabPanelId);
