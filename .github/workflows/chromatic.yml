@@ -7,8 +7,11 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: |
-          npm install && npx lerna bootstrap
+          npm run --prefix ./test/storybook install
+      - run: |
+          npm run --prefix ./test/storybook build-storybook
       - uses: chromaui/action@v1
         with:
+          storybookBuildDir: ./test/storybook/storybook-static
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
