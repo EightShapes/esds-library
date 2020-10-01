@@ -1,2 +1,14 @@
-- name: Chromatic Action
-  uses: chromaui/action@v1
+name: 'Chromatic'
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: |
+          npm install && lerna bootstrap
+      - uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
