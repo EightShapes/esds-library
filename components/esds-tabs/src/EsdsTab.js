@@ -55,6 +55,10 @@ export class EsdsTab extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) {
     this.selected = false;
   }
 
+  firstUpdated() {
+    this.setLabelFromSlot(); // Trigger this if it was undefined on slotchange
+  }
+
   get cssClassObject() {
     return {
       default: `${this.constructor.customElementNamespace}-tab`,
@@ -66,7 +70,7 @@ export class EsdsTab extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) {
   setLabelFromSlot() {
     // If the label was passed in as a slotted value, set the label property to reflect it
     const slottedLabel = this.getAssignedSlotContent('label');
-    if (slottedLabel.length > 0) {
+    if (slottedLabel !== undefined && slottedLabel.length > 0) {
       this.label = slottedLabel[0].innerHTML;
       // After the slotted value has been copied to the prop, clear the slot
       this.querySelector('s-slot[name="label"] s-assigned-wrapper').innerHTML = '';
