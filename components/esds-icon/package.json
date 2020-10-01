@@ -30,6 +30,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@eightshapes/esds-tokens": "^0.3.3",
     "@eightshapes/esds-icons": "^0.3.3",
     "@eightshapes/esds-visual-style": "^0.2.3",
     "@eightshapes/scopify": "^0.1.0",

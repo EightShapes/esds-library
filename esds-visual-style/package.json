@@ -3,11 +3,6 @@
   "version": "0.2.3",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "build": "node scripts/copy-tokens.js",
-    "prepack": "npm run build",
-    "prepare": "npm run build"
-  },
   "dependencies": {
     "@eightshapes/esds-tokens": "^0.3.3"
   },

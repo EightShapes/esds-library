@@ -23,6 +23,9 @@ module.exports = {
           loader: 'sass-loader',
           options: {
             implementation: require('sass'),
+            sassOptions: {
+              includePaths: ['node_modules'],
+            },
           },
         },
       ],
