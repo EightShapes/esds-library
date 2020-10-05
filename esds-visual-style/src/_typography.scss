@@ -15,24 +15,17 @@
   $text-shadow: none,
   $text-transform: none
 ) {
-  &,
-  &::before,
-  &::after,
-  *,
-  *::before,
-  *::after {
-    font-family: $font-family;
-    font-size: $font-size;
-    font-style: $font-style;
-    font-weight: $font-weight;
-    letter-spacing: $letter-spacing;
-    line-height: $line-height;
-    text-align: $text-align;
-    text-decoration: $text-decoration;
-    text-indent: $text-indent;
-    text-shadow: $text-shadow;
-    text-transform: $text-transform;
-  }
+  font-family: $font-family;
+  font-size: $font-size;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+  line-height: $line-height;
+  text-align: $text-align;
+  text-decoration: $text-decoration;
+  text-indent: $text-indent;
+  text-shadow: $text-shadow;
+  text-transform: $text-transform;
 }
 
 @mixin esds-responsive-font-size($type: 'body-m') {

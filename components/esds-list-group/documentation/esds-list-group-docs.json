@@ -1,0 +1,115 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "esds-list-group",
+      "path": "./../src/EsdsListGroup.js",
+      "attributes": [
+        {
+          "name": "collapsed",
+          "description": "If true, hides child esds-list-item elements",
+          "type": "boolean"
+        },
+        {
+          "name": "collapsible",
+          "description": "If true, enables a visibility toggle for child esds-list-item elements",
+          "type": "boolean"
+        },
+        {
+          "name": "header",
+          "description": "Header text displayed above the child esds-list-item elements",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "collapsed",
+          "attribute": "collapsed",
+          "description": "If true, hides child esds-list-item elements",
+          "type": "boolean"
+        },
+        {
+          "name": "collapsible",
+          "attribute": "collapsible",
+          "description": "If true, enables a visibility toggle for child esds-list-item elements",
+          "type": "boolean"
+        },
+        {
+          "name": "header",
+          "attribute": "header",
+          "description": "Header text displayed above the child esds-list-item elements",
+          "type": "string"
+        },
+        {
+          "name": "cssClassObject",
+          "type": "{ default: string; prefix: string; collapsible: any; collapsed: any; }"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "Default slot, put whatever you want in here."
+        },
+        {
+          "name": "content",
+          "description": "Insert content in the named \"content\" slot."
+        }
+      ]
+    },
+    {
+      "name": "esds-list-item",
+      "path": "./../src/EsdsListItem.js",
+      "attributes": [
+        {
+          "name": "href",
+          "description": "If provided the list item will include a link to the given href",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "description": "The size of the list item",
+          "type": "'small'|'medium'|'large'"
+        },
+        {
+          "name": "text",
+          "description": "The text as the list item. The default slot overrides this text",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "href",
+          "attribute": "href",
+          "description": "If provided the list item will include a link to the given href",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "The size of the list item",
+          "type": "'small'|'medium'|'large'"
+        },
+        {
+          "name": "text",
+          "attribute": "text",
+          "description": "The text as the list item. The default slot overrides this text",
+          "type": "string"
+        },
+        {
+          "name": "cssClassObject",
+          "type": "{ default: string; prefix: string; size: { conditional: any; class: any; }; }"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "Default slot, put whatever you want in here."
+        },
+        {
+          "name": "content",
+          "description": "Insert content in the named \"content\" slot."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+@use '@eightshapes/esds-visual-style/src/esds-visual-style' as *;
+$esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
+
+.#{$esds-custom-element-namespace}-list-group {
+  @include esds-box-sizing;
+  @include esds-typography-reset($font-size: $esds-font-size-body-m-at-1000);
+  font-size: $esds-font-size-body-m-default;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  .#{$esds-custom-element-namespace}-list-group {
+    margin: $esds-space-generic-1-x 0;
+  }
+
+  .esds-list-group__header {
+    @include esds-typography-reset($font-size: $esds-font-size-body-m-at-1000);
+    align-items: center;
+    color: $esds-color-text-primary-on-light;
+    display: flex;
+    justify-content: space-between;
+
+    .esds-icon {
+      fill: $esds-color-text-primary-on-light;
+    }
+  }
+
+  .esds-list-group__header-text {
+    @include esds-typography-reset($font-size: $esds-font-size-body-m-at-1000);
+    color: $esds-color-text-primary-on-light;
+  }
+
+  .esds-list-group--collapsible {
+    .esds-list-group__header {
+      cursor: pointer;
+
+      &:hover {
+        .esds-list-group__header-text {
+          color: $esds-color-action-hover-on-light;
+        }
+
+        .esds-icon {
+          fill: $esds-color-action-hover-on-light;
+        }
+      }
+
+      .esds-list-group__header-text {
+        font-weight: $esds-font-weight-semi-bold;
+      }
+    }
+
+    &.esds-list-group--collapsed {
+      .esds-list-group__collapsible-item {
+        display: none;
+      }
+
+      .esds-list-group__header .esds-icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    .esds-list-group__collapsible-item {
+      @include esds-typography-reset;
+    }
+  }
+
+  .esds-list-group__collapsible-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.#{$esds-custom-element-namespace}-list-item {
+  @include esds-typography-reset($font-size: $esds-font-size-body-m-at-1000);
+
+  .esds-list-item__link {
+    @include esds-typography-reset($font-size: $esds-font-size-body-m-at-1000);
+    align-items: center;
+    color: $esds-color-text-primary-on-light;
+    display: flex;
+
+    .esds-icon {
+      fill: $esds-color-text-primary-on-light;
+    }
+
+    &:hover {
+      color: $esds-color-action-hover-on-light;
+
+      .esds-icon {
+        fill: $esds-color-action-hover-on-light;
+      }
+    }
+  }
+
+  &.esds-list-item--small {
+    font-size: $esds-font-size-body-s-at-1000;
+
+    .esds-list-item__link {
+      font-size: $esds-font-size-body-s-at-1000;
+    }
+  }
+}
