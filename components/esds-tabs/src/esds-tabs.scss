@@ -1,13 +1,15 @@
 @use '@eightshapes/esds-visual-style/src/esds-visual-style' as *;
 $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
 
+$esds-tabs-selected-indicator-thickness: 4px;
+
 #{$esds-custom-element-namespace}-tabs {
   display: contents;
 }
 
 .#{$esds-custom-element-namespace}-tabs {
-  @include esds-box-sizing;
   @include esds-typography-reset;
+  @include esds-box-sizing;
   width: 100%;
 
   s-root,
@@ -29,7 +31,6 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
 
 .#{$esds-custom-element-namespace}-tab {
   @include esds-box-sizing;
-  @include esds-typography-reset;
 }
 
 .esds-tabs__tablist {
@@ -39,7 +40,7 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
   list-style: none;
   margin: 0;
   overflow-x: auto;
-  padding: 0 0 4px;
+  padding: 0 0 $esds-tabs-selected-indicator-thickness;
   width: 100%;
 }
 
@@ -56,9 +57,9 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
   }
 
   &::after {
-    background: $esds-color-brand;
+    background: $esds-color-navigation-selected-on-light;
     content: '';
-    height: 4px;
+    height: $esds-tabs-selected-indicator-thickness;
     left: 0;
     position: absolute;
     top: 100%;
@@ -67,7 +68,7 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
 }
 
 .esds-tabs__tab-text {
-  @include esds-text-crop;
+  @include esds-typography-reset($font-size-token: 'body-m');
   display: block;
 
   &,

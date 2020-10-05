@@ -4,8 +4,10 @@
 
 @mixin esds-typography-reset(
   $font-family: $esds-font-family-sans-serif,
-  $font-size: $esds-font-size-body-m-default,
   $font-style: normal,
+  $font-size: false,
+  $font-size-token: 'body-m',
+  $font-size-type: 'fixed',
   $font-weight: $esds-font-weight-regular,
   $letter-spacing: 0,
   $line-height: $esds-font-line-height-normal,
@@ -15,37 +17,42 @@
   $text-shadow: none,
   $text-transform: none
 ) {
-  &,
-  &::before,
-  &::after,
-  *,
-  *::before,
-  *::after {
-    font-family: $font-family;
+  @if $font-size {
     font-size: $font-size;
-    font-style: $font-style;
-    font-weight: $font-weight;
-    letter-spacing: $letter-spacing;
-    line-height: $line-height;
-    text-align: $text-align;
-    text-decoration: $text-decoration;
-    text-indent: $text-indent;
-    text-shadow: $text-shadow;
-    text-transform: $text-transform;
+  } @else {
+    @include esds-font-size($size: $font-size-token, $type: $font-size-type);
+  }
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+  line-height: $line-height;
+  text-align: $text-align;
+  text-decoration: $text-decoration;
+  text-indent: $text-indent;
+  text-shadow: $text-shadow;
+  text-transform: $text-transform;
+}
+
+@mixin esds-font-size($size: 'body-m', $type: 'responsive') {
+  @if $type == 'responsive' {
+    @include esds-responsive-font-size($size);
+  } @else {
+    font-size: esds-token('font', 'size', $size, 'at-1000');
   }
 }
 
-@mixin esds-responsive-font-size($type: 'body-m') {
-  font-size: esds-token('font', 'size', $type, 'default');
+@mixin esds-responsive-font-size($size: 'body-m') {
+  font-size: esds-token('font', 'size', $size, 'default');
 
   @media screen and (min-width: 480px) {
-    font-size: esds-token('font', 'size', $type, 'at-480');
+    font-size: esds-token('font', 'size', $size, 'at-480');
   }
   @media screen and (min-width: 768px) {
-    font-size: esds-token('font', 'size', $type, 'at-768');
+    font-size: esds-token('font', 'size', $size, 'at-768');
   }
   @media screen and (min-width: 1000px) {
-    font-size: esds-token('font', 'size', $type, 'at-1000');
+    font-size: esds-token('font', 'size', $size, 'at-1000');
   }
 }
 
@@ -57,32 +64,32 @@
 
 @mixin esds-heading-level-1() {
   @include esds-heading-reset;
-  @include esds-responsive-font-size($type: 'heading-level-1');
+  @include esds-font-size($size: 'heading-level-1');
 }
 
 @mixin esds-heading-level-2() {
   @include esds-heading-reset;
-  @include esds-responsive-font-size($type: 'heading-level-2');
+  @include esds-font-size($size: 'heading-level-2');
 }
 
 @mixin esds-heading-level-3() {
   @include esds-heading-reset;
-  @include esds-responsive-font-size($type: 'heading-level-3');
+  @include esds-font-size($size: 'heading-level-3');
 }
 
 @mixin esds-heading-level-4() {
   @include esds-heading-reset;
-  @include esds-responsive-font-size($type: 'heading-level-4');
+  @include esds-font-size($size: 'heading-level-4');
 }
 
 @mixin esds-heading-level-5() {
   @include esds-heading-reset;
-  @include esds-responsive-font-size($type: 'heading-level-5');
+  @include esds-font-size($size: 'heading-level-5');
 }
 
 @mixin esds-heading-eyebrow() {
   @include esds-heading-reset;
-  @include esds-responsive-font-size($type: 'heading-eyebrow');
+  @include esds-font-size($size: 'heading-eyebrow');
   letter-spacing: 0.2em;
   line-height: $esds-font-line-height-headings;
   margin: 0;
@@ -91,7 +98,7 @@
 
 @mixin esds-heading-eyebrow-small() {
   @include esds-heading-reset;
-  @include esds-responsive-font-size($type: 'heading-eyebrow-small');
+  @include esds-font-size($size: 'heading-eyebrow-small');
   letter-spacing: 0.2em;
   line-height: $esds-font-line-height-headings;
   margin: 0;
@@ -100,7 +107,7 @@
 
 @mixin esds-body-lead() {
   @include esds-typography-reset;
-  @include esds-responsive-font-size($type: 'heading-level-4');
+  @include esds-font-size($size: 'heading-level-4');
   font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
   margin: 0;
@@ -108,7 +115,7 @@
 
 @mixin esds-body-l() {
   @include esds-typography-reset;
-  @include esds-responsive-font-size($type: 'body-l');
+  @include esds-font-size($size: 'body-l');
   font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
   margin: 0;
@@ -116,7 +123,7 @@
 
 @mixin esds-body-m() {
   @include esds-typography-reset;
-  @include esds-responsive-font-size($type: 'body-m');
+  @include esds-font-size($size: 'body-m');
   font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
   margin: 0;
@@ -124,14 +131,14 @@
 
 @mixin esds-body-s() {
   @include esds-typography-reset;
-  @include esds-responsive-font-size($type: 'body-s');
+  @include esds-font-size($size: 'body-s');
   font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
   margin: 0;
 }
 @mixin esds-body-xs() {
   @include esds-typography-reset;
-  @include esds-responsive-font-size($type: 'body-xs');
+  @include esds-font-size($size: 'body-xs');
   font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
   margin: 0;
