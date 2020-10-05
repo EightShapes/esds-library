@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-icon",
-  "version": "0.3.1",
+  "version": "0.3.3",
   "description": "",
   "esnext": "dist/EsdsIcon.js",
   "main": "dist/esds-icon-web-component.js",
@@ -30,8 +30,9 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@eightshapes/esds-icons": "^0.3.1",
-    "@eightshapes/esds-visual-style": "^0.2.1",
+    "@eightshapes/esds-tokens": "^0.3.3",
+    "@eightshapes/esds-icons": "^0.3.3",
+    "@eightshapes/esds-visual-style": "^0.2.3",
     "@eightshapes/scopify": "^0.1.0",
     "@open-wc/testing": "^2.0.0",
     "@open-wc/testing-karma": "^3.0.0",
@@ -50,5 +51,5 @@
     "lit-element": "^2.2.1",
     "lit-html": "^1.1.2"
   },
-  "gitHead": "f6efadc3bceed945e5b92d7794c890f9342bba59"
+  "gitHead": "fc702e9012c10e169f433014bd9400035e4d59c5"
 }

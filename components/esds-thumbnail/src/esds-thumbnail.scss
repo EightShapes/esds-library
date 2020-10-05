@@ -1,4 +1,4 @@
-@use '../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
+@use '@eightshapes/esds-visual-style/src/esds-visual-style' as *;
 $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
 
 .#{$esds-custom-element-namespace}-thumbnail__root {

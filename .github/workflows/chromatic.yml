@@ -1,0 +1,12 @@
+name: 'Chromatic'
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: |
+          npm --prefix ./test/storybook install
+      - run: |
+          npm run --prefix ./test/storybook vrt

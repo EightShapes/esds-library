@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-tokens",
-  "version": "0.3.1",
+  "version": "0.3.3",
   "description": "",
   "main": "dist/js/esds-tokens.json",
   "scripts": {
@@ -24,5 +24,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "f6efadc3bceed945e5b92d7794c890f9342bba59"
+  "gitHead": "fc702e9012c10e169f433014bd9400035e4d59c5"
 }

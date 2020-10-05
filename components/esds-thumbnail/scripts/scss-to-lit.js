@@ -32,6 +32,7 @@ componentSassFiles.forEach(s => {
     file: path.join('src', s),
     sourceMap: true,
     outputStyle: 'expanded',
+    includePaths: ['node_modules'],
     outFile: path.join('dist', `${fileWithoutExtension}.css`),
   });
 
@@ -49,6 +50,7 @@ componentSassFiles.forEach(s => {
   const compressedResult = sass.renderSync({
     file: path.join('src', s),
     outputStyle: 'compressed',
+    includePaths: ['node_modules'],
   });
   postcss([autoprefixer({ grid: 'autoplace' })])
     .process(compressedResult.css.toString(), { from: undefined })

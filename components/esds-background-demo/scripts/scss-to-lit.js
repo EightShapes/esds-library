@@ -27,6 +27,7 @@ componentSassFiles.forEach(s => {
     file: path.join('src', s),
     sourceMap: true,
     outputStyle: 'expanded',
+    includePaths: ['node_modules'],
     outFile: path.join('dist', `${fileWithoutExtension}.css`),
   });
 
@@ -43,6 +44,7 @@ componentSassFiles.forEach(s => {
   // SCSS -> Lit Element JS Import
   const compressedResult = sass.renderSync({
     file: path.join('src', s),
+    includePaths: ['node_modules'],
     outputStyle: 'compressed',
   });
   postcss([autoprefixer({ grid: 'autoplace' })])

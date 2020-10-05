@@ -1,18 +1,13 @@
 {
   "name": "@eightshapes/esds-visual-style",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "build": "node scripts/copy-tokens.js",
-    "prepack": "npm run build",
-    "prepare": "npm run build"
-  },
   "dependencies": {
-    "@eightshapes/esds-tokens": "^0.3.1"
+    "@eightshapes/esds-tokens": "^0.3.3"
   },
   "keywords": [],
   "author": "Kevin Powell <kevinmpowell@gmail.com>",
   "license": "ISC",
-  "gitHead": "f6efadc3bceed945e5b92d7794c890f9342bba59"
+  "gitHead": "fc702e9012c10e169f433014bd9400035e4d59c5"
 }

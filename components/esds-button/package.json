@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-button",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "",
   "esnext": "dist/EsdsButton.js",
   "main": "dist/esds-button-web-component.js",
@@ -34,7 +34,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@eightshapes/esds-visual-style": "^0.2.1",
+    "@eightshapes/esds-tokens": "^0.3.3",
+    "@eightshapes/esds-visual-style": "^0.2.3",
     "@eightshapes/scopify": "^0.1.0",
     "@eightshapes/slotify": "^0.5.3",
     "@open-wc/testing": "^2.0.0",
@@ -59,5 +60,6 @@
     "@eightshapes/css-classify": "^0.1.2",
     "lit-element": "^2.2.1",
     "lit-html": "^1.1.2"
-  }
+  },
+  "gitHead": "fc702e9012c10e169f433014bd9400035e4d59c5"
 }

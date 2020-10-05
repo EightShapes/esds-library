@@ -1,5 +1,5 @@
-@use '../../node_modules/@eightshapes/esds-card/src/esds-card' as *;
-@use '../../node_modules/@eightshapes/esds-visual-style/src/esds-visual-style' as *;
+@use '@eightshapes/esds-card/src/esds-card' as *;
+@use '@eightshapes/esds-visual-style/src/esds-visual-style' as *;
 
 // Storybook specific override to show component state without interaction
 .storybook-esds-card-state {
