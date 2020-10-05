@@ -1,38 +1,122 @@
 @use '@eightshapes/esds-visual-style/src/esds-visual-style' as *;
 $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
 
+$esds-list-group-unselected-on-light: $esds-color-neutral-90;
+$esds-list-group-selected-indicator-width: 2px;
+
+// LIST GROUP
 .#{$esds-custom-element-namespace}-list-group {
   @include esds-box-sizing;
-  @include esds-typography-reset($font-size: $esds-font-size-body-m-at-1000);
+  @include esds-typography-reset;
   font-size: $esds-font-size-body-m-default;
+  list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
 
-  .#{$esds-custom-element-namespace}-list-group {
-    margin: $esds-space-generic-1-x 0;
-  }
-
+  // List group headers
   .esds-list-group__header {
-    @include esds-typography-reset($font-size: $esds-font-size-body-m-at-1000);
     align-items: center;
     color: $esds-color-text-primary-on-light;
     display: flex;
     justify-content: space-between;
+    line-height: 0; // line-height reset
 
     .esds-icon {
       fill: $esds-color-text-primary-on-light;
     }
   }
 
+  // LIST GROUP HEADER TEXT
   .esds-list-group__header-text {
-    @include esds-typography-reset($font-size: $esds-font-size-body-m-at-1000);
+    @include esds-heading-eyebrow;
+    // @include esds-typography-reset($font-size-token: 'body-m', $font-size-type: 'fixed');
     color: $esds-color-text-primary-on-light;
+    padding: $esds-space-inset-quarter-x;
+    text-transform: uppercase;
   }
 
-  .esds-list-group--collapsible {
+  &.esds-list-group--small .esds-list-group__header-text {
+    @include esds-heading-eyebrow-small;
+    color: $esds-color-text-secondary-on-light;
+  }
+
+  &.esds-list-group--selected-indicators .esds-list-group__header-text {
+    border-left: solid $esds-list-group-selected-indicator-width
+      $esds-list-group-unselected-on-light;
+    padding-left: $esds-space-generic-half-x;
+  }
+
+  // On dark backgrounds
+  .esds-container--dark-primary &,
+  .esds-container--dark-secondary & {
+    .esds-list-group__header {
+      .esds-list-group__header-text {
+        color: $esds-color-text-primary-on-dark;
+      }
+
+      .esds-icon {
+        fill: $esds-color-text-primary-on-dark;
+      }
+    }
+  }
+
+  // LIST GROUP HEADER LINK
+  .esds-list-group__header-link {
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    width: 100%;
+
+    .esds-list-group__header-text {
+      @include esds-font-size($size: 'body-m', $type: 'fixed');
+      border-left: 0;
+      color: $esds-color-text-primary-on-light;
+      font-weight: $esds-font-weight-regular;
+      letter-spacing: 0;
+      padding: 0;
+      text-transform: none;
+    }
+
+    &:hover {
+      .esds-list-group__header-text {
+        color: $esds-color-action-hover-on-light;
+      }
+
+      .esds-icon {
+        fill: $esds-color-action-hover-on-light;
+      }
+    }
+  }
+
+  &.esds-list-group--small .esds-list-group__header-link {
+    padding: $esds-space-inset-quarter-x;
+
+    .esds-list-group__header-text {
+      @include esds-font-size($size: 'body-s', $type: 'fixed');
+    }
+  }
+
+  //ACTIVE INDICATORS HEADER LINK
+  &.esds-list-group--selected-indicators .esds-list-group__header-link {
+    border-left: solid $esds-list-group-selected-indicator-width
+      $esds-list-group-unselected-on-light;
+    padding-left: $esds-space-generic-half-x;
+  }
+
+  // COLLAPSIBLE LIST GROUP
+  &.esds-list-group--collapsible {
+    margin: $esds-space-generic-1-x 0;
     .esds-list-group__header {
       cursor: pointer;
+
+      .esds-list-group__header-text {
+        @include esds-font-size($size: 'body-m', $type: 'fixed');
+        font-weight: $esds-font-weight-semi-bold;
+        letter-spacing: 0;
+        padding: 0;
+        text-transform: none;
+      }
 
       &:hover {
         .esds-list-group__header-text {
@@ -43,42 +127,55 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
           fill: $esds-color-action-hover-on-light;
         }
       }
-
-      .esds-list-group__header-text {
-        font-weight: $esds-font-weight-semi-bold;
-      }
-    }
-
-    &.esds-list-group--collapsed {
-      .esds-list-group__collapsible-item {
-        display: none;
-      }
-
-      .esds-list-group__header .esds-icon {
-        transform: rotate(180deg);
-      }
-    }
-
-    .esds-list-group__collapsible-item {
-      @include esds-typography-reset;
     }
   }
 
+  // COLLAPSED LIST GROUP
+  &.esds-list-group--collapsed {
+    .esds-list-group__collapsible-item {
+      display: none;
+    }
+
+    .esds-list-group__header .esds-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  .esds-list-group__collapsible-item {
+    line-height: 0; // line-height reset
+  }
+
   .esds-list-group__collapsible-list {
+    line-height: 0; // line-height reset
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  // CHILD LISTS, NON-COLLAPSIBLE
+  .esds-list-group__child-list-item {
+    line-height: 0;
+  }
+
+  .esds-list-group__child-list {
+    line-height: 0;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 }
 
+// LIST ITEM
 .#{$esds-custom-element-namespace}-list-item {
-  @include esds-typography-reset($font-size: $esds-font-size-body-m-at-1000);
+  @include esds-typography-reset($font-size-token: 'body-m', $font-size-type: 'fixed');
+  color: $esds-color-text-primary-on-light;
 
   .esds-list-item__link {
-    @include esds-typography-reset($font-size: $esds-font-size-body-m-at-1000);
+    @include esds-typography-reset($font-size-token: 'body-m', $font-size-type: 'fixed');
     align-items: center;
     color: $esds-color-text-primary-on-light;
     display: flex;
+    padding: $esds-space-generic-quarter-x 0;
 
     .esds-icon {
       fill: $esds-color-text-primary-on-light;
@@ -93,11 +190,47 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
     }
   }
 
-  &.esds-list-item--small {
-    font-size: $esds-font-size-body-s-at-1000;
+  // NESTED LIST ITEM
+  &.esds-list-item--nested .esds-list-item__link {
+    padding-left: $esds-space-generic-1-x;
+  }
+
+  // SMALL LIST GROUP
+  &.esds-list-item--small,
+  .esds-list-group--small & {
+    @include esds-font-size($size: 'body-s', $type: 'fixed');
 
     .esds-list-item__link {
-      font-size: $esds-font-size-body-s-at-1000;
+      @include esds-font-size($size: 'body-s', $type: 'fixed');
+      padding: $esds-space-inset-quarter-x;
+    }
+  }
+
+  //ACTIVE INDICATORS LIST GROUP
+  .esds-list-group--selected-indicators & .esds-list-item__link {
+    border-left: solid $esds-list-group-selected-indicator-width
+      $esds-list-group-unselected-on-light;
+    padding-left: $esds-space-generic-1-and-half-x;
+  }
+
+  .esds-list-item__icon {
+    @include esds-typography-reset;
+    padding: 0 $esds-space-generic-quarter-x 0 0;
+  }
+
+  .esds-list-item--selected .esds-list-item__link {
+    border-left-color: $esds-color-brand;
+  }
+
+  // On dark backgrounds
+  .esds-container--dark-primary &,
+  .esds-container--dark-secondary & {
+    .esds-list-item__link {
+      color: $esds-color-text-primary-on-dark;
+
+      .esds-icon {
+        fill: $esds-color-text-primary-on-dark;
+      }
     }
   }
 }
