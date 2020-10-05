@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-tabs",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "",
   "esnext": "dist/EsdsTabs.js",
   "main": "dist/esds-tabs-web-component.js",
@@ -39,9 +39,9 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@eightshapes/esds-tokens": "^0.3.3",
     "@eightshapes/css-classify": "^0.1.2",
-    "@eightshapes/esds-visual-style": "^0.2.3",
+    "@eightshapes/esds-tokens": "^0.4.0",
+    "@eightshapes/esds-visual-style": "^0.3.0",
     "@eightshapes/scopify": "^0.1.0",
     "@eightshapes/slotify": "^0.5.3",
     "@open-wc/testing": "^2.0.0",
