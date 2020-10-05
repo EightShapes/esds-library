@@ -48,6 +48,34 @@ export const Default = () => {
   `;
 };
 
+export const Small = () => {
+  return html`
+    <div style="width: 250px;">
+      <esds-list-group size="small" header="Contents">
+        <esds-list-item>
+          <esds-list-group header="Variations" href="#Variations">
+            <esds-list-item href="#Default">Default</esds-list-item>
+            <esds-list-item href="#Linked">Linked</esds-list-item>
+          </esds-list-group>
+        </esds-list-item>
+        <esds-list-item>
+          <esds-list-group header="Additional Elements" href="#Additional-Elements">
+            <esds-list-item href="#Content">Content</esds-list-item>
+            <esds-list-item href="#Actions">Actions</esds-list-item>
+          </esds-list-group>
+        </esds-list-item>
+        <esds-list-item>
+          <esds-list-group header="Sizes" href="#Sizes">
+            <esds-list-item href="#Small">Small</esds-list-item>
+            <esds-list-item href="#Medium">Medium</esds-list-item>
+            <esds-list-item href="#Large">Large</esds-list-item>
+          </esds-list-group>
+        </esds-list-item>
+      </esds-list-group>
+    </div>
+  `;
+};
+
 export const Scoped = () => {
   return html`
     <div class="storybook-grid">
