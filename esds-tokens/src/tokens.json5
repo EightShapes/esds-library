@@ -112,6 +112,12 @@
         'on-dark': { value: '{color.neutral.25.value}' },
       },
     },
+    navigation: {
+      selected: {
+        'on-light': { value: '{color.orange.45.value}' },
+        'on-dark': { value: '{color.orange.45.value}' },
+      },
+    },
     border: {
       control: {
         default: {
