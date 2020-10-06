@@ -36,6 +36,7 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
       END: 35,
     };
     this.linkedTabs = [];
+    this.currentTabId = undefined;
   }
 
   firstUpdated() {
@@ -85,6 +86,9 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
     const linkedTabData = this.linkedTabs.find(lt => lt.panelId === tabPanelId);
     linkedTabData.selected = true;
     this.requestUpdate();
+    this.currentTabId = tabPanelId;
+    const event = new CustomEvent('esds-tabs-tab-changed', {});
+    this.dispatchEvent(event);
   }
 
   linkPanels() {
