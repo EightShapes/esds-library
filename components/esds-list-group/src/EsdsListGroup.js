@@ -2,7 +2,7 @@ import { html, LitElement } from 'lit-element';
 import { CSSClassify } from '@eightshapes/css-classify';
 import { Scopify } from '@eightshapes/scopify';
 import { Slotify } from '@eightshapes/slotify';
-import { EsdsIconCaretDown } from '@eightshapes/esds-icons';
+import { EsdsIconArrowDown } from '@eightshapes/esds-icons';
 import '@eightshapes/esds-icon/dist/esds-icon-web-component.js';
 import { namespacedStyles } from './esds-list-group-styles.js';
 
@@ -91,27 +91,25 @@ export class EsdsListGroup extends Slotify(Scopify(CSSClassify(LitElement), 'esd
     if (this.collapsible) {
       return html`
         <li class="esds-list-group__header" @click="${this.collapsibleClick}">
-          <span class="esds-list-group__header-text">
-            ${this.header}
+          <span class="esds-list-group__header-inner esds-list-group__header-inner--collapsible">
+            <span class="esds-list-group__header-text">
+              ${this.header}
+            </span>
+            <esds-icon use="${EsdsIconArrowDown}" size="small"></esds-icon>
           </span>
-          <esds-icon use="${EsdsIconCaretDown}" size="small"></esds-icon>
         </li>
       `;
     }
     if (this.href) {
       return html`
-        <li class="esds-list-group__header" @click="${this.collapsibleClick}">
-          <a href="${this.href}" class="esds-list-group__header-link">
-            <span class="esds-list-group__header-text">
-              ${this.header}
-            </span>
-          </a>
-        </li>
+        <esds-list-item href="${this.href}">${this.header}</esds-list-item>
       `;
     }
     return html`
       <li class="esds-list-group__header">
-        <span class="esds-list-group__header-text">${this.header}</span>
+        <span class="esds-list-group__header-inner">
+          <span class="esds-list-group__header-text">${this.header}</span>
+        </span>
       </li>
     `;
   }

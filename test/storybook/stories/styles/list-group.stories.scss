@@ -1,0 +1,20 @@
+@use '@eightshapes/esds-list-group/src/esds-list-group' as *;
+@use '@eightshapes/esds-visual-style/src/esds-visual-style' as *;
+
+.storybook-esds-list-item-state--hover {
+  .esds-list-item {
+    @include esds-list-item-hover;
+  }
+}
+
+.storybook-esds-list-item-state--active {
+  .esds-list-item {
+    @include esds-list-item-active;
+  }
+}
+
+.storybook-esds-list-item-state--focus {
+  .esds-list-item {
+    @include esds-list-item-focus;
+  }
+}

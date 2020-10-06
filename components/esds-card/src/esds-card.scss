@@ -157,7 +157,7 @@ $esds-card-hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 
   .esds-card__actions {
     @include esds-typography-reset;
-    margin-top: $esds-space-generic-1-x;
+    margin-top: $esds-space-1-x;
     position: relative; // Allows actions to be available even when the entire card is a link
   }
 }

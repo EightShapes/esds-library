@@ -7,10 +7,10 @@
   $font-style: normal,
   $font-size: false,
   $font-size-token: 'body-m',
-  $font-size-type: 'fixed',
   $font-weight: $esds-font-weight-regular,
   $letter-spacing: 0,
   $line-height: $esds-font-line-height-normal,
+  $responsive-font-size: false,
   $text-align: left,
   $text-decoration: none,
   $text-indent: 0,
@@ -20,7 +20,7 @@
   @if $font-size {
     font-size: $font-size;
   } @else {
-    @include esds-font-size($size: $font-size-token, $type: $font-size-type);
+    @include esds-font-size($size: $font-size-token, $responsive: $responsive-font-size);
   }
   font-family: $font-family;
   font-style: $font-style;
@@ -34,8 +34,8 @@
   text-transform: $text-transform;
 }
 
-@mixin esds-font-size($size: 'body-m', $type: 'responsive') {
-  @if $type == 'responsive' {
+@mixin esds-font-size($size: 'body-m', $responsive: false) {
+  @if $responsive {
     @include esds-responsive-font-size($size);
   } @else {
     font-size: esds-token('font', 'size', $size, 'at-1000');

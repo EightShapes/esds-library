@@ -84,7 +84,9 @@ export class EsdsListItem extends Slotify(Scopify(CSSClassify(LitElement), 'esds
               >
             `
           : html`
-              ${this.renderIcon()}<s-slot>${this.text}</s-slot>
+              <span class="esds-list-item__inner">
+                ${this.renderIcon()}<s-slot>${this.text}</s-slot>
+              </span>
             `}
       </li>
     `;
