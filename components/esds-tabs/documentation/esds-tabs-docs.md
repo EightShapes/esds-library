@@ -36,6 +36,7 @@
 |------------------|-----------|----------------------------------------|--------------------------------------------------|
 | `KEYCODES`       |           | `object`                               | {"DOWN":40,"LEFT":37,"RIGHT":39,"UP":38,"HOME":36,"END":35} |
 | `cssClassObject` | readonly  | `{ default: string; prefix: string; }` |                                                  |
+| `currentTabId`   |           |                                        | "undefined"                                      |
 | `linkedTabs`     |           | `never[]`                              | []                                               |
 | `tabCounter`     |           | `number`                               | 0                                                |
 
@@ -55,6 +56,12 @@
 | `prevTab`        | `(): any`                 | `prevTab()` returns the tab that comes before the currently selected<br />one, wrapping around when reaching the first one. |
 | `reset`          | `(): void`                |                                                  |
 | `selectTab`      | `(tabPanelId: any): void` |                                                  |
+
+## Events
+
+| Event                   |
+|-------------------------|
+| `esds-tabs-tab-changed` |
 
 ## Slots
 

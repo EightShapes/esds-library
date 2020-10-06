@@ -98,6 +98,15 @@
           "name": "linkedTabs",
           "type": "never[]",
           "default": "[]"
+        },
+        {
+          "name": "currentTabId",
+          "default": "\"undefined\""
+        }
+      ],
+      "events": [
+        {
+          "name": "esds-tabs-tab-changed"
         }
       ],
       "slots": [
