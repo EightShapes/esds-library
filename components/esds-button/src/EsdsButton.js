@@ -100,7 +100,6 @@ export class EsdsButton extends Slotify(Scopify(CSSClassify(LitElement), 'esds')
   }
 
   render() {
-    console.log(this.href === undefined);
     return html`
       <style>
         ${namespacedStyles(this.constructor.customElementNamespace)}

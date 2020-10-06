@@ -3,7 +3,7 @@
 
 // Storybook specific override to show component state without interaction
 .storybook-esds-card-state {
-  margin-right: $esds-space-generic-1-x;
+  margin-right: $esds-space-1-x;
   pointer-events: none; // Prevent interaction from changing state
 
   &:last-child {
