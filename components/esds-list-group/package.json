@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-list-group",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "esnext": "dist/EsdsListGroup.js",
   "main": "dist/esds-list-group-web-component.js",
@@ -38,7 +38,7 @@
   "devDependencies": {
     "@eightshapes/css-classify": "^0.1.2",
     "@eightshapes/esds-icon": "^0.3.3",
-    "@eightshapes/esds-icons": "^0.3.5",
+    "@eightshapes/esds-icons": "^0.3.6",
     "@eightshapes/esds-tokens": "^0.3.3",
     "@eightshapes/esds-visual-style": "^0.2.3",
     "@eightshapes/scopify": "^0.1.0",
