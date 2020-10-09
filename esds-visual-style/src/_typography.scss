@@ -62,43 +62,43 @@
   margin: 0;
 }
 
-@mixin esds-heading-level-1() {
+@mixin esds-heading-level-1($responsive: false) {
   @include esds-heading-reset;
-  @include esds-font-size($size: 'heading-level-1');
+  @include esds-font-size($size: 'heading-level-1', $responsive: $responsive);
 }
 
-@mixin esds-heading-level-2() {
+@mixin esds-heading-level-2($responsive: false) {
   @include esds-heading-reset;
-  @include esds-font-size($size: 'heading-level-2');
+  @include esds-font-size($size: 'heading-level-2', $responsive: $responsive);
 }
 
-@mixin esds-heading-level-3() {
+@mixin esds-heading-level-3($responsive: false) {
   @include esds-heading-reset;
-  @include esds-font-size($size: 'heading-level-3');
+  @include esds-font-size($size: 'heading-level-3', $responsive: $responsive);
 }
 
-@mixin esds-heading-level-4() {
+@mixin esds-heading-level-4($responsive: false) {
   @include esds-heading-reset;
-  @include esds-font-size($size: 'heading-level-4');
+  @include esds-font-size($size: 'heading-level-4', $responsive: $responsive);
 }
 
-@mixin esds-heading-level-5() {
+@mixin esds-heading-level-5($responsive: false) {
   @include esds-heading-reset;
-  @include esds-font-size($size: 'heading-level-5');
+  @include esds-font-size($size: 'heading-level-5', $responsive: $responsive);
 }
 
-@mixin esds-heading-eyebrow() {
+@mixin esds-heading-eyebrow($responsive: false) {
   @include esds-heading-reset;
-  @include esds-font-size($size: 'heading-eyebrow');
+  @include esds-font-size($size: 'heading-eyebrow', $responsive: $responsive);
   letter-spacing: 0.2em;
   line-height: $esds-font-line-height-headings;
   margin: 0;
   text-transform: uppercase;
 }
 
-@mixin esds-heading-eyebrow-small() {
+@mixin esds-heading-eyebrow-small($responsive: false) {
   @include esds-heading-reset;
-  @include esds-font-size($size: 'heading-eyebrow-small');
+  @include esds-font-size($size: 'heading-eyebrow-small', $responsive: $responsive);
   letter-spacing: 0.2em;
   line-height: $esds-font-line-height-headings;
   margin: 0;
