@@ -254,16 +254,16 @@
   border: {
     control: {
       default: {
-        'on-light': { value: "solid 1px {color.border.control.default['on-light']" },
-        'on-dark': { value: "solid 1px {color.border.control.default['on-dark']" },
+        'on-light': { value: 'solid 1px {color.border.control.default.on-light.value}' },
+        'on-dark': { value: 'solid 1px {color.border.control.default.on-dark.value}' },
       },
       focus: {
-        'on-light': { value: "solid 1px {color.border.control.focus['on-light']" },
-        'on-dark': { value: "solid 1px {color.border.control.focus['on-dark']" },
+        'on-light': { value: 'solid 1px {color.border.control.focus.on-light.value}' },
+        'on-dark': { value: 'solid 1px {color.border.control.focus.on-dark.value}' },
       },
       error: {
-        'on-light': { value: "solid 1px {color.border.control.error['on-light']" },
-        'on-dark': { value: "solid 1px {color.border.control.error['on-dark']" },
+        'on-light': { value: 'solid 1px {color.border.control.error.on-light.value}' },
+        'on-dark': { value: 'solid 1px {color.border.control.error.on-dark.value}' },
       },
     },
     radius: {
