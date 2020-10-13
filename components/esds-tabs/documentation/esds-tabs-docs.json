@@ -79,10 +79,18 @@
     {
       "name": "esds-tabs",
       "path": "./../src/EsdsTabs.js",
+      "attributes": [
+        {
+          "name": "layout",
+          "description": "The visual layout of the tabs",
+          "type": "'horizontal'|'vertical'",
+          "default": "\"horizontal\""
+        }
+      ],
       "properties": [
         {
           "name": "cssClassObject",
-          "type": "{ default: string; prefix: string; }"
+          "type": "{ default: string; prefix: string; layout: { class: string; }; }"
         },
         {
           "name": "tabCounter",
@@ -102,6 +110,13 @@
         {
           "name": "currentTabId",
           "default": "\"undefined\""
+        },
+        {
+          "name": "layout",
+          "attribute": "layout",
+          "description": "The visual layout of the tabs",
+          "type": "'horizontal'|'vertical'",
+          "default": "\"horizontal\""
         }
       ],
       "events": [

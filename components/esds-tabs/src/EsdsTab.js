@@ -40,7 +40,7 @@ export class EsdsTab extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) {
        * Used to link the label to the panel in HTML
        * @type String
        */
-      panelId: { type: String, attribute: 'panel-id' },
+      panelId: { type: String, attribute: 'panel-id', reflect: true },
 
       /*
        * Determines the visibility of the tab
@@ -71,7 +71,11 @@ export class EsdsTab extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) {
     // If the label was passed in as a slotted value, set the label property to reflect it
     const slottedLabel = this.getAssignedSlotContent('label');
     if (slottedLabel !== undefined && slottedLabel.length > 0) {
-      this.label = slottedLabel[0].innerHTML;
+      this.label = Array.from(slottedLabel[0].childNodes)
+        .filter(n => n.nodeType === Node.TEXT_NODE)
+        .map(n => n.textContent)
+        .filter(text => text.trim().length > 0)
+        .join('-'); // Get only text nodes, not all HTML, cause that will include SVG's potentially
       // After the slotted value has been copied to the prop, clear the slot
       this.querySelector('s-slot[name="label"] s-assigned-wrapper').innerHTML = '';
     }

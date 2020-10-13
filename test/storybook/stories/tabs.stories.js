@@ -22,7 +22,7 @@ export const Default = () => {
           obcaecati tempora vel eius officiis nisi fuga impedit deleniti asperiores!
         </p>
       </esds-tab>
-      <esds-tab selected>
+      <esds-tab>
         <h2 slot="label">Tab 2</h2>
         <p>
           Tab 2 content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ea
@@ -36,6 +36,70 @@ export const Default = () => {
         <p>
           Tab 3 content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ea
           obcaecati tempora vel eius officiis nisi fuga impedit deleniti asperiores!
+        </p>
+      </esds-tab>
+    </esds-tabs>
+  `;
+};
+
+export const Nested = () => {
+  return html`
+    <esds-tabs>
+      <esds-tab>
+        <h2 slot="label">Tab 1</h2>
+        <p>
+          Tab 1 content
+        </p>
+      </esds-tab>
+      <esds-tab selected label="Nested Tabs">
+        <esds-tabs>
+          <esds-tab label="Nested 1">Nested 1 content</esds-tab>
+          <esds-tab label="Nested 2">Nested 2 content</esds-tab>
+        </esds-tabs>
+      </esds-tab>
+      <esds-tab>
+        <h2 slot="label">
+          <esds-icon use="${EsdsIconAlertWarning}" size="small"></esds-icon> Nested Tabs Another Set
+        </h2>
+        <esds-tabs>
+          <esds-tab label="Alpha">Alpha content</esds-tab>
+          <esds-tab label="Beta">Beta content</esds-tab>
+          <esds-tab label="Gamma">Gamma content</esds-tab>
+          <esds-tab>
+            <h2 slot="label">Nested 2</h2>
+            <p>Nested 2 duplicate label using label slot</p>
+          </esds-tab>
+        </esds-tabs>
+      </esds-tab>
+    </esds-tabs>
+  `;
+};
+
+export const VerticalLayout = () => {
+  return html`
+    <esds-tabs layout="vertical">
+      <esds-tab>
+        <h2 slot="label">Tab 1</h2>
+        <p>
+          Tab 1 content
+        </p>
+      </esds-tab>
+      <esds-tab>
+        <h2 slot="label">Tab 2</h2>
+        <p>
+          Tab 2 content
+        </p>
+      </esds-tab>
+      <esds-tab>
+        <h2 slot="label">Tab 3</h2>
+        <p>
+          Tab 3 content
+        </p>
+      </esds-tab>
+      <esds-tab>
+        <h2 slot="label">Longer Label</h2>
+        <p>
+          Longer Content content
         </p>
       </esds-tab>
     </esds-tabs>

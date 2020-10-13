@@ -17,11 +17,30 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
     return 'tabs';
   }
 
-  get cssClassObject() {
+  static get properties() {
     return {
-      default: `${this.constructor.customElementNamespace}-tabs`,
-      prefix: `${this.constructor.customElementNamespace}-tabs`, // will cause `active` to become `my-card--active`
+      /*
+       * The visual layout of the tabs
+       * @type {'horizontal'|'vertical'}
+       */
+      layout: { type: String },
     };
+  }
+
+  static generateTabIdFromLabel(label) {
+    let tabId;
+    const calculatedId = label
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+
+    let tabCounter = 0;
+    tabId = calculatedId;
+    while (tabCounter < 10 && document.getElementById(tabId) !== null) {
+      tabId = `${calculatedId}--${tabCounter}`;
+      tabCounter += 1;
+    }
+    return tabId;
   }
 
   constructor() {
@@ -37,14 +56,30 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
     };
     this.linkedTabs = [];
     this.currentTabId = undefined;
+    this.layout = 'horizontal';
   }
 
   firstUpdated() {
     this.linkPanels(); // Slot change events should link the panels, but do it again after everything's rendered
   }
 
+  get cssClassObject() {
+    return {
+      default: `${this.constructor.customElementNamespace}-tabs`,
+      prefix: `${this.constructor.customElementNamespace}-tabs`, // will cause `active` to become `my-card--active`
+      layout: {
+        class: this.layout,
+      },
+    };
+  }
+
   allTabs() {
-    return Array.from(this.querySelectorAll(`${this.constructor.customElementNamespace}-tab`));
+    // Not ideal, lots of logic around slot wrappers here
+    const defaultSlot = this.querySelector('s-root s-assigned-wrapper');
+    const allTabs = Array.from(defaultSlot.childNodes).filter(
+      n => n.tagName === `${this.constructor.customElementNamespace}-tab`.toUpperCase(),
+    );
+    return allTabs;
   }
 
   reset() {
@@ -61,57 +96,64 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
     this.requestUpdate();
   }
 
-  panelForTab(tab) {
-    const panelId = tab.getAttribute('aria-controls');
-    return this.querySelector(`#${panelId}`);
-  }
-
   getTabById(id) {
-    let tab;
-    const tabTemplate = this.querySelector(`#${id}`);
-    if (tabTemplate !== undefined) {
-      tab = tabTemplate.closest('esds-tab');
+    const tab = this.querySelector(`esds-tab[panel-id="${id}"]`);
+    if (tab === null) {
+      console.warn(`No Tab found for selector: esds-tab[panel-id="${id}"]`);
     }
     return tab;
   }
 
   selectTab(tabPanelId) {
     const newTab = this.getTabById(tabPanelId);
-    if (newTab !== undefined) {
+    if (newTab !== null) {
       this.reset();
       newTab.selected = true;
       newTab.focus();
+      const linkedTabData = this.linkedTabs.find(lt => lt.panelId === tabPanelId);
+      linkedTabData.selected = true;
+      this.currentTabId = tabPanelId;
+      this.requestUpdate().then(() => {
+        const event = new CustomEvent('esds-tabs-tab-changed', {});
+        this.dispatchEvent(event);
+      });
+    } else {
+      // If the tab id hasn't been set yet, keep trying to select the tab
+      setTimeout(() => this.selectTab(tabPanelId), 50);
     }
-
-    const linkedTabData = this.linkedTabs.find(lt => lt.panelId === tabPanelId);
-    linkedTabData.selected = true;
-    this.currentTabId = tabPanelId;
-    this.requestUpdate().then(() => {
-      const event = new CustomEvent('esds-tabs-tab-changed', {});
-      this.dispatchEvent(event);
-    });
   }
 
   linkPanels() {
     const tabs = this.allTabs();
-    this.linkedTabs = []; // reset the tab data each time a slotchange occurs (to accomodate dynamically added tabs)
-    tabs.forEach((tab, index) => {
-      const generatedPanelId = `${this.constructor.customElementNamespace}-tab-panel--${index}`;
-      const generatedTabId = `${this.constructor.customElementNamespace}-tab--${index}`;
-      this.linkedTabs.push({
-        label: tab.label,
-        selected: tab.selected,
-        panelId: generatedPanelId,
-        tabId: generatedTabId,
-      });
 
-      // Set the id of the panel and pass the id of the corresponding tab
-      tab.panelId = generatedPanelId; // eslint-disable-line no-param-reassign
-      tab.ariaLabelledby = generatedTabId; // eslint-disable-line no-param-reassign
+    // Ensure all tabs have hydrated before attempting to link them
+    const tabLoadedPromises = tabs.map(t => t.updateComplete);
+
+    Promise.all(tabLoadedPromises).then(() => {
+      this.linkedTabs = []; // reset the tab data each time a slotchange occurs (to accomodate dynamically added tabs)
+      tabs.forEach(tab => {
+        const tabId = this.constructor.generateTabIdFromLabel(tab.label);
+        const generatedPanelId = `${this.constructor.customElementNamespace}-${tabId}--panel`;
+        const generatedTabId = `${this.constructor.customElementNamespace}-${tabId}--tab`;
+
+        this.linkedTabs.push({
+          label: tab.label,
+          selected: tab.selected,
+          panelId: generatedPanelId,
+          tabId: generatedTabId,
+        });
+
+        // Set the id of the panel and pass the id of the corresponding tab
+        tab.panelId = generatedPanelId; // eslint-disable-line no-param-reassign
+        tab.ariaLabelledby = generatedTabId; // eslint-disable-line no-param-reassign
+      });
+      this.requestUpdate(); // Manually trigger lit-element render since linkedTabs is not a prop, but an internal value
     });
-    this.requestUpdate(); // Manually trigger lit-element render since linkedTabs is not a prop, but an internal value
-    const selectedTab = this.linkedTabs.find(tab => tab.selected) || tabs[0];
-    this.selectTab(selectedTab.panelId);
+
+    Promise.all(tabLoadedPromises).then(() => {
+      const selectedTab = this.linkedTabs.find(tab => tab.selected) || tabs[0];
+      this.selectTab(selectedTab.panelId);
+    });
   }
 
   /**
@@ -199,6 +241,10 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
     this.selectTab(newTab.panelId);
   }
 
+  handleSlotChange() {
+    this.linkPanels();
+  }
+
   render() {
     return html`
       <style>
@@ -224,7 +270,7 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
             `;
           })}
         </ul>
-        <s-slot @slotchange=${this.linkPanels}></s-slot>
+        <s-slot @slotchange=${this.handleSlotChange}></s-slot>
       </div>
     `;
   }
