@@ -23,7 +23,7 @@
     "watch:build-visual-style-dependency": "chokidar \"../../esds-visual-style/src/**/*.scss\" -c \"npm run build:styles\"",
     "watch:build-token-dependency": "chokidar \"../../esds-tokens/dist/**/*.scss\" -c \"npm run build:styles\"",
     "watch:build-tokens": "npm run --prefix ../../esds-tokens start",
-    "build:jsdoc": "npx web-component-analyzer src --format json --outFile documentation/esds-background-demo-docs.json && npx web-component-analyzer src --format markdown --outFile documentation/esds-background-demo-docs.md",
+    "build:jsdoc": "npx web-component-analyzer src/EsdsBackgroundDemo.js --format json --outFile documentation/esds-background-demo-docs.json && npx web-component-analyzer src/EsdsBackgroundDemo.js --format markdown --outFile documentation/esds-background-demo-docs.md",
     "watch:build-jsdoc": "chokidar \"src/**/*.js\" -c \"npm run build:jsdoc\"",
     "prepack": "npm run build",
     "test": "karma start",

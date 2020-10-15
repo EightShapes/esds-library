@@ -19,7 +19,7 @@
     "watch:build-esm": "chokidar \"src/EsdsIcon.js\" -c \"npm run build:esm\"",
     "watch:build-web-component": "chokidar \"src/**/*.js\" -c \"npm run build:web-component\"",
     "watch:build-styles": "chokidar \"src/**/*.scss\" -c \"npm run build:styles\"",
-    "build:jsdoc": "npx web-component-analyzer src --format json --outFile documentation/esds-icon-docs.json && npx web-component-analyzer src --format markdown --outFile documentation/esds-icon-docs.md",
+    "build:jsdoc": "npx web-component-analyzer src/EsdsIcon.js --format json --outFile documentation/esds-icon-docs.json && npx web-component-analyzer src/EsdsIcon.js --format markdown --outFile documentation/esds-icon-docs.md",
     "watch:build-jsdoc": "chokidar \"src/**/*.js\" -c \"npm run build:jsdoc\"",
     "prepack": "npm run build",
     "test": "karma start",

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "storybook",
+    "start": "npm run storybook",
     "test": "npm run vrt",
     "storybook": "start-storybook -p 6006 -s ./static",
     "build-storybook": "build-storybook  -s ./static",
