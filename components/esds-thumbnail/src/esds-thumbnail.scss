@@ -13,6 +13,7 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
   width: 100%;
 
   .esds-thumbnail__inner-wrap {
+    @include esds-typography-reset;
     align-items: center;
     bottom: 0;
     display: flex;
