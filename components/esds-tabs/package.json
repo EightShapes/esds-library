@@ -31,7 +31,6 @@
     "build:jsdoc": "npx web-component-analyzer src --format json --outFile documentation/esds-tabs-docs.json && npx web-component-analyzer src --format markdown --outFile documentation/esds-tabs-docs.md",
     "watch:build-jsdoc": "chokidar \"src/**/*.js\" -c \"npm run build:jsdoc\"",
     "prepack": "npm run build",
-    "prepare": "npm run build",
     "test": "karma start",
     "test:watch": "npm-run-all --parallel watch:build karma:watch",
     "karma:watch": "karma start --auto-watch=true --single-run=false",

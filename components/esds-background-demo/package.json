@@ -26,7 +26,6 @@
     "build:jsdoc": "npx web-component-analyzer src --format json --outFile documentation/esds-background-demo-docs.json && npx web-component-analyzer src --format markdown --outFile documentation/esds-background-demo-docs.md",
     "watch:build-jsdoc": "chokidar \"src/**/*.js\" -c \"npm run build:jsdoc\"",
     "prepack": "npm run build",
-    "prepare": "npm run build",
     "test": "karma start",
     "test:vrt": "npm run --prefix ../../test/storybook test",
     "test:watch": "npm-run-all --parallel watch:build karma:watch",
