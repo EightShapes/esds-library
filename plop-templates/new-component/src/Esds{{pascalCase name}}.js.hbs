@@ -17,66 +17,66 @@ import { namespacedStyles } from './esds-{{ lowerCase (dashCase name) }}-styles.
 */
 
 export class Esds{{ pascalCase name }} extends {{#if slots}}Slotify({{/if}}Scopify(CSSClassify(LitElement), 'esds'){{#if slots}}){{/if}} {
-static get customElementName() {
-return '{{ lowerCase (dashCase name) }}';
-}
+  static get customElementName() {
+    return '{{ lowerCase (dashCase name) }}';
+  }
 
-static get properties() {
-return {
-/*
-* Describe the prop here using JSDoc syntax
-* @type {'small'|'medium'|'large'}
-*/
-example: { type: String },
-/*
-* The text displayed in the component
-* @type String
-*/
-text: { type: String },
-};
-}
+  static get properties() {
+    return {
+      /*
+      * Describe the prop here using JSDoc syntax
+      * @type {'small'|'medium'|'large'}
+      */
+      example: { type: String },
+      /*
+      * The text displayed in the component
+      * @type String
+      */
+      text: { type: String },
+    };
+  }
 
-constructor() {
-super();
-// Prop Defaults
-this.example = 'medium';
-this.text = 'Hello World';
-}
+  constructor() {
+    super();
+    // Prop Defaults
+    this.example = 'medium';
+    this.text = 'Hello World';
+  }
 
 {{#unless slots}}
-/*
-* @ignore
-*/
-createRenderRoot() {
-return this; // Prevents lit-element from rendering in shadowDOM
-}
+  /*
+  * @ignore
+  */
+  createRenderRoot() {
+    return this; // Prevents lit-element from rendering in shadowDOM
+  }
 
 {{/unless}}
 
-get cssClassObject() {
-return {
-default: `${this.constructor.customElementNamespace}-{{ lowerCase (dashCase name) }}`,
-prefix: `${this.constructor.customElementNamespace}-{{ lowerCase (dashCase name) }}`, // will cause `active` to become `my-card--active`
-}
-};
+  get cssClassObject() {
+    return {
+      default: `${this.constructor.customElementNamespace}-{{ lowerCase (dashCase name) }}`,
+      prefix: `${this.constructor.customElementNamespace}-{{ lowerCase (dashCase name) }}`, // will cause `active` to become `my-card--active`
+    }
+  };
 
-render() {
-// Placeholder attribute validation warning. Delete this after confirming unit tests work.
-if (this.text !== 'Hello World') {
-console.warn('text is not "Hello World", delete this silly test and console warning to make this go away.');
-}
+  render() {
+    // Placeholder attribute validation warning. Delete this after confirming unit tests work.
+    if (this.text !== 'Hello World') {
+      console.warn('text is not "Hello World", delete this silly test and console warning to make this go away.');
+    }
 
-return html`
-<style>
-  ${namespacedStyles(this.constructor.customElementNamespace)}
-</style>
-<h1 class="${this.getClassName()}">
-  ${this.text}
-</h1>
-{{#if slots}}
-<s-slot></s-slot>
-<s-slot name="content"></s-slot>
-{{/if}}
-`;
-}
+    return html`
+      <style>
+        ${namespacedStyles(this.constructor.customElementNamespace)}
+      </style>
+      <h1 class="${this.getClassName()}">
+        ${this.text}
+      </h1>
+      {{#if slots}}
+      <s-slot></s-slot>
+      <s-slot name="content"></s-slot>
+      {{/if}}
+    `;
+  }
 }
