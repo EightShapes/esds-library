@@ -2,8 +2,6 @@
 @use './color' as *;
 @use './utils' as *;
 
-$esds-code-tag-font-size: 14px;
-
 @mixin esds-typography-reset(
   $font-family: $esds-font-family-sans-serif,
   $font-style: normal,
@@ -165,6 +163,7 @@ $esds-code-tag-font-size: 14px;
   font-size: 0.75em;
   font-weight: 500;
   padding: $esds-space-quarter-x;
+  white-space: nowrap;
 }
 
 @mixin esds-text-crop(
