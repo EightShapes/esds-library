@@ -37,6 +37,9 @@ export class EsdsDataTable extends Scopify(CSSClassify(LitElement), 'esds') {
     return this; // Prevents lit-element from rendering in shadowDOM
   }
 
+  /*
+   * @ignore
+   */
   get cssClassObject() {
     return {
       default: `${this.constructor.customElementNamespace}-data-table`,

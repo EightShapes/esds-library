@@ -13,14 +13,30 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
       $font-size-token: 'body-s'
     );
     color: $esds-color-text-secondary-on-light;
-    padding: $esds-space-1-x 0;
+    padding: $esds-space-1-x;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 
   .esds-data-table__td {
     @include esds-typography-reset($font-size-token: 'body-m');
     border-top: $esds-border-control-default-on-light;
     color: $esds-color-text-primary-on-light;
-    padding: $esds-space-1-x 0;
+    padding: $esds-space-1-x;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 
   code {

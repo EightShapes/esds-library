@@ -28,10 +28,6 @@
           "attribute": "rows",
           "description": "An array of arrays representing the data for each row and cell",
           "type": "array"
-        },
-        {
-          "name": "cssClassObject",
-          "type": "{ default: string; prefix: string; }"
         }
       ]
     }

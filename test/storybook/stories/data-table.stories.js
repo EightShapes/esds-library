@@ -16,8 +16,8 @@ export default {
 export const Default = () => {
   return html`
     <esds-data-table
-      headers='["Name", "Email", "Phone"]'
-      rows='[["Kevin Powell", "kevin@example.com", "555-555-5555"],["Nathan Curtis", "nathan@examples.com", "555-555-1234"]]'
+      headers='["Component", "Status", "Latest Version"]'
+      rows='[["Button", "Available", "1.2.3"],["Card", "Beta", "0.3.0"],["Data Table", "Beta", "0.9.0"],["List Group", "Available", "1.4.6"]]'
     ></esds-data-table>
   `;
 };
@@ -26,7 +26,7 @@ export const CodeHighlighting = () => {
   return html`
     <esds-data-table
       headers='[{"text":"Property", "code": true}, "Description"]'
-      rows='[["align", "Array containing data table header strings or objects."],["rows", "An array of arrays representing the data for each row and cell. Corresponds with <code>headers</code>."]]'
+      rows='[["align", "Array containing data table header strings or objects."],["rows", "An array of arrays representing the data for each row and cell. Corresponds with <code>headers</code>. Include keys of <code>text</code> and <code>code</code> to define the headers."]]'
     ></esds-data-table>
   `;
 };
