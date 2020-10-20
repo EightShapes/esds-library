@@ -163,6 +163,7 @@
   font: {
     family: {
       'sans-serif': { value: '"Barlow Semi Condensed", sans-serif' },
+      monospace: { value: '"Roboto Mono", monospace' },
     },
     size: {
       'heading-level-1': {

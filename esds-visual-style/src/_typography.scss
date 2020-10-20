@@ -2,6 +2,8 @@
 @use './color' as *;
 @use './utils' as *;
 
+$esds-code-tag-font-size: 14px;
+
 @mixin esds-typography-reset(
   $font-family: $esds-font-family-sans-serif,
   $font-style: normal,
@@ -152,6 +154,17 @@
   &:hover {
     text-decoration: underline;
   }
+}
+
+@mixin esds-code-tag() {
+  background: $esds-color-background-light-secondary;
+  border: $esds-border-control-default-on-light;
+  border-radius: 2px;
+  color: $esds-color-alert-error-on-light;
+  font-family: $esds-font-family-monospace;
+  font-size: $esds-code-tag-font-size;
+  font-weight: 500;
+  padding: $esds-space-quarter-x;
 }
 
 @mixin esds-text-crop(
