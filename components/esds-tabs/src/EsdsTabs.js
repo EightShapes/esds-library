@@ -43,9 +43,18 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
     return tabId;
   }
 
+  /*
+   * @ignore
+   */
   constructor() {
     super();
+    /*
+     * @ignore
+     */
     this.tabCounter = 0;
+    /*
+     * @ignore
+     */
     this.KEYCODES = {
       DOWN: 40,
       LEFT: 37,
@@ -54,7 +63,13 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
       HOME: 36,
       END: 35,
     };
+    /*
+     * @ignore
+     */
     this.linkedTabs = [];
+    /*
+     * @ignore
+     */
     this.currentTabId = undefined;
     this.layout = 'horizontal';
   }
@@ -63,6 +78,9 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
     this.linkPanels(); // Slot change events should link the panels, but do it again after everything's rendered
   }
 
+  /*
+   * @ignore
+   */
   get cssClassObject() {
     return {
       default: `${this.constructor.customElementNamespace}-tabs`,

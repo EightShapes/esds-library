@@ -59,10 +59,6 @@
           "type": "string"
         },
         {
-          "name": "cssClassObject",
-          "type": "{ default: string; prefix: string; size: { conditional: string; class: string; }; variant: { conditional: string; class: string; }; }"
-        },
-        {
           "name": "variant",
           "attribute": "variant",
           "description": "Visual style of the button.",

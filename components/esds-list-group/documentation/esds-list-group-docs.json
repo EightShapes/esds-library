@@ -59,10 +59,6 @@
           "type": "'small'|'medium'|'large'"
         },
         {
-          "name": "cssClassObject",
-          "type": "{ default: string; prefix: string; selectedIndicators: { conditional: boolean; class: string; }; collapsible: boolean; collapsed: boolean; size: { conditional: any; class: any; }; }"
-        },
-        {
           "name": "selectedIndicators",
           "attribute": "selected-indicators",
           "description": "If true, shows selected state on child list items",
