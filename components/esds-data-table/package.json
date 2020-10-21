@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-data-table",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "",
   "esnext": "dist/EsdsDataTable.js",
   "main": "dist/esds-data-table-web-component.js",

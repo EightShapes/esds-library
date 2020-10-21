@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-button",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "",
   "esnext": "dist/EsdsButton.js",
   "main": "dist/esds-button-web-component.js",

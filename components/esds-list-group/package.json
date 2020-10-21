@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-list-group",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "",
   "esnext": "dist/EsdsListGroup.js",
   "main": "dist/esds-list-group-web-component.js",
