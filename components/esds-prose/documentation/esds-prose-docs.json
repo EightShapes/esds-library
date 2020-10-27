@@ -1,0 +1,21 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "esds-prose",
+      "path": "./../src/EsdsProse.js",
+      "properties": [
+        {
+          "name": "cssClassObject",
+          "type": "{ default: string; prefix: string; }"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "Default slot, put whatever you want in here."
+        }
+      ]
+    }
+  ]
+}

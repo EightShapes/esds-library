@@ -23,7 +23,6 @@
 
 ## Slots
 
-| Name      | Description                                  |
-|-----------|----------------------------------------------|
-|           | Default slot, put whatever you want in here. |
-| `content` | Insert content in the named "content" slot.  |
+| Name | Description                                      |
+|------|--------------------------------------------------|
+|      | Default slot, use <code>&lt;esds-list-item&gt;</code> web components as child elements. |

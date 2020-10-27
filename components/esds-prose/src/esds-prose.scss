@@ -1,0 +1,50 @@
+@use '@eightshapes/esds-visual-style/src/esds-visual-style' as *;
+$esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
+
+.#{$esds-custom-element-namespace}-prose {
+  font-size: $esds-font-size-body-m-default;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  li,
+  ul,
+  p,
+  ol,
+  li {
+    @include esds-box-sizing;
+    @include esds-typography-reset;
+    color: $esds-color-text-primary-on-light;
+    margin: 0;
+    padding: 0;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h1 {
+    @include esds-heading-level-1($responsive: true);
+    margin-top: $esds-space-4-x;
+  }
+
+  h2 {
+    @include esds-heading-level-2($responsive: true);
+    margin-top: $esds-space-3-x;
+  }
+
+  h3 {
+    @include esds-heading-level-3($responsive: true);
+    margin-top: $esds-space-2-x;
+  }
+
+  h4 {
+    @include esds-heading-level-4($responsive: true);
+    margin-top: $esds-space-2-x;
+  }
+  p,
+  li {
+    @include esds-font-size($size: 'body-l', $responsive: true);
+    margin-top: $esds-space-1-x;
+  }
+}
