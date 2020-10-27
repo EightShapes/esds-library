@@ -4,31 +4,7 @@
     {
       "name": "esds-prose",
       "path": "./../src/EsdsProse.js",
-      "attributes": [
-        {
-          "name": "example",
-          "description": "Describe the prop here using JSDoc syntax",
-          "type": "'small'|'medium'|'large'"
-        },
-        {
-          "name": "text",
-          "description": "The text displayed in the component",
-          "type": "string"
-        }
-      ],
       "properties": [
-        {
-          "name": "example",
-          "attribute": "example",
-          "description": "Describe the prop here using JSDoc syntax",
-          "type": "'small'|'medium'|'large'"
-        },
-        {
-          "name": "text",
-          "attribute": "text",
-          "description": "The text displayed in the component",
-          "type": "string"
-        },
         {
           "name": "cssClassObject",
           "type": "{ default: string; prefix: string; }"

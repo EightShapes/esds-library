@@ -4,11 +4,9 @@
 
 ## Properties
 
-| Property         | Attribute | Modifiers | Type                                   | Description                               |
-|------------------|-----------|-----------|----------------------------------------|-------------------------------------------|
-| `cssClassObject` |           | readonly  | `{ default: string; prefix: string; }` |                                           |
-| `example`        | `example` |           | `'small'\|'medium'\|'large'`           | Describe the prop here using JSDoc syntax |
-| `text`           | `text`    |           | `string`                               | The text displayed in the component       |
+| Property         | Modifiers | Type                                   |
+|------------------|-----------|----------------------------------------|
+| `cssClassObject` | readonly  | `{ default: string; prefix: string; }` |
 
 ## Slots
 

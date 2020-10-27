@@ -16,21 +16,6 @@ export class EsdsProse extends Slotify(Scopify(CSSClassify(LitElement), 'esds'))
     return 'prose';
   }
 
-  static get properties() {
-    return {
-      /*
-       * Describe the prop here using JSDoc syntax
-       * @type {'small'|'medium'|'large'}
-       */
-      example: { type: String },
-      /*
-       * The text displayed in the component
-       * @type String
-       */
-      text: { type: String },
-    };
-  }
-
   get cssClassObject() {
     return {
       default: `${this.constructor.customElementNamespace}-prose`,
