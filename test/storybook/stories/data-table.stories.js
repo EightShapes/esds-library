@@ -9,7 +9,7 @@ import { sinkFor } from './scripts/utilities.js';
 // EsdsDataTable.define('esds-v10'); // Define a <esds-v10-data-table> component
 
 export default {
-  title: 'Data Table',
+  title: 'Design System/Data Table',
 };
 
 /* eslint-disable */

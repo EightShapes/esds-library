@@ -10,7 +10,7 @@ import { sinkFor } from './scripts/utilities.js';
 EsdsButton.define('esds-v10'); // Define a <esds-v10-button> component
 
 export default {
-  title: 'Button',
+  title: 'Design System/Button',
 };
 
 const renderButtonExamples = variant => {

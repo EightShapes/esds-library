@@ -38,6 +38,14 @@ $esds-tabs-selected-indicator-thickness: 4px;
     overflow-x: auto;
     padding: 0 0 $esds-tabs-selected-indicator-thickness;
     width: 100%;
+
+    li:first-child .esds-tabs__tab {
+      margin-left: 0;
+    }
+
+    li:last-child .esds-tabs__tab {
+      margin-right: 0;
+    }
   }
 
   &.esds-tabs--vertical .esds-tabs__tablist {
@@ -51,7 +59,8 @@ $esds-tabs-selected-indicator-thickness: 4px;
   .esds-tabs__tab {
     @include esds-typography-reset;
     display: block;
-    padding: $esds-space-inset-squish-1-x;
+    margin: 0 $esds-space-three-quarter-x;
+    padding: $esds-space-half-x 0;
     position: relative;
   }
 

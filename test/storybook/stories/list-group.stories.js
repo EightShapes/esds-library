@@ -12,7 +12,7 @@ import './styles/list-group.stories.scss'; // Demo styles to show component stat
 // EsdsListGroup.define('esds-v10'); // Define a <esds-v10-list-group> component
 
 export default {
-  title: 'List Group',
+  title: 'Design System/List Group',
 };
 
 export const ListItemStates = () => {

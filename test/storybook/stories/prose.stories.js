@@ -5,7 +5,7 @@ import '@eightshapes/esds-prose/dist/esds-prose-web-component.js';
 import { sinkFor } from './scripts/utilities.js';
 
 export default {
-  title: 'Prose',
+  title: 'Design System/Prose',
 };
 
 export const Default = () => {

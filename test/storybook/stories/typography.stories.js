@@ -5,7 +5,7 @@ import { sinkFor } from './scripts/utilities.js';
 import './styles/typography.stories.scss'; // Demo styles to show component states
 
 export default {
-  title: 'Typography',
+  title: 'Design System/Typography',
 };
 
 export const Heading = () => {

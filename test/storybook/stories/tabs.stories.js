@@ -9,7 +9,7 @@ import { sinkFor } from './scripts/utilities.js';
 // EsdsTabs.define('esds-v10'); // Define a <esds-v10-tabs> component
 
 export default {
-  title: 'Tabs',
+  title: 'Design System/Tabs',
 };
 
 export const Default = () => {
