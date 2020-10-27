@@ -1,0 +1,45 @@
+@use '@eightshapes/esds-visual-style/src/esds-visual-style' as *;
+$esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
+
+.#{$esds-custom-element-namespace}-data-table {
+  @include esds-typography-reset;
+  border-collapse: collapse;
+  font-size: $esds-font-size-body-m-default;
+  width: 100%;
+
+  .esds-data-table__th {
+    @include esds-typography-reset(
+      $font-weight: $esds-font-weight-regular,
+      $font-size-token: 'body-s'
+    );
+    color: $esds-color-text-secondary-on-light;
+    padding: $esds-space-1-x;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .esds-data-table__td {
+    @include esds-typography-reset($font-size-token: 'body-m');
+    border-top: $esds-border-control-default-on-light;
+    color: $esds-color-text-primary-on-light;
+    padding: $esds-space-1-x;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  code {
+    @include esds-code-tag;
+  }
+}

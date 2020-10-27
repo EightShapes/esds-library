@@ -154,6 +154,18 @@
   }
 }
 
+@mixin esds-code-tag() {
+  background: $esds-color-background-light-secondary;
+  border: $esds-border-control-default-on-light;
+  border-radius: 2px;
+  color: $esds-color-alert-error-on-light;
+  font-family: $esds-font-family-monospace;
+  font-size: 0.75em;
+  font-weight: 500;
+  padding: $esds-space-quarter-x;
+  white-space: nowrap;
+}
+
 @mixin esds-text-crop(
   $line-height: $esds-font-line-height-normal,
   $top-adjustment: 0,

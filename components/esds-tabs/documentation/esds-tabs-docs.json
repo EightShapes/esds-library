@@ -2,81 +2,6 @@
   "version": "experimental",
   "tags": [
     {
-      "name": "esds-tab",
-      "path": "./../src/EsdsTab.js",
-      "attributes": [
-        {
-          "name": "aria-labelledby",
-          "description": "Accessibly binds the panel to the tab label",
-          "type": "string"
-        },
-        {
-          "name": "href",
-          "description": "Relative Href that links to a corresponding tab panel's id",
-          "type": "string"
-        },
-        {
-          "name": "label",
-          "description": "The label for the tab's visibility trigger, overridden by the label slot",
-          "type": "string"
-        },
-        {
-          "name": "panel-id",
-          "description": "Used to link the label to the panel in HTML",
-          "type": "string"
-        },
-        {
-          "name": "selected",
-          "description": "Determines the visibility of the tab",
-          "type": "boolean",
-          "default": "false"
-        }
-      ],
-      "properties": [
-        {
-          "name": "ariaLabelledby",
-          "attribute": "aria-labelledby",
-          "description": "Accessibly binds the panel to the tab label",
-          "type": "string"
-        },
-        {
-          "name": "href",
-          "attribute": "href",
-          "description": "Relative Href that links to a corresponding tab panel's id",
-          "type": "string"
-        },
-        {
-          "name": "label",
-          "attribute": "label",
-          "description": "The label for the tab's visibility trigger, overridden by the label slot",
-          "type": "string"
-        },
-        {
-          "name": "panelId",
-          "attribute": "panel-id",
-          "description": "Used to link the label to the panel in HTML",
-          "type": "string"
-        },
-        {
-          "name": "cssClassObject",
-          "type": "{ default: string; prefix: string; selected: string; }"
-        },
-        {
-          "name": "selected",
-          "attribute": "selected",
-          "description": "Determines the visibility of the tab",
-          "type": "boolean",
-          "default": "false"
-        }
-      ],
-      "slots": [
-        {
-          "name": "",
-          "description": "Default slot, used for the tab's content."
-        }
-      ]
-    },
-    {
       "name": "esds-tabs",
       "path": "./../src/EsdsTabs.js",
       "attributes": [
@@ -88,29 +13,6 @@
         }
       ],
       "properties": [
-        {
-          "name": "cssClassObject",
-          "type": "{ default: string; prefix: string; layout: { class: string; }; }"
-        },
-        {
-          "name": "tabCounter",
-          "type": "number",
-          "default": "0"
-        },
-        {
-          "name": "KEYCODES",
-          "type": "object",
-          "default": "{\"DOWN\":40,\"LEFT\":37,\"RIGHT\":39,\"UP\":38,\"HOME\":36,\"END\":35}"
-        },
-        {
-          "name": "linkedTabs",
-          "type": "never[]",
-          "default": "[]"
-        },
-        {
-          "name": "currentTabId",
-          "default": "\"undefined\""
-        },
         {
           "name": "layout",
           "attribute": "layout",

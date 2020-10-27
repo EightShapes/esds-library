@@ -1,45 +1,12 @@
-# esds-tab
-
-**Mixins:** Slotify, Scopify, CSSClassify
-
-## Properties
-
-| Property         | Attribute         | Modifiers | Type                                             | Default | Description                                      |
-|------------------|-------------------|-----------|--------------------------------------------------|---------|--------------------------------------------------|
-| `ariaLabelledby` | `aria-labelledby` |           | `string`                                         |         | Accessibly binds the panel to the tab label      |
-| `cssClassObject` |                   | readonly  | `{ default: string; prefix: string; selected: string; }` |         |                                                  |
-| `href`           | `href`            |           | `string`                                         |         | Relative Href that links to a corresponding tab panel's id |
-| `label`          | `label`           |           | `string`                                         |         | The label for the tab's visibility trigger, overridden by the label slot |
-| `panelId`        | `panel-id`        |           | `string`                                         |         | Used to link the label to the panel in HTML      |
-| `selected`       | `selected`        |           | `boolean`                                        | false   | Determines the visibility of the tab             |
-
-## Methods
-
-| Method             | Type       |
-|--------------------|------------|
-| `setLabelFromSlot` | `(): void` |
-
-## Slots
-
-| Name | Description                               |
-|------|-------------------------------------------|
-|      | Default slot, used for the tab's content. |
-
-
 # esds-tabs
 
 **Mixins:** Slotify, Scopify, CSSClassify
 
 ## Properties
 
-| Property         | Attribute | Modifiers | Type                                             | Default                                          | Description                   |
-|------------------|-----------|-----------|--------------------------------------------------|--------------------------------------------------|-------------------------------|
-| `KEYCODES`       |           |           | `object`                                         | {"DOWN":40,"LEFT":37,"RIGHT":39,"UP":38,"HOME":36,"END":35} |                               |
-| `cssClassObject` |           | readonly  | `{ default: string; prefix: string; layout: { class: string; }; }` |                                                  |                               |
-| `currentTabId`   |           |           |                                                  | "undefined"                                      |                               |
-| `layout`         | `layout`  |           | `'horizontal'\|'vertical'`                       | "horizontal"                                     | The visual layout of the tabs |
-| `linkedTabs`     |           |           | `never[]`                                        | []                                               |                               |
-| `tabCounter`     |           |           | `number`                                         | 0                                                |                               |
+| Property | Attribute | Type                       | Default      | Description                   |
+|----------|-----------|----------------------------|--------------|-------------------------------|
+| `layout` | `layout`  | `'horizontal'\|'vertical'` | "horizontal" | The visual layout of the tabs |
 
 ## Methods
 

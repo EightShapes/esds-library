@@ -1,0 +1,35 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "esds-data-table",
+      "path": "./../src/EsdsDataTable.js",
+      "attributes": [
+        {
+          "name": "headers",
+          "description": "Array containing data table header strings or objects",
+          "type": "array"
+        },
+        {
+          "name": "rows",
+          "description": "An array of arrays representing the data for each row and cell",
+          "type": "array"
+        }
+      ],
+      "properties": [
+        {
+          "name": "headers",
+          "attribute": "headers",
+          "description": "Array containing data table header strings or objects",
+          "type": "array"
+        },
+        {
+          "name": "rows",
+          "attribute": "rows",
+          "description": "An array of arrays representing the data for each row and cell",
+          "type": "array"
+        }
+      ]
+    }
+  ]
+}

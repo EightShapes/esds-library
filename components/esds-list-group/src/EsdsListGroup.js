@@ -9,8 +9,7 @@ import { namespacedStyles } from './esds-list-group-styles.js';
 /**
  * @element esds-list-group
  *
- * @slot - Default slot, put whatever you want in here.
- * @slot content - Insert content in the named "content" slot.
+ * @slot - Default slot, use <code>&lt;esds-list-item&gt;</code> web components as child elements.
  *
  */
 
@@ -59,6 +58,9 @@ export class EsdsListGroup extends Slotify(Scopify(CSSClassify(LitElement), 'esd
     };
   }
 
+  /*
+   * @ignore
+   */
   constructor() {
     super();
     this.selectedIndicators = false;
@@ -66,6 +68,9 @@ export class EsdsListGroup extends Slotify(Scopify(CSSClassify(LitElement), 'esd
     this.collapsible = false;
   }
 
+  /*
+   * @ignore
+   */
   get cssClassObject() {
     return {
       default: `${this.constructor.customElementNamespace}-list-group`,

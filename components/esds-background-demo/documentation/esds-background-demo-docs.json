@@ -27,33 +27,6 @@
           "description": "Default slot, content placed here will be duplicated across all background columns."
         }
       ]
-    },
-    {
-      "name": "esds-background-demo",
-      "path": "./../src/esds-background-demo-entry.js",
-      "attributes": [
-        {
-          "name": "text",
-          "description": "The text displayed in the component",
-          "type": "string",
-          "default": "\"Hello World\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "text",
-          "attribute": "text",
-          "description": "The text displayed in the component",
-          "type": "string",
-          "default": "\"Hello World\""
-        }
-      ],
-      "slots": [
-        {
-          "name": "",
-          "description": "Default slot, content placed here will be duplicated across all background columns."
-        }
-      ]
     }
   ]
 }

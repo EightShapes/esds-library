@@ -1,7 +1,7 @@
 // import { createSandbox } from 'sinon';
 // import { expect, fixture, html } from '@open-wc/testing';
 
-describe('esds-{{ lowerCase (dashCase name) }}', () => {
+describe('esds-data-table', () => {
   // const sandbox = createSandbox();
   // let fakeMethod;
   // beforeEach(() => {
@@ -15,7 +15,7 @@ describe('esds-{{ lowerCase (dashCase name) }}', () => {
   //   const errorMessage = `text is not "Hello World", delete this silly test and console warning to make this go away.`;
   //   const el = await fixture(
   //     html`
-  //       <esds-{{ lowerCase (dashCase name) }} text="Goodbye World"></esds-{{ lowerCase (dashCase name) }}>
+  //       <esds-data-table text="Goodbye World"></esds-data-table>
   //     `,
   //   );
   //   expect(console.warn).to.have.calledOnceWith(errorMessage);

@@ -59,10 +59,6 @@
           "type": "'small'|'medium'|'large'"
         },
         {
-          "name": "cssClassObject",
-          "type": "{ default: string; prefix: string; selectedIndicators: { conditional: boolean; class: string; }; collapsible: boolean; collapsed: boolean; size: { conditional: any; class: any; }; }"
-        },
-        {
           "name": "selectedIndicators",
           "attribute": "selected-indicators",
           "description": "If true, shows selected state on child list items",
@@ -87,88 +83,7 @@
       "slots": [
         {
           "name": "",
-          "description": "Default slot, put whatever you want in here."
-        },
-        {
-          "name": "content",
-          "description": "Insert content in the named \"content\" slot."
-        }
-      ]
-    },
-    {
-      "name": "esds-list-item",
-      "path": "./../src/EsdsListItem.js",
-      "attributes": [
-        {
-          "name": "href",
-          "description": "If provided the list item will include a link to the given href",
-          "type": "string"
-        },
-        {
-          "name": "nested",
-          "description": "If true, indents the list group to show hierarchy",
-          "type": "boolean"
-        },
-        {
-          "name": "size",
-          "description": "The size of the list item",
-          "type": "'small'|'medium'|'large'"
-        },
-        {
-          "name": "selected",
-          "description": "If true, will include a selected indicator to the left of the list item",
-          "type": "boolean"
-        },
-        {
-          "name": "text",
-          "description": "The text as the list item. The default slot overrides this text",
-          "type": "string"
-        }
-      ],
-      "properties": [
-        {
-          "name": "href",
-          "attribute": "href",
-          "description": "If provided the list item will include a link to the given href",
-          "type": "string"
-        },
-        {
-          "name": "nested",
-          "attribute": "nested",
-          "description": "If true, indents the list group to show hierarchy",
-          "type": "boolean"
-        },
-        {
-          "name": "size",
-          "attribute": "size",
-          "description": "The size of the list item",
-          "type": "'small'|'medium'|'large'"
-        },
-        {
-          "name": "selected",
-          "attribute": "selected",
-          "description": "If true, will include a selected indicator to the left of the list item",
-          "type": "boolean"
-        },
-        {
-          "name": "text",
-          "attribute": "text",
-          "description": "The text as the list item. The default slot overrides this text",
-          "type": "string"
-        },
-        {
-          "name": "cssClassObject",
-          "type": "{ default: string; nested: any; prefix: string; size: { conditional: any; class: any; }; selected: any; }"
-        }
-      ],
-      "slots": [
-        {
-          "name": "",
-          "description": "Default slot, put whatever you want in here."
-        },
-        {
-          "name": "content",
-          "description": "Insert content in the named \"content\" slot."
+          "description": "Default slot, use <code>&lt;esds-list-item&gt;</code> web components as child elements."
         }
       ]
     }

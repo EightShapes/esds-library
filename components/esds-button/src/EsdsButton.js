@@ -57,6 +57,9 @@ export class EsdsButton extends Slotify(Scopify(CSSClassify(LitElement), 'esds')
     };
   }
 
+  /*
+   * @ignore
+   */
   constructor() {
     super();
     // Prop Defaults
@@ -65,6 +68,9 @@ export class EsdsButton extends Slotify(Scopify(CSSClassify(LitElement), 'esds')
     this.type = 'button';
   }
 
+  /*
+   * @ignore
+   */
   get cssClassObject() {
     return {
       default: `${this.constructor.customElementNamespace}-button`,
