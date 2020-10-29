@@ -8,14 +8,12 @@ import {
 import { withA11y } from '@storybook/addon-a11y';
 
 // TODO: Make this more scalable
-import cardDocs from '@eightshapes/esds-card/documentation/esds-card-docs.json';
 import iconDocs from '@eightshapes/esds-icon/documentation/esds-icon-docs.json';
 import thumbnailDocs from '@eightshapes/esds-thumbnail/documentation/esds-thumbnail-docs.json';
 import '../stories/styles/annotation-styles.scss';
 import '../stories/styles/hostile-styles.scss';
 
-const customElements = cardDocs;
-customElements.tags.push(...iconDocs.tags);
+const customElements = iconDocs;
 customElements.tags.push(...thumbnailDocs.tags);
 
 setCustomElements(customElements);
