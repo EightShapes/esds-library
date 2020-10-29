@@ -18,7 +18,6 @@
   "dependencies": {
     "@eightshapes/esds-background-demo": "^0.3.4",
     "@eightshapes/esds-button": "^0.3.4",
-    "@eightshapes/esds-card": "^0.3.4",
     "@eightshapes/esds-icon": "^0.4.4",
     "@eightshapes/esds-icons": "^0.3.6",
     "@eightshapes/esds-list-group": "^0.2.2",
