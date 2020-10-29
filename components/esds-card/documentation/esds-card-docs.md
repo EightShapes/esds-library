@@ -22,10 +22,3 @@
 | `renderImage`       | `(): TemplateResult`       |
 | `renderMetadata`    | `(): TemplateResult \| ""` |
 | `renderTitle`       | `(): TemplateResult`       |
-
-## Slots
-
-| Name      | Description                                  |
-|-----------|----------------------------------------------|
-|           | Default slot, put whatever you want in here. |
-| `content` | Insert content in the named "content" slot.  |
