@@ -1,0 +1,93 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "esds-card",
+      "path": "./../src/EsdsCard.js",
+      "attributes": [
+        {
+          "name": "description",
+          "description": "Text description rendered below the title",
+          "type": "string"
+        },
+        {
+          "name": "href",
+          "description": "Destination when card is clicked",
+          "type": "string"
+        },
+        {
+          "name": "img-crop-type",
+          "description": "Image crop behavior",
+          "type": "'fill'|'contain'|'cover'|'none'|'scale-down'"
+        },
+        {
+          "name": "img-src",
+          "description": "Relative path to the image displayed on the card",
+          "type": "string"
+        },
+        {
+          "name": "metadata",
+          "description": "Metadata text displayed on the card",
+          "type": "string"
+        },
+        {
+          "name": "title",
+          "description": "Title text displayed on the card",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "description",
+          "attribute": "description",
+          "description": "Text description rendered below the title",
+          "type": "string"
+        },
+        {
+          "name": "href",
+          "attribute": "href",
+          "description": "Destination when card is clicked",
+          "type": "string"
+        },
+        {
+          "name": "imgCropType",
+          "attribute": "img-crop-type",
+          "description": "Image crop behavior",
+          "type": "'fill'|'contain'|'cover'|'none'|'scale-down'"
+        },
+        {
+          "name": "imgSrc",
+          "attribute": "img-src",
+          "description": "Relative path to the image displayed on the card",
+          "type": "string"
+        },
+        {
+          "name": "metadata",
+          "attribute": "metadata",
+          "description": "Metadata text displayed on the card",
+          "type": "string"
+        },
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Title text displayed on the card",
+          "type": "string"
+        },
+        {
+          "name": "cssClassObject",
+          "type": "{ default: string; prefix: string; }"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "Default slot, put whatever you want in here."
+        },
+        {
+          "name": "content",
+          "description": "Insert content in the named \"content\" slot."
+        }
+      ]
+    }
+  ]
+}

@@ -2,5 +2,6 @@
 $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
 
 .#{$esds-custom-element-namespace}-{{ lowerCase (dashCase name) }} {
+  @include esds-box-sizing;
   font-size: $esds-font-size-body-m-default;
 }
