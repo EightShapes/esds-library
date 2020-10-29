@@ -8,8 +8,6 @@ import { namespacedStyles } from './esds-card-styles.js';
 /**
  * @element esds-card
  *
- * @slot - Default slot, put whatever you want in here.
- * @slot content - Insert content in the named "content" slot.
  *
  */
 

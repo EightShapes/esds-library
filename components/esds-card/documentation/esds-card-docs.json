@@ -77,16 +77,6 @@
           "name": "cssClassObject",
           "type": "{ default: string; prefix: string; }"
         }
-      ],
-      "slots": [
-        {
-          "name": "",
-          "description": "Default slot, put whatever you want in here."
-        },
-        {
-          "name": "content",
-          "description": "Insert content in the named \"content\" slot."
-        }
       ]
     }
   ]
