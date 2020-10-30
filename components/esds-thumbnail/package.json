@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-thumbnail",
-  "version": "0.3.8",
+  "version": "0.4.0",
   "description": "",
   "esnext": "dist/EsdsThumbnail.js",
   "main": "dist/esds-thumbnail-web-component.js",
