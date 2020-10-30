@@ -33,11 +33,6 @@ addParameters({
   },
   // disables Chromatic on a global level
   chromatic: { disable: true },
-  options: {
-    storySort: {
-      order: ['Button'],
-    },
-  },
 });
 
 // force full reload to not reregister web components

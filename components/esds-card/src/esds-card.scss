@@ -1,0 +1,7 @@
+@use '@eightshapes/esds-visual-style/src/esds-visual-style' as *;
+$esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
+
+.#{$esds-custom-element-namespace}-card {
+  @include esds-box-sizing;
+  font-size: $esds-font-size-body-m-default;
+}
