@@ -7,13 +7,11 @@
       "attributes": [
         {
           "name": "example",
-          "description": "Describe the prop here using JSDoc syntax",
-          "type": "'small'|'medium'|'large'",
+          "type": "string",
           "default": "\"medium\""
         },
         {
           "name": "text",
-          "description": "The text displayed in the component",
           "type": "string",
           "default": "\"Hello World\""
         }
@@ -26,14 +24,12 @@
         {
           "name": "example",
           "attribute": "example",
-          "description": "Describe the prop here using JSDoc syntax",
-          "type": "'small'|'medium'|'large'",
+          "type": "string",
           "default": "\"medium\""
         },
         {
           "name": "text",
           "attribute": "text",
-          "description": "The text displayed in the component",
           "type": "string",
           "default": "\"Hello World\""
         }

@@ -4,8 +4,8 @@
 
 ## Properties
 
-| Property         | Attribute | Modifiers | Type                                   | Default       | Description                               |
-|------------------|-----------|-----------|----------------------------------------|---------------|-------------------------------------------|
-| `cssClassObject` |           | readonly  | `{ default: string; prefix: string; }` |               |                                           |
-| `example`        | `example` |           | `'small'\|'medium'\|'large'`           | "medium"      | Describe the prop here using JSDoc syntax |
-| `text`           | `text`    |           | `string`                               | "Hello World" | The text displayed in the component       |
+| Property         | Attribute | Modifiers | Type                                   | Default       |
+|------------------|-----------|-----------|----------------------------------------|---------------|
+| `cssClassObject` |           | readonly  | `{ default: string; prefix: string; }` |               |
+| `example`        | `example` |           | `string`                               | "medium"      |
+| `text`           | `text`    |           | `string`                               | "Hello World" |

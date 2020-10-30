@@ -1,7 +1,5 @@
 import { html } from 'lit-html';
-// The Web Component Import
 import '@eightshapes/esds-card/dist/esds-card-web-component.js';
-// The Custom Element Class
 import { sinkFor } from './scripts/utilities.js';
 
 export default {
