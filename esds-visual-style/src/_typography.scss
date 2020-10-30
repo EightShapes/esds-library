@@ -105,40 +105,40 @@
   text-transform: uppercase;
 }
 
-@mixin esds-body-lead() {
+@mixin esds-body-lead($responsive: false) {
   @include esds-typography-reset;
-  @include esds-font-size($size: 'heading-level-4');
+  @include esds-font-size($size: 'heading-level-4', $responsive: $responsive);
   font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
   margin: 0;
 }
 
-@mixin esds-body-l() {
+@mixin esds-body-l($responsive: false) {
   @include esds-typography-reset;
-  @include esds-font-size($size: 'body-l');
+  @include esds-font-size($size: 'body-l', $responsive: $responsive);
   font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
   margin: 0;
 }
 
-@mixin esds-body-m() {
+@mixin esds-body-m($responsive: false) {
   @include esds-typography-reset;
-  @include esds-font-size($size: 'body-m');
+  @include esds-font-size($size: 'body-m', $responsive: $responsive);
   font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
   margin: 0;
 }
 
-@mixin esds-body-s() {
+@mixin esds-body-s($responsive: false) {
   @include esds-typography-reset;
-  @include esds-font-size($size: 'body-s');
+  @include esds-font-size($size: 'body-s', $responsive: $responsive);
   font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
   margin: 0;
 }
-@mixin esds-body-xs() {
+@mixin esds-body-xs($responsive: false) {
   @include esds-typography-reset;
-  @include esds-font-size($size: 'body-xs');
+  @include esds-font-size($size: 'body-xs', $responsive: $responsive);
   font-weight: $esds-font-weight-regular;
   line-height: $esds-font-line-height-normal;
   margin: 0;
