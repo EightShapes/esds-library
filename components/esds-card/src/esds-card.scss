@@ -1,7 +1,23 @@
 @use '@eightshapes/esds-visual-style/src/esds-visual-style' as *;
 $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
-
 $esds-card-min-width: 300px;
+$esds-card-focus-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+$esds-card-color-background-hover: #E7F4F6;
+
+// Mixins for states so they can be leveraged on test pages for static state examples
+@mixin esds-card-hover() {
+  background-color: $esds-card-color-background-hover;
+}
+
+@mixin esds-card-focus() {
+  box-shadow: 0 0 0 4px $esds-color-action-focus-on-light, $esds-card-focus-shadow;
+  outline: none;
+}
+
+@mixin esds-card-active() {
+  background-color: $esds-color-action-hover-on-light;
+  box-shadow: none;
+}
 
 #{$esds-custom-element-namespace}-card {
   display: inline-flex;
@@ -19,6 +35,20 @@ $esds-card-min-width: 300px;
   overflow: hidden;
   width: 100%;
 
+  &.esds-card--link {
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+      @include esds-card-hover;
+    }
+
+    &:focus-within {
+      @include esds-card-focus;
+    }
+  }
+
   .esds-card__body {
     display: flex;
     flex-direction: column;
@@ -32,6 +62,16 @@ $esds-card-min-width: 300px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  .esds-card__title-link {
+    @include esds-heading-level-2;
+    color: $esds-color-text-primary-on-light;
+    text-decoration: none;
+
+    &:focus {
+      outline: 0;
     }
   }
 

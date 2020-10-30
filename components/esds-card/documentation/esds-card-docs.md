@@ -6,7 +6,7 @@
 
 | Property         | Attribute          | Modifiers | Type                                             | Description                                      |
 |------------------|--------------------|-----------|--------------------------------------------------|--------------------------------------------------|
-| `cssClassObject` |                    | readonly  | `{ default: string; prefix: string; link: { conditional: any; }; size: { class: any; }; }` |                                                  |
+| `cssClassObject` |                    | readonly  | `{ default: string; prefix: string; link: { conditional: boolean; }; size: { class: any; conditional: boolean; }; }` |                                                  |
 | `description`    | `description`      |           | `string`                                         | Text description rendered below the title        |
 | `href`           | `href`             |           | `string`                                         | Destination when card is clicked                 |
 | `imgAspectRatio` | `img-aspect-ratio` |           | `'16:9'\|'1:1'\|'square'`                        | Image aspect ratio                               |

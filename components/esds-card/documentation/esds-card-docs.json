@@ -97,7 +97,7 @@
         },
         {
           "name": "cssClassObject",
-          "type": "{ default: string; prefix: string; link: { conditional: any; }; size: { class: any; }; }"
+          "type": "{ default: string; prefix: string; link: { conditional: boolean; }; size: { class: any; conditional: boolean; }; }"
         }
       ]
     }

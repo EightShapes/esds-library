@@ -76,10 +76,11 @@ export class EsdsCard extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
       default: `${this.constructor.customElementNamespace}-card`,
       prefix: `${this.constructor.customElementNamespace}-card`,
       link: {
-        conditional: this.href,
+        conditional: this.href !== undefined,
       },
       size: {
-        class: this.class,
+        class: this.size,
+        conditional: this.size !== undefined,
       },
     };
   }

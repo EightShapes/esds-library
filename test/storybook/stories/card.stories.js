@@ -15,6 +15,7 @@ export const Default = () => {
       style="${demoStyles}"
       title="Recreational Equipment, Inc., commonly known as REI"
       img-src="/images/samples/REI HQ.png"
+      href="https://rei.github.io/rei-cedar-docs/"
     ></esds-card>
   `;
 };
