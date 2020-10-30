@@ -3,5 +3,24 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
 
 .#{$esds-custom-element-namespace}-card {
   @include esds-box-sizing;
+  background: $esds-color-background-light-secondary;
+  border-radius: $esds-border-radius-default;
+  display: inline-flex;
+  flex-direction: column;
   font-size: $esds-font-size-body-m-default;
+  overflow: hidden;
+
+  .esds-card__title {
+    @include esds-heading-level-2;
+    color: $esds-color-text-primary-on-light;
+  }
+
+  .esds-card__image {
+    margin: $esds-space-stack-1-x;
+    order: -1;
+  }
+
+  .esds-card__body {
+    padding: $esds-space-inset-1-x;
+  }
 }

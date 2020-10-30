@@ -9,9 +9,9 @@ export default {
 export const Default = () => {
   return html`
     <esds-card
-      ><h3>Default Slot Heading</h3>
-      <h4 slot="content">Named Slot Heading</h4>
-    </esds-card>
+      title="Recreational Equipment, Inc., commonly known as REI"
+      img-src="/images/samples/REI HQ.png"
+    ></esds-card>
   `;
 };
 

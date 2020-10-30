@@ -6,32 +6,28 @@
       "path": "./../src/EsdsCard.js",
       "attributes": [
         {
-          "name": "example",
-          "type": "string",
-          "default": "\"medium\""
+          "name": "img-src",
+          "type": "string"
         },
         {
-          "name": "text",
-          "type": "string",
-          "default": "\"Hello World\""
+          "name": "title",
+          "type": "string"
         }
       ],
       "properties": [
         {
+          "name": "imgSrc",
+          "attribute": "img-src",
+          "type": "string"
+        },
+        {
+          "name": "title",
+          "attribute": "title",
+          "type": "string"
+        },
+        {
           "name": "cssClassObject",
           "type": "{ default: string; prefix: string; }"
-        },
-        {
-          "name": "example",
-          "attribute": "example",
-          "type": "string",
-          "default": "\"medium\""
-        },
-        {
-          "name": "text",
-          "attribute": "text",
-          "type": "string",
-          "default": "\"Hello World\""
         }
       ]
     }

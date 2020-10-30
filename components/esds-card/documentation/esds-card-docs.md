@@ -4,8 +4,8 @@
 
 ## Properties
 
-| Property         | Attribute | Modifiers | Type                                   | Default       |
-|------------------|-----------|-----------|----------------------------------------|---------------|
-| `cssClassObject` |           | readonly  | `{ default: string; prefix: string; }` |               |
-| `example`        | `example` |           | `string`                               | "medium"      |
-| `text`           | `text`    |           | `string`                               | "Hello World" |
+| Property         | Attribute | Modifiers | Type                                   |
+|------------------|-----------|-----------|----------------------------------------|
+| `cssClassObject` |           | readonly  | `{ default: string; prefix: string; }` |
+| `imgSrc`         | `img-src` |           | `string`                               |
+| `title`          | `title`   |           | `string`                               |

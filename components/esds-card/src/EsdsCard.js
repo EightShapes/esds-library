@@ -2,6 +2,7 @@ import { html, LitElement } from 'lit-element';
 import { CSSClassify } from '@eightshapes/css-classify';
 import { Scopify } from '@eightshapes/scopify';
 import { Slotify } from '@eightshapes/slotify';
+import { EsdsThumbnail } from '@eightshapes/esds-thumbnail/dist/EsdsThumbnail.js';
 import { namespacedStyles } from './esds-card-styles.js';
 
 /**
@@ -15,16 +16,14 @@ export class EsdsCard extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
 
   static get properties() {
     return {
-      example: { type: String },
-      text: { type: String },
+      imgSrc: { type: String, attribute: 'img-src' },
+      title: { type: String },
     };
   }
 
   constructor() {
     super();
-    // Prop Defaults
-    this.example = 'medium';
-    this.text = 'Hello World';
+    EsdsThumbnail.define('esds-card');
   }
 
   get cssClassObject() {
@@ -39,9 +38,14 @@ export class EsdsCard extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
       <style>
         ${namespacedStyles(this.constructor.customElementNamespace)}
       </style>
-      <h1 class="${this.getClassName()}">
-        ${this.text}
-      </h1>
+      <div class="${this.getClassName()}">
+        <div class="esds-card__body">
+          <h3 class="esds-card__title">${this.title}</h3>
+        </div>
+        <div class="esds-card__image">
+          <esds-card-thumbnail src="${this.imgSrc}"></esds-card-thumbnail>
+        </div>
+      </div>
     `;
   }
 }
