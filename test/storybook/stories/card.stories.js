@@ -54,5 +54,45 @@ export const WithMetadataAndDescription = () => {
   `;
 };
 
+export const Sizes = () => {
+  return html`
+    <div class="storybook-grid">
+      <div>
+        <span class="storybook-annotation">Small</span>
+        <esds-card
+          style="${demoStyles}"
+          img-src="/images/samples/Vernazza.png"
+          metadata="Destination"
+          title="Vernazza"
+          description="Lorem ipsum dolor sanctum."
+          size="small"
+        ></esds-card>
+      </div>
+      <div>
+        <span class="storybook-annotation">Medium</span>
+        <esds-card
+          style="${demoStyles}"
+          img-src="/images/samples/Vernazza.png"
+          metadata="Destination"
+          title="Vernazza"
+          description="Lorem ipsum dolor sanctum."
+          size="medium"
+        ></esds-card>
+      </div>
+      <div>
+        <span class="storybook-annotation">Large</span>
+        <esds-card
+          style="${demoStyles}"
+          img-src="/images/samples/Vernazza.png"
+          metadata="Destination"
+          title="Vernazza"
+          description="Lorem ipsum dolor sanctum."
+          size="large"
+        ></esds-card>
+      </div>
+    </div>
+  `;
+};
+
 export const Sink = sinkFor(Default);
 Sink.story = { parameters: { chromatic: { disable: false } } };

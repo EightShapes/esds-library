@@ -56,7 +56,7 @@ $esds-card-color-background-hover: #E7F4F6;
   }
 
   .esds-card__title {
-    @include esds-heading-level-2;
+    @include esds-heading-level-3($responsive: true);
     color: $esds-color-text-primary-on-light;
     margin: $esds-space-stack-half-x;
 
@@ -66,7 +66,7 @@ $esds-card-color-background-hover: #E7F4F6;
   }
 
   .esds-card__title-link {
-    @include esds-heading-level-2;
+    @include esds-heading-level-2($responsive: true);
     color: $esds-color-text-primary-on-light;
     text-decoration: none;
 
@@ -76,13 +76,13 @@ $esds-card-color-background-hover: #E7F4F6;
   }
 
   .esds-card__metadata {
-    @include esds-heading-eyebrow;
+    @include esds-heading-eyebrow($responsive: true);
     color: $esds-color-text-secondary-on-light;
     order: -1;
   }
 
   .esds-card__description {
-    @include esds-body-l;
+    @include esds-body-m($responsive: true);
     color: $esds-color-text-primary-on-light;
     margin: $esds-space-stack-1-x;
 
@@ -93,5 +93,31 @@ $esds-card-color-background-hover: #E7F4F6;
 
   .esds-card__image {
     order: -1;
+  }
+
+  &.esds-card--small {
+    .esds-card__title {
+      @include esds-heading-level-4($responsive: true);
+      margin: $esds-space-stack-half-x;
+    }
+
+    .esds-card__metadata {
+      @include esds-heading-eyebrow-small($responsive: true);
+    }
+
+    .esds-card__description {
+      @include esds-body-s($responsive: true);
+    }
+  }
+
+  &.esds-card--large {
+    .esds-card__title {
+      @include esds-heading-level-2($responsive: true);
+      margin: $esds-space-stack-half-x;
+    }
+
+    .esds-card__description {
+      @include esds-body-l($responsive: true);
+    }
   }
 }
