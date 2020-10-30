@@ -6,28 +6,98 @@
       "path": "./../src/EsdsCard.js",
       "attributes": [
         {
+          "name": "description",
+          "description": "Text description rendered below the title",
+          "type": "string"
+        },
+        {
+          "name": "href",
+          "description": "Destination when card is clicked",
+          "type": "string"
+        },
+        {
+          "name": "img-aspect-ratio",
+          "description": "Image aspect ratio",
+          "type": "'16:9'|'1:1'|'square'"
+        },
+        {
+          "name": "img-crop-type",
+          "description": "Image crop behavior",
+          "type": "'fill'|'contain'|'cover'|'none'|'scale-down'"
+        },
+        {
           "name": "img-src",
+          "description": "Relative path to the image displayed on the card",
+          "type": "string"
+        },
+        {
+          "name": "metadata",
+          "description": "Metadata text displayed on the card",
           "type": "string"
         },
         {
           "name": "title",
+          "description": "Title text displayed on the card",
           "type": "string"
+        },
+        {
+          "name": "size",
+          "description": "Overall size of the card",
+          "type": "'small'|'medium'|'large'"
         }
       ],
       "properties": [
         {
+          "name": "description",
+          "attribute": "description",
+          "description": "Text description rendered below the title",
+          "type": "string"
+        },
+        {
+          "name": "href",
+          "attribute": "href",
+          "description": "Destination when card is clicked",
+          "type": "string"
+        },
+        {
+          "name": "imgAspectRatio",
+          "attribute": "img-aspect-ratio",
+          "description": "Image aspect ratio",
+          "type": "'16:9'|'1:1'|'square'"
+        },
+        {
+          "name": "imgCropType",
+          "attribute": "img-crop-type",
+          "description": "Image crop behavior",
+          "type": "'fill'|'contain'|'cover'|'none'|'scale-down'"
+        },
+        {
           "name": "imgSrc",
           "attribute": "img-src",
+          "description": "Relative path to the image displayed on the card",
+          "type": "string"
+        },
+        {
+          "name": "metadata",
+          "attribute": "metadata",
+          "description": "Metadata text displayed on the card",
           "type": "string"
         },
         {
           "name": "title",
           "attribute": "title",
+          "description": "Title text displayed on the card",
           "type": "string"
         },
         {
+          "name": "size",
+          "attribute": "size",
+          "description": "Overall size of the card",
+          "type": "'small'|'medium'|'large'"
+        },
+        {
           "name": "cssClassObject",
-          "type": "{ default: string; prefix: string; }"
+          "type": "{ default: string; prefix: string; link: { conditional: any; }; size: { class: any; }; }"
         }
       ]
     }

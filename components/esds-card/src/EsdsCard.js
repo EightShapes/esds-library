@@ -16,8 +16,53 @@ export class EsdsCard extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
 
   static get properties() {
     return {
+      /*
+       * Text description rendered below the title
+       * @type String
+       */
+      description: { type: String },
+
+      /*
+       * Destination when card is clicked
+       * @type String
+       */
+      href: { type: String },
+
+      /*
+       * Image aspect ratio
+       * @type {'16:9'|'1:1'|'square'}
+       */
+      imgAspectRatio: { type: String, attribute: 'img-aspect-ratio' },
+
+      /*
+       * Image crop behavior
+       * @type {'fill'|'contain'|'cover'|'none'|'scale-down'}
+       */
+      imgCropType: { type: String, attribute: 'img-crop-type' },
+
+      /*
+       * Relative path to the image displayed on the card
+       * @type String
+       */
       imgSrc: { type: String, attribute: 'img-src' },
+
+      /*
+       * Metadata text displayed on the card
+       * @type String
+       */
+      metadata: { type: String },
+
+      /*
+       * Title text displayed on the card
+       * @type String
+       */
       title: { type: String },
+
+      /*
+       * Overall size of the card
+       * @type {'small'|'medium'|'large'}
+       */
+      size: { type: String },
     };
   }
 
@@ -29,8 +74,53 @@ export class EsdsCard extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
   get cssClassObject() {
     return {
       default: `${this.constructor.customElementNamespace}-card`,
-      prefix: `${this.constructor.customElementNamespace}-card`, // will cause `active` to become `my-card--active`
+      prefix: `${this.constructor.customElementNamespace}-card`,
+      link: {
+        conditional: this.href,
+      },
+      size: {
+        class: this.class,
+      },
     };
+  }
+
+  renderImage() {
+    return html`
+      <div class="esds-card__image">
+        <esds-card-thumbnail
+          src="${this.imgSrc}"
+          object-fit="${this.imgCropType}"
+        ></esds-card-thumbnail>
+      </div>
+    `;
+  }
+
+  renderTitle() {
+    return html`
+      <h3 class="esds-card__title">
+        ${this.href
+          ? html`
+              <a href="${this.href}" class="esds-card__title-link">${this.title}</a>
+            `
+          : this.title}
+      </h3>
+    `;
+  }
+
+  renderDescription() {
+    return this.description
+      ? html`
+          <p class="esds-card__description">${this.description}</p>
+        `
+      : '';
+  }
+
+  renderMetadata() {
+    return this.metadata
+      ? html`
+          <h4 class="esds-card__metadata">${this.metadata}</h4>
+        `
+      : '';
   }
 
   render() {
@@ -40,11 +130,9 @@ export class EsdsCard extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
       </style>
       <div class="${this.getClassName()}">
         <div class="esds-card__body">
-          <h3 class="esds-card__title">${this.title}</h3>
+          ${this.renderTitle()} ${this.renderMetadata()} ${this.renderDescription()}
         </div>
-        <div class="esds-card__image">
-          <esds-card-thumbnail src="${this.imgSrc}"></esds-card-thumbnail>
-        </div>
+        ${this.renderImage()}
       </div>
     `;
   }
