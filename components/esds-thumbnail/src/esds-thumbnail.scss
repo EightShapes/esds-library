@@ -1,14 +1,14 @@
 @use '@eightshapes/esds-visual-style/src/esds-visual-style' as *;
 $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
 
-.#{$esds-custom-element-namespace}-thumbnail__root {
+.#{$esds-custom-element-namespace}-thumbnail {
   @include esds-typography-reset;
   @include esds-box-sizing;
   align-items: center;
-  background: $esds-color-brand;
+  background: $esds-color-background-dark-secondary;
   display: flex;
   justify-content: center;
-  padding-bottom: 54.8%; // aspect ratio for image crop
+  padding-bottom: 56.25%; // aspect ratio for image crop
   position: relative;
   width: 100%;
 
@@ -22,6 +22,11 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
     position: absolute;
     right: 0;
     top: 0;
+  }
+
+  &.esds-thumbnail--aspect-square,
+  &.esds-thumbnail--aspect-1-1 {
+    padding-bottom: 100%;
   }
 
   .esds-thumbnail__image {
@@ -53,7 +58,7 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
   }
 
   .esds-thumbnail-icon {
-    color: $esds-color-black;
+    color: $esds-color-white;
     height: 64px;
     opacity: 0.6;
     transform: rotate(-7deg);

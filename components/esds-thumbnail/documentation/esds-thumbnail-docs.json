@@ -15,6 +15,12 @@
           "description": "Image crop behavior",
           "type": "'fill'|'contain'|'cover'|'none'|'scale-down'",
           "default": "\"cover\""
+        },
+        {
+          "name": "aspect-ratio",
+          "description": "Image aspect ratio",
+          "type": "'16:9'|'square'|'1:1'",
+          "default": "\"16:9\""
         }
       ],
       "properties": [
@@ -30,6 +36,13 @@
           "description": "Image crop behavior",
           "type": "'fill'|'contain'|'cover'|'none'|'scale-down'",
           "default": "\"cover\""
+        },
+        {
+          "name": "aspectRatio",
+          "attribute": "aspect-ratio",
+          "description": "Image aspect ratio",
+          "type": "'16:9'|'square'|'1:1'",
+          "default": "\"16:9\""
         }
       ]
     }
