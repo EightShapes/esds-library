@@ -130,5 +130,13 @@ export const SlotExamples = () => {
   `;
 };
 
-export const Sink = sinkFor(Default);
+export const Sink = sinkFor(
+  Default,
+  WithDescription,
+  WithMetadata,
+  WithMetadataAndDescription,
+  Sizes,
+  SlotAnatomy,
+  SlotExamples,
+);
 Sink.story = { parameters: { chromatic: { disable: false } } };
