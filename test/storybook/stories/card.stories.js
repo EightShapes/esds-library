@@ -1,6 +1,7 @@
 import { html } from 'lit-html';
 import '@eightshapes/esds-card/dist/esds-card-web-component.js';
 import { sinkFor } from './scripts/utilities.js';
+import './styles/card.stories.scss'; // Demo styles to show component states
 
 const storybookCardWidth = 450;
 const demoStyles = `width: ${storybookCardWidth}px`;
@@ -88,6 +89,60 @@ export const Sizes = () => {
           title="Vernazza"
           description="Lorem ipsum dolor sanctum."
           size="large"
+        ></esds-card>
+      </div>
+    </div>
+  `;
+};
+
+export const States = () => {
+  return html`
+    <div class="storybook-grid">
+      <div>
+        <span class="storybook-annotation">Default</span>
+        <esds-card
+          style="${demoStyles}"
+          href="http://example.com"
+          img-src="/images/samples/New Zealand Mount Cook.png"
+          metadata="Metadata"
+          title="Title"
+          description="Description"
+        ></esds-card>
+      </div>
+      <div>
+        <span class="storybook-annotation">Hover</span>
+        <esds-card
+          class="storybook-esds-card-state storybook-esds-card-state--hover"
+          style="${demoStyles}"
+          href="http://example.com"
+          img-src="/images/samples/New Zealand Mount Cook.png"
+          metadata="Metadata"
+          title="Title"
+          description="Description"
+        ></esds-card>
+      </div>
+      <div>
+        <span class="storybook-annotation">Focus</span>
+        <esds-card
+          class="storybook-esds-card-state storybook-esds-card-state--focus"
+          style="${demoStyles}"
+          href="http://example.com"
+          img-src="/images/samples/New Zealand Mount Cook.png"
+          metadata="Metadata"
+          title="Title"
+          description="Description"
+        ></esds-card>
+      </div>
+      <div>
+        <span class="storybook-annotation">Active</span>
+        <esds-card
+          class="storybook-esds-card-state storybook-esds-card-state--active"
+          style="${demoStyles}"
+          href="http://example.com"
+          img-src="/images/samples/New Zealand Mount Cook.png"
+          metadata="Metadata"
+          title="Title"
+          description="Description"
         ></esds-card>
       </div>
     </div>
