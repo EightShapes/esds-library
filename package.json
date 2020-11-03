@@ -9,7 +9,7 @@
     "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
     "lint": "npm run lint:eslint && npm run lint:stylelint",
     "format": "npm run format:eslint && npm run format:stylelint",
-    "test": "npx lerna bootstrap && npm run --prefix ./test/storybook vrt"
+    "test": "npx lerna bootstrap --force-local && npm run --prefix ./test/storybook vrt"
   },
   "devDependencies": {
     "@lerna/package-graph": "^3.18.5",
