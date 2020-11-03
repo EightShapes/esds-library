@@ -124,6 +124,32 @@ export class EsdsCard extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
       : '';
   }
 
+  renderContentSlot() {
+    if (this.hasSlotableContent('content')) {
+      return html`
+        <div class="esds-card__content-slot">
+          <s-slot name="content"></s-slot>
+        </div>
+      `;
+    }
+    return html`
+      <s-slot name="content"></s-slot>
+    `;
+  }
+
+  renderActionsSlot() {
+    if (this.hasSlotableContent('actions')) {
+      return html`
+        <div class="esds-card__actions-slot">
+          <s-slot name="actions"></s-slot>
+        </div>
+      `;
+    }
+    return html`
+      <s-slot name="actions"></s-slot>
+    `;
+  }
+
   render() {
     return html`
       <style>
@@ -132,6 +158,7 @@ export class EsdsCard extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
       <div class="${this.getClassName()}">
         <div class="esds-card__body">
           ${this.renderTitle()} ${this.renderMetadata()} ${this.renderDescription()}
+          ${this.renderContentSlot()} ${this.renderActionsSlot()}
         </div>
         ${this.renderImage()}
       </div>

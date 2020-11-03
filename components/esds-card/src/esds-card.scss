@@ -95,6 +95,16 @@ $esds-card-color-background-hover: #E7F4F6;
     order: -1;
   }
 
+  .esds-card__content-slot,
+  .esds-card__actions-slot {
+    @include esds-typography-reset;
+    margin: $esds-space-stack-1-x;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &.esds-card--small {
     .esds-card__title {
       @include esds-heading-level-4($responsive: true);

@@ -20,6 +20,8 @@
 
 | Method              | Type                       |
 |---------------------|----------------------------|
+| `renderActionsSlot` | `(): TemplateResult`       |
+| `renderContentSlot` | `(): TemplateResult`       |
 | `renderDescription` | `(): TemplateResult \| ""` |
 | `renderImage`       | `(): TemplateResult`       |
 | `renderMetadata`    | `(): TemplateResult \| ""` |

@@ -1,5 +1,7 @@
 import { html } from 'lit-html';
 import '@eightshapes/esds-card/dist/esds-card-web-component.js';
+import '@eightshapes/esds-button/dist/esds-button-web-component.js';
+import '@eightshapes/esds-list-group/dist/esds-list-group-web-component.js';
 import { sinkFor } from './scripts/utilities.js';
 
 const storybookCardWidth = 450;
@@ -91,6 +93,40 @@ export const Sizes = () => {
         ></esds-card>
       </div>
     </div>
+  `;
+};
+
+export const SlotAnatomy = () => {
+  return html`
+    <esds-card style="${demoStyles}" title="Wanaka" img-src="/images/samples/Wanaka.png">
+      <div class="storybook-slotholder" slot="content">Content</div>
+      <div class="storybook-slotholder" slot="actions">Actions</div>
+    </esds-card>
+  `;
+};
+
+export const SlotExamples = () => {
+  return html`
+    <esds-card style="${demoStyles}" title="Wanaka" img-src="/images/samples/Wanaka.png">
+      <esds-prose slot="content">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptate. Dignissimos
+          aperiam mollitia non, odit vel nostrum natus nesciunt officia!
+        </p>
+        <h4>Heading</h4>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptate. Dignissimos
+          aperiam mollitia non, odit vel nostrum natus nesciunt officia!
+        </p>
+        <h4>Heading</h4>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptate. Dignissimos
+          aperiam mollitia non, odit vel nostrum natus nesciunt officia!
+        </p>
+      </esds-prose>
+      <esds-button slot="actions" variant="secondary">Subscribe</esds-button>
+      <esds-button slot="actions" variant="flat">Learn More</esds-button>
+    </esds-card>
   `;
 };
 
