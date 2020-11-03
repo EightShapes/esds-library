@@ -21,6 +21,10 @@ $esds-card-color-background-hover: #E7F4F6;
 
 #{$esds-custom-element-namespace}-card {
   display: inline-flex;
+
+  s-root {
+    width: 100%;
+  }
 }
 
 .#{$esds-custom-element-namespace}-card {
