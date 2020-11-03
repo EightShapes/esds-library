@@ -129,4 +129,26 @@ $esds-card-color-background-hover: #E7F4F6;
       @include esds-body-l($responsive: true);
     }
   }
+
+  .esds-container--light-secondary & {
+    background: $esds-color-background-light-primary;
+  }
+
+  .esds-container--dark-primary &,
+  .esds-container--dark-secondary & {
+    background: $esds-color-background-dark-primary;
+
+    .esds-card__title,
+    .esds-card__description {
+      color: $esds-color-text-primary-on-dark;
+    }
+
+    .esds-card__metadata {
+      color: $esds-color-text-secondary-on-dark;
+    }
+  }
+
+  .esds-container--dark-primary & {
+    background: $esds-color-background-dark-secondary;
+  }
 }

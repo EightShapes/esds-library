@@ -1,5 +1,6 @@
 import { html } from 'lit-html';
 import '@eightshapes/esds-card/dist/esds-card-web-component.js';
+import '@eightshapes/esds-background-demo/dist/esds-background-demo-web-component.js';
 import { sinkFor } from './scripts/utilities.js';
 import './styles/card.stories.scss'; // Demo styles to show component states
 
@@ -146,6 +147,21 @@ export const States = () => {
         ></esds-card>
       </div>
     </div>
+  `;
+};
+
+export const AcrossBackgrounds = () => {
+  return html`
+    <esds-background-demo>
+      <esds-card
+        style="${demoStyles}"
+        title="Title"
+        img-src="/images/samples/Emirates Stadium.png"
+        metadata="Metadata"
+        title="Title"
+        description="Description"
+      ></esds-card>
+    </esds-background-demo>
   `;
 };
 
