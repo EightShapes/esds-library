@@ -1,0 +1,20 @@
+@use '@eightshapes/esds-card/src/esds-card' as *;
+@use '@eightshapes/esds-visual-style/src/esds-visual-style' as *;
+
+.storybook-esds-card-state--hover {
+  .esds-card {
+    @include esds-card-hover;
+  }
+}
+
+.storybook-esds-card-state--active {
+  .esds-card {
+    @include esds-card-active;
+  }
+}
+
+.storybook-esds-card-state--focus {
+  .esds-card {
+    @include esds-card-focus;
+  }
+}

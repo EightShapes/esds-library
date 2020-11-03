@@ -10,6 +10,7 @@ $esds-card-color-background-hover: #E7F4F6;
 }
 
 @mixin esds-card-focus() {
+  background-color: $esds-card-color-background-hover;
   box-shadow: 0 0 0 4px $esds-color-action-focus-on-light, $esds-card-focus-shadow;
   outline: none;
 }
@@ -50,6 +51,10 @@ $esds-card-color-background-hover: #E7F4F6;
 
     &:focus-within {
       @include esds-card-focus;
+    }
+
+    &:active {
+      @include esds-card-active;
     }
   }
 
@@ -133,5 +138,27 @@ $esds-card-color-background-hover: #E7F4F6;
     .esds-card__description {
       @include esds-body-l($responsive: true);
     }
+  }
+
+  .esds-container--light-secondary & {
+    background: $esds-color-background-light-primary;
+  }
+
+  .esds-container--dark-primary &,
+  .esds-container--dark-secondary & {
+    background: $esds-color-background-dark-primary;
+
+    .esds-card__title,
+    .esds-card__description {
+      color: $esds-color-text-primary-on-dark;
+    }
+
+    .esds-card__metadata {
+      color: $esds-color-text-secondary-on-dark;
+    }
+  }
+
+  .esds-container--dark-primary & {
+    background: $esds-color-background-dark-secondary;
   }
 }

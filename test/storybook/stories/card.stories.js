@@ -1,8 +1,8 @@
 import { html } from 'lit-html';
 import '@eightshapes/esds-card/dist/esds-card-web-component.js';
-import '@eightshapes/esds-button/dist/esds-button-web-component.js';
-import '@eightshapes/esds-list-group/dist/esds-list-group-web-component.js';
+import '@eightshapes/esds-background-demo/dist/esds-background-demo-web-component.js';
 import { sinkFor } from './scripts/utilities.js';
+import './styles/card.stories.scss'; // Demo styles to show component states
 
 const storybookCardWidth = 450;
 const demoStyles = `width: ${storybookCardWidth}px`;
@@ -96,6 +96,75 @@ export const Sizes = () => {
   `;
 };
 
+export const States = () => {
+  return html`
+    <div class="storybook-grid">
+      <div>
+        <span class="storybook-annotation">Default</span>
+        <esds-card
+          style="${demoStyles}"
+          href="http://example.com"
+          img-src="/images/samples/New Zealand Mount Cook.png"
+          metadata="Metadata"
+          title="Title"
+          description="Description"
+        ></esds-card>
+      </div>
+      <div>
+        <span class="storybook-annotation">Hover</span>
+        <esds-card
+          class="storybook-esds-card-state storybook-esds-card-state--hover"
+          style="${demoStyles}"
+          href="http://example.com"
+          img-src="/images/samples/New Zealand Mount Cook.png"
+          metadata="Metadata"
+          title="Title"
+          description="Description"
+        ></esds-card>
+      </div>
+      <div>
+        <span class="storybook-annotation">Focus</span>
+        <esds-card
+          class="storybook-esds-card-state storybook-esds-card-state--focus"
+          style="${demoStyles}"
+          href="http://example.com"
+          img-src="/images/samples/New Zealand Mount Cook.png"
+          metadata="Metadata"
+          title="Title"
+          description="Description"
+        ></esds-card>
+      </div>
+      <div>
+        <span class="storybook-annotation">Active</span>
+        <esds-card
+          class="storybook-esds-card-state storybook-esds-card-state--active"
+          style="${demoStyles}"
+          href="http://example.com"
+          img-src="/images/samples/New Zealand Mount Cook.png"
+          metadata="Metadata"
+          title="Title"
+          description="Description"
+        ></esds-card>
+      </div>
+    </div>
+  `;
+};
+
+export const AcrossBackgrounds = () => {
+  return html`
+    <esds-background-demo>
+      <esds-card
+        style="${demoStyles}"
+        title="Title"
+        img-src="/images/samples/Emirates Stadium.png"
+        metadata="Metadata"
+        title="Title"
+        description="Description"
+      ></esds-card>
+    </esds-background-demo>
+  `;
+};
+
 export const SlotAnatomy = () => {
   return html`
     <esds-card style="${demoStyles}" title="Wanaka" img-src="/images/samples/Wanaka.png">
@@ -136,6 +205,8 @@ export const Sink = sinkFor(
   WithMetadata,
   WithMetadataAndDescription,
   Sizes,
+  States,
+  AcrossBackgrounds,
   SlotAnatomy,
   SlotExamples,
 );
