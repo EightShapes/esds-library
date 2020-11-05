@@ -32,7 +32,7 @@ $esds-card-color-background-hover: #E7F4F6;
   @include esds-box-sizing;
   @include esds-typography-reset;
   background: $esds-color-background-light-secondary;
-  border-radius: 20px;
+  border-radius: $esds-border-radius-default;
   display: inline-flex;
   flex-direction: column;
   font-size: $esds-font-size-body-m-default;
