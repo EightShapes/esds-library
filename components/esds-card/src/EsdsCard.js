@@ -73,6 +73,9 @@ export class EsdsCard extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
     EsdsThumbnail.define('esds-card');
   }
 
+  /*
+   * @ignore
+   */
   get cssClassObject() {
     return {
       default: `${this.constructor.customElementNamespace}-card`,

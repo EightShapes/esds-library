@@ -94,10 +94,6 @@
           "attribute": "size",
           "description": "Overall size of the card",
           "type": "'small'|'medium'|'large'"
-        },
-        {
-          "name": "cssClassObject",
-          "type": "{ default: string; prefix: string; link: { conditional: boolean; }; size: { class: any; conditional: boolean; }; }"
         }
       ],
       "slots": [
