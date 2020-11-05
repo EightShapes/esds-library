@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-card",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "",
   "esnext": "dist/EsdsCard.js",
   "main": "dist/esds-card-web-component.js",
