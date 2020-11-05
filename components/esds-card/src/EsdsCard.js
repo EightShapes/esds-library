@@ -7,6 +7,8 @@ import { namespacedStyles } from './esds-card-styles.js';
 
 /**
  * @element esds-card
+ * @slot content - Accepts miscellaneous content for the card
+ * @slot actions - Accepts links or buttons as actions at the bottom of the card
  */
 
 export class EsdsCard extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) {

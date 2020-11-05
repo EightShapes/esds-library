@@ -199,6 +199,18 @@ export const SlotExamples = () => {
   `;
 };
 
+export const ContentResilience = () => {
+  return html`
+    <esds-card
+      style="${demoStyles}"
+      title="This is a really really really really long title. Please don't ever use a title this long"
+      metadata="So much metadata here. This will definitely wrap to a second line and demonstrate the line height"
+      img-src="/images/samples/Florence.png"
+      description="This long description shows what happens when you put a lot of text inside the card and then how the card handles it. Will it break? Will the CSS need more work? Find out in the exciting conclusion of the content resilience example. This long description shows what happens when you put a lot of text inside the card and then how the card handles it. Will it break? Will the CSS need more work? Find out in the exciting conclusion of the content resilience example. This long description shows what happens when you put a lot of text inside the card and then how the card handles it. Will it break? Will the CSS need more work? Find out in the exciting conclusion of the content resilience example."
+    ></esds-card>
+  `;
+};
+
 export const Sink = sinkFor(
   Default,
   WithDescription,
