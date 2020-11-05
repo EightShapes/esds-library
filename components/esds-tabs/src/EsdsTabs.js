@@ -135,9 +135,6 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
         const event = new CustomEvent('esds-tabs-tab-changed', {});
         this.dispatchEvent(event);
       });
-    } else {
-      // If the tab id hasn't been set yet, keep trying to select the tab
-      setTimeout(() => this.selectTab(tabPanelId), 50);
     }
   }
 
@@ -162,13 +159,11 @@ export class EsdsTabs extends Slotify(Scopify(CSSClassify(LitElement), 'esds')) 
         });
 
         // Set the id of the panel and pass the id of the corresponding tab
-        tab.panelId = generatedPanelId; // eslint-disable-line no-param-reassign
+        tab.setAttribute('panel-id', generatedPanelId); // eslint-disable-line no-param-reassign
         tab.ariaLabelledby = generatedTabId; // eslint-disable-line no-param-reassign
       });
       this.requestUpdate(); // Manually trigger lit-element render since linkedTabs is not a prop, but an internal value
-    });
 
-    Promise.all(tabLoadedPromises).then(() => {
       const selectedTab = this.linkedTabs.find(tab => tab.selected) || tabs[0];
       this.selectTab(selectedTab.panelId);
     });
