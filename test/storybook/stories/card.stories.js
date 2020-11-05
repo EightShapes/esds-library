@@ -1,6 +1,8 @@
 import { html } from 'lit-html';
 import '@eightshapes/esds-card/dist/esds-card-web-component.js';
 import '@eightshapes/esds-background-demo/dist/esds-background-demo-web-component.js';
+import '@eightshapes/esds-prose/dist/esds-prose-web-component.js';
+import '@eightshapes/esds-button/dist/esds-button-web-component.js';
 import { sinkFor } from './scripts/utilities.js';
 import './styles/card.stories.scss'; // Demo styles to show component states
 
@@ -174,31 +176,6 @@ export const SlotAnatomy = () => {
   `;
 };
 
-export const SlotExamples = () => {
-  return html`
-    <esds-card style="${demoStyles}" title="Wanaka" img-src="/images/samples/Wanaka.png">
-      <esds-prose slot="content">
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptate. Dignissimos
-          aperiam mollitia non, odit vel nostrum natus nesciunt officia!
-        </p>
-        <h4>Heading</h4>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptate. Dignissimos
-          aperiam mollitia non, odit vel nostrum natus nesciunt officia!
-        </p>
-        <h4>Heading</h4>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptate. Dignissimos
-          aperiam mollitia non, odit vel nostrum natus nesciunt officia!
-        </p>
-      </esds-prose>
-      <esds-button slot="actions" variant="secondary">Subscribe</esds-button>
-      <esds-button slot="actions" variant="flat">Learn More</esds-button>
-    </esds-card>
-  `;
-};
-
 export const Sink = sinkFor(
   Default,
   WithDescription,
@@ -208,6 +185,5 @@ export const Sink = sinkFor(
   States,
   AcrossBackgrounds,
   SlotAnatomy,
-  SlotExamples,
 );
 Sink.story = { parameters: { chromatic: { disable: false } } };
