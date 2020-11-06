@@ -5,7 +5,6 @@ import {
   addDecorator,
   setCustomElements,
 } from '@storybook/web-components';
-import { withA11y } from '@storybook/addon-a11y';
 
 // TODO: Make this more scalable
 import iconDocs from '@eightshapes/esds-icon/documentation/esds-icon-docs.json';
@@ -18,19 +17,7 @@ customElements.tags.push(...thumbnailDocs.tags);
 
 setCustomElements(customElements);
 
-addDecorator(withA11y);
-
 addParameters({
-  a11y: {
-    element: '#root',
-    config: {},
-    options: {},
-    manual: true,
-  },
-  docs: {
-    iframeHeight: '200px',
-    inlineStories: false,
-  },
   // disables Chromatic on a global level
   chromatic: { disable: true },
 });
