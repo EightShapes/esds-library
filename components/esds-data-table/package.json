@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-data-table",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "",
   "esnext": "dist/EsdsDataTable.js",
   "main": "dist/esds-data-table-web-component.js",
@@ -34,8 +34,8 @@
   "license": "MIT",
   "devDependencies": {
     "@eightshapes/css-classify": "^0.1.2",
-    "@eightshapes/esds-tokens": "^0.6.0",
-    "@eightshapes/esds-visual-style": "^0.7.0",
+    "@eightshapes/esds-tokens": "^0.7.0",
+    "@eightshapes/esds-visual-style": "^0.8.0",
     "@eightshapes/scopify": "^0.1.0",
     "@open-wc/testing": "^2.0.0",
     "@open-wc/testing-karma": "^3.0.0",
