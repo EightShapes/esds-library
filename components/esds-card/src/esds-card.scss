@@ -70,7 +70,7 @@ $esds-card-color-background-hover: #E7F4F6;
   }
 
   .esds-card__title-link {
-    @include esds-heading-level-2($responsive: true);
+    @include esds-typography-reset($font-size: inherit, $font-weight: $esds-font-weight-semi-bold);
     color: $esds-color-text-primary-on-light;
     text-decoration: none;
 
@@ -80,7 +80,7 @@ $esds-card-color-background-hover: #E7F4F6;
   }
 
   .esds-card__metadata {
-    @include esds-heading-eyebrow($responsive: true);
+    @include esds-heading-eyebrow-s($responsive: true);
     color: $esds-color-text-secondary-on-light;
     order: -1;
   }
@@ -108,7 +108,7 @@ $esds-card-color-background-hover: #E7F4F6;
     }
 
     .esds-card__metadata {
-      @include esds-heading-eyebrow-small($responsive: true);
+      @include esds-heading-eyebrow-xs($responsive: true);
     }
 
     .esds-card__description {
@@ -124,6 +124,10 @@ $esds-card-color-background-hover: #E7F4F6;
     .esds-card__title {
       @include esds-heading-level-2($responsive: true);
       margin: $esds-space-stack-half-x;
+    }
+
+    .esds-card__metadata {
+      @include esds-heading-eyebrow-m($responsive: true);
     }
 
     .esds-card__description {

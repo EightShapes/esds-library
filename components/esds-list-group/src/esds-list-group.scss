@@ -101,14 +101,14 @@ $esds-list-item-space-inset: $esds-space-quarter-x $esds-space-half-x $esds-spac
 
   // LIST GROUP HEADER TEXT
   .esds-list-group__header-text {
-    @include esds-heading-eyebrow;
+    @include esds-heading-eyebrow-m;
     // @include esds-typography-reset($font-size-token: 'body-m', $font-size-type: 'fixed');
     color: $esds-color-text-primary-on-light;
     text-transform: uppercase;
   }
 
   &.esds-list-group--small .esds-list-group__header-text {
-    @include esds-heading-eyebrow-small;
+    @include esds-heading-eyebrow-s;
     color: $esds-color-text-secondary-on-light;
   }
 

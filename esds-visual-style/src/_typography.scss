@@ -87,18 +87,27 @@
   @include esds-font-size($size: 'heading-level-5', $responsive: $responsive);
 }
 
-@mixin esds-heading-eyebrow($responsive: false) {
+@mixin esds-heading-eyebrow-m($responsive: false) {
   @include esds-heading-reset;
-  @include esds-font-size($size: 'heading-eyebrow', $responsive: $responsive);
+  @include esds-font-size($size: 'heading-eyebrow-m', $responsive: $responsive);
   letter-spacing: 0.2em;
   line-height: $esds-font-line-height-headings;
   margin: 0;
   text-transform: uppercase;
 }
 
-@mixin esds-heading-eyebrow-small($responsive: false) {
+@mixin esds-heading-eyebrow-s($responsive: false) {
   @include esds-heading-reset;
-  @include esds-font-size($size: 'heading-eyebrow-small', $responsive: $responsive);
+  @include esds-font-size($size: 'heading-eyebrow-s', $responsive: $responsive);
+  letter-spacing: 0.2em;
+  line-height: $esds-font-line-height-headings;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@mixin esds-heading-eyebrow-xs($responsive: false) {
+  @include esds-heading-reset;
+  @include esds-font-size($size: 'heading-eyebrow-xs', $responsive: $responsive);
   letter-spacing: 0.2em;
   line-height: $esds-font-line-height-headings;
   margin: 0;
