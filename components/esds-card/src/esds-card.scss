@@ -16,7 +16,7 @@ $esds-card-color-background-hover: #E7F4F6;
 }
 
 @mixin esds-card-active() {
-  background-color: $esds-color-action-hover-on-light;
+  background-color: $esds-card-color-background-hover;
   box-shadow: none;
 }
 
