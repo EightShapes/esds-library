@@ -2,84 +2,87 @@
 $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
 
 .#{$esds-custom-element-namespace}-prose {
-  font-size: $esds-font-size-body-m-default;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  p {
-    @include esds-box-sizing;
-    @include esds-typography-reset;
-    color: $esds-color-text-primary-on-light;
-    margin: 0;
-    padding: 0;
-    &:first-child {
-      margin-top: 0;
+  s-assigned-wrapper {
+    font-size: $esds-font-size-body-m-default;
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > p {
+      @include esds-box-sizing;
+      @include esds-typography-reset;
+      color: $esds-color-text-primary-on-light;
+      margin: 0;
+      padding: 0;
+      &:first-child {
+        margin-top: 0;
+      }
     }
-  }
 
-  h1 {
-    @include esds-heading-level-2($responsive: true);
-    margin-top: $esds-space-4-x;
-  }
+    > h1 {
+      @include esds-heading-level-2($responsive: true);
+      margin-top: $esds-space-4-x;
+    }
 
-  h2 {
-    @include esds-heading-level-3($responsive: true);
-    margin-top: $esds-space-3-x;
-  }
+    > h2 {
+      @include esds-heading-level-3($responsive: true);
+      margin-top: $esds-space-3-x;
+    }
 
-  h3 {
-    @include esds-heading-level-4($responsive: true);
-    margin-top: $esds-space-2-x;
-  }
+    > h3 {
+      @include esds-heading-level-4($responsive: true);
+      margin-top: $esds-space-2-x;
+    }
 
-  h4 {
-    @include esds-heading-level-5($responsive: true);
-    margin-top: $esds-space-2-x;
-  }
+    > h4 {
+      @include esds-heading-level-5($responsive: true);
+      margin-top: $esds-space-2-x;
+    }
 
-  p {
-    @include esds-body-m($responsive: true);
-    margin-top: $esds-space-1-x;
-  }
+    > p {
+      @include esds-body-m($responsive: true);
+      margin-top: $esds-space-1-x;
+    }
 
-  img {
-    display: block;
-    margin-top: $esds-space-1-x;
-    max-width: 100%;
-  }
+    > img {
+      display: block;
+      margin-top: $esds-space-1-x;
+      max-width: 100%;
+    }
 
-  a {
-    @include esds-link;
-  }
+    > a,
+    > p > a {
+      @include esds-link;
+    }
 
-  ul,
-  ol {
-    @include esds-body-m($responsive: true);
-    color: $esds-color-text-primary-on-light;
-    margin: $esds-space-1-x 0 0 0;
-    padding-left: $esds-space-2-x;
-  }
+    > ul,
+    > ol {
+      @include esds-body-m($responsive: true);
+      color: $esds-color-text-primary-on-light;
+      margin: $esds-space-1-x 0 0 0;
+      padding-left: $esds-space-2-x;
+    }
 
-  li {
-    margin-top: $esds-space-1-x;
-  }
+    li {
+      margin-top: $esds-space-1-x;
+    }
 
-  code {
-    @include esds-code-tag;
-  }
-
-  pre {
-    @include esds-body-s($responsive: true);
-    @include esds-code-tag;
-    margin-top: $esds-space-1-x;
-    padding: $esds-space-inset-1-x;
-
+    > p > code,
     > code {
-      background: transparent;
-      border: 0;
-      font-size: 1em;
+      @include esds-code-tag;
+    }
+
+    > pre {
+      @include esds-body-s($responsive: true);
+      @include esds-code-tag;
+      margin-top: $esds-space-1-x;
+      padding: $esds-space-inset-1-x;
+
+      > code {
+        background: transparent;
+        border: 0;
+        font-size: 1em;
+      }
     }
   }
 }
