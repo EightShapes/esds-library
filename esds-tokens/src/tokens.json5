@@ -245,8 +245,8 @@
       tight: { value: '1.2' },
     },
     weight: {
-      regular: { value: '400' },
-      'semi-bold': { value: '600' },
+      regular: { value: '300' },
+      'semi-bold': { value: '500' },
     },
     'line-length': {
       'long-form': { value: '800px' },

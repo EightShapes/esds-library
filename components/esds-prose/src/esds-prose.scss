@@ -8,11 +8,7 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
   h2,
   h3,
   h4,
-  li,
-  ul,
-  p,
-  ol,
-  li {
+  p {
     @include esds-box-sizing;
     @include esds-typography-reset;
     color: $esds-color-text-primary-on-light;
@@ -42,9 +38,46 @@ $esds-custom-element-namespace: 'CUSTOM-ELEMENT-NAMESPACE' !default;
     @include esds-heading-level-4($responsive: true);
     margin-top: $esds-space-2-x;
   }
-  p,
-  li {
-    @include esds-font-size($size: 'body-l', $responsive: true);
+
+  p {
+    @include esds-body-m($responsive: true);
     margin-top: $esds-space-1-x;
+  }
+
+  img {
+    margin-top: $esds-space-1-x;
+  }
+
+  a {
+    @include esds-link;
+  }
+
+  ul,
+  ol {
+    @include esds-body-m($responsive: true);
+    color: $esds-color-text-primary-on-light;
+    margin: $esds-space-1-x 0 0 0;
+    padding-left: $esds-space-2-x;
+  }
+
+  li {
+    margin-top: $esds-space-1-x;
+  }
+
+  code {
+    @include esds-code-tag;
+  }
+
+  pre {
+    @include esds-body-m($responsive: true);
+    @include esds-code-tag;
+    margin-top: $esds-space-1-x;
+    padding: $esds-space-inset-1-x;
+
+    > code {
+      background: transparent;
+      border: 0;
+      font-size: 1em;
+    }
   }
 }

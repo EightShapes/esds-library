@@ -147,6 +147,7 @@
 @mixin esds-link() {
   @include esds-typography-reset;
   color: $esds-color-text-link-on-light;
+  font-size: 1em;
   text-decoration: none;
 
   &:hover {

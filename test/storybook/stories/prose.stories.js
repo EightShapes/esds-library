@@ -24,8 +24,8 @@ export const DocumentationPage = () => {
     <esds-prose>
       <h2>Anatomy</h2>
       <p>
-        Cards can be configured individually and arranged collectively to meet different thematic,
-        messaging, and user goals.
+        Cards can be configured individually and arranged <a href="#">collectively</a> to meet
+        different thematic, messaging, and user goals.
       </p>
       <h2>Variants</h2>
       <h3>Default</h3>
@@ -39,6 +39,7 @@ export const DocumentationPage = () => {
         Customize additional content in the content-area slot, such as pricing, metadata, and other
         indicators.
       </p>
+      <img src="/images/samples/REI HQ.png" alt="REI Headquarters" />
       <h3>Action Area</h3>
       <p>
         Include actions in the action-area slot, such as one or more [buttons] or [icon buttons].
@@ -48,6 +49,13 @@ export const DocumentationPage = () => {
         Match the size of adjacent elements when presenting a small, medium (default), or large
         card.
       </p>
+      <ol>
+        <li>First, do this.</li>
+        <li>Do this next.</li>
+        <li>Now you'll need to do this.</li>
+        <li>Pentultimate step. Nearly there.</li>
+        <li>Finally, conclude with this.</li>
+      </ol>
       <h2>Layout</h2>
       <p>
         Wrap multiple cards in a cards grid container to arrange them in a row or multi-row grid.
@@ -55,6 +63,31 @@ export const DocumentationPage = () => {
       <p>
         Wrap multiple cards in a cards grid container to arrange them in a row or multi-row grid.
       </p>
+      <p>
+        Prose may have <code>code</code> mixed in with the prose. So we need to
+        <code>account</code> for that. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Eius minus voluptatibus vero? Doloribus deserunt obcaecati saepe accusamus ipsam
+        reprehenderit iure dolorum! Beatae eos optio minima blanditiis fugit, adipisci corrupti
+        delectus.
+      </p>
+      <pre>
+  <code>
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+  </code>
+</pre>
+      <ul>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, alias!</li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit enim cum magni
+          illum nulla repudiandae at labore eligendi placeat eius.
+        </li>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus corporis explicabo at
+          libero, atque tempore labore facere dolore veritatis quos dolores quaerat. Aliquam vel
+          culpa quidem architecto repellendus a illo.
+        </li>
+      </ul>
     </esds-prose>
   `;
 };
