@@ -67,11 +67,6 @@ $esds-card-color-background-hover: #E7F4F6;
   .esds-card__title {
     @include esds-heading-level-3($responsive: true);
     color: $esds-color-text-primary-on-light;
-    margin: $esds-space-stack-half-x;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 
   .esds-card__title-link {
@@ -93,11 +88,7 @@ $esds-card-color-background-hover: #E7F4F6;
   .esds-card__description {
     @include esds-body-m($responsive: true);
     color: $esds-color-text-primary-on-light;
-    margin: $esds-space-stack-1-x;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    margin-top: $esds-space-1-x;
   }
 
   .esds-card__image {
@@ -107,11 +98,7 @@ $esds-card-color-background-hover: #E7F4F6;
   .esds-card__content-slot,
   .esds-card__actions-slot {
     @include esds-typography-reset;
-    margin: $esds-space-stack-1-x;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    margin-top: $esds-space-1-x;
   }
 
   &.esds-card--small {
@@ -127,6 +114,10 @@ $esds-card-color-background-hover: #E7F4F6;
     .esds-card__description {
       @include esds-body-s($responsive: true);
     }
+
+    .esds-card__body {
+      padding: $esds-space-inset-1-x;
+    }
   }
 
   &.esds-card--large {
@@ -137,6 +128,10 @@ $esds-card-color-background-hover: #E7F4F6;
 
     .esds-card__description {
       @include esds-body-l($responsive: true);
+    }
+
+    .esds-card__body {
+      padding: $esds-space-inset-2-x;
     }
   }
 

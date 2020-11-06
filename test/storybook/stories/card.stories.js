@@ -169,7 +169,13 @@ export const AcrossBackgrounds = () => {
 
 export const SlotAnatomy = () => {
   return html`
-    <esds-card style="${demoStyles}" title="Wanaka" img-src="/images/samples/Wanaka.png">
+    <esds-card
+      style="${demoStyles}"
+      title="Wanaka"
+      metadata="See The World"
+      description="Pick your favorite travel destinations."
+      img-src="/images/samples/Wanaka.png"
+    >
       <div class="storybook-slotholder" slot="content">Content</div>
       <div class="storybook-slotholder" slot="actions">Actions</div>
     </esds-card>
