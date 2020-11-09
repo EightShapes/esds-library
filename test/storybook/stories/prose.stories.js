@@ -71,10 +71,14 @@ export const DocumentationPage = () => {
         delectus.
       </p>
       <pre>
-  <code>
-    &lt;h1&gt;Hello World&lt;/h1&gt;
-  </code>
-</pre>
+        <code>
+          &lt;h1&gt;Hello World&lt;/h1&gt;
+        </code>
+      </pre>
+      <pre>
+          &lt;h1&gt;Hello World&lt;/h1&gt;
+      </pre
+      >
       <ul>
         <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, alias!</li>
         <li>
