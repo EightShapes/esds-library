@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-prose",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "",
   "esnext": "dist/EsdsProse.js",
   "main": "dist/esds-prose-web-component.js",
