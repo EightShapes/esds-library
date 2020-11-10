@@ -7,7 +7,7 @@ $esds-list-item-color-hover-on-light: $esds-color-neutral-90;
 $esds-list-item-color-hover-on-dark: $esds-color-neutral-25;
 
 $esds-list-item-color-active-on-light: $esds-color-neutral-80;
-$esds-list-item-color-active-on-dark: $esds-color-neutral-42;
+$esds-list-item-color-active-on-dark: $esds-color-neutral-15;
 
 $esds-list-item-color-focus-outline: $esds-color-neutral-70;
 $esds-list-item-border-width-focus-outline: 1px;
@@ -47,6 +47,19 @@ $esds-list-item-space-inset: $esds-space-quarter-x $esds-space-half-x $esds-spac
 }
 
 @mixin esds-list-item-selected {
+  background: $esds-color-background-light-secondary;
+
+  .esds-container--light-secondary & {
+    background: $esds-color-background-light-primary;
+  }
+
+  .esds-container--dark-primary & {
+    background: $esds-color-background-dark-secondary;
+  }
+  .esds-container--dark-secondary & {
+    background: $esds-color-background-dark-primary;
+  }
+
   &,
   .esds-container--dark-primary &,
   .esds-container--dark-secondary & {
@@ -82,19 +95,20 @@ $esds-list-item-space-inset: $esds-space-quarter-x $esds-space-half-x $esds-spac
   .esds-list-group__header-inner {
     align-items: center;
     display: flex;
+    line-height: 0;
     padding: $esds-list-item-space-inset;
   }
 
   // LIST GROUP HEADER TEXT
   .esds-list-group__header-text {
-    @include esds-heading-eyebrow;
+    @include esds-heading-eyebrow-m;
     // @include esds-typography-reset($font-size-token: 'body-m', $font-size-type: 'fixed');
     color: $esds-color-text-primary-on-light;
     text-transform: uppercase;
   }
 
   &.esds-list-group--small .esds-list-group__header-text {
-    @include esds-heading-eyebrow-small;
+    @include esds-heading-eyebrow-s;
     color: $esds-color-text-secondary-on-light;
   }
 
@@ -157,6 +171,7 @@ $esds-list-item-space-inset: $esds-space-quarter-x $esds-space-half-x $esds-spac
 
     .esds-icon {
       fill: $esds-color-text-primary-on-light;
+      transform: rotate(180deg);
     }
 
     &:hover {
@@ -186,7 +201,7 @@ $esds-list-item-space-inset: $esds-space-quarter-x $esds-space-half-x $esds-spac
     }
 
     .esds-list-group__header .esds-icon {
-      transform: rotate(180deg);
+      transform: rotate(0deg);
     }
   }
 

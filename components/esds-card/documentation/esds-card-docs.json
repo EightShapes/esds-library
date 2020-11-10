@@ -105,6 +105,16 @@
           "name": "actions",
           "description": "Accepts links or buttons as actions at the bottom of the card"
         }
+      ],
+      "slots": [
+        {
+          "name": "content",
+          "description": "Accepts miscellaneous content for the card"
+        },
+        {
+          "name": "actions",
+          "description": "Accepts links or buttons as actions at the bottom of the card"
+        }
       ]
     }
   ]

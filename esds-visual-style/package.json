@@ -1,10 +1,10 @@
 {
   "name": "@eightshapes/esds-visual-style",
-  "version": "0.7.1",
+  "version": "0.8.2",
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@eightshapes/esds-tokens": "^0.6.0"
+    "@eightshapes/esds-tokens": "^0.7.1"
   },
   "keywords": [],
   "author": "Kevin Powell <kevinmpowell@gmail.com>",

@@ -15,8 +15,9 @@ export const Heading = () => {
     <h3 class="esds-heading--level-3">Level 3 Heading</h3>
     <h4 class="esds-heading--level-4">Level 4 Heading</h4>
     <h5 class="esds-heading--level-5">Level 5 Heading</h5>
-    <h3 class="esds-heading--eyebrow">Eyebrow Heading</h3>
+    <h3 class="esds-heading--eyebrow-medium">Eyebrow Heading</h3>
     <h4 class="esds-heading--eyebrow-small">Eyebrow Heading Small</h4>
+    <h4 class="esds-heading--eyebrow-extra-small">Eyebrow Heading Extra Small</h4>
   `;
 };
 

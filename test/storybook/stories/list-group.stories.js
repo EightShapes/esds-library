@@ -138,7 +138,7 @@ export const ListGroupSizes = () => {
 export const DocSiteNav = () => {
   return html`
     <esds-background-demo>
-      <div style="width: 250px">
+      <div style="width: 300px">
         <esds-list-group>
           <esds-list-item href="/">Home</esds-list-item>
           <esds-list-item href="/getting-started">Getting started</esds-list-item>

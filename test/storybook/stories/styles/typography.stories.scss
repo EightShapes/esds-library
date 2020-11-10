@@ -25,13 +25,18 @@
   color: $esds-color-text-primary-on-light;
 }
 
-.esds-heading--eyebrow {
-  @include esds-heading-eyebrow;
+.esds-heading--eyebrow-medium {
+  @include esds-heading-eyebrow-m;
   color: $esds-color-text-primary-on-light;
 }
 
 .esds-heading--eyebrow-small {
-  @include esds-heading-eyebrow-small;
+  @include esds-heading-eyebrow-s;
+  color: $esds-color-text-primary-on-light;
+}
+
+.esds-heading--eyebrow-extra-small {
+  @include esds-heading-eyebrow-xs;
   color: $esds-color-text-primary-on-light;
 }
 

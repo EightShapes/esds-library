@@ -196,17 +196,23 @@
         'at-768': { value: '17px' },
         'at-1000': { value: '19.2px' },
       },
-      'heading-eyebrow': {
+      'heading-eyebrow-m': {
         default: { value: '13px' },
         'at-480': { value: '14px' },
         'at-768': { value: '15px' },
         'at-1000': { value: '15px' },
       },
-      'heading-eyebrow-small': {
+      'heading-eyebrow-s': {
         default: { value: '11px' },
         'at-480': { value: '12px' },
         'at-768': { value: '13px' },
         'at-1000': { value: '13px' },
+      },
+      'heading-eyebrow-xs': {
+        default: { value: '9px' },
+        'at-480': { value: '10px' },
+        'at-768': { value: '11px' },
+        'at-1000': { value: '11px' },
       },
       'body-lead': {
         default: { value: '20.8px' },
@@ -245,8 +251,8 @@
       tight: { value: '1.2' },
     },
     weight: {
-      regular: { value: '400' },
-      'semi-bold': { value: '600' },
+      regular: { value: '300' },
+      'semi-bold': { value: '500' },
     },
     'line-length': {
       'long-form': { value: '800px' },

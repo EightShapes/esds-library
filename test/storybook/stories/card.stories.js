@@ -1,6 +1,8 @@
 import { html } from 'lit-html';
 import '@eightshapes/esds-card/dist/esds-card-web-component.js';
 import '@eightshapes/esds-background-demo/dist/esds-background-demo-web-component.js';
+import '@eightshapes/esds-prose/dist/esds-prose-web-component.js';
+import '@eightshapes/esds-button/dist/esds-button-web-component.js';
 import { sinkFor } from './scripts/utilities.js';
 import './styles/card.stories.scss'; // Demo styles to show component states
 
@@ -93,6 +95,44 @@ export const Sizes = () => {
         ></esds-card>
       </div>
     </div>
+    <div class="storybook-grid">
+      <div>
+        <span class="storybook-annotation">Small</span>
+        <esds-card
+          style="${demoStyles}"
+          img-src="/images/samples/Vernazza.png"
+          metadata="Destination"
+          title="Vernazza"
+          description="Lorem ipsum dolor sanctum."
+          size="small"
+          href="#"
+        ></esds-card>
+      </div>
+      <div>
+        <span class="storybook-annotation">Medium</span>
+        <esds-card
+          style="${demoStyles}"
+          img-src="/images/samples/Vernazza.png"
+          metadata="Destination"
+          title="Vernazza"
+          description="Lorem ipsum dolor sanctum."
+          size="medium"
+          href="#"
+        ></esds-card>
+      </div>
+      <div>
+        <span class="storybook-annotation">Large</span>
+        <esds-card
+          style="${demoStyles}"
+          img-src="/images/samples/Vernazza.png"
+          metadata="Destination"
+          title="Vernazza"
+          description="Lorem ipsum dolor sanctum."
+          size="large"
+          href="#"
+        ></esds-card>
+      </div>
+    </div>
   `;
 };
 
@@ -167,7 +207,12 @@ export const AcrossBackgrounds = () => {
 
 export const SlotAnatomy = () => {
   return html`
-    <esds-card style="${demoStyles}" title="Wanaka" img-src="/images/samples/Wanaka.png">
+    <esds-card
+      style="${demoStyles}"
+      title="Wanaka"
+      metadata="See The World"
+      description="Pick your favorite travel destinations."
+      img-src="/images/samples/Wanaka.png"
       <div class="storybook-slotholder" slot="content">Content</div>
       <div class="storybook-slotholder" slot="actions">Actions</div>
     </esds-card>
@@ -220,6 +265,5 @@ export const Sink = sinkFor(
   States,
   AcrossBackgrounds,
   SlotAnatomy,
-  SlotExamples,
 );
 Sink.story = { parameters: { chromatic: { disable: false } } };
