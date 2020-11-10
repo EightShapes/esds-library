@@ -53,7 +53,7 @@ export const DocumentationPage = () => {
         <li>First, do this.</li>
         <li>Do this next.</li>
         <li>Now you'll need to do this.</li>
-        <li>Pentultimate step. Nearly there.</li>
+        <li>Pentultimate step. <a href="#">link in ol</a> Nearly there.</li>
         <li>Finally, conclude with this.</li>
       </ol>
       <h2>Layout</h2>
@@ -80,7 +80,10 @@ export const DocumentationPage = () => {
       </pre
       >
       <ul>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, alias!</li>
+        <li>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          <a href="#">link in ul</a> Fugit, alias!
+        </li>
         <li>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit enim cum magni
           illum nulla repudiandae at labore eligendi placeat eius.
