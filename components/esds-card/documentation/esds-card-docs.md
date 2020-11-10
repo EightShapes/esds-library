@@ -26,3 +26,10 @@
 | `renderImage`       | `(): TemplateResult`       |
 | `renderMetadata`    | `(): TemplateResult \| ""` |
 | `renderTitle`       | `(): TemplateResult`       |
+
+## Slots
+
+| Name      | Description                                      |
+|-----------|--------------------------------------------------|
+| `actions` | Accepts links or buttons as actions at the bottom of the card |
+| `content` | Accepts miscellaneous content for the card       |
