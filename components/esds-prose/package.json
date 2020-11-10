@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-prose",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "",
   "esnext": "dist/EsdsProse.js",
   "main": "dist/esds-prose-web-component.js",
@@ -35,7 +35,7 @@
   "devDependencies": {
     "@eightshapes/css-classify": "^0.1.2",
     "@eightshapes/esds-tokens": "^0.7.1",
-    "@eightshapes/esds-visual-style": "^0.8.1",
+    "@eightshapes/esds-visual-style": "^0.8.2",
     "@eightshapes/scopify": "^0.1.0",
     "@eightshapes/slotify": "^0.6.1",
     "@open-wc/testing": "^2.0.0",

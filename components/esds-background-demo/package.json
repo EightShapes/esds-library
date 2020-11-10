@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-background-demo",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "",
   "esnext": "dist/EsdsBackgroundDemo.js",
   "main": "dist/esds-background-demo-web-component.js",
@@ -34,7 +34,7 @@
   "license": "MIT",
   "devDependencies": {
     "@eightshapes/esds-tokens": "^0.7.1",
-    "@eightshapes/esds-visual-style": "^0.8.1",
+    "@eightshapes/esds-visual-style": "^0.8.2",
     "@eightshapes/slotify": "^0.6.1",
     "@open-wc/testing": "^2.0.0",
     "@open-wc/testing-karma": "^3.0.0",

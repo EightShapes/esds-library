@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-list-group",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "",
   "esnext": "dist/EsdsListGroup.js",
   "main": "dist/esds-list-group-web-component.js",
@@ -36,10 +36,10 @@
   "license": "MIT",
   "devDependencies": {
     "@eightshapes/css-classify": "^0.1.2",
-    "@eightshapes/esds-icon": "^0.5.1",
+    "@eightshapes/esds-icon": "^0.5.2",
     "@eightshapes/esds-icons": "^0.4.1",
     "@eightshapes/esds-tokens": "^0.7.1",
-    "@eightshapes/esds-visual-style": "^0.8.1",
+    "@eightshapes/esds-visual-style": "^0.8.2",
     "@eightshapes/scopify": "^0.1.0",
     "@eightshapes/slotify": "^0.5.3",
     "@open-wc/testing": "^2.0.0",

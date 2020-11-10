@@ -1,6 +1,6 @@
 {
   "name": "@eightshapes/esds-card",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "",
   "esnext": "dist/EsdsCard.js",
   "main": "dist/esds-card-web-component.js",
@@ -34,9 +34,9 @@
   "license": "MIT",
   "devDependencies": {
     "@eightshapes/css-classify": "^0.1.2",
-    "@eightshapes/esds-thumbnail": "^0.5.1",
+    "@eightshapes/esds-thumbnail": "^0.5.2",
     "@eightshapes/esds-tokens": "^0.7.1",
-    "@eightshapes/esds-visual-style": "^0.8.1",
+    "@eightshapes/esds-visual-style": "^0.8.2",
     "@eightshapes/scopify": "^0.1.0",
     "@eightshapes/slotify": "^0.6.1",
     "@open-wc/testing": "^2.0.0",
