@@ -99,6 +99,16 @@
           "name": "cssClassObject",
           "type": "{ default: string; prefix: string; link: { conditional: boolean; }; size: { class: any; conditional: boolean; }; }"
         }
+      ],
+      "slots": [
+        {
+          "name": "content",
+          "description": "Accepts miscellaneous content for the card"
+        },
+        {
+          "name": "actions",
+          "description": "Accepts links or buttons as actions at the bottom of the card"
+        }
       ]
     }
   ]
